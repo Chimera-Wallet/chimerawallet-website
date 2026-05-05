@@ -1,4 +1,6 @@
 import { Link } from "@tanstack/react-router";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 const navItems = [
   { label: "APP", to: "/app" },
@@ -41,6 +43,36 @@ export function SiteHeader() {
           >
             TRADE NOW
           </button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <button
+                aria-label="Open menu"
+                className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10"
+              >
+                <Menu className="h-5 w-5" />
+              </button>
+            </SheetTrigger>
+            <SheetContent
+              side="left"
+              className="w-72 border-white/10 bg-[var(--brand-navy)] text-foreground"
+            >
+              <div className="mt-8 flex flex-col gap-1">
+                {navItems.map((n) => (
+                  <Link
+                    key={n.to}
+                    to={n.to}
+                    className="rounded-lg px-4 py-3 text-sm font-semibold tracking-widest text-muted-foreground hover:bg-white/5 hover:text-foreground"
+                    activeProps={{ className: "rounded-lg px-4 py-3 text-sm font-semibold tracking-widest text-foreground bg-white/10" }}
+                  >
+                    {n.label}
+                  </Link>
+                ))}
+                <button className="mt-4 inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-3 text-xs font-semibold tracking-widest text-foreground hover:bg-white/10">
+                  REGISTER
+                </button>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
