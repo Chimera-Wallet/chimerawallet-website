@@ -28,7 +28,7 @@ function Index() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 pt-12 pb-20">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_2fr_1fr]">
-            <Placeholder label="Floating phone + coins (left)" className="aspect-[3/5]" />
+            <Placeholder label="Floating phone + coins (left)" className="hidden lg:flex aspect-[3/5]" />
             <div className="text-center">
               <p className="display text-xs tracking-[0.3em] text-[var(--brand-green)]">
                 CHIMERAWALLET, FINANCE EVOLVED
@@ -48,7 +48,7 @@ function Index() {
                 </button>
               </div>
             </div>
-            <Placeholder label="Floating phone + coins (right)" className="aspect-[3/5]" />
+            <Placeholder label="Floating phone + coins (right)" className="hidden lg:flex aspect-[3/5]" />
           </div>
 
           {/* CTA cards */}
