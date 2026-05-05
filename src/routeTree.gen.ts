@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TokenRouteImport } from './routes/token'
+import { Route as ReferralsRouteImport } from './routes/referrals'
 import { Route as CardRouteImport } from './routes/card'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as IndexRouteImport } from './routes/index'
@@ -17,6 +18,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const TokenRoute = TokenRouteImport.update({
   id: '/token',
   path: '/token',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferralsRoute = ReferralsRouteImport.update({
+  id: '/referrals',
+  path: '/referrals',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CardRoute = CardRouteImport.update({
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/app': typeof AppRoute
   '/card': typeof CardRoute
+  '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/app': typeof AppRoute
   '/card': typeof CardRoute
+  '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
 }
 export interface FileRoutesById {
@@ -52,20 +60,22 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/app': typeof AppRoute
   '/card': typeof CardRoute
+  '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/app' | '/card' | '/token'
+  fullPaths: '/' | '/app' | '/card' | '/referrals' | '/token'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/app' | '/card' | '/token'
-  id: '__root__' | '/' | '/app' | '/card' | '/token'
+  to: '/' | '/app' | '/card' | '/referrals' | '/token'
+  id: '__root__' | '/' | '/app' | '/card' | '/referrals' | '/token'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRoute: typeof AppRoute
   CardRoute: typeof CardRoute
+  ReferralsRoute: typeof ReferralsRoute
   TokenRoute: typeof TokenRoute
 }
 
@@ -76,6 +86,13 @@ declare module '@tanstack/react-router' {
       path: '/token'
       fullPath: '/token'
       preLoaderRoute: typeof TokenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/referrals': {
+      id: '/referrals'
+      path: '/referrals'
+      fullPath: '/referrals'
+      preLoaderRoute: typeof ReferralsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/card': {
@@ -106,6 +123,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRoute: AppRoute,
   CardRoute: CardRoute,
+  ReferralsRoute: ReferralsRoute,
   TokenRoute: TokenRoute,
 }
 export const routeTree = rootRouteImport
