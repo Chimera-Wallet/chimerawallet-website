@@ -1,0 +1,57 @@
+export function SiteFooter() {
+  return (
+    <footer className="border-t border-white/5 bg-[var(--brand-navy-deep)] text-foreground">
+      <div className="mx-auto max-w-7xl px-6 py-12">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+          <div>
+            <div className="flex items-center gap-2">
+              <div className="placeholder-box h-10 w-10 !p-0 text-[9px]">LOGO</div>
+              <span className="display text-lg tracking-widest">CHIMERA</span>
+            </div>
+            <div className="mt-6 text-xs text-muted-foreground">Powered by:</div>
+            <div className="mt-2 text-xs text-foreground/80">
+              Bitcoin &nbsp;|&nbsp; ARK &nbsp;|&nbsp; Lightning &nbsp;|&nbsp; Outlogic
+            </div>
+          </div>
+
+          <div>
+            <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">POLICIES</h4>
+            <ul className="mt-4 space-y-2 text-sm text-foreground/90">
+              <li>App Privacy Policy</li>
+              <li>Web Privacy Policy</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">PRESS AND MEDIA</h4>
+            <ul className="mt-4 space-y-2 text-sm text-foreground/90">
+              <li>News</li>
+              <li>Press Kit</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">SUPPORT</h4>
+            <ul className="mt-4 space-y-2 text-sm text-foreground/90">
+              <li>Chimera API Documentation</li>
+              <li>Support Center</li>
+            </ul>
+          </div>
+        </div>
+
+        <p className="mt-10 max-w-5xl text-xs text-muted-foreground">
+          CEXT, issued by Outlogic SAGL, is a utility token under Swiss regulation. Not security. Not a payment token. Not an investment contract. Staking rewards are not guaranteed. The platform buy programme does not constitute a guaranteed return. Fiat, card, trading and stacking services are provided by third parties - not by Chimera Wallet.
+        </p>
+
+        <div className="mt-8 flex flex-col gap-3 border-t border-white/5 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex gap-4">
+            <span>Privacy Policy</span>
+            <span>Cookie Policy</span>
+            <span>Terms &amp; Conditions</span>
+          </div>
+          <div>© 2026 Chimera. All right reserved. Made with ❤️ in 🇨🇭</div>
+        </div>
+      </div>
+    </footer>
+  );
+}
