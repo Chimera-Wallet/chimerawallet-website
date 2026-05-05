@@ -14,10 +14,40 @@ const navItems = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-[var(--brand-navy)]/80 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
-        <Link to="/" className="flex items-center gap-2">
+      <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-6 py-4 md:flex md:justify-between">
+        <Sheet>
+          <SheetTrigger asChild>
+            <button
+              aria-label="Open menu"
+              className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
+          </SheetTrigger>
+          <SheetContent
+            side="left"
+            className="w-72 border-white/10 bg-[var(--brand-navy)] text-foreground"
+          >
+            <div className="mt-8 flex flex-col gap-1">
+              {navItems.map((n) => (
+                <Link
+                  key={n.to}
+                  to={n.to}
+                  className="rounded-lg px-4 py-3 text-sm font-semibold tracking-widest text-muted-foreground hover:bg-white/5 hover:text-foreground"
+                  activeProps={{ className: "rounded-lg px-4 py-3 text-sm font-semibold tracking-widest text-foreground bg-white/10" }}
+                >
+                  {n.label}
+                </Link>
+              ))}
+              <button className="mt-4 inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-3 text-xs font-semibold tracking-widest text-foreground hover:bg-white/10">
+                REGISTER
+              </button>
+            </div>
+          </SheetContent>
+        </Sheet>
+
+        <Link to="/" className="flex items-center justify-center md:justify-start">
           <div className="placeholder-box h-10 w-10 !p-0 text-[9px]">LOGO</div>
-          <span className="display text-lg tracking-widest">CHIMERA</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2 py-1.5">
@@ -43,36 +73,6 @@ export function SiteHeader() {
           >
             TRADE NOW
           </button>
-          <Sheet>
-            <SheetTrigger asChild>
-              <button
-                aria-label="Open menu"
-                className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10"
-              >
-                <Menu className="h-5 w-5" />
-              </button>
-            </SheetTrigger>
-            <SheetContent
-              side="left"
-              className="w-72 border-white/10 bg-[var(--brand-navy)] text-foreground"
-            >
-              <div className="mt-8 flex flex-col gap-1">
-                {navItems.map((n) => (
-                  <Link
-                    key={n.to}
-                    to={n.to}
-                    className="rounded-lg px-4 py-3 text-sm font-semibold tracking-widest text-muted-foreground hover:bg-white/5 hover:text-foreground"
-                    activeProps={{ className: "rounded-lg px-4 py-3 text-sm font-semibold tracking-widest text-foreground bg-white/10" }}
-                  >
-                    {n.label}
-                  </Link>
-                ))}
-                <button className="mt-4 inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-3 text-xs font-semibold tracking-widest text-foreground hover:bg-white/10">
-                  REGISTER
-                </button>
-              </div>
-            </SheetContent>
-          </Sheet>
         </div>
       </div>
     </header>
