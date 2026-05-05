@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TokenRouteImport } from './routes/token'
 import { Route as ReferralsRouteImport } from './routes/referrals'
+import { Route as NewsRouteImport } from './routes/news'
 import { Route as CardRouteImport } from './routes/card'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AboutRouteImport } from './routes/about'
@@ -24,6 +25,11 @@ const TokenRoute = TokenRouteImport.update({
 const ReferralsRoute = ReferralsRouteImport.update({
   id: '/referrals',
   path: '/referrals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsRoute = NewsRouteImport.update({
+  id: '/news',
+  path: '/news',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CardRoute = CardRouteImport.update({
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/app': typeof AppRoute
   '/card': typeof CardRoute
+  '/news': typeof NewsRoute
   '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/app': typeof AppRoute
   '/card': typeof CardRoute
+  '/news': typeof NewsRoute
   '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
 }
@@ -69,15 +77,31 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/app': typeof AppRoute
   '/card': typeof CardRoute
+  '/news': typeof NewsRoute
   '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/app' | '/card' | '/referrals' | '/token'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/app'
+    | '/card'
+    | '/news'
+    | '/referrals'
+    | '/token'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/app' | '/card' | '/referrals' | '/token'
-  id: '__root__' | '/' | '/about' | '/app' | '/card' | '/referrals' | '/token'
+  to: '/' | '/about' | '/app' | '/card' | '/news' | '/referrals' | '/token'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/app'
+    | '/card'
+    | '/news'
+    | '/referrals'
+    | '/token'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -85,6 +109,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AppRoute: typeof AppRoute
   CardRoute: typeof CardRoute
+  NewsRoute: typeof NewsRoute
   ReferralsRoute: typeof ReferralsRoute
   TokenRoute: typeof TokenRoute
 }
@@ -103,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/referrals'
       fullPath: '/referrals'
       preLoaderRoute: typeof ReferralsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news': {
+      id: '/news'
+      path: '/news'
+      fullPath: '/news'
+      preLoaderRoute: typeof NewsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/card': {
@@ -141,6 +173,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AppRoute: AppRoute,
   CardRoute: CardRoute,
+  NewsRoute: NewsRoute,
   ReferralsRoute: ReferralsRoute,
   TokenRoute: TokenRoute,
 }
