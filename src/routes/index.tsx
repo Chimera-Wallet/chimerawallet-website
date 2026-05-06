@@ -53,13 +53,13 @@ function Index() {
 
           {/* CTA cards */}
           <div className="mx-auto mt-16 max-w-3xl space-y-4">
-            <CtaCard eyebrow="CHIMERA WALLET" title="LAUNCH THE APP" eyebrowColor="text-[var(--brand-green)]" filled />
+            <CtaCard eyebrow="CHIMERA WALLET" title="LAUNCH THE APP" eyebrowColor="text-[var(--brand-green)]" filled href="https://app.chimerawallet.com" />
             <CtaCard
               eyebrow="36 D | 20 H | 03 M | 16 S to TGE"
               title="JOIN CEXT WAITLIST"
               eyebrowColor="text-[var(--brand-green)]"
             />
-            <CtaCard eyebrow="NOTIFY ME" title="JOIN THE COMMUNITY" eyebrowColor="text-[var(--brand-green)]" />
+            <CtaCard eyebrow="NOTIFY ME" title="JOIN THE COMMUNITY" eyebrowColor="text-[var(--brand-green)]" href="https://t.me/Chimera_Community" />
           </div>
         </div>
       </section>
@@ -233,15 +233,20 @@ function CtaCard({
   className = "",
   filled = false,
   eyebrowColor = "text-[var(--brand-green)]",
+  href,
 }: {
   eyebrow?: string;
   title: string;
   className?: string;
   filled?: boolean;
   eyebrowColor?: string;
+  href?: string;
 }) {
+  const Tag: any = href ? "a" : "button";
+  const linkProps = href ? { href, target: "_blank", rel: "noopener noreferrer" } : {};
   return (
-    <button
+    <Tag
+      {...linkProps}
       className={`group flex w-full items-center justify-between rounded-2xl border border-white/10 px-6 py-5 text-left transition-colors hover:border-white/30 ${className}`}
       style={{
         background: filled
@@ -256,7 +261,7 @@ function CtaCard({
         <div className="display mt-1 text-xl">{title}</div>
       </div>
       <span className="text-xl text-foreground/70 transition-transform group-hover:translate-x-1">↗</span>
-    </button>
+    </Tag>
   );
 }
 
