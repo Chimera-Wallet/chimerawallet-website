@@ -71,16 +71,16 @@ function Index() {
       {/* CONTROL / TRADE / EARN */}
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.1fr_1fr]">
-          <div className="relative aspect-[5/4] w-full">
+          <div className="relative mx-auto aspect-[5/4] w-full max-w-md">
             <img
               src={wallet1}
               alt="Chimera wallet app — primary view"
-              className="absolute left-0 top-0 w-[65%] h-auto"
+              className="absolute left-0 top-0 w-[60%] h-auto object-contain"
             />
             <img
               src={wallet2}
               alt="Chimera wallet app — secondary view"
-              className="absolute right-0 bottom-0 w-[65%] h-auto"
+              className="absolute right-0 bottom-0 w-[60%] h-auto object-contain"
             />
           </div>
           <div className="space-y-4">
