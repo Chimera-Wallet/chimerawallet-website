@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
 import heroPhoneLeft from "@/assets/site/hero-phone-left.png";
 import heroPhoneRight from "@/assets/site/hero-phone-right.png";
+import wallet1 from "@/assets/site/wallet-1.png";
+import wallet2 from "@/assets/site/wallet-2.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -69,7 +71,18 @@ function Index() {
       {/* CONTROL / TRADE / EARN */}
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.1fr_1fr]">
-          <Placeholder label="Two phone mockups (Wallet UI)" className="aspect-[5/4]" />
+          <div className="relative aspect-[5/4] w-full">
+            <img
+              src={wallet1}
+              alt="Chimera wallet app — primary view"
+              className="absolute left-0 top-0 w-[65%] h-auto"
+            />
+            <img
+              src={wallet2}
+              alt="Chimera wallet app — secondary view"
+              className="absolute right-0 bottom-0 w-[65%] h-auto"
+            />
+          </div>
           <div className="space-y-4">
             <FeatureCard
               title="CONTROL"
