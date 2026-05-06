@@ -71,7 +71,7 @@ function Index() {
       {/* CONTROL / TRADE / EARN */}
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.1fr_1fr]">
-          <div className="relative mx-auto aspect-[5/4] w-1/2 max-w-md lg:w-full">
+          <div className="relative mx-auto aspect-[5/4] w-1/2 max-w-md pb-12 lg:w-3/4 lg:pb-20">
             <img
               src={wallet1}
               alt="Chimera wallet app — primary view"
