@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
+import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
 
 export const Route = createFileRoute("/app")({
   head: () => ({
@@ -42,7 +43,11 @@ function AppPage() {
           OPEN IN BROWSER
         </button>
 
-        <Placeholder label="Fanned phone mockups (6 phones)" className="mx-auto mt-12 aspect-[16/7] w-full" />
+        <img
+          src={mockupAppPage1}
+          alt="Chimera app phone mockups"
+          className="mx-auto mt-12 w-full max-w-5xl h-auto"
+        />
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-12">
