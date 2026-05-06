@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
+import heroPhoneLeft from "@/assets/site/hero-phone-left.png";
+import heroPhoneRight from "@/assets/site/hero-phone-right.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,7 +30,7 @@ function Index() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 pt-12 pb-20">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_2fr_1fr]">
-            <Placeholder label="Floating phone + coins (left)" className="hidden lg:flex aspect-[3/5]" />
+            <img src={heroPhoneLeft} alt="Chimera wallet app showing balance and transactions" className="hidden lg:block w-full h-auto" />
             <div className="text-center">
               <p className="display text-xs tracking-[0.3em] text-[var(--brand-green)]">
                 CHIMERAWALLET, FINANCE EVOLVED
@@ -48,7 +50,7 @@ function Index() {
                 </button>
               </div>
             </div>
-            <Placeholder label="Floating phone + coins (right)" className="hidden lg:flex aspect-[3/5]" />
+            <img src={heroPhoneRight} alt="Chimera card balance and transactions" className="hidden lg:block w-full h-auto" />
           </div>
 
           {/* CTA cards */}
