@@ -80,7 +80,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground">
       <SiteHeader />
       <Outlet />
       <SiteFooter />
