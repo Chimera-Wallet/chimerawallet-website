@@ -101,7 +101,7 @@ function Index() {
             <FeatureCard
               iconSrc={tradeIcon}
               title="TRADE"
-              body="Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial ARK swaps coming soon."
+              body="Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial Arkade swaps coming soon."
             />
             <FeatureCard
               iconSrc={earnIcon}
