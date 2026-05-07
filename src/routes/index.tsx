@@ -234,7 +234,7 @@ function Index() {
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.4fr_1fr]">
           <div>
             <h2 className="display text-3xl md:text-4xl">REFERRALS</h2>
-            <p className="display text-3xl md:text-4xl text-foreground/70">PREVIEW.</p>
+            <p className="display text-3xl md:text-4xl text-foreground/70">​</p>
             <p className="mt-6 text-base font-medium">
               Share once. Earn on every trade they make. Forever.
             </p>
