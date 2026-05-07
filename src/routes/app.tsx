@@ -51,9 +51,15 @@ function AppPage() {
           Every native crypto app lives at the mercy of app stores. Wallets get removed on a Wednesday afternoon
           because someone in Cupertino or Mountain View changed their mind.
         </p>
-        <button className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10">
-          OPEN IN BROWSER
-        </button>
+        <a
+          href="https://app.chimerawallet.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-flex items-center rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
+          style={{ backgroundColor: "var(--brand-green)" }}
+        >
+          LAUNCH CHIMERA
+        </a>
 
         <img
           src={mockupAppPage1}
