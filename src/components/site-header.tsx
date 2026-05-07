@@ -64,15 +64,15 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <button className="hidden sm:inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold tracking-widest text-foreground hover:bg-white/10">
-            REGISTER
-          </button>
-          <button
+          <a
+            href="https://app.chimerawallet.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center rounded-full px-4 py-2 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
             style={{ backgroundColor: "var(--brand-green)" }}
           >
-            TRADE NOW
-          </button>
+            LAUNCH CHIMERA
+          </a>
         </div>
       </div>
     </header>
