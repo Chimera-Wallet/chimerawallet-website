@@ -93,11 +93,6 @@ function TokenPage() {
         <p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
           Put your CEXT to work. Stake and earn up to 15% annual returns paid in CEXT. Lock tokens for longer periods to multiply your score and maximize rewards. The longer you lock, the more you earn.
         </p>
-        <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground">
-          Eg. 10000 CEXT locked for 3 years = 45% average compound interest.
-          <br />
-          10000 CEXT locked for 1.5 years = 10% average compound interest.
-        </p>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
