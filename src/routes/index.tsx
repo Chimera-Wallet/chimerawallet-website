@@ -214,7 +214,7 @@ function Index() {
           <img src={cextCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain" />
           <div>
             <h2 className="display text-3xl md:text-4xl">CEXT TOKEN</h2>
-            <p className="display text-3xl md:text-4xl text-foreground/70">PREVIEW.</p>
+            <p className="display text-3xl md:text-4xl text-foreground/70">​</p>
             <p className="mt-6 text-base font-medium">
               The more you hold, the harder the platform works for you.
             </p>
