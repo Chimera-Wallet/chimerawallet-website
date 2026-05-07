@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import chimeraLogo from "@/assets/site/Chimera Logo.png";
 
 const navItems = [
   { label: "APP", to: "/app" },
@@ -47,7 +48,7 @@ export function SiteHeader() {
         </Sheet>
 
         <Link to="/" className="flex items-center justify-center md:justify-start">
-          <div className="placeholder-box h-10 w-10 !p-0 text-[9px]">LOGO</div>
+          <img src={chimeraLogo} alt="Chimera" className="h-10 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2 py-1.5">
