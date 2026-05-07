@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
 import arkLogo from "@/assets/site/ARK logo.png";
 import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
+import openSource from "@/assets/site/open_source.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -63,7 +64,7 @@ function AboutPage() {
             <p className="mt-6 text-sm text-foreground/85">Every line of code is public on GitHub.<br/>Auditable by anyone, free to fork.</p>
             <p className="mt-4 text-sm text-foreground/85">Financial services run through regulated third parties.<br/>We don't hold your funds. The architecture makes it impossible.</p>
           </div>
-          <img src={mockupAppPage1} alt="Chimera Wallet app preview" className="aspect-[4/3] w-full object-contain" />
+          <img src={openSource} alt="Open source code" className="aspect-[4/3] w-full object-contain" />
         </div>
       </section>
 
