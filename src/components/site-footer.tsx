@@ -12,7 +12,7 @@ export function SiteFooter() {
             </div>
             <div className="mt-6 text-xs text-muted-foreground">Powered by:</div>
             <div className="mt-2 text-xs text-foreground/80">
-              Bitcoin &nbsp;|&nbsp; Arkade &nbsp;|&nbsp; Lightning &nbsp;|&nbsp; Outlogic
+              Bitcoin &nbsp;|&nbsp; Chimera &nbsp;|&nbsp; Lightning &nbsp;|&nbsp; Outlogic
             </div>
           </div>
 
