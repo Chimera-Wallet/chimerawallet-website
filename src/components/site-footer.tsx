@@ -24,7 +24,11 @@ export function SiteFooter() {
                   App Privacy Policy
                 </Link>
               </li>
-              <li>Web Privacy Policy</li>
+              <li>
+                <Link to="/privacy-web" className="hover:text-[var(--brand-green)]">
+                  Web Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
