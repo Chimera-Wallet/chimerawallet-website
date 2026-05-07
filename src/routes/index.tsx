@@ -101,7 +101,7 @@ function Index() {
             <FeatureCard
               iconSrc={earnIcon}
               title="EARN"
-              body="Refer friends and earn a share of platform fees - up to 30%, no cap, no expiry. Not points. Real revenue. P2P loans."
+              body="Refer friends and earn a share of platform fees - up to 20%, no cap, no expiry. Not points. Real revenue. P2P loans."
             />
           </div>
         </div>
