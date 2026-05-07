@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
-import referralPreview from "@/assets/site/referral_preview.png";
-
 export const Route = createFileRoute("/referrals")({
   head: () => ({
     meta: [
@@ -18,11 +16,6 @@ function ReferralsPage() {
   return (
     <main>
       <section className="relative overflow-hidden">
-        <img
-          src={referralPreview}
-          alt="Chimera referral network preview"
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40"
-        />
         <div className="mx-auto max-w-5xl px-6 pt-16 pb-24 text-center">
           <p className="display text-xs tracking-[0.3em] text-[var(--brand-green)]">REFERRALS</p>
           <h1 className="display mx-auto mt-6 text-4xl md:text-6xl">
