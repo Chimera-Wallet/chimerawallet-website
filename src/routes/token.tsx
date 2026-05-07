@@ -160,9 +160,6 @@ function TokenPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
           {[
             ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Chimera Protocol VTXO technology."],
