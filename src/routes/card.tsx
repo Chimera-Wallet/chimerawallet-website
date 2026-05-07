@@ -145,8 +145,11 @@ function CardPage() {
             <Faq q="How do I top up?" />
           </div>
 
-          <div
-            className="mt-12 flex items-center justify-between rounded-2xl border border-white/10 px-6 py-5"
+          <a
+            href="https://app.chimerawallet.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-12 flex items-center justify-between rounded-2xl border border-white/10 px-6 py-5 transition-colors hover:border-white/30"
             style={{ background: "var(--brand-navy-card)" }}
           >
             <div>
@@ -156,7 +159,7 @@ function CardPage() {
               <div className="display mt-1 text-xl">OPEN CHIMERA</div>
             </div>
             <span className="text-xl">↗</span>
-          </div>
+          </a>
         </div>
       </section>
     </main>
