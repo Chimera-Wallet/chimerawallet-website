@@ -1,6 +1,6 @@
-import chimeraLogo from "@/assets/site/Chimera Logo.png";
-import bitcoinLogo from "@/assets/site/Bitcoin logo.svg";
-import lightningLogo from "@/assets/site/Lightning logo.svg";
+import chimeraLogo from "@/assets/site/chimera-logo.png";
+import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
+import lightningLogo from "@/assets/site/lightning-logo.svg";
 import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {

@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import chimeraLogo from "@/assets/site/Chimera Logo.png";
+import chimeraLogo from "@/assets/site/chimera-logo.png";
 
 const navItems = [
   { label: "APP", to: "/app" },

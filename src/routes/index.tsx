@@ -4,15 +4,15 @@ import heroPhoneLeft from "@/assets/site/hero-phone-left.png";
 import heroPhoneRight from "@/assets/site/hero-phone-right.png";
 import wallet1 from "@/assets/site/wallet-1.png";
 import wallet2 from "@/assets/site/wallet-2.png";
-import chimeraCard from "@/assets/site/Chimera Card.png";
-import bitcoinLogo from "@/assets/site/Bitcoin logo.svg";
-import lightningLogo from "@/assets/site/Lightning logo.svg";
-import arkLogo from "@/assets/site/ARK logo.png";
+import chimeraCard from "@/assets/site/chimera-card.png";
+import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
+import lightningLogo from "@/assets/site/lightning-logo.svg";
+import arkLogo from "@/assets/site/ark-logo.png";
 import controlIcon from "@/assets/site/chimera-logo-control.svg";
 import tradeIcon from "@/assets/site/chimera-logo-trade.svg";
 import earnIcon from "@/assets/site/chimera-logo-earn.svg";
 import referralPreview from "@/assets/site/referral_preview.png";
-import cextCoins from "@/assets/site/Coins/coin-front-Chimera 1.png";
+import cextCoins from "@/assets/site/Coins/coin-front-chimera.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
