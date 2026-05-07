@@ -60,7 +60,7 @@ function AboutPage() {
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
           <div>
             <h2 className="display text-2xl">ALL CODE</h2>
-            <p className="display text-3xl md:text-4xl">PUBLIC.</p>
+            <p className="display text-3xl md:text-4xl">PUBLIC AND FREE.</p>
             <p className="mt-6 text-sm text-foreground/85">Every line of code is public on GitHub.<br/>Auditable by anyone, free to fork.</p>
             <p className="mt-4 text-sm text-foreground/85">Financial services run through regulated third parties.<br/>We don't hold your funds. The architecture makes it impossible.</p>
           </div>
