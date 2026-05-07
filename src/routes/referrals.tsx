@@ -39,9 +39,6 @@ function ReferralsPage() {
       <section className="mx-auto max-w-7xl px-6 py-16">
         <h2 className="display text-3xl md:text-5xl">HOW IT WORKS.</h2>
         <p className="display text-2xl text-foreground/80">LOREM IPSUM DOLOR SIT AMET.</p>
-        <p className="mt-6 max-w-4xl text-sm text-muted-foreground">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
           {[
