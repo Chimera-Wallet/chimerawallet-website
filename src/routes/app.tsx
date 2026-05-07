@@ -173,7 +173,7 @@ function AppPage() {
               <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
                 YOUR MONEY. YOUR DEVICE. YOUR RULES.
               </div>
-              <div className="display mt-1 text-xl">OPEN CHIMERA</div>
+                <div className="display mt-1 text-xl">LAUNCH CHIMERA</div>
             </div>
             <span className="text-xl">↗</span>
           </div>
