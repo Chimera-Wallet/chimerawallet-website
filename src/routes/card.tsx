@@ -64,10 +64,7 @@ function CardPage() {
         </div>
       </section>
 
-      <section
-        className="py-20"
-        style={{ background: "linear-gradient(180deg, var(--brand-blue-bright) 0%, var(--brand-blue) 100%)" }}
-      >
+      <section className="py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
           <img src={cardCoins} alt="Chimera card with floating coins" className="aspect-[4/3] w-full object-contain" />
           <div>
