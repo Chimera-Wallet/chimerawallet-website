@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Placeholder } from "@/components/placeholder";
 import cardHero from "@/assets/site/Coins/Chimera-card-2-1.png";
-import cardCoins from "@/assets/site/Coins/Chimera-card-2-3.png";
+import cardCoins from "@/assets/site/Chimera Card.png";
 
 export const Route = createFileRoute("/card")({
   head: () => ({
