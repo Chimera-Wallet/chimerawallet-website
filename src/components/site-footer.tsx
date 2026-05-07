@@ -1,4 +1,6 @@
 import chimeraLogo from "@/assets/site/Chimera Logo.png";
+import bitcoinLogo from "@/assets/site/Bitcoin logo.svg";
+import lightningLogo from "@/assets/site/Lightning logo.svg";
 import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
@@ -11,8 +13,11 @@ export function SiteFooter() {
               <img src={chimeraLogo} alt="Chimera" className="h-10 w-auto object-contain" />
             </div>
             <div className="mt-6 text-xs text-muted-foreground">Powered by:</div>
-            <div className="mt-2 text-xs text-foreground/80">
-              Bitcoin &nbsp;|&nbsp; Chimera &nbsp;|&nbsp; Lightning &nbsp;|&nbsp; Outlogic
+            <div className="mt-3 flex items-center gap-4">
+              <img src={bitcoinLogo} alt="Bitcoin" className="h-5 w-auto object-contain opacity-80" />
+              <img src={chimeraLogo} alt="Chimera" className="h-5 w-auto object-contain opacity-80" />
+              <img src={lightningLogo} alt="Lightning" className="h-5 w-auto object-contain opacity-80" />
+              <span className="text-xs text-foreground/80">Outlogic</span>
             </div>
           </div>
 
