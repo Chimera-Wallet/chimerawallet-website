@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
 import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
+import arkLogo from "@/assets/site/ARK logo.png";
 
 export const Route = createFileRoute("/app")({
   head: () => ({
@@ -128,7 +129,7 @@ function AppPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 text-center">
-        <Placeholder label="Arkade logo mark" className="mx-auto h-16 w-16" />
+        <img src={arkLogo} alt="Arkade" className="mx-auto h-16 w-auto object-contain" />
         <h2 className="display mt-6 text-3xl md:text-5xl">
           ARKADE SWAP
           <br />
