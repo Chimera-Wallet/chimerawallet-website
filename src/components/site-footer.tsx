@@ -1,3 +1,5 @@
+import chimeraLogo from "@/assets/site/Chimera Logo.png";
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-white/5 bg-[var(--brand-navy-deep)] text-foreground">
@@ -5,8 +7,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-2">
-              <div className="placeholder-box h-10 w-10 !p-0 text-[9px]">LOGO</div>
-              <span className="display text-lg tracking-widest">CHIMERA</span>
+              <img src={chimeraLogo} alt="Chimera" className="h-10 w-auto object-contain" />
             </div>
             <div className="mt-6 text-xs text-muted-foreground">Powered by:</div>
             <div className="mt-2 text-xs text-foreground/80">
