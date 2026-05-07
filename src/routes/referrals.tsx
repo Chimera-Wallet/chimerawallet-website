@@ -1,5 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
+import bronzeBadge from "@/assets/site/Tiers/Bronze.png";
+import silverBadge from "@/assets/site/Tiers/Silver.png";
+import goldBadge from "@/assets/site/Tiers/Gold.png";
+import diamondBadge from "@/assets/site/Tiers/Diamond.png";
 export const Route = createFileRoute("/referrals")({
   head: () => ({
     meta: [
@@ -60,9 +64,14 @@ function ReferralsPage() {
         <p className="display mt-2 text-xl text-foreground/80">THE HIGHER YOUR TIER, THE BIGGER YOUR CUT.</p>
 
         <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-          {[["BRONZE","1x"],["SILVER","1.5x"],["GOLD","2x"],["DIAMOND","3x"]].map(([n,m]) => (
+          {[
+            { n: "BRONZE", m: "1x", img: bronzeBadge },
+            { n: "SILVER", m: "1.5x", img: silverBadge },
+            { n: "GOLD", m: "2x", img: goldBadge },
+            { n: "DIAMOND", m: "3x", img: diamondBadge },
+          ].map(({ n, m, img }) => (
             <div key={n} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
-              <Placeholder label={`${n} badge`} className="mx-auto h-24 w-24 text-[8px]" />
+              <img src={img} alt={`${n} tier badge`} className="mx-auto h-24 w-24 object-contain" />
               <h3 className="display mt-4 text-2xl">{n}</h3>
               <div className="mt-3 border-t border-white/10 pt-3">
                 <div className="display text-xl">{m}</div>

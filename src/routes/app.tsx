@@ -2,6 +2,17 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
 import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
 import arkLogo from "@/assets/site/ARK logo.png";
+import coinChimera from "@/assets/site/Coins/coin-front-Chimera 1.png";
+import coinBitcoin from "@/assets/site/Coins/coin-front-Bitcoin 1.png";
+import coinTether from "@/assets/site/Coins/coin-front-Tether 1.png";
+import coinEthereum from "@/assets/site/Coins/coin-front-Ethereum 1.png";
+import coinTron from "@/assets/site/Coins/coin-front-Tron 1.png";
+import coinPolygon from "@/assets/site/Coins/coin-front-Polygon 1.png";
+import iconBolt from "@/assets/site/Icons/icon_Bolt.svg";
+import iconPaperplane from "@/assets/site/Icons/icon_Paperplane.svg";
+import iconFaceID from "@/assets/site/Icons/icon_FaceID.svg";
+import iconCard from "@/assets/site/Icons/icon_Card.svg";
+import cardSwap from "@/assets/site/Coins/Chimera-card-2-3.png";
 
 export const Route = createFileRoute("/app")({
   head: () => ({
@@ -85,8 +96,15 @@ function AppPage() {
 
         {/* asset row */}
         <div className="mt-16 grid grid-cols-3 gap-6 sm:grid-cols-6">
-          {["Chimera", "BTC", "USDT", "ETH", "TRON", "POLYGON"].map((a) => (
-            <Placeholder key={a} label={`${a} icon`} className="aspect-square" />
+          {[
+            { a: "Chimera", img: coinChimera },
+            { a: "BTC", img: coinBitcoin },
+            { a: "USDT", img: coinTether },
+            { a: "ETH", img: coinEthereum },
+            { a: "TRON", img: coinTron },
+            { a: "POLYGON", img: coinPolygon },
+          ].map(({ a, img }) => (
+            <img key={a} src={img} alt={`${a} coin`} className="aspect-square w-full object-contain" />
           ))}
         </div>
       </section>
@@ -94,12 +112,12 @@ function AppPage() {
       <section className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <Tile
-            iconLabel="Bolt icon"
+            icon={iconBolt}
             title={<>WHAT <span className="text-[var(--brand-green)]">YOU GET</span></>}
             body="Bitcoin. Lightning. Arkade. All in one — and nothing missing. Mainchain for settlement. Lightning for instant payments. Arkade Protocol for the next generation. No switching apps. No compromise."
           />
           <Tile
-            iconLabel="Send icon"
+            icon={iconPaperplane}
             title={
               <>
                 NO CHANNELS. NO SETUP.
@@ -110,12 +128,12 @@ function AppPage() {
             body="Arkade eliminates Lightning's most painful friction. No inbound liquidity. No channel opens. Receive from day one."
           />
           <Tile
-            iconLabel="ID icon"
+            icon={iconFaceID}
             title={<><span className="text-[var(--brand-green)]">NO ID</span> REQUIRED.</>}
             body="Access your wallet in minutes. Start trading. KYC kicks in above CHF 1,000 per month."
           />
           <Tile
-            iconLabel="Phone icon"
+            icon={iconCard}
             title={
               <>
                 MULTI-ASSET.
@@ -136,7 +154,7 @@ function AppPage() {
           AND WRAPPED ASSETS
         </h2>
         <p className="display mt-3 text-xl tracking-widest text-[var(--brand-green)]">COMING SOON</p>
-        <Placeholder label="Phone mockup — Card swap" className="mx-auto mt-10 aspect-[3/5] w-64" />
+        <img src={cardSwap} alt="Chimera card swap" className="mx-auto mt-10 w-72 object-contain" />
       </section>
 
       <section
@@ -160,17 +178,17 @@ function AppPage() {
 }
 
 function Tile({
-  iconLabel,
+  icon,
   title,
   body,
 }: {
-  iconLabel: string;
+  icon: string;
   title: React.ReactNode;
   body: string;
 }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-8">
-      <Placeholder label={iconLabel} className="h-10 w-10 text-[8px]" />
+      <img src={icon} alt="" className="h-10 w-10 object-contain" />
       <h3 className="display mt-6 text-2xl">{title}</h3>
       <p className="mt-4 text-sm text-foreground/80">{body}</p>
     </div>
