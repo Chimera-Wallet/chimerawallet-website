@@ -34,8 +34,16 @@ export function SiteFooter() {
           <div>
             <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">SUPPORT</h4>
             <ul className="mt-4 space-y-2 text-sm text-foreground/90">
-              <li>Chimera API Documentation</li>
-              <li>Support Center</li>
+              <li>
+                <a href="https://docs.outlogic.net/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--brand-green)]">
+                  Chimera API Documentation
+                </a>
+              </li>
+              <li>
+                <a href="https://support.chimerawallet.com/en/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--brand-green)]">
+                  Support Center
+                </a>
+              </li>
             </ul>
           </div>
         </div>
