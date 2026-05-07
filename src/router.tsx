@@ -1,8 +1,27 @@
 import { createRouter, useRouter } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { routeTree } from "./routeTree.gen";
+
+const STALE_CHUNK_RELOAD_KEY = "chimera:stale-chunk-reload-attempted";
+
+function isStaleChunkError(error: Error) {
+  return /Failed to fetch dynamically imported module|error loading dynamically imported module|Importing a module script failed|ChunkLoadError|Loading chunk \d+ failed/i.test(
+    error.message,
+  );
+}
 
 function DefaultErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   const router = useRouter();
+  const staleChunkError = isStaleChunkError(error);
+
+  useEffect(() => {
+    if (!staleChunkError || typeof window === "undefined") return;
+
+    if (window.sessionStorage.getItem(STALE_CHUNK_RELOAD_KEY) === "true") return;
+
+    window.sessionStorage.setItem(STALE_CHUNK_RELOAD_KEY, "true");
+    window.location.reload();
+  }, [staleChunkError]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -25,7 +44,9 @@ function DefaultErrorComponent({ error, reset }: { error: Error; reset: () => vo
         </div>
         <h1 className="text-2xl font-bold tracking-tight text-foreground">Something went wrong</h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          An unexpected error occurred. Please try again.
+          {staleChunkError
+            ? "The app updated while this page was loading. Please refresh once."
+            : "An unexpected error occurred. Please try again."}
         </p>
         {import.meta.env.DEV && error.message && (
           <pre className="mt-4 max-h-40 overflow-auto rounded-md bg-muted p-3 text-left font-mono text-xs text-destructive">
@@ -35,6 +56,12 @@ function DefaultErrorComponent({ error, reset }: { error: Error; reset: () => vo
         <div className="mt-6 flex items-center justify-center gap-3">
           <button
             onClick={() => {
+              if (staleChunkError && typeof window !== "undefined") {
+                window.sessionStorage.removeItem(STALE_CHUNK_RELOAD_KEY);
+                window.location.reload();
+                return;
+              }
+
               router.invalidate();
               reset();
             }}
