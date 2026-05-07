@@ -4,6 +4,10 @@ import heroPhoneLeft from "@/assets/site/hero-phone-left.png";
 import heroPhoneRight from "@/assets/site/hero-phone-right.png";
 import wallet1 from "@/assets/site/wallet-1.png";
 import wallet2 from "@/assets/site/wallet-2.png";
+import chimeraCard from "@/assets/site/Chimera Card.png";
+import bitcoinLogo from "@/assets/site/Bitcoin logo.svg";
+import lightningLogo from "@/assets/site/Lightning logo.svg";
+import arkLogo from "@/assets/site/ARK logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -116,17 +120,17 @@ function Index() {
 
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
             <LayerCard
-              icon="₿"
+              iconSrc={bitcoinLogo}
               title="MAINCHAIN"
               body="Full BTC on-chain deposits and withdrawals and Fiat on/off ramp via third party providers."
             />
             <LayerCard
-              icon="▲"
+              iconSrc={arkLogo}
               title="ARK PROTOCOL"
               body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on ARK Protocol."
             />
             <LayerCard
-              icon="⚡"
+              iconSrc={lightningLogo}
               title="LIGHTNING"
               body="Full Lightning invoice support, enhanced by Boltz. Every merchant, every exchange, zero channel management."
             />
@@ -180,7 +184,11 @@ function Index() {
         style={{ background: "linear-gradient(180deg, var(--brand-blue-bright) 0%, var(--brand-blue) 100%)" }}
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
-          <Placeholder label="Card + floating coins" className="aspect-[4/3]" />
+          <img
+            src={chimeraCard}
+            alt="Chimera card with floating crypto coins"
+            className="w-full h-auto rounded-2xl"
+          />
           <div>
             <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY DOESN'T STOP AT THE CHECKOUT.</h2>
             <p className="mt-6 text-sm text-foreground/85">
@@ -290,10 +298,10 @@ function FeatureCard({ title, body }: { title: string; body: string }) {
   );
 }
 
-function LayerCard({ icon, title, body }: { icon: string; title: string; body: string }) {
+function LayerCard({ iconSrc, title, body }: { iconSrc: string; title: string; body: string }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)]/80 p-6 backdrop-blur">
-      <div className="text-2xl text-[var(--brand-green)]">{icon}</div>
+      <img src={iconSrc} alt="" className="h-10 w-10 object-contain" />
       <h3 className="display mt-3 text-xl text-[var(--brand-green)]">{title}</h3>
       <p className="mt-3 text-sm text-foreground/80">{body}</p>
     </div>
