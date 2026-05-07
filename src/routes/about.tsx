@@ -39,8 +39,8 @@ function AboutPage() {
       <section className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
-            <img src={arkLogo} alt="ARK logo" className="h-10 w-10 object-contain" />
-            <div className="mt-6 text-xs tracking-widest text-foreground/80">ARK MAINNET<br/>LIVE SINCE</div>
+            <img src={arkLogo} alt="Arkade logo" className="h-10 w-10 object-contain" />
+            <div className="mt-6 text-xs tracking-widest text-foreground/80">ARKADE MAINNET<br/>LIVE SINCE</div>
             <div className="display mt-2 text-2xl text-[var(--brand-green)]">OCTOBER 2025</div>
           </div>
           <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
