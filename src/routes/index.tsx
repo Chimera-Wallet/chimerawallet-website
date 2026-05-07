@@ -55,11 +55,6 @@ function Index() {
                 <br />
                 Your keys. Nobody in between.
               </p>
-              <div className="mt-8 flex justify-center">
-                <button className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10">
-                  JOIN THE WAITLIST
-                </button>
-              </div>
             </div>
             <img src={heroPhoneRight} alt="Chimera card balance and transactions" className="hidden lg:block w-full h-auto" />
           </div>
