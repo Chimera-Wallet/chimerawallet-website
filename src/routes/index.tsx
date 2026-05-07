@@ -21,13 +21,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "The only Bitcoin super-app built so nobody can ever take your money away. Mainchain. Lightning. ARK Protocol. One app.",
+          "The only Bitcoin super-app built so nobody can ever take your money away. Mainchain. Lightning. Arkade Protocol. One app.",
       },
       { property: "og:title", content: "Chimera — The Bitcoin Super-App" },
       {
         property: "og:description",
         content:
-          "The only Bitcoin super-app built so nobody can ever take your money away. Mainchain. Lightning. ARK Protocol. One app.",
+          "The only Bitcoin super-app built so nobody can ever take your money away. Mainchain. Lightning. Arkade Protocol. One app.",
       },
     ],
   }),
@@ -51,7 +51,7 @@ function Index() {
               </h1>
               <p className="mt-6 text-base text-foreground/80">Not a promise. Not a policy. Mathematics.</p>
               <p className="mt-2 text-sm text-muted-foreground">
-                Mainchain. Lightning. ARK Protocol. One app.
+                Mainchain. Lightning. Arkade Protocol. One app.
                 <br />
                 Your keys. Nobody in between.
               </p>
@@ -96,12 +96,12 @@ function Index() {
             <FeatureCard
               iconSrc={controlIcon}
               title="CONTROL"
-              body="Your keys. Your coins. Full stop. Bitcoin mainchain, Lightning, ARK Protocol VTXO - the complete Bitcoin stack, non-custodial from the first second to the last."
+              body="Your keys. Your coins. Full stop. Bitcoin mainchain, Lightning, Arkade Protocol VTXO - the complete Bitcoin stack, non-custodial from the first second to the last."
             />
             <FeatureCard
               iconSrc={tradeIcon}
               title="TRADE"
-              body="Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial ARK swaps coming soon."
+              body="Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial Arkade swaps coming soon."
             />
             <FeatureCard
               iconSrc={earnIcon}
@@ -134,8 +134,8 @@ function Index() {
             />
             <LayerCard
               iconSrc={arkLogo}
-              title="ARK PROTOCOL"
-              body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on ARK Protocol."
+              title="ARKADE PROTOCOL"
+              body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Arkade Protocol."
             />
             <LayerCard
               iconSrc={lightningLogo}
@@ -146,9 +146,9 @@ function Index() {
         </div>
       </section>
 
-      {/* ARK PROTOCOL — comparison */}
+      {/* ARKADE PROTOCOL — comparison */}
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <h2 className="display text-center text-4xl md:text-5xl">ARK PROTOCOL</h2>
+        <h2 className="display text-center text-4xl md:text-5xl">ARKADE PROTOCOL</h2>
         <p className="display mt-2 text-center text-xl tracking-widest text-foreground/80">BACKED BY THE BEST</p>
         <p className="mt-3 text-center text-sm text-muted-foreground">$7.7M raised across two rounds.</p>
 
@@ -174,7 +174,7 @@ function Index() {
             ]}
           />
           <ComparisonCard
-            title="ARK"
+            title="ARKADE"
             rows={[
               ["Non-custodial", "Custody"],
               ["Instant", "Speed"],
