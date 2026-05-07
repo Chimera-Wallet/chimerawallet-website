@@ -7,7 +7,7 @@ import cextIcon from "@/assets/site/Coins/coin-front-Chimera 1.png";
 import bnbIcon from "@/assets/site/Icons/bnb-bnb-logo 2.svg";
 import kcsIcon from "@/assets/site/Icons/kucoin-token-kcs-logo 1.svg";
 import okbIcon from "@/assets/site/Icons/okb-okb-logo 1.svg";
-import floatingCoins from "@/assets/site/Coins/coin-front-Chimera 1.png";
+import floatingCoins from "@/assets/site/airdrop.png";
 import pieChart from "@/assets/site/pie_chart.png";
 
 export const Route = createFileRoute("/token")({
@@ -206,10 +206,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <div
-          className="rounded-2xl p-10"
-          style={{ background: "linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-bright) 100%)" }}
-        >
+        <div className="rounded-2xl p-10">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             <img src={floatingCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain" />
             <div>
