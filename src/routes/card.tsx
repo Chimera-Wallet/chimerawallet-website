@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Placeholder } from "@/components/placeholder";
+import cardHero from "@/assets/site/Coins/Chimera-card-2-1.png";
+import cardCoins from "@/assets/site/Coins/Chimera-card-2-4.png";
 
 export const Route = createFileRoute("/card")({
   head: () => ({
@@ -41,7 +43,7 @@ function CardPage() {
         <button className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10">
           RESERVE YOUR CARD
         </button>
-        <Placeholder label="Three Chimera cards (hero)" className="mx-auto mt-10 aspect-[16/7] w-full" />
+        <img src={cardHero} alt="Chimera cards" className="mx-auto mt-10 w-full object-contain" />
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-6">
@@ -67,7 +69,7 @@ function CardPage() {
         style={{ background: "linear-gradient(180deg, var(--brand-blue-bright) 0%, var(--brand-blue) 100%)" }}
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
-          <Placeholder label="Card + floating coins" className="aspect-[4/3]" />
+          <img src={cardCoins} alt="Chimera card with floating coins" className="aspect-[4/3] w-full object-contain" />
           <div>
             <h2 className="display text-4xl md:text-5xl">1,000 SPOTS.</h2>
             <p className="display mt-1 text-2xl text-foreground/80">THAT'S IT.</p>
