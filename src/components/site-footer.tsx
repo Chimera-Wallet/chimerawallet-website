@@ -67,7 +67,7 @@ export function SiteFooter() {
         </p>
 
         <div className="mt-8 border-t border-white/5 pt-6 text-xs text-muted-foreground">
-          © 2026 Chimera. All right reserved. Made with ❤️ in 🇨🇭
+          © 2026 Chimera Software Association - 6900 Lugano Switzerland. All right reserved. Made with ❤️ in 🇨🇭
         </div>
       </div>
     </footer>
