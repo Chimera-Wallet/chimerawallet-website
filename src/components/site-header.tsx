@@ -48,7 +48,7 @@ export function SiteHeader() {
         </Sheet>
 
         <Link to="/" className="flex items-center justify-center md:justify-start">
-          <img src={chimeraLogo} alt="Chimera" className="h-10 w-auto" />
+          <img src={chimeraLogo} alt="Chimera" className="h-14 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2 py-1.5">
