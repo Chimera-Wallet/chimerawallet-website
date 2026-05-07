@@ -121,7 +121,7 @@ function TokenPage() {
             { name: "DIAMOND", img: diamondBadge, balance: "≥ 10,000,000 CEXT", fee: "50%", ref: "3x", sup: "Direct", news: "+24 Hours", list: "Full + Proposal Rights" },
           ].map((t) => (
             <div key={t.name} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
-              <img src={t.img} alt={`${t.name} tier badge`} className="mx-auto h-20 w-20 object-contain" />
+              <img src={t.img} alt={`${t.name} tier badge`} className="mx-auto h-32 w-32 object-contain" />
               <h3 className="display mt-4 text-2xl">{t.name}</h3>
               <div className="mt-3 text-xs text-muted-foreground">{t.balance}<br/>Average Locked Balance</div>
               <Row v={t.fee} l="Trading Fee Discount" />
