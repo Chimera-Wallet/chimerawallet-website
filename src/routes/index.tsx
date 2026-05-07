@@ -195,7 +195,7 @@ function Index() {
           <div>
             <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY DOESN'T STOP AT THE CHECKOUT.</h2>
             <p className="mt-6 text-sm text-foreground/85">
-              Your Bitcoin stays yours until the exact moment you tap. Zero monthly fee. Zero top-up fee. 1.5%
+              Zero monthly fee. Zero top-up fee. 1.5%
               transaction fee locked for life. First 1,000 pre-orders only.
             </p>
             <button
