@@ -128,9 +128,6 @@ function TokenPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <h2 className="display text-center text-3xl md:text-5xl">LOREM IPSUM</h2>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
         <p className="display text-center text-2xl text-foreground/80">DOLOR SIT AMET.</p>
         <p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
