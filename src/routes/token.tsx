@@ -214,7 +214,7 @@ function TokenPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <h2 className="display text-3xl md:text-5xl">WHITE PAPER.</h2>
-        <p className="display text-2xl text-foreground/80 uppercase">Exchange Tokens Comparison</p>
+        <p className="display text-2xl text-foreground/80 uppercase">4 tiers - many advantages</p>
         <p className="mt-4 max-w-4xl text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
         </p>
