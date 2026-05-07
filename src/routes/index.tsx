@@ -219,7 +219,7 @@ function Index() {
               The more you hold, the harder the platform works for you.
             </p>
             <p className="mt-3 text-sm text-muted-foreground">
-              1 Billion fixed supply. Four tiers/Four tiers. Fee discounts up to 60%. Referral multipliers up to
+              1 Billion fixed supply. Fee discounts up to 60%. Referral multipliers up to
               3×. Governance at Diamond tier. Zero inflation. Classified as a utility token under the Swiss
               regulation.
             </p>
