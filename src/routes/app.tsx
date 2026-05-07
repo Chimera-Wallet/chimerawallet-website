@@ -21,13 +21,13 @@ export const Route = createFileRoute("/app")({
       {
         name: "description",
         content:
-          "Chimera Wallet runs in your browser. Bitcoin, Lightning and Arkade in one progressive web app.",
+          "Chimera Wallet runs in your browser. Bitcoin, Lightning and Chimera in one progressive web app.",
       },
       { property: "og:title", content: "Chimera App — Progressive Web App" },
       {
         property: "og:description",
         content:
-          "Chimera Wallet runs in your browser. Bitcoin, Lightning and Arkade in one progressive web app.",
+          "Chimera Wallet runs in your browser. Bitcoin, Lightning and Chimera in one progressive web app.",
       },
     ],
   }),
@@ -114,7 +114,7 @@ function AppPage() {
           <Tile
             icon={iconBolt}
             title={<>WHAT <span className="text-[var(--brand-green)]">YOU GET</span></>}
-            body="Bitcoin. Lightning. Arkade. All in one — and nothing missing. Mainchain for settlement. Lightning for instant payments. Arkade Protocol for the next generation. No switching apps. No compromise."
+            body="Bitcoin. Lightning. Chimera. All in one — and nothing missing. Mainchain for settlement. Lightning for instant payments. Chimera Protocol for the next generation. No switching apps. No compromise."
           />
           <Tile
             icon={iconPaperplane}
@@ -125,7 +125,7 @@ function AppPage() {
                 <span className="text-[var(--brand-green)]">JUST SEND.</span>
               </>
             }
-            body="Arkade eliminates Lightning's most painful friction. No inbound liquidity. No channel opens. Receive from day one."
+            body="Chimera eliminates Lightning's most painful friction. No inbound liquidity. No channel opens. Receive from day one."
           />
           <Tile
             icon={iconFaceID}
@@ -147,9 +147,9 @@ function AppPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 text-center">
-        <img src={arkLogo} alt="Arkade" className="mx-auto h-16 w-auto object-contain" />
+        <img src={arkLogo} alt="Chimera" className="mx-auto h-16 w-auto object-contain" />
         <h2 className="display mt-6 text-3xl md:text-5xl">
-          ARKADE SWAP
+          CHIMERA SWAP
           <br />
           AND WRAPPED ASSETS
         </h2>

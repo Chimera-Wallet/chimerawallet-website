@@ -39,8 +39,8 @@ function AboutPage() {
       <section className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
-            <img src={arkLogo} alt="Arkade logo" className="h-10 w-10 object-contain" />
-            <div className="mt-6 text-xs tracking-widest text-foreground/80">ARKADE MAINNET<br/>LIVE SINCE</div>
+            <img src={arkLogo} alt="Chimera logo" className="h-10 w-10 object-contain" />
+            <div className="mt-6 text-xs tracking-widest text-foreground/80">CHIMERA MAINNET<br/>LIVE SINCE</div>
             <div className="display mt-2 text-2xl text-[var(--brand-green)]">OCTOBER 2025</div>
           </div>
           <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
@@ -49,7 +49,7 @@ function AboutPage() {
             <p className="mt-2 text-xs text-muted-foreground">THREE YEARS OF R&amp;D BEFORE PUBLIC MAINNET.</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
-            <div className="text-xs tracking-widest text-foreground/80">ARKADE PROTOCOL RAISED</div>
+            <div className="text-xs tracking-widest text-foreground/80">CHIMERA PROTOCOL RAISED</div>
             <div className="display mt-2 text-3xl">$7.7M.</div>
             <p className="mt-2 text-xs text-muted-foreground">THE INFRASTRUCTURE CHIMERA IS BUILT ON IS TRUSTED BY THE BEST IN THE SPACE.</p>
           </div>
