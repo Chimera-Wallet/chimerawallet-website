@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TokenRouteImport } from './routes/token'
 import { Route as ReferralsRouteImport } from './routes/referrals'
+import { Route as PrivacyAppRouteImport } from './routes/privacy-app'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as CardRouteImport } from './routes/card'
 import { Route as AppRouteImport } from './routes/app'
@@ -25,6 +26,11 @@ const TokenRoute = TokenRouteImport.update({
 const ReferralsRoute = ReferralsRouteImport.update({
   id: '/referrals',
   path: '/referrals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyAppRoute = PrivacyAppRouteImport.update({
+  id: '/privacy-app',
+  path: '/privacy-app',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NewsRoute = NewsRouteImport.update({
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/app': typeof AppRoute
   '/card': typeof CardRoute
   '/news': typeof NewsRoute
+  '/privacy-app': typeof PrivacyAppRoute
   '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/app': typeof AppRoute
   '/card': typeof CardRoute
   '/news': typeof NewsRoute
+  '/privacy-app': typeof PrivacyAppRoute
   '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/app': typeof AppRoute
   '/card': typeof CardRoute
   '/news': typeof NewsRoute
+  '/privacy-app': typeof PrivacyAppRoute
   '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
 }
@@ -89,10 +98,19 @@ export interface FileRouteTypes {
     | '/app'
     | '/card'
     | '/news'
+    | '/privacy-app'
     | '/referrals'
     | '/token'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/app' | '/card' | '/news' | '/referrals' | '/token'
+  to:
+    | '/'
+    | '/about'
+    | '/app'
+    | '/card'
+    | '/news'
+    | '/privacy-app'
+    | '/referrals'
+    | '/token'
   id:
     | '__root__'
     | '/'
@@ -100,6 +118,7 @@ export interface FileRouteTypes {
     | '/app'
     | '/card'
     | '/news'
+    | '/privacy-app'
     | '/referrals'
     | '/token'
   fileRoutesById: FileRoutesById
@@ -110,6 +129,7 @@ export interface RootRouteChildren {
   AppRoute: typeof AppRoute
   CardRoute: typeof CardRoute
   NewsRoute: typeof NewsRoute
+  PrivacyAppRoute: typeof PrivacyAppRoute
   ReferralsRoute: typeof ReferralsRoute
   TokenRoute: typeof TokenRoute
 }
@@ -128,6 +148,13 @@ declare module '@tanstack/react-router' {
       path: '/referrals'
       fullPath: '/referrals'
       preLoaderRoute: typeof ReferralsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-app': {
+      id: '/privacy-app'
+      path: '/privacy-app'
+      fullPath: '/privacy-app'
+      preLoaderRoute: typeof PrivacyAppRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/news': {
@@ -174,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   AppRoute: AppRoute,
   CardRoute: CardRoute,
   NewsRoute: NewsRoute,
+  PrivacyAppRoute: PrivacyAppRoute,
   ReferralsRoute: ReferralsRoute,
   TokenRoute: TokenRoute,
 }
