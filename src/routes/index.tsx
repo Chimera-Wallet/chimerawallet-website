@@ -12,6 +12,7 @@ import controlIcon from "@/assets/site/chimera-logo-control.svg";
 import tradeIcon from "@/assets/site/chimera-logo-trade.svg";
 import earnIcon from "@/assets/site/chimera-logo-earn.svg";
 import referralPreview from "@/assets/site/referral_preview.png";
+import cextCoins from "@/assets/site/Coins/coin-front-Chimera 1.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -215,7 +216,7 @@ function Index() {
       {/* CEXT TOKEN PREVIEW */}
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_1.4fr]">
-          <Placeholder label="Floating CEXT coins" className="aspect-square" />
+          <img src={cextCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain" />
           <div>
             <h2 className="display text-3xl md:text-4xl">CEXT TOKEN</h2>
             <p className="display text-3xl md:text-4xl text-foreground/70">PREVIEW.</p>
