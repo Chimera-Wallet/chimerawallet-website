@@ -43,7 +43,7 @@ function CardPage() {
         <button className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10">
           RESERVE YOUR CARD
         </button>
-        <img src={cardHero} alt="Chimera cards" className="mx-auto mt-10 w-full object-contain" />
+        <img src={cardHero} alt="Chimera cards" className="mx-auto mt-10 w-full max-w-md object-contain" />
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-6">
