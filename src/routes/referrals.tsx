@@ -71,7 +71,7 @@ function ReferralsPage() {
             { n: "DIAMOND", m: "3x", img: diamondBadge },
           ].map(({ n, m, img }) => (
             <div key={n} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
-              <img src={img} alt={`${n} tier badge`} className="mx-auto h-24 w-24 object-contain" />
+              <img src={img} alt={`${n} tier badge`} className="mx-auto h-40 w-40 object-contain" />
               <h3 className="display mt-4 text-2xl">{n}</h3>
               <div className="mt-3 border-t border-white/10 pt-3">
                 <div className="display text-xl">{m}</div>
