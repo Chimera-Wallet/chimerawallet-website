@@ -64,13 +64,7 @@ function TokenPage() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div>
             <h3 className="display text-xl">Token distribution</h3>
-            <Placeholder label="Pie chart: 90/4/3/3" className="mt-4 aspect-square" />
-            <ul className="mt-4 space-y-1 text-sm">
-              <li>• 90% Community</li>
-              <li>• 4% Foundation &amp; Liquidity</li>
-              <li>• 3% Team</li>
-              <li>• 3% Partners</li>
-            </ul>
+            <TokenPie />
           </div>
           <div>
             <h3 className="display text-xl">Token overview</h3>
