@@ -8,6 +8,9 @@ import chimeraCard from "@/assets/site/Chimera Card.png";
 import bitcoinLogo from "@/assets/site/Bitcoin logo.svg";
 import lightningLogo from "@/assets/site/Lightning logo.svg";
 import arkLogo from "@/assets/site/ARK logo.png";
+import controlIcon from "@/assets/site/chimera-logo-control.svg";
+import tradeIcon from "@/assets/site/chimera-logo-trade.svg";
+import earnIcon from "@/assets/site/chimera-logo-earn.svg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -89,14 +92,17 @@ function Index() {
           </div>
           <div className="space-y-4">
             <FeatureCard
+              iconSrc={controlIcon}
               title="CONTROL"
               body="Your keys. Your coins. Full stop. Bitcoin mainchain, Lightning, ARK Protocol VTXO - the complete Bitcoin stack, non-custodial from the first second to the last."
             />
             <FeatureCard
+              iconSrc={tradeIcon}
               title="TRADE"
               body="Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial ARK swaps coming soon."
             />
             <FeatureCard
+              iconSrc={earnIcon}
               title="EARN"
               body="Refer friends and earn a share of platform fees - up to 30%, no cap, no expiry. Not points. Real revenue. P2P loans."
             />
@@ -288,10 +294,10 @@ function CtaCard({
   );
 }
 
-function FeatureCard({ title, body }: { title: string; body: string }) {
+function FeatureCard({ iconSrc, title, body }: { iconSrc: string; title: string; body: string }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
-      <div className="text-2xl text-[var(--brand-green)]">||</div>
+      <img src={iconSrc} alt="" className="h-10 w-auto object-contain" />
       <h3 className="display mt-3 text-2xl text-[var(--brand-green)]">{title}</h3>
       <p className="mt-3 text-sm text-foreground/80">{body}</p>
     </div>
