@@ -1,5 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
+import bronzeBadge from "@/assets/site/Tiers/Bronze.png";
+import silverBadge from "@/assets/site/Tiers/Silver.png";
+import goldBadge from "@/assets/site/Tiers/Gold.png";
+import diamondBadge from "@/assets/site/Tiers/Diamond.png";
+import cextIcon from "@/assets/site/Coins/coin-front-Chimera 1.png";
+import bnbIcon from "@/assets/site/Icons/bnb-bnb-logo 2.svg";
+import kcsIcon from "@/assets/site/Icons/kucoin-token-kcs-logo 1.svg";
+import okbIcon from "@/assets/site/Icons/okb-okb-logo 1.svg";
+import floatingCoins from "@/assets/site/Coins/coin-front-Chimera 1.png";
 
 export const Route = createFileRoute("/token")({
   head: () => ({
@@ -106,13 +115,13 @@ function TokenPage() {
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
           {[
-            { name: "BRONZE", balance: "≥ 10,000 CEXT", fee: "20%", ref: "1x", sup: "Standard", news: "Public", list: "Basic" },
-            { name: "SILVER", balance: "≥ 100,000 CEXT", fee: "30%", ref: "1.5x", sup: "Priority", news: "+12 Hours", list: "Moderate" },
-            { name: "GOLD", balance: "≥ 1,000,000 CEXT", fee: "40%", ref: "2x", sup: "Premium", news: "+24 Hours", list: "High" },
-            { name: "DIAMOND", balance: "≥ 10,000,000 CEXT", fee: "50%", ref: "3x", sup: "Direct", news: "+24 Hours", list: "Full + Proposal Rights" },
+            { name: "BRONZE", img: bronzeBadge, balance: "≥ 10,000 CEXT", fee: "20%", ref: "1x", sup: "Standard", news: "Public", list: "Basic" },
+            { name: "SILVER", img: silverBadge, balance: "≥ 100,000 CEXT", fee: "30%", ref: "1.5x", sup: "Priority", news: "+12 Hours", list: "Moderate" },
+            { name: "GOLD", img: goldBadge, balance: "≥ 1,000,000 CEXT", fee: "40%", ref: "2x", sup: "Premium", news: "+24 Hours", list: "High" },
+            { name: "DIAMOND", img: diamondBadge, balance: "≥ 10,000,000 CEXT", fee: "50%", ref: "3x", sup: "Direct", news: "+24 Hours", list: "Full + Proposal Rights" },
           ].map((t) => (
             <div key={t.name} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
-              <Placeholder label={`${t.name} badge`} className="mx-auto h-20 w-20 text-[8px]" />
+              <img src={t.img} alt={`${t.name} tier badge`} className="mx-auto h-20 w-20 object-contain" />
               <h3 className="display mt-4 text-2xl">{t.name}</h3>
               <div className="mt-3 text-xs text-muted-foreground">{t.balance}<br/>Average Locked Balance</div>
               <Row v={t.fee} l="Trading Fee Discount" />
@@ -141,9 +150,14 @@ function TokenPage() {
         </p>
 
         <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-          {["CEXT", "BNB", "KCS", "OKB"].map((n) => (
+          {[
+            { n: "CEXT", icon: cextIcon },
+            { n: "BNB", icon: bnbIcon },
+            { n: "KCS", icon: kcsIcon },
+            { n: "OKB", icon: okbIcon },
+          ].map(({ n, icon }) => (
             <div key={n} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
-              <Placeholder label={`${n} icon`} className="mx-auto h-16 w-16 text-[8px]" />
+              <img src={icon} alt={`${n} logo`} className="mx-auto h-16 w-16 object-contain" />
               <h3 className="display mt-4 text-xl">{n}</h3>
               <Row v="50%" l="Max Fee Discount" />
               <Row v="20%" l="Referral Bonus" />
@@ -203,7 +217,7 @@ function TokenPage() {
           style={{ background: "linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-bright) 100%)" }}
         >
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-            <Placeholder label="Floating CEXT coins" className="aspect-square" />
+            <img src={floatingCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain" />
             <div>
               <h3 className="display text-3xl">CEXT</h3>
               <p className="display text-2xl text-foreground/80">ACTIVITY AIRDROP.</p>
