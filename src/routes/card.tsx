@@ -10,14 +10,12 @@ export const Route = createFileRoute("/card")({
       { title: "Chimera Card — Self-custody Visa" },
       {
         name: "description",
-        content:
-          "Chimera Card bridges self-custody with real-world purchases. Reserve your spot — first 1,000 only.",
+        content: "Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.",
       },
       { property: "og:title", content: "Chimera Card — Self-custody Visa" },
       {
         property: "og:description",
-        content:
-          "Chimera Card bridges self-custody with real-world purchases. Reserve your spot — first 1,000 only.",
+        content: "Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.",
       },
     ],
   }),
@@ -35,10 +33,7 @@ function CardPage() {
           VISA IN YOUR POCKET.
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
-          Your Bitcoin stays yours until the exact moment you tap and top up your card.
-        </p>
-        <p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground">
-          Chimera Card bridges self-custody with real-world purchases.
+          Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
         </p>
         <button className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10">
           RESERVE YOUR CARD
