@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
+import arkLogo from "@/assets/site/ARK logo.png";
+import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -36,7 +38,7 @@ function AboutPage() {
       <section className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
-            <Placeholder label="ARK logo" className="h-10 w-10 text-[8px]" />
+            <img src={arkLogo} alt="ARK logo" className="h-10 w-10 object-contain" />
             <div className="mt-6 text-xs tracking-widest text-foreground/80">ARK MAINNET<br/>LIVE SINCE</div>
             <div className="display mt-2 text-2xl text-[var(--brand-green)]">OCTOBER 2025</div>
           </div>
@@ -61,13 +63,13 @@ function AboutPage() {
             <p className="mt-6 text-sm text-foreground/85">Every line of code is public on GitHub.<br/>Auditable by anyone, free to fork.</p>
             <p className="mt-4 text-sm text-foreground/85">Financial services run through regulated third parties.<br/>We don't hold your funds. The architecture makes it impossible.</p>
           </div>
-          <Placeholder label="Code editor screenshot" className="aspect-[4/3]" />
+          <img src={mockupAppPage1} alt="Chimera Wallet app preview" className="aspect-[4/3] w-full object-contain" />
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-          <Placeholder label="Phone mockups (Chimera Wallet)" className="aspect-[5/4]" />
+          <img src={mockupAppPage1} alt="Chimera Wallet phone mockups" className="aspect-[5/4] w-full object-contain" />
           <div>
             <h2 className="display text-2xl">CHIMERA</h2>
             <p className="display text-3xl md:text-4xl">WALLET.</p>
