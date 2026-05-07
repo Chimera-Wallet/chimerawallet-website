@@ -11,6 +11,7 @@ import arkLogo from "@/assets/site/ARK logo.png";
 import controlIcon from "@/assets/site/chimera-logo-control.svg";
 import tradeIcon from "@/assets/site/chimera-logo-trade.svg";
 import earnIcon from "@/assets/site/chimera-logo-earn.svg";
+import referralPreview from "@/assets/site/referral_preview.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -249,7 +250,11 @@ function Index() {
             </p>
             <CtaCard className="mt-8" title="GET YOUR REFERRAL CODE" />
           </div>
-          <Placeholder label="Chart + referral UI mock" className="aspect-[4/5]" />
+          <img
+            src={referralPreview}
+            alt="Chimera referral preview"
+            className="aspect-[4/5] w-full object-contain"
+          />
         </div>
       </section>
     </main>
