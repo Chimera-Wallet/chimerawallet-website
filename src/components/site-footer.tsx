@@ -1,4 +1,5 @@
 import chimeraLogo from "@/assets/site/Chimera Logo.png";
+import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
   return (
@@ -18,7 +19,11 @@ export function SiteFooter() {
           <div>
             <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">POLICIES</h4>
             <ul className="mt-4 space-y-2 text-sm text-foreground/90">
-              <li>App Privacy Policy</li>
+              <li>
+                <Link to="/privacy-app" className="hover:text-[var(--brand-green)]">
+                  App Privacy Policy
+                </Link>
+              </li>
               <li>Web Privacy Policy</li>
             </ul>
           </div>
