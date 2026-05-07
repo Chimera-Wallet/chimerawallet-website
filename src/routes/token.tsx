@@ -3,10 +3,10 @@ import bronzeBadge from "@/assets/site/Tiers/Bronze.png";
 import silverBadge from "@/assets/site/Tiers/Silver.png";
 import goldBadge from "@/assets/site/Tiers/Gold.png";
 import diamondBadge from "@/assets/site/Tiers/Diamond.png";
-import cextIcon from "@/assets/site/Coins/coin-front-Chimera 1.png";
-import bnbIcon from "@/assets/site/Icons/bnb-bnb-logo 2.svg";
-import kcsIcon from "@/assets/site/Icons/kucoin-token-kcs-logo 1.svg";
-import okbIcon from "@/assets/site/Icons/okb-okb-logo 1.svg";
+import cextIcon from "@/assets/site/Coins/coin-front-chimera.png";
+import bnbIcon from "@/assets/site/Icons/bnb-bnb-logo.svg";
+import kcsIcon from "@/assets/site/Icons/kucoin-token-kcs-logo.svg";
+import okbIcon from "@/assets/site/Icons/okb-okb-logo.svg";
 import floatingCoins from "@/assets/site/airdrop.png";
 import pieChart from "@/assets/site/pie_chart.png";
 

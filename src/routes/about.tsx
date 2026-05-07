@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
-import arkLogo from "@/assets/site/ARK logo.png";
+import arkLogo from "@/assets/site/ark-logo.png";
 import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
 import openSource from "@/assets/site/open_source.png";
 
