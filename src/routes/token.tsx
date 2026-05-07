@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Placeholder } from "@/components/placeholder";
 import bronzeBadge from "@/assets/site/Tiers/Bronze.png";
 import silverBadge from "@/assets/site/Tiers/Silver.png";
 import goldBadge from "@/assets/site/Tiers/Gold.png";
