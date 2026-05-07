@@ -89,7 +89,7 @@ function AboutPage() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {[
             ["OPEN SOURCE.", "Every line published. No black boxes. Code that belongs to everyone who uses it."],
-            ["NON-CUSTODIAL BY DESIGN.", "Not a policy that can change. Not a promise that can be broken. Mathematics."],
+            ["NON-CUSTODIAL BY DESIGN.", "Not a policy that can change. Not a promise that can be broken."],
             ["SWISS NON-PROFIT ASSOCIATION.", "No extraction. No VC pressure. A legal structure built to align with the mission, not against it."],
             ["SELF-SOVEREIGNTY.", "The word the financial system has spent decades trying not to normalise. We're normalising it — one wallet at a time."],
           ].map(([t, b]) => (
