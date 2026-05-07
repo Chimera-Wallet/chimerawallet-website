@@ -241,6 +241,43 @@ function Row({ v, l }: { v: string; l: string }) {
   );
 }
 
+function TokenPie() {
+  const slices = [
+    { label: "Community", value: 90, color: "var(--brand-green)" },
+    { label: "Foundation & Liquidity", value: 4, color: "var(--brand-blue-bright)" },
+    { label: "Team", value: 3, color: "var(--brand-blue)" },
+    { label: "Partners", value: 3, color: "#ffffff" },
+  ];
+  const total = slices.reduce((s, x) => s + x.value, 0);
+  let acc = 0;
+  const radius = 80;
+  const cx = 100;
+  const cy = 100;
+  const paths = slices.map((s) => {
+    const start = (acc / total) * Math.PI * 2 - Math.PI / 2;
+    acc += s.value;
+    const end = (acc / total) * Math.PI * 2 - Math.PI / 2;
+    const large = end - start > Math.PI ? 1 : 0;
+    const x1 = cx + radius * Math.cos(start);
+    const y1 = cy + radius * Math.sin(start);
+    const x2 = cx + radius * Math.cos(end);
+    const y2 = cy + radius * Math.sin(end);
+    return {
+      ...s,
+      d: `M ${cx} ${cy} L ${x1} ${y1} A ${radius} ${radius} 0 ${large} 1 ${x2} ${y2} Z`,
+    };
+  });
+  return (
+    <div className="mt-4 flex items-center justify-center">
+      <svg viewBox="0 0 200 200" className="w-full max-w-xs">
+        {paths.map((p) => (
+          <path key={p.label} d={p.d} fill={p.color} stroke="var(--brand-navy)" strokeWidth="1" />
+        ))}
+      </svg>
+    </div>
+  );
+}
+
 function Card({
   eyebrow,
   title,
