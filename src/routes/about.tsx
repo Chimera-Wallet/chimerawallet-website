@@ -83,9 +83,6 @@ function AboutPage() {
       <section className="mx-auto max-w-5xl px-6 py-16 text-center">
         <h2 className="display text-2xl">WHAT WE</h2>
         <p className="display text-3xl md:text-5xl">STAND FOR.</p>
-        <p className="mx-auto mt-6 max-w-3xl text-sm text-muted-foreground">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-16">
