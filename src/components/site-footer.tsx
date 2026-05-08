@@ -1,4 +1,5 @@
 import chimeraLogo from "@/assets/site/chimera-logo.png";
+import chimeraMark from "@/assets/site/Chimera 1.svg";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
 import { Link } from "@tanstack/react-router";
@@ -10,7 +11,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-2">
-              <img src={chimeraLogo} alt="Chimera" className="h-10 w-auto object-contain" />
+              <img src={chimeraMark} alt="Chimera" className="h-16 w-auto object-contain" />
             </div>
             <div className="mt-6 text-xs text-muted-foreground">Powered by:</div>
             <div className="mt-3 flex items-center gap-4">
