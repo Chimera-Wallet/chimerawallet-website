@@ -71,7 +71,7 @@ function CardPage() {
           <button type="submit" className="block w-full text-left">
         <div
           className="flex items-center justify-between rounded-2xl border border-white/10 px-6 py-5"
-          style={{ background: "var(--brand-navy-card)" }}
+          style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
         >
           <div>
             <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
@@ -174,7 +174,7 @@ function CardPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="mt-12 flex items-center justify-between rounded-2xl border border-white/10 px-6 py-5 transition-colors hover:border-white/30"
-            style={{ background: "var(--brand-navy-card)" }}
+            style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
           >
             <div>
               <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
