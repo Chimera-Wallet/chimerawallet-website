@@ -12,12 +12,12 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-2">
-              <img src={chimeraMark} alt="Chimera" className="h-16 w-auto object-contain" />
+              <img src={chimeraLogo} alt="Chimera" className="h-10 w-auto object-contain" />
             </div>
             <div className="mt-6 text-xs text-muted-foreground">Powered by:</div>
             <div className="mt-3 flex items-center gap-4">
               <img src={bitcoinLogo} alt="Bitcoin" className="h-5 w-auto object-contain opacity-80" />
-              <img src={chimeraLogo} alt="Chimera" className="h-5 w-auto object-contain opacity-80" />
+              <img src={chimeraMark} alt="Chimera" className="h-5 w-auto object-contain opacity-80" />
               <img src={lightningLogo} alt="Lightning" className="h-5 w-auto object-contain opacity-80" />
               <img src={outlogicLogo} alt="Outlogic" className="h-5 w-auto object-contain opacity-80" />
             </div>
