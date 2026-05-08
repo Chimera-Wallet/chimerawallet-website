@@ -206,9 +206,11 @@ function TokenPage() {
           href={whitepaperPdf}
           target="_blank"
           rel="noopener noreferrer"
-          className="display text-3xl md:text-5xl hover:text-[var(--brand-green)] transition-colors"
+          className="display inline-flex items-center gap-3 rounded-full px-8 py-4 text-lg md:text-xl tracking-widest text-[var(--brand-navy)] shadow-lg transition-transform hover:scale-105"
+          style={{ backgroundColor: "var(--brand-green)" }}
         >
-          WHITE PAPER.
+          READ THE WHITE PAPER
+          <span aria-hidden="true">→</span>
         </a>
       </section>
     </main>
