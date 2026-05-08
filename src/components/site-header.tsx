@@ -72,7 +72,7 @@ export function SiteHeader() {
             className="inline-flex items-center rounded-full px-4 py-2 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
             style={{ backgroundColor: "var(--brand-green)" }}
           >
-            LAUNCH CHIMERA
+            OPEN CHIMERA
           </a>
         </div>
       </div>
