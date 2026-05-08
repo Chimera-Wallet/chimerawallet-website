@@ -14,9 +14,9 @@ export const Route = createFileRoute("/token")({
   head: () => ({
     meta: [
       { title: "CEXT Token — Pay Less. Earn More." },
-      { name: "description", content: "CEXT utility token. TGE 20 May 2026. Fixed supply. Zero inflation. Four tiers." },
+      { name: "description", content: "CEXT utility token. TGE 27 May 2026. Fixed supply. Zero inflation. Four tiers." },
       { property: "og:title", content: "CEXT Token — Pay Less. Earn More." },
-      { property: "og:description", content: "CEXT utility token. TGE 20 May 2026. Fixed supply. Zero inflation. Four tiers." },
+      { property: "og:description", content: "CEXT utility token. TGE 27 May 2026. Fixed supply. Zero inflation. Four tiers." },
     ],
   }),
   component: TokenPage,
@@ -75,7 +75,7 @@ function TokenPage() {
                 ["Total Supply", "1,000,000,000 CEXT"],
                 ["Blockchain", "Multichain"],
                 ["Token Type", "Utility Token"],
-                ["TGE", "20th May 2026"],
+                ["TGE", "27th May 2026"],
               ].map(([k, v]) => (
                 <div key={k} className="flex justify-between border-b border-white/5 py-3 last:border-0">
                   <span className="text-muted-foreground">{k}</span>
@@ -165,7 +165,7 @@ function TokenPage() {
             ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Chimera Protocol VTXO technology."],
             ["Q2 2026 — Coming", "DEX / CEX Listing", "CEXT listed on centralized and decentralized exchanges."],
             ["2026", "Cross Chain Support", "CEXT bridges to major L1/L2 networks. Multi-chain staking. Cross-chain swaps (coming soon)."],
-            ["Q2 2026: 20 May 2026", "TGE", "CEXT token generation event. Native on Ethereum, bridged to Chimera assets."],
+            ["Q2 2026: 27 May 2026", "TGE", "CEXT token generation event. Native on Ethereum, bridged to Chimera assets."],
             ["Mid 2026 — Coming", "Card Integration", "Chimera Card goes live."],
             ["2027", "Decentralised Governance", ""],
             ["2028", "DAO Transition", ""],
@@ -184,7 +184,7 @@ function TokenPage() {
 
       <section className="mx-auto max-w-5xl px-6 py-16 text-center">
         <h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2>
-        <p className="display mt-2 text-4xl md:text-6xl">20 MAY 2026</p>
+        <p className="display mt-2 text-4xl md:text-6xl">27 MAY 2026</p>
         <div className="mt-8 grid grid-cols-4 gap-4">
           {[["36","DAYS"],["20","HOURS"],["03","MINUTES"],["16","SECONDS"]].map(([n,l]) => (
             <div key={l} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
