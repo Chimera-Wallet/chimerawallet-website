@@ -103,7 +103,11 @@ function Index() {
       </section>
 
       {/* CONTROL / TRADE / EARN */}
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section
+        className="py-16"
+        style={{ background: "linear-gradient(180deg, var(--brand-navy) 0%, var(--brand-blue) 100%)" }}
+      >
+        <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.1fr_1fr]">
           <div className="relative mx-auto aspect-[5/4] w-1/2 max-w-md pb-12 lg:w-3/4 lg:pb-20">
             <img
@@ -135,13 +139,11 @@ function Index() {
             />
           </div>
         </div>
+        </div>
       </section>
 
       {/* SUPERCHARGING BITCOIN */}
-      <section
-        className="py-20"
-        style={{ background: "linear-gradient(180deg, var(--brand-blue) 0%, var(--brand-navy) 100%)" }}
-      >
+      <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
           <p className="display text-center text-sm tracking-[0.3em] text-foreground/80">
             SUPERCHARGING BITCOIN
