@@ -5,6 +5,8 @@ export const Route = createFileRoute("/news")({
     meta: [
       { title: "Chimera — News" },
       { name: "description", content: "News and updates from Chimera." },
+      { name: "robots", content: "noindex, nofollow, noarchive, nosnippet" },
+      { name: "googlebot", content: "noindex, nofollow, noarchive, nosnippet" },
     ],
   }),
   component: NewsPage,
@@ -89,7 +91,7 @@ function NewsPage() {
             key={item.url}
             href={item.url}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] transition-transform hover:-translate-y-1"
           >
             <div className="aspect-[3/2] w-full overflow-hidden">
