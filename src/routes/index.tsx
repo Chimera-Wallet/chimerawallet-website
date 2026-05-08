@@ -13,7 +13,9 @@ import controlIcon from "@/assets/site/chimera-logo-control.svg";
 import tradeIcon from "@/assets/site/chimera-logo-trade.svg";
 import earnIcon from "@/assets/site/chimera-logo-earn.svg";
 import referralPreview from "@/assets/site/referral_preview.png";
-import cextCoins from "@/assets/site/Coins/coin-front-chimera.png";
+import coinTopLeft from "@/assets/site/Coins/Chimera-card-2-3.png";
+import coinBottomLeft from "@/assets/site/Coins/Chimera-card-2-4.png";
+import coinRight from "@/assets/site/Coins/Chimera-card-2-1.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -246,7 +248,16 @@ function Index() {
       {/* CEXT TOKEN PREVIEW */}
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_1.4fr]">
-          <img src={cextCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain" />
+          <div className="relative aspect-square w-full">
+            <img src={coinTopLeft} alt="" className="absolute left-0 top-0 w-1/2 h-auto object-contain" />
+            <img src={coinBottomLeft} alt="" className="absolute left-0 bottom-0 w-1/2 h-auto object-contain" />
+            <img
+              src={coinRight}
+              alt="Floating CEXT coins"
+              className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-auto object-contain"
+              style={{ transform: "translateY(-50%) rotate(180deg)" }}
+            />
+          </div>
           <div>
             <h2 className="display text-3xl md:text-4xl">CEXT TOKEN</h2>
             <p className="display text-3xl md:text-4xl text-foreground/70">​</p>
