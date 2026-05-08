@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import bronzeBadge from "@/assets/site/Tiers/Bronze.png";
 import silverBadge from "@/assets/site/Tiers/Silver.png";
 import goldBadge from "@/assets/site/Tiers/Gold.png";
@@ -182,18 +183,7 @@ function TokenPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16 text-center">
-        <h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2>
-        <p className="display mt-2 text-4xl md:text-6xl">27 MAY 2026</p>
-        <div className="mt-8 grid grid-cols-4 gap-4">
-          {[["36","DAYS"],["20","HOURS"],["03","MINUTES"],["16","SECONDS"]].map(([n,l]) => (
-            <div key={l} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
-              <div className="display text-4xl">{n}</div>
-              <div className="mt-2 text-[10px] tracking-widest text-muted-foreground">{l}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <TgeCountdownSection />
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="rounded-2xl p-10">
@@ -243,5 +233,41 @@ function Card({
       <p className="mt-3 text-sm text-foreground/85">{body}</p>
       {footnote && <p className="mt-3 text-[10px] text-muted-foreground">{footnote}</p>}
     </div>
+  );
+}
+
+function TgeCountdownSection() {
+  const target = Date.UTC(2026, 4, 27, 12, 0, 0);
+  const compute = () => {
+    const diff = Math.max(0, target - Date.now());
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    return [
+      { v: d.toString().padStart(2, "0"), l: "DAYS" },
+      { v: h.toString().padStart(2, "0"), l: "HOURS" },
+      { v: m.toString().padStart(2, "0"), l: "MINUTES" },
+      { v: s.toString().padStart(2, "0"), l: "SECONDS" },
+    ];
+  };
+  const [t, setT] = useState(compute);
+  useEffect(() => {
+    const id = setInterval(() => setT(compute()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  return (
+    <section className="mx-auto max-w-5xl px-6 py-16 text-center">
+      <h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2>
+      <p className="display mt-2 text-4xl md:text-6xl uppercase">27 May 2026</p>
+      <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
+        {t.map(({ v, l }) => (
+          <div key={l} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+            <div className="display text-4xl">{v}</div>
+            <div className="mt-2 text-[10px] tracking-widest text-muted-foreground">{l}</div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
