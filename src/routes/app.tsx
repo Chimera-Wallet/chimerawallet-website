@@ -136,7 +136,7 @@ function AppPage() {
           <Tile
             icon={iconFaceID}
             title={<><span className="text-[var(--brand-green)]">NO ID</span> REQUIRED.</>}
-            body="Access your wallet in minutes. Start trading. KYC kicks in above CHF 1,000 per month regulated services provided by third parties."
+            body="Access your wallet in minutes. Start trading. Regulated services provided by third parties."
           />
           <Tile
             icon={iconCard}
