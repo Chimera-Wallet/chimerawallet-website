@@ -1,4 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
+import coinmarketcapImg from "@/assets/news-images/coinmarketcap.jpg";
+import coinliveImg from "@/assets/news-images/coinlive.jpg";
+import ainvestImg from "@/assets/news-images/ainvest.webp";
+import cointelegraphImg from "@/assets/news-images/cointelegraph.jpg";
+import prnewswireImg from "@/assets/news-images/prnewswire.jpg";
+import fintecbuzzImg from "@/assets/news-images/fintecbuzz.webp";
+import mexcImg from "@/assets/news-images/mexc.webp";
+import binance1Img from "@/assets/news-images/binance-1.png";
+import globenewswireImg from "@/assets/news-images/globenewswire.jpg";
+import zeroxzxImg from "@/assets/news-images/0xzx.png";
+import binance2Img from "@/assets/news-images/binance-2.png";
 
 export const Route = createFileRoute("/news")({
   head: () => ({
@@ -14,67 +25,67 @@ export const Route = createFileRoute("/news")({
 
 const newsItems = [
   {
-    image: "https://chimerawallet.com/wp-content/uploads/2026/04/basdd-7-1024x683.jpg",
+    image: coinmarketcapImg,
     source: "coinmarketcap",
     title: "Nimbus Capital and Chimera Wallet Announce $15 Million Strategic Partnership To Expand DeFi Infrastructure on Bitcoin",
     url: "https://coinmarketcap.com/community/articles/69956464b090f37b28113f0e/",
   },
   {
-    image: "https://chimerawallet.com/wp-content/uploads/2026/04/basdd-5-1024x683.jpg",
+    image: coinliveImg,
     source: "COINLIVE",
     title: "Nimbus Capital and Chimera Wallet Forge $15 Million Partnership to Enhance Bitcoin DeFi",
     url: "https://www.coinlive.com/news-flash/1038936",
   },
   {
-    image: "https://chimerawallet.com/wp-content/uploads/2026/04/compress-qwen_generated_1771412800523.jpg-1.webp",
+    image: ainvestImg,
     source: "AInvest",
     title: "Bitcoin DeFi Partnership: A $15M Signal or Noise?",
     url: "https://www.ainvest.com/news/bitcoin-defi-partnership-15m-signal-noise-2602/",
   },
   {
-    image: "https://chimerawallet.com/wp-content/uploads/2026/04/basdd-3-1024x683.jpg",
+    image: cointelegraphImg,
     source: "cointelegraph",
     title: "Nimbus Capital and Chimera Wallet announce $15 million strategic partnership to expand DeFi infrastructure on Bitcoin",
     url: "https://cointelegraph.com/press-releases/nimbus-capital-and-chimera-wallet-announce-15-million-strategic-partnership-to-expand-defi-infrastructure-on-bitcoin",
   },
   {
-    image: "https://chimerawallet.com/wp-content/uploads/2026/04/Wirex-1.jpg",
+    image: prnewswireImg,
     source: "PR NEWSWIRE",
     title: "Bitcoin Meets Commerce: Wirex and Chimera Wallet Bring Bitcoin spending to 80M+ Merchants",
     url: "https://www.prnewswire.com/news-releases/bitcoin-meets-commerce-wirex-and-chimera-wallet-bring-bitcoin-spending-to-80m-merchants-302677597.html",
   },
   {
-    image: "https://chimerawallet.com/wp-content/uploads/2026/04/download-1-1024x683.webp",
+    image: fintecbuzzImg,
     source: "FINTEC BUZZ",
     title: "Wirex and Chimera Wallet Bring Bitcoin spending to 80M+ Merchants",
     url: "https://fintecbuzz.com/wirex-and-chimera-wallet-bring-bitcoin-spending-to-80m-merchants/",
   },
   {
-    image: "https://chimerawallet.com/wp-content/uploads/2026/04/blockchain-for-parsiq-15-1-1024x576.webp",
+    image: mexcImg,
     source: "MEXC",
     title: "Wirex Powers Chimera Card, Bringing Bitcoin Payments to 80M+ Merchants Worldwide",
     url: "https://www.mexc.com/news/630603",
   },
   {
-    image: "https://chimerawallet.com/wp-content/uploads/2026/04/feed-og-image-2-2-1024x512.png",
+    image: binance1Img,
     source: "binance",
     title: "Wirex and Chimera Wallet Launch Bitcoin-Based Debit Card",
     url: "https://www.binance.com/en/square/post/02-04-2026-wirex-and-chimera-wallet-launch-bitcoin-based-debit-card-35988065039417",
   },
   {
-    image: "https://chimerawallet.com/wp-content/uploads/2026/04/basdd-1-1024x683.jpg",
+    image: globenewswireImg,
     source: "globe news wire",
     title: "Nimbus Capital and Chimera Wallet announce $15 million strategic partnership to expand DeFi infrastructure on Bitcoin",
     url: "https://www.globenewswire.com/news-release/2026/02/18/3239958/0/en/Nimbus-Capital-and-Chimera-Wallet-announce-15-million-strategic-partnership-to-expand-DeFi-infrastructure-on-Bitcoin.html",
   },
   {
-    image: "https://chimerawallet.com/wp-content/uploads/2026/04/Gift_card@2x-1024x684.png",
+    image: zeroxzxImg,
     source: "0xzx",
     title: "Nimbus Capital and Chimera Wallet enter into a $15 million strategic partnership to expand Bitcoin DeFi infrastructure",
     url: "https://0xzx.com/en/2026021818106110333.html",
   },
   {
-    image: "https://chimerawallet.com/wp-content/uploads/2026/04/feed-og-image-2-1024x512.png",
+    image: binance2Img,
     source: "binance",
     title: "Nimbus Capital and Chimera Wallet $15M DeFi Partnership",
     url: "https://www.binance.com/en/square/post/02-18-2026-nimbus-capital-chimera-wallet-1500-defi-292936985201234",
