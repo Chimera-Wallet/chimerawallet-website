@@ -59,6 +59,16 @@ export const Route = createRootRoute({
         href: "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap",
       },
     ],
+    scripts: [
+      {
+        src: "https://plausible.io/js/pa-O9g29d40_pHpvC6a8romr.js",
+        async: true,
+      },
+      {
+        children:
+          "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()",
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
