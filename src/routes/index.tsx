@@ -377,7 +377,7 @@ function LayerCard({ iconSrc, title, body }: { iconSrc: string; title: string; b
 
 function ComparisonCard({ title, rows }: { title: string; rows: [string, string][] }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+    <div className="rounded-2xl border border-white/10 p-6" style={{ background: "rgba(255, 255, 255, 0.1)" }}>
       <h3 className="display text-center text-2xl">{title}</h3>
       <div className="mt-4 divide-y divide-white/5">
         {rows.map(([val, label]) => (
