@@ -1,4 +1,5 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
 import { SiteHeader } from "@/components/site-header";
@@ -79,6 +80,43 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const w = window as any;
+    w.intercomSettings = {
+      api_base: "https://api-iam.intercom.io",
+      app_id: "a7pgvcoj",
+    };
+    const ic = w.Intercom;
+    if (typeof ic === "function") {
+      ic("reattach_activator");
+      ic("update", w.intercomSettings);
+    } else {
+      const d = document;
+      const i: any = function () {
+        i.c(arguments);
+      };
+      i.q = [];
+      i.c = function (args: any) {
+        i.q.push(args);
+      };
+      w.Intercom = i;
+      const l = () => {
+        const s = d.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://widget.intercom.io/widget/a7pgvcoj";
+        const x = d.getElementsByTagName("script")[0];
+        x.parentNode!.insertBefore(s, x);
+      };
+      if (document.readyState === "complete") {
+        l();
+      } else {
+        window.addEventListener("load", l, false);
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen text-foreground">
       <SiteHeader />
