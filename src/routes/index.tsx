@@ -219,7 +219,7 @@ function Index() {
       {/* SELF-CUSTODY checkout */}
       <section
         className="py-20"
-        style={{ background: "linear-gradient(180deg, var(--brand-blue-bright) 0%, var(--brand-blue) 100%)" }}
+        style={{ background: "linear-gradient(180deg, var(--brand-blue) 0%, var(--brand-navy) 100%)" }}
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
           <img
