@@ -5,6 +5,8 @@ export const Route = createFileRoute("/news")({
     meta: [
       { title: "Chimera — News" },
       { name: "description", content: "News and updates from Chimera." },
+      { name: "robots", content: "noindex, nofollow, noarchive, nosnippet" },
+      { name: "googlebot", content: "noindex, nofollow, noarchive, nosnippet" },
     ],
   }),
   component: NewsPage,
