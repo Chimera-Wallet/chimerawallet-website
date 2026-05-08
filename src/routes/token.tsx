@@ -168,6 +168,8 @@ function TokenPage() {
             ["2026", "Cross Chain Support", "CEXT bridges to major L1/L2 networks. Multi-chain staking. Cross-chain swaps (coming soon)."],
             ["Q2 2026: 27 May 2026", "TGE", "CEXT token generation event. Native on Ethereum, bridged to Chimera assets."],
             ["Mid 2026 — Coming", "Card Integration", "Chimera Card goes live."],
+            ["June 2026", "Wrap", "Wrap assets across supported chains."],
+            ["June 2026", "P2P Swaps", "Peer-to-peer swaps directly in-app."],
             ["2027", "Decentralised Governance", ""],
             ["2028", "DAO Transition", ""],
           ].map(([d, t, b]) => (
