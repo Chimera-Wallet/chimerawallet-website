@@ -10,11 +10,107 @@ export const Route = createFileRoute("/news")({
   component: NewsPage,
 });
 
+const newsItems = [
+  {
+    image: "https://chimerawallet.com/wp-content/uploads/2026/04/basdd-7-1024x683.jpg",
+    source: "coinmarketcap",
+    title: "Nimbus Capital and Chimera Wallet Announce $15 Million Strategic Partnership To Expand DeFi Infrastructure on Bitcoin",
+    url: "https://coinmarketcap.com/community/articles/69956464b090f37b28113f0e/",
+  },
+  {
+    image: "https://chimerawallet.com/wp-content/uploads/2026/04/basdd-5-1024x683.jpg",
+    source: "COINLIVE",
+    title: "Nimbus Capital and Chimera Wallet Forge $15 Million Partnership to Enhance Bitcoin DeFi",
+    url: "https://www.coinlive.com/news-flash/1038936",
+  },
+  {
+    image: "https://chimerawallet.com/wp-content/uploads/2026/04/compress-qwen_generated_1771412800523.jpg-1.webp",
+    source: "AInvest",
+    title: "Bitcoin DeFi Partnership: A $15M Signal or Noise?",
+    url: "https://www.ainvest.com/news/bitcoin-defi-partnership-15m-signal-noise-2602/",
+  },
+  {
+    image: "https://chimerawallet.com/wp-content/uploads/2026/04/basdd-3-1024x683.jpg",
+    source: "cointelegraph",
+    title: "Nimbus Capital and Chimera Wallet announce $15 million strategic partnership to expand DeFi infrastructure on Bitcoin",
+    url: "https://cointelegraph.com/press-releases/nimbus-capital-and-chimera-wallet-announce-15-million-strategic-partnership-to-expand-defi-infrastructure-on-bitcoin",
+  },
+  {
+    image: "https://chimerawallet.com/wp-content/uploads/2026/04/Wirex-1.jpg",
+    source: "PR NEWSWIRE",
+    title: "Bitcoin Meets Commerce: Wirex and Chimera Wallet Bring Bitcoin spending to 80M+ Merchants",
+    url: "https://www.prnewswire.com/news-releases/bitcoin-meets-commerce-wirex-and-chimera-wallet-bring-bitcoin-spending-to-80m-merchants-302677597.html",
+  },
+  {
+    image: "https://chimerawallet.com/wp-content/uploads/2026/04/download-1-1024x683.webp",
+    source: "FINTEC BUZZ",
+    title: "Wirex and Chimera Wallet Bring Bitcoin spending to 80M+ Merchants",
+    url: "https://fintecbuzz.com/wirex-and-chimera-wallet-bring-bitcoin-spending-to-80m-merchants/",
+  },
+  {
+    image: "https://chimerawallet.com/wp-content/uploads/2026/04/blockchain-for-parsiq-15-1-1024x576.webp",
+    source: "MEXC",
+    title: "Wirex Powers Chimera Card, Bringing Bitcoin Payments to 80M+ Merchants Worldwide",
+    url: "https://www.mexc.com/news/630603",
+  },
+  {
+    image: "https://chimerawallet.com/wp-content/uploads/2026/04/feed-og-image-2-2-1024x512.png",
+    source: "binance",
+    title: "Wirex and Chimera Wallet Launch Bitcoin-Based Debit Card",
+    url: "https://www.binance.com/en/square/post/02-04-2026-wirex-and-chimera-wallet-launch-bitcoin-based-debit-card-35988065039417",
+  },
+  {
+    image: "https://chimerawallet.com/wp-content/uploads/2026/04/basdd-1-1024x683.jpg",
+    source: "globe news wire",
+    title: "Nimbus Capital and Chimera Wallet announce $15 million strategic partnership to expand DeFi infrastructure on Bitcoin",
+    url: "https://www.globenewswire.com/news-release/2026/02/18/3239958/0/en/Nimbus-Capital-and-Chimera-Wallet-announce-15-million-strategic-partnership-to-expand-DeFi-infrastructure-on-Bitcoin.html",
+  },
+  {
+    image: "https://chimerawallet.com/wp-content/uploads/2026/04/Gift_card@2x-1024x684.png",
+    source: "0xzx",
+    title: "Nimbus Capital and Chimera Wallet enter into a $15 million strategic partnership to expand Bitcoin DeFi infrastructure",
+    url: "https://0xzx.com/en/2026021818106110333.html",
+  },
+  {
+    image: "https://chimerawallet.com/wp-content/uploads/2026/04/feed-og-image-2-1024x512.png",
+    source: "binance",
+    title: "Nimbus Capital and Chimera Wallet $15M DeFi Partnership",
+    url: "https://www.binance.com/en/square/post/02-18-2026-nimbus-capital-chimera-wallet-1500-defi-292936985201234",
+  },
+];
+
 function NewsPage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-24 text-center">
-      <h1 className="display text-4xl md:text-6xl">NEWS</h1>
-      <p className="mt-6 text-sm text-muted-foreground">Coming soon.</p>
+    <main className="mx-auto max-w-7xl px-6 py-24">
+      <h1 className="display text-4xl md:text-6xl text-center">NEWS</h1>
+      <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {newsItems.map((item) => (
+          <a
+            key={item.url}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] transition-transform hover:-translate-y-1"
+          >
+            <div className="aspect-[3/2] w-full overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform group-hover:scale-105"
+              />
+            </div>
+            <div className="flex flex-1 flex-col gap-3 p-5">
+              <span className="display text-xs uppercase tracking-widest text-[var(--brand-green)]">
+                {item.source}
+              </span>
+              <h2 className="text-base font-semibold leading-snug text-foreground group-hover:text-[var(--brand-green)]">
+                {item.title}
+              </h2>
+            </div>
+          </a>
+        ))}
+      </div>
     </main>
   );
 }
