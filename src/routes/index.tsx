@@ -59,7 +59,18 @@ function Index() {
               >
                 THE ONLY BITCOIN SUPER-APP BUILT SO NOBODY CAN EVER TAKE YOUR MONEY AWAY.
               </h1>
-              <p className="mt-6 text-base text-foreground/80">Not a promise. Not a policy. Mathematics.</p>
+              <p
+                className="mt-6 text-center text-foreground/80"
+                style={{
+                  fontFamily: '"Funnel Display", sans-serif',
+                  fontWeight: 400,
+                  fontSize: "32px",
+                  lineHeight: "100%",
+                  letterSpacing: "1px",
+                }}
+              >
+                Not a promise. Not a policy. Mathematics.
+              </p>
               <p className="mt-2 text-sm text-muted-foreground">
                 Mainchain. Lightning. Chimera Protocol. One app.
                 <br />
