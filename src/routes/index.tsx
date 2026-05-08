@@ -44,7 +44,16 @@ function Index() {
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_2fr_1fr]">
             <img src={heroPhoneLeft} alt="Chimera wallet app showing balance and transactions" className="hidden lg:block w-full h-auto" />
             <div className="text-center">
-              <p className="display text-xs tracking-[0.3em] text-[var(--brand-green)]">
+              <p
+                className="text-center uppercase text-[var(--brand-green)]"
+                style={{
+                  fontFamily: '"Titillium Web", sans-serif',
+                  fontWeight: 700,
+                  fontSize: "20px",
+                  lineHeight: "100%",
+                  letterSpacing: "2px",
+                }}
+              >
                 CHIMERAWALLET, FINANCE EVOLVED
               </p>
               <h1
