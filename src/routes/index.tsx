@@ -315,6 +315,7 @@ function CtaCard({
         background: filled
           ? "linear-gradient(90deg, var(--brand-blue) 0%, var(--brand-blue-bright) 100%)"
           : "var(--brand-navy-card)",
+        boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)",
       }}
     >
       <div>
