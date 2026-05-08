@@ -23,6 +23,26 @@ export const Route = createFileRoute("/card")({
 });
 
 function CardPage() {
+  const ReserveForm = ({ children }: { children: React.ReactNode }) => (
+    <form
+      target="_blank"
+      action="https://legacy.coinpayments.net/index.php"
+      method="post"
+      className="inline-block"
+    >
+      <input type="hidden" name="cmd" value="_pay" />
+      <input type="hidden" name="reset" value="1" />
+      <input type="hidden" name="merchant" value="ffbe722f993d4e0fe6bca78ac543e15b" />
+      <input type="hidden" name="item_name" value="Chimera Card Reservation" />
+      <input type="hidden" name="currency" value="CHF" />
+      <input type="hidden" name="amountf" value="20.00000000" />
+      <input type="hidden" name="quantity" value="1" />
+      <input type="hidden" name="allow_quantity" value="0" />
+      <input type="hidden" name="want_shipping" value="0" />
+      <input type="hidden" name="allow_extra" value="0" />
+      {children}
+    </form>
+  );
   return (
     <main>
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-10 text-center">
@@ -35,13 +55,20 @@ function CardPage() {
         <p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
           Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
         </p>
-        <button className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10">
-          RESERVE YOUR CARD
-        </button>
+        <ReserveForm>
+          <button
+            type="submit"
+            className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10"
+          >
+            RESERVE YOUR CARD
+          </button>
+        </ReserveForm>
         <img src={cardHero} alt="Chimera cards" className="mx-auto mt-10 w-full max-w-md object-contain" />
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-6">
+        <ReserveForm>
+          <button type="submit" className="block w-full text-left">
         <div
           className="flex items-center justify-between rounded-2xl border border-white/10 px-6 py-5"
           style={{ background: "var(--brand-navy-card)" }}
@@ -57,6 +84,8 @@ function CardPage() {
           </div>
           <span className="text-xl">↗</span>
         </div>
+          </button>
+        </ReserveForm>
       </section>
 
       <section className="py-20">
@@ -72,12 +101,15 @@ function CardPage() {
             <p className="mt-3 text-sm font-semibold text-[var(--brand-green)]">
               Chimera Card Rolling out mid 2026.
             </p>
-            <button
-              className="mt-8 rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
-              style={{ backgroundColor: "var(--brand-green)" }}
-            >
-              SECURE YOUR SPOT NOW
-            </button>
+            <ReserveForm>
+              <button
+                type="submit"
+                className="mt-8 rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
+                style={{ backgroundColor: "var(--brand-green)" }}
+              >
+                SECURE YOUR SPOT NOW
+              </button>
+            </ReserveForm>
           </div>
         </div>
       </section>
