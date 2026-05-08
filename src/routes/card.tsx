@@ -210,6 +210,7 @@ function BenefitRow({
       className="grid grid-cols-1 items-center gap-6 rounded-2xl border border-white/10 px-6 py-6 md:grid-cols-[1fr_auto]"
       style={{
         background: filled ? "var(--brand-blue)" : "var(--brand-navy-card)",
+        boxShadow: filled ? undefined : "0px 0px 40px 0px rgba(31, 59, 219, 0.5)",
       }}
     >
       <div>
