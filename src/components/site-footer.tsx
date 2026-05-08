@@ -42,7 +42,11 @@ export function SiteFooter() {
           <div>
             <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">PRESS AND MEDIA</h4>
             <ul className="mt-4 space-y-2 text-sm text-foreground/90">
-              <li>News</li>
+              <li>
+                <Link to="/news" className="hover:text-[var(--brand-green)]">
+                  News
+                </Link>
+              </li>
               <li>Press Kit</li>
             </ul>
           </div>
