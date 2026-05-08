@@ -141,13 +141,16 @@ function Index() {
         </div>
       </section>
 
-      {/* CHIMERA PROTOCOL — comparison */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      {/* CHIMERA PROTOCOL — heading */}
+      <section className="mx-auto max-w-7xl px-6 pt-20 pb-32">
         <h2 className="display text-center text-4xl md:text-5xl">CHIMERA PROTOCOL</h2>
         <p className="display mt-2 text-center text-xl tracking-widest text-foreground/80">BACKED BY THE BEST</p>
         <p className="display text-center tracking-[0.3em] text-foreground/80 text-sm py-[10px]">$7.7M raised across two rounds.</p>
+      </section>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+      {/* CHIMERA PROTOCOL — comparison */}
+      <section className="mx-auto max-w-7xl px-6 pb-20">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <ComparisonCard
             title="CEX"
             rows={[
