@@ -73,7 +73,7 @@ function Index() {
                 style={{
                   fontFamily: '"Funnel Display", sans-serif',
                   fontWeight: 400,
-                  fontSize: "32px",
+                  fontSize: "clamp(1rem, 2.4vw, 32px)",
                   lineHeight: "100%",
                   letterSpacing: "1px",
                 }}
