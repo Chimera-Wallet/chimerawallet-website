@@ -110,7 +110,7 @@ function TokenPage() {
             { name: "GOLD", img: goldBadge, balance: "≥ 1,000,000 CEXT", fee: "40%", ref: "2x", sup: "Premium", news: "+24 Hours", list: "High" },
             { name: "DIAMOND", img: diamondBadge, balance: "≥ 10,000,000 CEXT", fee: "50%", ref: "3x", sup: "Direct", news: "+24 Hours", list: "Full + Proposal Rights" },
           ].map((t) => (
-            <div key={t.name} className="rounded-2xl border border-white/10 bg-[#1f3bdb] p-6 text-center">
+            <div key={t.name} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
               <img src={t.img} alt={`${t.name} tier badge`} className="mx-auto h-32 w-32 object-contain" />
               <h3 className="display mt-4 text-2xl">{t.name}</h3>
               <div className="mt-3 text-xs text-muted-foreground">{t.balance}<br/>Average Locked Balance</div>
@@ -145,7 +145,7 @@ function TokenPage() {
             { n: "KCS", icon: kcsIcon },
             { n: "OKB", icon: okbIcon },
           ].map(({ n, icon }) => (
-            <div key={n} className="rounded-2xl border border-white/10 bg-[#1f3bdb] p-6 text-center">
+            <div key={n} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
               <img src={icon} alt={`${n} logo`} className="mx-auto h-16 w-16 object-contain" />
               <h3 className="display mt-4 text-xl">{n}</h3>
               <Row v="50%" l="Max Fee Discount" />
