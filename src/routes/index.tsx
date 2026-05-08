@@ -61,8 +61,8 @@ function Index() {
                 style={{
                   fontFamily: '"Titillium Web", sans-serif',
                   fontWeight: 700,
-                  fontSize: "85px",
-                  lineHeight: "85px",
+                  fontSize: "clamp(2rem, 6vw, 85px)",
+                  lineHeight: 1,
                   letterSpacing: "1px",
                 }}
               >
