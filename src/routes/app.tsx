@@ -58,7 +58,7 @@ function AppPage() {
           className="mt-8 inline-flex items-center rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
           style={{ backgroundColor: "var(--brand-green)" }}
         >
-          LAUNCH CHIMERA
+          OPEN CHIMERA
         </a>
 
         <img
@@ -173,7 +173,7 @@ function AppPage() {
               <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
                 YOUR MONEY. YOUR DEVICE. YOUR RULES.
               </div>
-                <div className="display mt-1 text-xl">LAUNCH CHIMERA</div>
+                <div className="display mt-1 text-xl">OPEN CHIMERA</div>
             </div>
             <span className="text-xl">↗</span>
           </div>
