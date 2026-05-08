@@ -144,8 +144,12 @@ function TokenPage() {
             { n: "BNB", icon: bnbIcon },
             { n: "KCS", icon: kcsIcon },
             { n: "OKB", icon: okbIcon },
-          ].map(({ n, icon }) => (
-            <div key={n} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
+          ].map(({ n, icon }, i) => (
+            <div
+              key={n}
+              className={`rounded-2xl border border-white/10 p-6 text-center ${i === 0 ? "" : "bg-[var(--brand-navy-card)]"}`}
+              style={i === 0 ? { background: "#1F3BDB" } : undefined}
+            >
               <img src={icon} alt={`${n} logo`} className="mx-auto h-16 w-16 object-contain" />
               <h3 className="display mt-4 text-xl">{n}</h3>
               <Row v="50%" l="Max Fee Discount" />
