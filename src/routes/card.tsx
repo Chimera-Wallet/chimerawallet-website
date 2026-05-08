@@ -122,7 +122,7 @@ function CardPage() {
         style={{ background: "linear-gradient(180deg, var(--brand-navy) 0%, var(--brand-blue) 100%)" }}
       >
         <div className="mx-auto max-w-3xl px-6">
-          <h2 className="mt-3 text-center text-muted-foreground text-base">FAQ</h2>
+          <h2 className="display text-center text-4xl md:text-5xl">FAQ</h2>
           <div className="mt-10 space-y-3">
             <Faq q="How do I apply?" />
             <Faq q="Are the lifetime rates actually locked forever?" />

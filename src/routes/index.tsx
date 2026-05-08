@@ -116,7 +116,7 @@ function Index() {
           <p className="display text-center text-sm tracking-[0.3em] text-foreground/80">
             SUPERCHARGING BITCOIN
           </p>
-          <h2 className="mt-3 text-center text-muted-foreground text-base">SUPERCHARGING BITCOIN</h2>
+          <h2 className="display mt-4 text-center text-4xl md:text-5xl">SUPERCHARGING BITCOIN</h2>
           <p className="mt-4 text-center text-sm text-foreground/80">
             Three layers. One interface. Zero compromise.
           </p>
@@ -143,7 +143,7 @@ function Index() {
 
       {/* ARKADE PROTOCOL — comparison */}
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <h2 className="mt-3 text-center text-muted-foreground text-base">ARKADE PROTOCOL</h2>
+        <h2 className="display text-center text-4xl md:text-5xl">ARKADE PROTOCOL</h2>
         <p className="display mt-2 text-center text-xl tracking-widest text-foreground/80">BACKED BY THE BEST</p>
         <p className="mt-3 text-center text-sm text-muted-foreground">$7.7M raised across two rounds.</p>
 
