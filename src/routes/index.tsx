@@ -364,7 +364,10 @@ function TgeCountdown() {
 
 function LayerCard({ iconSrc, title, body }: { iconSrc: string; title: string; body: string }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)]/80 p-6 backdrop-blur">
+    <div
+      className="rounded-2xl border border-white/10 p-6 backdrop-blur"
+      style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
+    >
       <img src={iconSrc} alt="" className="h-10 w-10 object-contain" />
       <h3 className="display mt-3 text-xl text-[var(--brand-green)]">{title}</h3>
       <p className="mt-3 text-sm text-foreground/80">{body}</p>
