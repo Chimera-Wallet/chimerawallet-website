@@ -21,13 +21,13 @@ export const Route = createFileRoute("/app")({
       {
         name: "description",
         content:
-          "Chimera Wallet runs in your browser. Bitcoin, Lightning and Arkade in one progressive web app.",
+          "Chimera Wallet runs in your browser. Bitcoin, Lightning and Chimera in one progressive web app.",
       },
       { property: "og:title", content: "Chimera App — Progressive Web App" },
       {
         property: "og:description",
         content:
-          "Chimera Wallet runs in your browser. Bitcoin, Lightning and Arkade in one progressive web app.",
+          "Chimera Wallet runs in your browser. Bitcoin, Lightning and Chimera in one progressive web app.",
       },
     ],
   }),
@@ -120,7 +120,7 @@ function AppPage() {
           <Tile
             icon={iconBolt}
             title={<>WHAT <span className="text-[var(--brand-green)]">YOU GET</span></>}
-            body="Bitcoin. Lightning. Arkade. All in one — and nothing missing. Mainchain for settlement. Lightning for instant payments. Arkade Protocol for the next generation. No switching apps. No compromise."
+            body="Bitcoin. Lightning. Chimera. All in one — and nothing missing. Mainchain for settlement. Lightning for instant payments. Chimera Protocol for the next generation. No switching apps. No compromise."
           />
           <Tile
             icon={iconPaperplane}

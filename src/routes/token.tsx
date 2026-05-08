@@ -162,7 +162,7 @@ function TokenPage() {
         <h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2>
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
           {[
-            ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Arkade Protocol VTXO technology."],
+            ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Chimera Protocol VTXO technology."],
             ["Q2 2026 — Coming", "DEX / CEX Listing", "CEXT listed on centralized and decentralized exchanges."],
             ["2026", "Cross Chain Support", "CEXT bridges to major L1/L2 networks. Multi-chain staking. Cross-chain swaps (coming soon)."],
             ["Q2 2026: 20 May 2026", "TGE", "CEXT token generation event. Native on Ethereum, bridged to Chimera assets."],

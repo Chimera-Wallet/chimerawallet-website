@@ -49,7 +49,7 @@ function AboutPage() {
             <p className="mt-2 text-xs text-muted-foreground">THREE YEARS OF R&amp;D BEFORE PUBLIC MAINNET.</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
-            <div className="text-xs tracking-widest text-foreground/80">ARKADE PROTOCOL RAISED</div>
+            <div className="text-xs tracking-widest text-foreground/80">CHIMERA PROTOCOL RAISED</div>
             <div className="display mt-2 text-3xl">$7.7M.</div>
             <p className="mt-2 text-xs text-muted-foreground">THE INFRASTRUCTURE CHIMERA IS BUILT ON IS TRUSTED BY THE BEST IN THE SPACE.</p>
           </div>

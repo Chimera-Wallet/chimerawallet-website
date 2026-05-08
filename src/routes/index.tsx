@@ -21,13 +21,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "The only Bitcoin super-app built so nobody can ever take your money away. Mainchain. Lightning. Arkade Protocol. One app.",
+          "The only Bitcoin super-app built so nobody can ever take your money away. Mainchain. Lightning. Chimera Protocol. One app.",
       },
       { property: "og:title", content: "Chimera — The Bitcoin Super-App" },
       {
         property: "og:description",
         content:
-          "The only Bitcoin super-app built so nobody can ever take your money away. Mainchain. Lightning. Arkade Protocol. One app.",
+          "The only Bitcoin super-app built so nobody can ever take your money away. Mainchain. Lightning. Chimera Protocol. One app.",
       },
     ],
   }),
@@ -51,7 +51,7 @@ function Index() {
               </h1>
               <p className="mt-6 text-base text-foreground/80">Not a promise. Not a policy. Mathematics.</p>
               <p className="mt-2 text-sm text-muted-foreground">
-                Mainchain. Lightning. Arkade Protocol. One app.
+                Mainchain. Lightning. Chimera Protocol. One app.
                 <br />
                 Your keys. Nobody in between.
               </p>
@@ -129,8 +129,8 @@ function Index() {
             />
             <LayerCard
               iconSrc={arkLogo}
-              title="ARKADE PROTOCOL"
-              body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Arkade Protocol."
+              title="CHIMERA PROTOCOL"
+              body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Chimera Protocol."
             />
             <LayerCard
               iconSrc={lightningLogo}
@@ -141,9 +141,9 @@ function Index() {
         </div>
       </section>
 
-      {/* ARKADE PROTOCOL — comparison */}
+      {/* CHIMERA PROTOCOL — comparison */}
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <h2 className="display text-center text-4xl md:text-5xl">ARKADE PROTOCOL</h2>
+        <h2 className="display text-center text-4xl md:text-5xl">CHIMERA PROTOCOL</h2>
         <p className="display mt-2 text-center text-xl tracking-widest text-foreground/80">BACKED BY THE BEST</p>
         <p className="mt-3 text-center text-sm text-muted-foreground">$7.7M raised across two rounds.</p>
 
