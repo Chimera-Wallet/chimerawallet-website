@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState, type ReactNode } from "react";
 import { Placeholder } from "@/components/placeholder";
 import heroPhoneLeft from "@/assets/site/hero-phone-left.png";
 import heroPhoneRight from "@/assets/site/hero-phone-right.png";
@@ -63,7 +64,7 @@ function Index() {
           <div className="mx-auto mt-16 max-w-3xl space-y-4">
             <CtaCard eyebrow="CHIMERA WALLET" title="LAUNCH THE APP" eyebrowColor="text-[var(--brand-green)]" filled href="https://app.chimerawallet.com" />
             <CtaCard
-              eyebrow="36 D | 20 H | 03 M | 16 S to TGE"
+              eyebrow={<TgeCountdown />}
               title="JOIN CEXT WAITLIST"
               eyebrowColor="text-[var(--brand-green)]"
             />
@@ -268,7 +269,7 @@ function CtaCard({
   eyebrowColor = "text-[var(--brand-green)]",
   href,
 }: {
-  eyebrow?: string;
+  eyebrow?: ReactNode;
   title: string;
   className?: string;
   filled?: boolean;
@@ -305,6 +306,27 @@ function FeatureCard({ iconSrc, title, body }: { iconSrc: string; title: string;
       <h3 className="display mt-3 text-2xl text-[var(--brand-green)]">{title}</h3>
       <p className="mt-3 text-sm text-foreground/80">{body}</p>
     </div>
+  );
+}
+
+function TgeCountdown() {
+  const target = Date.UTC(2026, 4, 27, 12, 0, 0);
+  const compute = () => {
+    const diff = Math.max(0, target - Date.now());
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    return { d, h, m, s };
+  };
+  const [t, setT] = useState(compute);
+  useEffect(() => {
+    const id = setInterval(() => setT(compute()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  const pad = (n: number) => n.toString().padStart(2, "0");
+  return (
+    <span>{`${pad(t.d)} D | ${pad(t.h)} H | ${pad(t.m)} M | ${pad(t.s)} S to TGE`}</span>
   );
 }
 
