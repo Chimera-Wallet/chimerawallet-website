@@ -84,8 +84,8 @@
   --input: oklch(1 0 0 / 12%);
   --ring: oklch(0.55 0.25 265);
   /* Brand-specific tokens */
-  --brand-blue: oklch(0.55 0.25 265);
-  --brand-blue-bright: oklch(0.62 0.27 263);
+  --brand-blue: #1F3BDB;
+  --brand-blue-bright: #1F3BDB;
   --brand-green: oklch(0.85 0.27 152);
   --brand-navy: oklch(0.16 0.06 270);
   --brand-navy-deep: oklch(0.10 0.05 270);
