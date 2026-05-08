@@ -1,5 +1,6 @@
 import chimeraLogo from "@/assets/site/chimera-logo.png";
 import chimeraMark from "@/assets/site/Chimera 1.svg";
+import outlogicLogo from "@/assets/site/Outlogic_LOGO.png";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
 import { Link } from "@tanstack/react-router";
@@ -18,7 +19,7 @@ export function SiteFooter() {
               <img src={bitcoinLogo} alt="Bitcoin" className="h-5 w-auto object-contain opacity-80" />
               <img src={chimeraLogo} alt="Chimera" className="h-5 w-auto object-contain opacity-80" />
               <img src={lightningLogo} alt="Lightning" className="h-5 w-auto object-contain opacity-80" />
-              <span className="text-xs text-foreground/80">Outlogic</span>
+              <img src={outlogicLogo} alt="Outlogic" className="h-5 w-auto object-contain opacity-80" />
             </div>
           </div>
 
