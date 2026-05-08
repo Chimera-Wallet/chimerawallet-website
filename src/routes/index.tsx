@@ -226,7 +226,7 @@ function Index() {
               3×. Governance at Diamond tier. Zero inflation. Classified as a utility token under the Swiss
               regulation.
             </p>
-            <p className="mt-3 text-sm text-[var(--brand-green)] font-semibold">TGE: 20 May 2026.</p>
+            <p className="mt-3 text-sm text-[var(--brand-green)] font-semibold">TGE: 27 May 2026.</p>
             <CtaCard className="mt-8" title="DISCOVER CEXT" />
           </div>
         </div>
