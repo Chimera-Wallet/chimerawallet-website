@@ -10,6 +10,7 @@ import kcsIcon from "@/assets/site/Icons/kucoin-token-kcs-logo.svg";
 import okbIcon from "@/assets/site/Icons/okb-okb-logo.svg";
 import floatingCoins from "@/assets/site/airdrop.png";
 import pieChart from "@/assets/site/pie_chart.png";
+import whitepaperPdf from "@/assets/documents/CEXT_Whitepaper_V2.pdf?url";
 
 export const Route = createFileRoute("/token")({
   head: () => ({
@@ -201,7 +202,14 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="display text-3xl md:text-5xl">WHITE PAPER.</h2>
+        <a
+          href={whitepaperPdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="display text-3xl md:text-5xl hover:text-[var(--brand-green)] transition-colors"
+        >
+          WHITE PAPER.
+        </a>
       </section>
     </main>
   );
