@@ -96,7 +96,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="display text-center text-3xl md:text-5xl uppercase">4 tiers - many advantages</h2>
+        <h2 className="mt-3 text-center text-muted-foreground text-base uppercase">4 tiers - many advantages</h2>
         <p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
         </p>
@@ -131,7 +131,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="display text-center text-3xl md:text-5xl uppercase">Exchange Tokens Comparison</h2>
+        <h2 className="mt-3 text-center text-muted-foreground text-base uppercase">Exchange Tokens Comparison</h2>
         <p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
         </p>
@@ -159,7 +159,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2>
+        <h2 className="mt-3 text-center text-muted-foreground text-base">WHAT'S NEXT?</h2>
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
           {[
             ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Arkade Protocol VTXO technology."],
