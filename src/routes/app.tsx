@@ -155,7 +155,7 @@ function AppPage() {
       <section className="mx-auto max-w-7xl px-6 py-20 text-center">
         <img src={arkLogo} alt="Chimera" className="mx-auto h-16 w-auto object-contain" />
         <h2 className="display mt-6 text-3xl md:text-5xl">
-          CHIMERA SWAP
+          ARKADE SWAP
           <br />
           AND WRAPPED ASSETS
         </h2>
