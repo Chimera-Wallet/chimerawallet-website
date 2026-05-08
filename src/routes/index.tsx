@@ -47,7 +47,16 @@ function Index() {
               <p className="display text-xs tracking-[0.3em] text-[var(--brand-green)]">
                 CHIMERAWALLET, FINANCE EVOLVED
               </p>
-              <h1 className="display mt-6 text-4xl leading-[1.05] sm:text-5xl md:text-6xl">
+              <h1
+                className="mt-6 text-center uppercase"
+                style={{
+                  fontFamily: '"Titillium Web", sans-serif',
+                  fontWeight: 700,
+                  fontSize: "85px",
+                  lineHeight: "85px",
+                  letterSpacing: "1px",
+                }}
+              >
                 THE ONLY BITCOIN SUPER-APP BUILT SO NOBODY CAN EVER TAKE YOUR MONEY AWAY.
               </h1>
               <p className="mt-6 text-base text-foreground/80">Not a promise. Not a policy. Mathematics.</p>
