@@ -162,6 +162,10 @@
     text-transform: uppercase;
   }
 
+  h1 {
+    font-family: "Titillium Web", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+
   .placeholder-box {
     border: 1px dashed oklch(1 0 0 / 25%);
     background: oklch(1 0 0 / 3%);
