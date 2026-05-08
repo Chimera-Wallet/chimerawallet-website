@@ -87,7 +87,7 @@ function AppPage() {
 
             <div
               className="mt-8 flex items-center justify-between rounded-2xl border border-white/15 px-6 py-5"
-              style={{ background: "var(--brand-navy-card)" }}
+              style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
             >
               <div>
                 <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
@@ -168,7 +168,10 @@ function AppPage() {
         style={{ background: "linear-gradient(180deg, var(--brand-blue-bright) 0%, var(--brand-blue) 100%)" }}
       >
         <div className="mx-auto max-w-5xl px-6">
-          <div className="flex items-center justify-between rounded-2xl border border-white/15 bg-[var(--brand-navy-card)]/60 px-6 py-5 backdrop-blur">
+          <div
+            className="flex items-center justify-between rounded-2xl border border-white/15 px-6 py-5 backdrop-blur"
+            style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
+          >
             <div>
               <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
                 YOUR MONEY. YOUR DEVICE. YOUR RULES.
