@@ -307,9 +307,6 @@ function Index() {
             JOIN THE WAITLIST
           </p>
           <h2 className="display mt-2 text-2xl md:text-3xl">JOIN CEXT WAITLIST!</h2>
-          <p className="mt-3 text-sm text-foreground/80">
-            Drop your email and we'll let you know the moment Chimera is ready for you.
-          </p>
           <WaitlistForm />
         </div>
       </section>
