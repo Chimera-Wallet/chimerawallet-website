@@ -55,12 +55,22 @@ export function SiteFooter() {
             <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">SUPPORT</h4>
             <ul className="mt-4 space-y-2 text-sm text-foreground/90">
               <li>
-                <a href="https://docs.outlogic.net/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--brand-green)]">
+                <a
+                  href="https://docs.outlogic.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[var(--brand-green)]"
+                >
                   Chimera API Documentation
                 </a>
               </li>
               <li>
-                <a href="https://support.chimerawallet.com/en/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--brand-green)]">
+                <a
+                  href="https://support.chimerawallet.com/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[var(--brand-green)]"
+                >
                   Support Center
                 </a>
               </li>
@@ -69,11 +79,14 @@ export function SiteFooter() {
         </div>
 
         <p className="mt-10 max-w-5xl text-xs text-muted-foreground">
-          CEXT, issued by Outlogic SAGL, is a utility token under Swiss regulation. Not security. Not a payment token. Not an investment contract. Staking rewards are not guaranteed. The platform buy programme does not constitute a guaranteed return. Fiat, card, trading and stacking services are provided by third parties - not by Chimera Wallet.
+          CEXT, issued by Outlogic SAGL, is a utility token under Swiss regulation. Not security. Not a payment token.
+          Not an investment contract. Staking rewards are not guaranteed. The platform buy programme does not constitute
+          a guaranteed return. Fiat, card, trading and stacking services are provided by third parties - not by Chimera
+          Wallet.
         </p>
 
         <div className="mt-8 border-t border-white/5 pt-6 text-xs text-muted-foreground">
-          © 2026 Chimera Software Association - 6900 Lugano Switzerland. All right reserved. Made with ❤️ in 🇨🇭
+          © 2026 Chimera Software Association - 6900 Lugano Switzerland. All rights reserved. Made with ❤️ in 🇨🇭
         </div>
       </div>
     </footer>
