@@ -149,7 +149,7 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: "Titillium Web", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    background-image: radial-gradient(circle, oklch(0.78 0.12 240 / 45%) 1px, transparent 1.2px);
+    background-image: radial-gradient(circle, oklch(0.78 0.12 240 / 45%) 0.5px, transparent 0.7px);
     background-size: 50px 50px;
     background-position: 0 0;
     background-attachment: fixed;
