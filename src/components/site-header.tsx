@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import chimeraLogo from "@/assets/site/chimera-logo.png";
@@ -13,10 +14,11 @@ const navItems = [
 ] as const;
 
 export function SiteHeader() {
+  const [mobileOpen, setMobileOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-[var(--brand-navy)]/80 backdrop-blur">
       <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-6 py-4 md:flex md:justify-between">
-        <Sheet>
+        <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
           <SheetTrigger asChild>
             <button
               aria-label="Open menu"
@@ -34,6 +36,7 @@ export function SiteHeader() {
                 <Link
                   key={n.to}
                   to={n.to}
+                  onClick={() => setMobileOpen(false)}
                   className="rounded-lg px-4 py-3 text-sm font-semibold tracking-widest text-muted-foreground hover:bg-white/5 hover:text-foreground"
                   activeProps={{ className: "rounded-lg px-4 py-3 text-sm font-semibold tracking-widest text-foreground bg-white/10" }}
                 >
