@@ -107,7 +107,7 @@ function Index() {
       {/* CONTROL / TRADE / EARN */}
       <section
         className="py-16"
-        style={{ background: "linear-gradient(180deg, var(--brand-navy) 0%, var(--brand-blue) 100%)" }}
+        style={{ background: "linear-gradient(180deg, transparent 0%, var(--brand-blue) 100%)" }}
       >
         <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.1fr_1fr]">
@@ -221,7 +221,7 @@ function Index() {
       {/* SELF-CUSTODY checkout */}
       <section
         className="py-20"
-        style={{ background: "linear-gradient(180deg, var(--brand-blue) 0%, var(--brand-navy) 100%)" }}
+        style={{ background: "linear-gradient(180deg, var(--brand-blue) 0%, transparent 100%)" }}
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
           <img
