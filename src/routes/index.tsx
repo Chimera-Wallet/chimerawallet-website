@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Placeholder } from "@/components/placeholder";
 import heroPhoneLeft from "@/assets/site/hero-phone-left.png";
 import heroPhoneRight from "@/assets/site/hero-phone-right.png";
@@ -293,7 +293,101 @@ function Index() {
           />
         </div>
       </section>
+
+      {/* WAITLIST SIGNUP */}
+      <section className="mx-auto max-w-3xl px-6 pb-20">
+        <div
+          className="rounded-2xl border border-white/10 p-8 md:p-10"
+          style={{
+            background: "var(--brand-navy-card)",
+            boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)",
+          }}
+        >
+          <p className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
+            JOIN THE WAITLIST
+          </p>
+          <h2 className="display mt-2 text-2xl md:text-3xl">BE FIRST IN LINE.</h2>
+          <p className="mt-3 text-sm text-foreground/80">
+            Drop your email and we'll let you know the moment Chimera is ready for you.
+          </p>
+          <WaitlistForm />
+        </div>
+      </section>
     </main>
+  );
+}
+
+function WaitlistForm() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState<string>("");
+  const cbName = useRef(`mcCallback_${Math.random().toString(36).slice(2)}`);
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setStatus("loading");
+    setMessage("");
+
+    const callbackName = cbName.current;
+    (window as any)[callbackName] = (data: { result: string; msg?: string }) => {
+      if (data.result === "success") {
+        setStatus("success");
+        setMessage("Thanks for subscribing!");
+        setEmail("");
+      } else {
+        setStatus("error");
+        setMessage(data.msg || "Something went wrong, please try again.");
+      }
+      delete (window as any)[callbackName];
+      script.remove();
+    };
+
+    const url = `https://trade.us13.list-manage.com/subscribe/post-json?u=00a079f682daf0fd064fd51a8&id=e89b2f090c&f_id=00638ee4f0&EMAIL=${encodeURIComponent(
+      email,
+    )}&c=${callbackName}`;
+    const script = document.createElement("script");
+    script.src = url;
+    document.body.appendChild(script);
+  };
+
+  return (
+    <form onSubmit={onSubmit} className="mt-6 flex flex-col gap-3 sm:flex-row">
+      <input
+        type="email"
+        required
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Email"
+        className="flex-1 rounded-full border border-white/10 bg-black/30 px-5 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[var(--brand-green)]"
+      />
+      {/* Honeypot: keeps Mailchimp happy, must stay hidden */}
+      <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
+        <input
+          type="text"
+          name="b_00a079f682daf0fd064fd51a8_e89b2f090c"
+          tabIndex={-1}
+          defaultValue=""
+        />
+      </div>
+      <button
+        type="submit"
+        disabled={status === "loading"}
+        className="rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)] transition-opacity disabled:opacity-60"
+        style={{ backgroundColor: "var(--brand-green)" }}
+      >
+        {status === "loading" ? "JOINING..." : "JOIN NOW!"}
+      </button>
+      {message && (
+        <p
+          className={`mt-2 text-xs sm:basis-full ${
+            status === "success" ? "text-[var(--brand-green)]" : "text-red-400"
+          }`}
+        >
+          {message}
+        </p>
+      )}
+    </form>
   );
 }
 
