@@ -81,7 +81,7 @@ export function SiteFooter() {
         <p className="mt-10 max-w-5xl text-xs text-muted-foreground">
           CEXT, issued by Outlogic SAGL, is a utility token under Swiss regulation. Not security. Not a payment token.
           Not an investment contract. Staking rewards are not guaranteed. The platform buy programme does not constitute
-          a guaranteed return. Fiat, card, trading and stacking services are provided by third parties - not by Chimera
+          a guaranteed return. Fiat, card, trading and staking services are provided by third parties - not by Chimera
           Wallet.
         </p>
 
