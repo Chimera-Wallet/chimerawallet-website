@@ -352,8 +352,9 @@ function WaitlistForm() {
   };
 
   return (
-    <form onSubmit={onSubmit} className="mt-6 flex flex-col gap-3 sm:flex-row">
-      <input
+    <form onSubmit={onSubmit} className="mt-6">
+      <div className="flex flex-col gap-3 sm:flex-row">
+        <input
         type="email"
         required
         value={email}
@@ -378,9 +379,10 @@ function WaitlistForm() {
       >
         {status === "loading" ? "JOINING..." : "JOIN NOW!"}
       </button>
+      </div>
       {message && (
         <p
-          className={`mt-2 text-xs sm:basis-full ${
+          className={`mt-3 text-xs ${
             status === "success" ? "text-[var(--brand-green)]" : "text-red-400"
           }`}
         >
