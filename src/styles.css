@@ -64,7 +64,7 @@
 :root {
   --radius: 0.75rem;
   /* Chimera dark palette */
-  --background: oklch(0.16 0.06 270);            /* deep navy #0c0f2e-ish */
+  --background: #151326;
   --foreground: oklch(0.98 0.005 250);
   --card: oklch(0.20 0.05 270);
   --card-foreground: oklch(0.98 0.005 250);
