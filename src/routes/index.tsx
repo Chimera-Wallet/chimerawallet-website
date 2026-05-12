@@ -225,8 +225,9 @@ function Index() {
               ["Yes", "Unilateral exit"],
             ]}
           /></Reveal>
-           <Reveal delay={240}><ComparisonCard
+          <Reveal delay={240}><ComparisonCard
              title="ARKADE"
+             highlight
             rows={[
               ["Non-custodial", "Custody"],
               ["Instant", "Speed"],
