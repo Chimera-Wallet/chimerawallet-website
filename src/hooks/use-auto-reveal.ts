@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
 
 const DEFAULT_SKIP_PATHS: string[] = [];
+
+const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 /**
  * Mirrors the per-element <Reveal> component used on the home page:
@@ -13,7 +15,7 @@ export function useAutoReveal({ skipPaths = DEFAULT_SKIP_PATHS }: { skipPaths?: 
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const skipKey = skipPaths.join("|");
 
-  useEffect(() => {
+  useIsoLayoutEffect(() => {
     if (typeof window === "undefined") return;
     if (skipPaths.includes(pathname)) return;
 
