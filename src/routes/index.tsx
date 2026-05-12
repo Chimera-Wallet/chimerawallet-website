@@ -226,7 +226,7 @@ function Index() {
             ]}
           /></Reveal>
           <Reveal delay={240}><ComparisonCard
-             title="Arkade"
+             title="Chimera"
              highlight
             rows={[
               ["Non-custodial", "Custody"],
