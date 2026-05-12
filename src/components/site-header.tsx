@@ -22,12 +22,12 @@ export function SiteHeader() {
           <img src={chimeraLogo} alt="Chimera" className="h-16 w-auto md:h-20" />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2 py-1.5">
+        <nav className="hidden md:flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.03] px-2 py-1.5">
           {navItems.map((n) => (
             <Link
               key={n.to}
               to={n.to}
-              className="rounded-full px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="rounded-full px-4 py-1.5 text-sm text-white/85 transition-colors hover:text-white"
               activeProps={{ className: "rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--brand-green)]" }}
             >
               {n.label}
