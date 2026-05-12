@@ -188,16 +188,16 @@ function Index() {
       </section>
 
       {/* ARKADE PROTOCOL — heading */}
-      <section className="mx-auto max-w-7xl px-6 pt-20 pb-32">
-        <h2 className="display text-center text-4xl md:text-5xl">ARKADE PROTOCOL</h2>
-        <p className="display mt-2 text-center text-xl tracking-widest text-foreground/80">BACKED BY THE BEST</p>
-        <p className="display text-center tracking-[0.3em] text-foreground/80 text-sm py-[10px]">
+      <section className="mx-auto max-w-4xl px-6 pt-20 pb-24">
+        <h2 className="display text-center text-5xl md:text-7xl">ARKADE PROTOCOL</h2>
+        <p className="display mt-6 text-center text-base md:text-lg tracking-widest text-foreground/70">BACKED BY THE BEST</p>
+        <p className="display mt-3 text-center tracking-[0.3em] text-foreground/60 text-[11px]">
           $7.7M raised across two rounds.
         </p>
       </section>
 
       {/* ARKADE PROTOCOL — comparison */}
-      <section className="mx-auto max-w-7xl px-6 pb-20">
+      <section className="mx-auto max-w-4xl px-6 pb-20">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <ComparisonCard
             title="CEX"
