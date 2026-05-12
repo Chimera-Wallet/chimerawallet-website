@@ -39,7 +39,7 @@ function AppPage() {
     <main>
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-12 text-center">
         <p className="hero-eyebrow text-[var(--brand-green)]">PROGRESSIVE APP</p>
-        <h1 className="display mx-auto mt-6 max-w-3xl text-4xl md:text-6xl">
+        <h1 className="hero-title mx-auto mt-6 max-w-3xl">
           NO INSTALL.
           <br />
           NO MEMORY. NO RISK.

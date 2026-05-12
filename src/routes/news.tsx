@@ -105,7 +105,7 @@ const newsItems = [
 function NewsPage() {
   return (
     <main className="mx-auto max-w-7xl px-6 py-24">
-      <h1 className="display text-4xl md:text-6xl text-center">NEWS</h1>
+      <h1 className="hero-title text-center">NEWS</h1>
       <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {newsItems.map((item) => (
           <a

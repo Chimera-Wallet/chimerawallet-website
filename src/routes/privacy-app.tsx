@@ -24,7 +24,7 @@ function Section({ title, children }: { title?: string; children: React.ReactNod
 function AppPrivacyPolicy() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
-      <h1 className="display text-4xl md:text-6xl">Chimera Wallet App Privacy Policy</h1>
+      <h1 className="hero-title">Chimera Wallet App Privacy Policy</h1>
 
       <Section>
         <p>

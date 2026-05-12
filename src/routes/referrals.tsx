@@ -30,7 +30,7 @@ function ReferralsPage() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-5xl px-6 pt-16 pb-24 text-center">
           <p className="hero-eyebrow text-[var(--brand-green)]">REFERRALS</p>
-          <h1 className="display mx-auto mt-6 text-4xl md:text-6xl">
+          <h1 className="hero-title mx-auto mt-6">
             YOUR LINK. THEIR TRADES.
             <br />
             YOUR CUT. FOREVER.

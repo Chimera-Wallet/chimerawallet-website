@@ -24,7 +24,7 @@ function PrivacyManifestoPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 pt-16 pb-24">
       <p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA</p>
-      <h1 className="display mt-6 text-4xl md:text-6xl">PRIVACY MANIFESTO</h1>
+      <h1 className="hero-title mt-6">PRIVACY MANIFESTO</h1>
 
       <div className="mt-10 space-y-6 text-sm leading-relaxed text-foreground/85">
         <p className="text-base font-medium text-foreground">

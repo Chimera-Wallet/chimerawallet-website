@@ -49,7 +49,7 @@ function CardPage() {
     <main>
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-10 text-center">
         <p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA CARD</p>
-        <h1 className="display mx-auto mt-6 max-w-4xl text-4xl md:text-6xl">
+        <h1 className="hero-title mx-auto mt-6 max-w-4xl">
           SELF-CUSTODY IN YOUR WALLET.
           <br />
           VISA IN YOUR POCKET.

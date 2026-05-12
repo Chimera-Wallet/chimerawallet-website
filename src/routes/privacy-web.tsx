@@ -25,7 +25,7 @@ function P({ children }: { children: React.ReactNode }) {
 function WebPrivacyPolicy() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
-      <h1 className="display text-4xl md:text-6xl">Chimera Website Privacy Policy</h1>
+      <h1 className="hero-title">Chimera Website Privacy Policy</h1>
       <p className="mt-4 text-xs text-muted-foreground">Last updated: June 09, 2025</p>
 
       <P>
