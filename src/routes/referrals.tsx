@@ -65,8 +65,8 @@ function ReferralsPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 text-center">
-        <h2 className="display text-3xl md:text-5xl">CEXT MULTIPLIERS</h2>
-        <p className="display mt-2 text-xl text-foreground/80">THE HIGHER YOUR TIER, THE BIGGER YOUR CUT.</p>
+        <Reveal><h2 className="display text-3xl md:text-5xl">CEXT MULTIPLIERS</h2></Reveal>
+        <Reveal delay={120}><p className="display mt-2 text-xl text-foreground/80">THE HIGHER YOUR TIER, THE BIGGER YOUR CUT.</p></Reveal>
 
         <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
@@ -74,22 +74,22 @@ function ReferralsPage() {
             { n: "SILVER", m: "1.5x", img: silverBadge },
             { n: "GOLD", m: "2x", img: goldBadge },
             { n: "DIAMOND", m: "3x", img: diamondBadge },
-          ].map(({ n, m, img }) => (
-            <div key={n} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+          ].map(({ n, m, img }, i) => (
+            <Reveal key={n} delay={i * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
               <img src={img} alt={`${n} tier badge`} className="mx-auto h-40 w-40 object-contain" />
               <h3 className="display mt-4 text-2xl">{n}</h3>
               <div className="mt-3 border-t border-white/10 pt-3">
                 <div className="display text-xl">{m}</div>
                 <div className="text-[10px] text-muted-foreground">Referral Bonus</div>
               </div>
-            </div>
+            </div></Reveal>
           ))}
         </div>
 
-        <p className="mt-8 text-xs text-muted-foreground">* Referral rewards apply to users who complete KYC verification.</p>
-        <button className="mt-8 rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]" style={{ backgroundColor: "var(--brand-green)" }}>
+        <Reveal><p className="mt-8 text-xs text-muted-foreground">* Referral rewards apply to users who complete KYC verification.</p></Reveal>
+        <Reveal delay={120}><button className="mt-8 rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]" style={{ backgroundColor: "var(--brand-green)" }}>
           GET YOUR REFERRAL CODE
-        </button>
+        </button></Reveal>
       </section>
     </main>
   );
