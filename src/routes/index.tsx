@@ -163,6 +163,7 @@ function Index() {
             />
             <LayerCard
               iconSrc={arkLogo}
+              iconClassName="h-16 w-16 -my-3"
               title="ARKADE PROTOCOL"
               body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Arkade Protocol."
             />
@@ -460,13 +461,13 @@ function TgeCountdown() {
   );
 }
 
-function LayerCard({ iconSrc, title, body }: { iconSrc: string; title: string; body: string }) {
+function LayerCard({ iconSrc, title, body, iconClassName = "h-10 w-10" }: { iconSrc: string; title: string; body: string; iconClassName?: string }) {
   return (
     <div
       className="rounded-2xl border border-white/10 p-6 backdrop-blur"
       style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
     >
-      <img src={iconSrc} alt="" className="h-10 w-10 object-contain" />
+      <img src={iconSrc} alt="" className={`${iconClassName} object-contain`} />
       <h3 className="display mt-3 text-xl text-[var(--brand-green)]">{title}</h3>
       <p className="mt-3 text-sm text-foreground/80">{body}</p>
     </div>
