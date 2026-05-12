@@ -16,7 +16,7 @@ const navItems = [
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-[var(--brand-navy)]/80 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full bg-transparent">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-6 py-4">
         <Link to="/" className="flex items-center">
           <img src={chimeraLogo} alt="Chimera" className="h-16 w-auto md:h-20" />
