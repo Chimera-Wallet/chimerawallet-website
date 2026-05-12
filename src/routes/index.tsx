@@ -43,11 +43,11 @@ function Index() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 pt-12 pb-20">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_2fr_1fr]">
+          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_4fr_1fr]">
             <img
               src={heroPhoneLeft}
               alt="Chimera wallet app showing balance and transactions"
-              className="hidden lg:block w-full h-auto"
+              className="hidden lg:block w-[160%] max-w-none h-auto -ml-[60%]"
             />
             <div className="text-center">
               <p
@@ -95,7 +95,7 @@ function Index() {
             <img
               src={heroPhoneRight}
               alt="Chimera card balance and transactions"
-              className="hidden lg:block w-full h-auto"
+              className="hidden lg:block w-[160%] max-w-none h-auto -mr-[60%]"
             />
           </div>
 
