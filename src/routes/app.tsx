@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
 import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
-import arkLogo from "@/assets/site/ark-logo.png";
+import arkLogo from "@/assets/site/arkade-logo.svg";
 import coinChimera from "@/assets/site/Coins/coin-front-chimera.png";
 import coinBitcoin from "@/assets/site/Coins/coin-front-bitcoin.png";
 import coinTether from "@/assets/site/Coins/coin-front-tether.png";
