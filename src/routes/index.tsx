@@ -20,20 +20,20 @@ import coinRight from "@/assets/site/Coins/Chimera-card-2-1.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: "Chimera — The Bitcoin Super-App" },
-      {
-        name: "description",
-        content:
-          "Chimera Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
-      },
-      { property: "og:title", content: "Chimera — The Bitcoin Super-App" },
-      {
-        property: "og:description",
-        content:
-          "Chimera Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
-      },
-    ],
+     meta: [
+       { title: "Arkade — The Bitcoin Super-App" },
+       {
+         name: "description",
+         content:
+           "Arkade Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
+       },
+       { property: "og:title", content: "Arkade — The Bitcoin Super-App" },
+       {
+         property: "og:description",
+         content:
+           "Arkade Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
+       },
+     ],
   }),
   component: Index,
 });
@@ -61,7 +61,7 @@ function Index() {
                   letterSpacing: "2px",
                 }}
               >
-                CHIMERAWALLET, FINANCE EVOLVED
+                 ARKADEWALLET, FINANCE EVOLVED
               </p></Reveal>
               <Reveal delay={120}><h1
                 className="mt-6 text-center uppercase"
@@ -88,7 +88,7 @@ function Index() {
                 Not a promise. Not a policy. Mathematics.
               </p></Reveal>
               <Reveal delay={340}><p className="mt-2 text-sm text-muted-foreground">
-                Mainchain. Lightning. Chimera Protocol. One app.
+                 Mainchain. Lightning. Arkade Protocol. One app.
                 <br />
                 Your keys. Nobody in between.
               </p></Reveal>
@@ -102,9 +102,9 @@ function Index() {
 
           {/* CTA cards */}
           <div className="mx-auto mt-16 max-w-3xl space-y-4">
-            <Reveal delay={0}><CtaCard
-              eyebrow="CHIMERA WALLET"
-              title="LAUNCH THE APP"
+             <Reveal delay={0}><CtaCard
+               eyebrow="ARKADE WALLET"
+               title="LAUNCH THE APP"
               eyebrowColor="text-[var(--brand-green)]"
               filled
               href="https://app.chimerawallet.com"
@@ -135,12 +135,12 @@ function Index() {
             <div className="relative mx-auto aspect-[5/4] w-1/2 max-w-md pb-12 lg:w-3/4 lg:pb-20">
               <img
                 src={wallet1}
-                alt="Chimera wallet app — primary view"
+               alt="Arkade wallet app — primary view"
                 className="absolute left-0 top-0 w-[60%] h-auto object-contain"
               />
               <img
                 src={wallet2}
-                alt="Chimera wallet app — secondary view"
+                 alt="Arkade wallet app — secondary view"
                 className="absolute right-0 bottom-0 w-[60%] h-auto object-contain"
               />
             </div>
@@ -148,12 +148,12 @@ function Index() {
               <Reveal><FeatureCard
                 iconSrc={controlIcon}
                 title="CONTROL"
-                body="Your keys. Your coins. Full stop. Bitcoin mainchain, Lightning, Chimera Protocol VTXO - the complete Bitcoin stack, non-custodial from the first second to the last."
+                 body="Your keys. Your coins. Full stop. Bitcoin mainchain, Lightning, Arkade Protocol VTXO - the complete Bitcoin stack, non-custodial from the first second to the last."
               /></Reveal>
               <Reveal delay={120}><FeatureCard
                 iconSrc={tradeIcon}
                 title="TRADE"
-                body="Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial Chimera swaps coming soon."
+                 body="Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial Arkade swaps coming soon."
               /></Reveal>
               <Reveal delay={240}><FeatureCard
                 iconSrc={earnIcon}
@@ -182,7 +182,7 @@ function Index() {
               iconSrc={arkLogo}
               iconClassName="h-16 w-16 -my-3"
               title="ARKADE PROTOCOL"
-              body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Arkade Protocol."
+               body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Arkade is the first Super App on Arkade Protocol."
             /></Reveal>
             <Reveal delay={240}><LayerCard
               iconSrc={lightningLogo}
@@ -225,8 +225,8 @@ function Index() {
               ["Yes", "Unilateral exit"],
             ]}
           /></Reveal>
-          <Reveal delay={240}><ComparisonCard
-            title="CHIMERA"
+           <Reveal delay={240}><ComparisonCard
+             title="ARKADE"
             rows={[
               ["Non-custodial", "Custody"],
               ["Instant", "Speed"],
@@ -244,7 +244,7 @@ function Index() {
         style={{ background: "linear-gradient(180deg, var(--brand-blue) 0%, transparent 100%)" }}
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
-          <img src={chimeraCard} alt="Chimera card with floating crypto coins" className="w-full h-auto rounded-2xl" />
+           <img src={chimeraCard} alt="Arkade card with floating crypto coins" className="w-full h-auto rounded-2xl" />
           <div>
             <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY DOESN'T STOP AT THE CHECKOUT.</h2>
             <p className="mt-6 text-sm text-foreground/85">
@@ -300,7 +300,7 @@ function Index() {
             </p>
             <CtaCard className="mt-8" title="GET YOUR REFERRAL CODE" />
           </div>
-          <img src={referralPreview} alt="Chimera referral preview" className="aspect-[4/5] w-full object-contain" />
+           <img src={referralPreview} alt="Arkade referral preview" className="aspect-[4/5] w-full object-contain" />
         </div>
       </section>
 
