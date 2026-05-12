@@ -403,17 +403,17 @@ function CtaCard({
   return (
     <Tag
       {...linkProps}
-      className={`group flex w-full items-center justify-between rounded-2xl border border-white/10 px-6 py-5 text-left transition-colors hover:border-white/30 ${className}`}
-      style={{
-        background: filled
-          ? "linear-gradient(90deg, var(--brand-blue) 0%, var(--brand-blue-bright) 100%)"
-          : "var(--brand-navy-card)",
-        boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)",
-      }}
+      data-filled={filled ? "true" : "false"}
+      className={`cta-card group flex w-full items-center justify-between rounded-2xl border border-white/10 px-6 py-8 text-left transition-all hover:border-white/30 ${className}`}
     >
       <div>
         {eyebrow && <div className={`text-[10px] font-bold tracking-[0.25em] ${eyebrowColor}`}>{eyebrow}</div>}
-        <div className="display mt-1 text-xl">{title}</div>
+        <div
+          className="mt-1 text-2xl uppercase"
+          style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}
+        >
+          {title}
+        </div>
       </div>
       <span className="text-xl text-foreground/70 transition-transform group-hover:translate-x-1">↗</span>
     </Tag>
