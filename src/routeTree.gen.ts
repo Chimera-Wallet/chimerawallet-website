@@ -14,6 +14,7 @@ import { Route as ReferralsRouteImport } from './routes/referrals'
 import { Route as PrivacyWebRouteImport } from './routes/privacy-web'
 import { Route as PrivacyManifestoRouteImport } from './routes/privacy-manifesto'
 import { Route as PrivacyAppRouteImport } from './routes/privacy-app'
+import { Route as PressKitRouteImport } from './routes/press-kit'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as CardRouteImport } from './routes/card'
 import { Route as AppRouteImport } from './routes/app'
@@ -43,6 +44,11 @@ const PrivacyManifestoRoute = PrivacyManifestoRouteImport.update({
 const PrivacyAppRoute = PrivacyAppRouteImport.update({
   id: '/privacy-app',
   path: '/privacy-app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PressKitRoute = PressKitRouteImport.update({
+  id: '/press-kit',
+  path: '/press-kit',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NewsRoute = NewsRouteImport.update({
@@ -77,6 +83,7 @@ export interface FileRoutesByFullPath {
   '/app': typeof AppRoute
   '/card': typeof CardRoute
   '/news': typeof NewsRoute
+  '/press-kit': typeof PressKitRoute
   '/privacy-app': typeof PrivacyAppRoute
   '/privacy-manifesto': typeof PrivacyManifestoRoute
   '/privacy-web': typeof PrivacyWebRoute
@@ -89,6 +96,7 @@ export interface FileRoutesByTo {
   '/app': typeof AppRoute
   '/card': typeof CardRoute
   '/news': typeof NewsRoute
+  '/press-kit': typeof PressKitRoute
   '/privacy-app': typeof PrivacyAppRoute
   '/privacy-manifesto': typeof PrivacyManifestoRoute
   '/privacy-web': typeof PrivacyWebRoute
@@ -102,6 +110,7 @@ export interface FileRoutesById {
   '/app': typeof AppRoute
   '/card': typeof CardRoute
   '/news': typeof NewsRoute
+  '/press-kit': typeof PressKitRoute
   '/privacy-app': typeof PrivacyAppRoute
   '/privacy-manifesto': typeof PrivacyManifestoRoute
   '/privacy-web': typeof PrivacyWebRoute
@@ -116,6 +125,7 @@ export interface FileRouteTypes {
     | '/app'
     | '/card'
     | '/news'
+    | '/press-kit'
     | '/privacy-app'
     | '/privacy-manifesto'
     | '/privacy-web'
@@ -128,6 +138,7 @@ export interface FileRouteTypes {
     | '/app'
     | '/card'
     | '/news'
+    | '/press-kit'
     | '/privacy-app'
     | '/privacy-manifesto'
     | '/privacy-web'
@@ -140,6 +151,7 @@ export interface FileRouteTypes {
     | '/app'
     | '/card'
     | '/news'
+    | '/press-kit'
     | '/privacy-app'
     | '/privacy-manifesto'
     | '/privacy-web'
@@ -153,6 +165,7 @@ export interface RootRouteChildren {
   AppRoute: typeof AppRoute
   CardRoute: typeof CardRoute
   NewsRoute: typeof NewsRoute
+  PressKitRoute: typeof PressKitRoute
   PrivacyAppRoute: typeof PrivacyAppRoute
   PrivacyManifestoRoute: typeof PrivacyManifestoRoute
   PrivacyWebRoute: typeof PrivacyWebRoute
@@ -195,6 +208,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy-app'
       fullPath: '/privacy-app'
       preLoaderRoute: typeof PrivacyAppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/press-kit': {
+      id: '/press-kit'
+      path: '/press-kit'
+      fullPath: '/press-kit'
+      preLoaderRoute: typeof PressKitRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/news': {
@@ -241,6 +261,7 @@ const rootRouteChildren: RootRouteChildren = {
   AppRoute: AppRoute,
   CardRoute: CardRoute,
   NewsRoute: NewsRoute,
+  PressKitRoute: PressKitRoute,
   PrivacyAppRoute: PrivacyAppRoute,
   PrivacyManifestoRoute: PrivacyManifestoRoute,
   PrivacyWebRoute: PrivacyWebRoute,
@@ -250,3 +271,12 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
