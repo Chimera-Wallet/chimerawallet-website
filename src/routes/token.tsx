@@ -226,7 +226,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2></Reveal>
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
           {[
             ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Chimera Protocol VTXO technology."],
@@ -238,23 +238,23 @@ function TokenPage() {
             ["June 2026", "P2P Swaps", "Peer-to-peer swaps directly in-app."],
             ["2027", "Decentralised Governance", ""],
             ["2028", "DAO Transition", ""],
-          ].map(([d, t, b]) => (
-            <div key={t} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+          ].map(([d, t, b], i) => (
+            <Reveal key={t} delay={(i % 3) * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
               <div className="text-xs font-bold tracking-widest text-[var(--brand-green)]">{d}</div>
               <div className="display mt-2 text-lg">{t}</div>
               {b && <p className="mt-2 text-xs text-muted-foreground">{b}</p>}
-            </div>
+            </div></Reveal>
           ))}
         </div>
-        <p className="mx-auto mt-8 max-w-4xl text-center text-xs text-muted-foreground">
+        <Reveal><p className="mx-auto mt-8 max-w-4xl text-center text-xs text-muted-foreground">
           CEXT is issued by Outlogic SAGL and reviewed in accordance with FINMA guidance. Not a security. Not a payment token. Not an investment contract. A utility token — with regulatory clarity most tokens never achieve.
-        </p>
+        </p></Reveal>
       </section>
 
       <TgeCountdownSection />
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="rounded-2xl p-10">
+        <Reveal><div className="rounded-2xl p-10">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             <img src={floatingCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain" />
             <div>
@@ -263,11 +263,11 @@ function TokenPage() {
               <p className="mt-4 text-sm">After TGE, active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
             </div>
           </div>
-        </div>
+        </div></Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <a
+        <Reveal><a
           href={whitepaperPdf}
           target="_blank"
           rel="noopener noreferrer"
@@ -276,7 +276,7 @@ function TokenPage() {
         >
           READ THE WHITE PAPER
           <span aria-hidden="true">→</span>
-        </a>
+        </a></Reveal>
       </section>
     </main>
   );
