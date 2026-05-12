@@ -16,9 +16,17 @@ export const Route = createFileRoute("/token")({
   head: () => ({
     meta: [
       { title: "CEXT Token — Pay Less. Earn More." },
-      { name: "description", content: "CEXT utility token. TGE 27 May 2026. Fixed supply. Zero inflation. Four tiers." },
+      {
+        name: "description",
+        content:
+          "CEXT. The utility token issued from Switzerland powering the Chimera ecosystem — fee sharing, staking, and referral multipliers.",
+      },
       { property: "og:title", content: "CEXT Token — Pay Less. Earn More." },
-      { property: "og:description", content: "CEXT utility token. TGE 27 May 2026. Fixed supply. Zero inflation. Four tiers." },
+      {
+        property: "og:description",
+        content:
+          "CEXT. The utility token issued from Switzerland powering the Chimera ecosystem — fee sharing, staking, and referral multipliers.",
+      },
     ],
   }),
   component: TokenPage,
