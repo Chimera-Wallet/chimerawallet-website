@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Placeholder } from "@/components/placeholder";
+import { Reveal } from "@/components/reveal";
 import cardHero from "@/assets/site/Chimera_Card.png";
 import cardCoins from "@/assets/site/chimera-card.png";
 
@@ -48,28 +49,28 @@ function CardPage() {
   return (
     <main>
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-10 text-center">
-        <p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA CARD</p>
-        <h1 className="hero-title mx-auto mt-6 max-w-4xl">
+        <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA CARD</p></Reveal>
+        <Reveal delay={120}><h1 className="hero-title mx-auto mt-6 max-w-4xl">
           SELF-CUSTODY IN YOUR WALLET.
           <br />
           VISA IN YOUR POCKET.
-        </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
+        </h1></Reveal>
+        <Reveal delay={240}><p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
           Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
-        </p>
-        <ReserveForm>
+        </p></Reveal>
+        <Reveal delay={340}><ReserveForm>
           <button
             type="submit"
             className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10"
           >
             RESERVE YOUR CARD
           </button>
-        </ReserveForm>
-        <img src={cardHero} alt="Chimera cards" className="mx-auto mt-10 w-full max-w-md object-contain" />
+        </ReserveForm></Reveal>
+        <Reveal delay={460}><img src={cardHero} alt="Chimera cards" className="mx-auto mt-10 w-full max-w-md object-contain" /></Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-6">
-        <ReserveForm>
+        <Reveal><ReserveForm>
           <button type="submit" className="block w-full text-left">
         <div
           className="flex items-center justify-between rounded-2xl border border-white/10 px-6 py-5"
@@ -87,7 +88,7 @@ function CardPage() {
           <span className="text-xl">↗</span>
         </div>
           </button>
-        </ReserveForm>
+        </ReserveForm></Reveal>
       </section>
 
       <section className="py-20">
