@@ -12,7 +12,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-2">
-               <img src={chimeraLogo} alt="Arkade" className="h-10 w-auto object-contain" />
+               <img src={chimeraLogo} alt="Chimera" className="h-10 w-auto object-contain" />
             </div>
             <div className="mt-6 text-xs text-muted-foreground">Powered by:</div>
             <div className="mt-3 flex items-center gap-4">
@@ -36,7 +36,7 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-2 text-sm text-foreground/90">
               <li>
                  <Link to="/privacy-manifesto" className="hover:text-[var(--brand-green)]">
-                   Arkade Privacy Manifesto
+                   Chimera Privacy Manifesto
                  </Link>
               </li>
             </ul>
@@ -86,11 +86,11 @@ export function SiteFooter() {
         </div>
 
         <p className="mt-10 max-w-5xl text-xs text-muted-foreground leading-relaxed">
-           CEXT, issued by Outlogic SAGL, is a utility token under Swiss regulation. Not security. Not a payment token. Not an investment contract. Staking rewards are not guaranteed. Fiat, card, trading and staking services are provided by third parties - not by Arkade Wallet.
+           CEXT, issued by Outlogic SAGL, is a utility token under Swiss regulation. Not security. Not a payment token. Not an investment contract. Staking rewards are not guaranteed. Fiat, card, trading and staking services are provided by third parties - not by Chimera Wallet.
         </p>
 
          <div className="mt-8 border-t border-white/5 pt-6 text-xs text-muted-foreground">
-           © 2026 Arkade Software Association - 6900 Lugano Switzerland. All rights reserved. Made with ❤️ in 🇨🇭
+           © 2026 Chimera Software Association - 6900 Lugano Switzerland. All rights reserved. Made with ❤️ in 🇨🇭
          </div>
       </div>
     </footer>

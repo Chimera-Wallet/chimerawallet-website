@@ -19,7 +19,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full bg-transparent">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-6 py-4">
         <Link to="/" className="flex items-center">
-           <img src={chimeraLogo} alt="Arkade" className="h-16 w-auto md:h-20" />
+           <img src={chimeraLogo} alt="Chimera" className="h-16 w-auto md:h-20" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1 rounded-full border border-white/15 bg-white/15 px-2 py-1.5 backdrop-blur">
@@ -43,7 +43,7 @@ export function SiteHeader() {
             className="inline-flex h-11 items-center rounded-full px-5 text-xs font-bold tracking-widest text-[var(--brand-navy)] md:h-12 md:px-7"
             style={{ backgroundColor: "var(--brand-green)" }}
           >
-             OPEN ARKADE
+             OPEN CHIMERA
           </a>
 
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
@@ -78,7 +78,7 @@ export function SiteHeader() {
                   className="mt-4 inline-flex items-center justify-center rounded-full px-4 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
                   style={{ backgroundColor: "var(--brand-green)" }}
                 >
-                   OPEN ARKADE
+                   OPEN CHIMERA
                 </a>
               </div>
             </SheetContent>
