@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Reveal } from "@/components/reveal";
 
 export const Route = createFileRoute("/privacy-web")({
   head: () => ({
@@ -13,20 +14,20 @@ export const Route = createFileRoute("/privacy-web")({
 });
 
 function H2({ children }: { children: React.ReactNode }) {
-  return <h2 className="display mt-12 text-2xl md:text-3xl text-[var(--brand-green)]">{children}</h2>;
+  return <Reveal><h2 className="display mt-12 text-2xl md:text-3xl text-[var(--brand-green)]">{children}</h2></Reveal>;
 }
 function H3({ children }: { children: React.ReactNode }) {
-  return <h3 className="mt-8 text-lg md:text-xl font-semibold text-foreground">{children}</h3>;
+  return <Reveal><h3 className="mt-8 text-lg md:text-xl font-semibold text-foreground">{children}</h3></Reveal>;
 }
 function P({ children }: { children: React.ReactNode }) {
-  return <p className="mt-4 text-sm md:text-base text-foreground/85 leading-relaxed">{children}</p>;
+  return <Reveal><p className="mt-4 text-sm md:text-base text-foreground/85 leading-relaxed">{children}</p></Reveal>;
 }
 
 function WebPrivacyPolicy() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
-      <h1 className="hero-title">Chimera Website Privacy Policy</h1>
-      <p className="mt-4 text-xs text-muted-foreground">Last updated: June 09, 2025</p>
+      <Reveal delay={120}><h1 className="hero-title">Chimera Website Privacy Policy</h1></Reveal>
+      <Reveal delay={240}><p className="mt-4 text-xs text-muted-foreground">Last updated: June 09, 2025</p></Reveal>
 
       <P>
         Our Privacy Policy outlines our practices regarding the collection, usage, and disclosure of your information when you utilize our service. It also informs you about your privacy rights and legal protections. We utilize your personal data to enhance and deliver our service. By using our service, you consent to the collection and utilization of information as outlined in this Privacy Policy.
