@@ -497,7 +497,11 @@ function ComparisonCard({ title, rows, highlight = false }: { title: string; row
       className="rounded-2xl border p-6"
       style={
         highlight
-          ? { background: "rgba(135, 206, 250, 0.18)", borderColor: "rgba(135, 206, 250, 0.45)" }
+          ? {
+              background:
+                "linear-gradient(90deg, var(--brand-blue) 0%, var(--brand-blue-bright) 100%)",
+              borderColor: "rgba(255, 255, 255, 0.1)",
+            }
           : { background: "rgba(255, 255, 255, 0.1)", borderColor: "rgba(255, 255, 255, 0.1)" }
       }
     >
