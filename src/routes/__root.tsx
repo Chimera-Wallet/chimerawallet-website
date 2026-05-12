@@ -40,8 +40,6 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Chimera Wallet" },
-      { name: "twitter:description", content: "The only Bitcoin super-app built so nobody can ever take your money away." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7dd2e4a0-c2ff-4f8f-8c19-e5ec01a2c402/id-preview-3e2172de--c1c26671-6d8a-47c2-8082-e76e22fa0bd2.lovable.app-1777985302818.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7dd2e4a0-c2ff-4f8f-8c19-e5ec01a2c402/id-preview-3e2172de--c1c26671-6d8a-47c2-8082-e76e22fa0bd2.lovable.app-1777985302818.png" },
     ],
