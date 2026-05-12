@@ -144,6 +144,9 @@ function TokenPage() {
         <p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
         </p>
+        <p className="mx-auto mt-2 max-w-3xl text-center text-xs text-muted-foreground/70">
+          Data accurate as of 05/2026
+        </p>
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
           {[
