@@ -156,17 +156,21 @@ function CardPage() {
         <div className="mx-auto max-w-3xl px-6">
           <h2 className="display text-center text-4xl md:text-5xl">FAQ</h2>
           <div className="mt-10 space-y-3">
-            <Faq q="How do I apply?" />
-            <Faq q="Are the lifetime rates actually locked forever?" />
-            <Faq q="Which countries?" defaultOpen>
-              Chimera Card works anywhere Visa is accepted. Residents of the following countries can apply:
-              Andorra, Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland,
-              France, Germany, Gibraltar, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Lithuania, Luxembourg,
-              Malta, Monaco, Montenegro, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia,
-              Spain, Sweden, Switzerland, United Kingdom, Australia, Hong Kong, Indonesia, Malaysia, Philippines,
-              Singapore, Taiwan, Thailand, Vietnam, Argentina, Brazil, Chile, Colombia, Ecuador, Mexico, Peru.
+            <Faq q="How do I apply for a Chimera Card?">
+              Click "PRE-ORDER NOW" below to reserve your card and lock in lifetime pre-order benefits.
             </Faq>
-            <Faq q="How do I top up?" />
+            <Faq q="What happens if I miss the pre-order window?">
+              You'll pay standard rates with no grandfathered pricing. Pre-order members receive permanent rate protection.
+            </Faq>
+            <Faq q="Are pre-order rates really locked forever?">
+              Yes. Your fees are frozen at pre-order levels for the lifetime of your account. Standard rates may increase over time, but yours won't.
+            </Faq>
+            <Faq q="Is Chimera Card secure?">
+              Yes. Chimera Card uses the same Visa security infrastructure as traditional bank cards.
+            </Faq>
+            <Faq q="How do I top up my Chimera Card?">
+              Top up directly from your non-custodial Chimera Wallet. It's quick, easy, and secure.
+            </Faq>
           </div>
 
           <a
