@@ -8,9 +8,17 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Chimera — Built by people who believe your money should belong to you" },
-      { name: "description", content: "Open-source. Non-custodial by design. Swiss non-profit. Self-sovereignty." },
+      {
+        name: "description",
+        content:
+          "Chimera Wallet holds no funds, takes no spread, and sells no order flow. Open source, browser-based, built on Arkade. Freedom the way it should be.",
+      },
       { property: "og:title", content: "About Chimera" },
-      { property: "og:description", content: "Open-source. Non-custodial by design. Swiss non-profit. Self-sovereignty." },
+      {
+        property: "og:description",
+        content:
+          "Chimera Wallet holds no funds, takes no spread, and sells no order flow. Open source, browser-based, built on Arkade. Freedom the way it should be.",
+      },
     ],
   }),
   component: AboutPage,
