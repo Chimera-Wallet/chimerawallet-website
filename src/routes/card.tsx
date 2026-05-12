@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Placeholder } from "@/components/placeholder";
+import { Reveal } from "@/components/reveal";
 import cardHero from "@/assets/site/Chimera_Card.png";
 import cardCoins from "@/assets/site/chimera-card.png";
 
@@ -48,28 +49,28 @@ function CardPage() {
   return (
     <main>
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-10 text-center">
-        <p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA CARD</p>
-        <h1 className="hero-title mx-auto mt-6 max-w-4xl">
+        <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA CARD</p></Reveal>
+        <Reveal delay={120}><h1 className="hero-title mx-auto mt-6 max-w-4xl">
           SELF-CUSTODY IN YOUR WALLET.
           <br />
           VISA IN YOUR POCKET.
-        </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
+        </h1></Reveal>
+        <Reveal delay={240}><p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
           Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
-        </p>
-        <ReserveForm>
+        </p></Reveal>
+        <Reveal delay={340}><ReserveForm>
           <button
             type="submit"
             className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10"
           >
             RESERVE YOUR CARD
           </button>
-        </ReserveForm>
-        <img src={cardHero} alt="Chimera cards" className="mx-auto mt-10 w-full max-w-md object-contain" />
+        </ReserveForm></Reveal>
+        <Reveal delay={460}><img src={cardHero} alt="Chimera cards" className="mx-auto mt-10 w-full max-w-md object-contain" /></Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-6">
-        <ReserveForm>
+        <Reveal><ReserveForm>
           <button type="submit" className="block w-full text-left">
         <div
           className="flex items-center justify-between rounded-2xl border border-white/10 px-6 py-5"
@@ -87,13 +88,13 @@ function CardPage() {
           <span className="text-xl">↗</span>
         </div>
           </button>
-        </ReserveForm>
+        </ReserveForm></Reveal>
       </section>
 
       <section className="py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
-          <img src={cardCoins} alt="Chimera card with floating coins" className="aspect-[4/3] w-full object-contain" />
-          <div>
+          <Reveal><img src={cardCoins} alt="Chimera card with floating coins" className="aspect-[4/3] w-full object-contain" /></Reveal>
+          <Reveal delay={120}><div>
             <h2 className="display text-4xl md:text-5xl">1,000 SPOTS.</h2>
             <p className="display mt-1 text-2xl text-foreground/80">THAT'S IT.</p>
             <p className="mt-6 text-sm text-foreground/85">
@@ -112,56 +113,56 @@ function CardPage() {
                 SECURE YOUR SPOT NOW
               </button>
             </ReserveForm>
-          </div>
+          </div></Reveal>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <h2 className="display text-3xl md:text-4xl">THREE BENEFITS</h2>
-        <p className="display text-2xl text-foreground/80">THAT DON'T EXPIRE:</p>
+        <Reveal><h2 className="display text-3xl md:text-4xl">THREE BENEFITS</h2></Reveal>
+        <Reveal delay={120}><p className="display text-2xl text-foreground/80">THAT DON'T EXPIRE:</p></Reveal>
 
         <div className="mt-10 space-y-4">
-          <BenefitRow
+          <Reveal><BenefitRow
             tag="FOREVER"
             title="1.5% TRANSACTION FEE FOR LIFE"
             body="Locked for life. Pre-order customers lock in 1.5% forever. Standard rate is 2% — and may rise. Yours won't."
             badge="1.5%"
             strike="STANDARD 2%"
             filled
-          />
-          <BenefitRow
+          /></Reveal>
+          <Reveal delay={120}><BenefitRow
             tag="FREE FOREVER"
             title="ZERO MONTHLY FEE"
             body="No subscription. No maintenance charge. No annual fee. No bill."
             badge="FREE"
             strike="FOREVER"
-          />
-          <BenefitRow
+          /></Reveal>
+          <Reveal delay={240}><BenefitRow
             tag="FOREVER"
             title="ZERO TOP-UP FEES"
             body="Load from your Chimera Wallet at zero cost. Every time."
             badge="0.0%"
             strike="STANDARD 1%"
-          />
+          /></Reveal>
         </div>
 
-        <p className="mt-8 text-center text-xs italic text-muted-foreground">
+        <Reveal><p className="mt-8 text-center text-xs italic text-muted-foreground">
           *Card programme provided in partnership with Wirex Pay. KYC is required to access the Wirex platform —
           separate from Chimera's own KYC. Chimera collects no fee or financial advantage for this service.
-        </p>
+        </p></Reveal>
       </section>
 
       <section className="mx-auto max-w-4xl px-6 py-16">
-        <h2 className="display text-center text-3xl md:text-4xl">SUPPORTED COUNTRIES</h2>
-        <p className="mt-4 text-center text-sm text-foreground/85">
+        <Reveal><h2 className="display text-center text-3xl md:text-4xl">SUPPORTED COUNTRIES</h2></Reveal>
+        <Reveal delay={120}><p className="mt-4 text-center text-sm text-foreground/85">
           Chimera Card works anywhere Visa is accepted. Residents of the following countries can apply:
-        </p>
+        </p></Reveal>
         <ul className="mt-10 grid grid-cols-1 gap-x-10 gap-y-2 text-sm text-foreground/90 sm:grid-cols-2">
           {SUPPORTED_COUNTRIES.map(([flag, name]) => (
-            <li key={name} className="flex items-center gap-3 border-b border-white/5 py-2">
+            <Reveal key={name} as="li" className="flex items-center gap-3 border-b border-white/5 py-2">
               <span className="text-lg leading-none">{flag}</span>
               <span>{name}</span>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </section>
@@ -171,26 +172,26 @@ function CardPage() {
         style={{ background: "linear-gradient(180deg, var(--brand-navy) 0%, var(--brand-blue) 100%)" }}
       >
         <div className="mx-auto max-w-3xl px-6">
-          <h2 className="display text-center text-4xl md:text-5xl">FAQ</h2>
+          <Reveal><h2 className="display text-center text-4xl md:text-5xl">FAQ</h2></Reveal>
           <div className="mt-10 space-y-3">
-            <Faq q="How do I apply for a Chimera Card?">
+            <Reveal><Faq q="How do I apply for a Chimera Card?">
               Click "PRE-ORDER NOW" below to reserve your card and lock in lifetime pre-order benefits.
-            </Faq>
-            <Faq q="What happens if I miss the pre-order window?">
+            </Faq></Reveal>
+            <Reveal delay={120}><Faq q="What happens if I miss the pre-order window?">
               You'll pay standard rates with no grandfathered pricing. Pre-order members receive permanent rate protection.
-            </Faq>
-            <Faq q="Are pre-order rates really locked forever?">
+            </Faq></Reveal>
+            <Reveal delay={240}><Faq q="Are pre-order rates really locked forever?">
               Yes. Your fees are frozen at pre-order levels for the lifetime of your account. Standard rates may increase over time, but yours won't.
-            </Faq>
-            <Faq q="Is Chimera Card secure?">
+            </Faq></Reveal>
+            <Reveal delay={360}><Faq q="Is Chimera Card secure?">
               Yes. Chimera Card uses the same Visa security infrastructure as traditional bank cards.
-            </Faq>
-            <Faq q="How do I top up my Chimera Card?">
+            </Faq></Reveal>
+            <Reveal delay={480}><Faq q="How do I top up my Chimera Card?">
               Top up directly from your non-custodial Chimera Wallet. It's quick, easy, and secure.
-            </Faq>
+            </Faq></Reveal>
           </div>
 
-          <a
+          <Reveal><a
             href="https://app.chimerawallet.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -204,7 +205,7 @@ function CardPage() {
                 <div className="display mt-1 text-xl">OPEN CHIMERA</div>
             </div>
             <span className="text-xl">↗</span>
-          </a>
+          </a></Reveal>
         </div>
       </section>
     </main>

@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import appCss from "../styles.css?url";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { useAutoReveal } from "@/hooks/use-auto-reveal";
 
 function NotFoundComponent() {
   return (
@@ -89,9 +88,6 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  // Skip "/" — that page has its own hand-tuned Reveal animations.
-  useAutoReveal({ skipPaths: ["/"] });
-
   useEffect(() => {
     if (typeof window === "undefined") return;
     const w = window as any;

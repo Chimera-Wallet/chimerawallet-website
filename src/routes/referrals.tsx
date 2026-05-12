@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
+import { Reveal } from "@/components/reveal";
 import bronzeBadge from "@/assets/site/Tiers/Bronze.png";
 import silverBadge from "@/assets/site/Tiers/Silver.png";
 import goldBadge from "@/assets/site/Tiers/Gold.png";
@@ -29,23 +30,23 @@ function ReferralsPage() {
     <main>
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-5xl px-6 pt-16 pb-24 text-center">
-          <p className="hero-eyebrow text-[var(--brand-green)]">REFERRALS</p>
-          <h1 className="hero-title mx-auto mt-6">
+          <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">REFERRALS</p></Reveal>
+          <Reveal delay={120}><h1 className="hero-title mx-auto mt-6">
             YOUR LINK. THEIR TRADES.
             <br />
             YOUR CUT. FOREVER.
             <br />
             NO CAP. NO EXPIRY.
-          </h1>
-          <p className="mt-6 text-base text-foreground/85">Real platform revenue, credited automatically</p>
-          <p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground">
+          </h1></Reveal>
+          <Reveal delay={240}><p className="mt-6 text-base text-foreground/85">Real platform revenue, credited automatically</p></Reveal>
+          <Reveal delay={340}><p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground">
             Every trade your referrals complete earns you a direct cut of the platform fee — for as long as they keep trading.
-          </p>
+          </p></Reveal>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="display text-3xl md:text-5xl">HOW IT WORKS.</h2>
+        <Reveal><h2 className="display text-3xl md:text-5xl">HOW IT WORKS.</h2></Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
           {[
@@ -53,19 +54,19 @@ function ReferralsPage() {
             { n: 2, t: <><span className="text-[var(--brand-green)]">SHARE IT ANYWHERE</span></>, b: "SOCIAL MEDIA, DMS, COMMUNITY GROUPS." },
             { n: 3, t: <>THEY SIGN UP, COMPLETE KYC, START TRADING. <span className="text-[var(--brand-green)]">YOU START EARNING.</span></>, b: "" },
             { n: 4, t: <>IT ACCUMULATES <span className="text-[var(--brand-green)]">FOREVER.</span></>, b: "EVERY TRADE NO CAP. NO EXPIRY." },
-          ].map((s) => (
-            <div key={s.n} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+          ].map((s, i) => (
+            <Reveal key={s.n} delay={i * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
               <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-sm">{s.n}</div>
               <div className="display mt-6 text-lg">{s.t}</div>
               {s.b && <div className="mt-2 text-xs text-muted-foreground">{s.b}</div>}
-            </div>
+            </div></Reveal>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 text-center">
-        <h2 className="display text-3xl md:text-5xl">CEXT MULTIPLIERS</h2>
-        <p className="display mt-2 text-xl text-foreground/80">THE HIGHER YOUR TIER, THE BIGGER YOUR CUT.</p>
+        <Reveal><h2 className="display text-3xl md:text-5xl">CEXT MULTIPLIERS</h2></Reveal>
+        <Reveal delay={120}><p className="display mt-2 text-xl text-foreground/80">THE HIGHER YOUR TIER, THE BIGGER YOUR CUT.</p></Reveal>
 
         <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
@@ -73,22 +74,22 @@ function ReferralsPage() {
             { n: "SILVER", m: "1.5x", img: silverBadge },
             { n: "GOLD", m: "2x", img: goldBadge },
             { n: "DIAMOND", m: "3x", img: diamondBadge },
-          ].map(({ n, m, img }) => (
-            <div key={n} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+          ].map(({ n, m, img }, i) => (
+            <Reveal key={n} delay={i * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
               <img src={img} alt={`${n} tier badge`} className="mx-auto h-40 w-40 object-contain" />
               <h3 className="display mt-4 text-2xl">{n}</h3>
               <div className="mt-3 border-t border-white/10 pt-3">
                 <div className="display text-xl">{m}</div>
                 <div className="text-[10px] text-muted-foreground">Referral Bonus</div>
               </div>
-            </div>
+            </div></Reveal>
           ))}
         </div>
 
-        <p className="mt-8 text-xs text-muted-foreground">* Referral rewards apply to users who complete KYC verification.</p>
-        <button className="mt-8 rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]" style={{ backgroundColor: "var(--brand-green)" }}>
+        <Reveal><p className="mt-8 text-xs text-muted-foreground">* Referral rewards apply to users who complete KYC verification.</p></Reveal>
+        <Reveal delay={120}><button className="mt-8 rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]" style={{ backgroundColor: "var(--brand-green)" }}>
           GET YOUR REFERRAL CODE
-        </button>
+        </button></Reveal>
       </section>
     </main>
   );

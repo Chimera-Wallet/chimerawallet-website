@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { Reveal } from "@/components/reveal";
 import bronzeBadge from "@/assets/site/Tiers/Bronze.png";
 import silverBadge from "@/assets/site/Tiers/Silver.png";
 import goldBadge from "@/assets/site/Tiers/Gold.png";
@@ -36,7 +37,7 @@ function TokenPage() {
   return (
     <main>
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-10">
-        <div className="rounded-3xl border border-white/10 bg-[var(--brand-navy-card)] p-10 text-center opacity-90">
+        <Reveal><div className="rounded-3xl border border-white/10 bg-[var(--brand-navy-card)] p-10 text-center opacity-90">
           <p className="hero-eyebrow text-[var(--brand-green)]">HOLD CEXT</p>
           <h1 className="hero-title mx-auto mt-6 max-w-3xl">
             PAY LESS. EARN MORE.
@@ -50,7 +51,7 @@ function TokenPage() {
           <button className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10">
             JOIN THE WAITLIST
           </button>
-        </div>
+        </div></Reveal>
 
         <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-7">
           {[
@@ -61,22 +62,22 @@ function TokenPage() {
             ["PRIORITY INCREASE", "as you move up"],
             ["SWISS ISSUED", "1 billion tokens"],
             ["NO INFLATION", "or diluition"],
-          ].map(([l, v]) => (
-            <div key={l} className="rounded-xl border border-white/10 bg-[var(--brand-navy-card)] p-4 text-center">
+          ].map(([l, v], i) => (
+            <Reveal key={l} delay={i * 80}><div className="rounded-xl border border-white/10 bg-[var(--brand-navy-card)] p-4 text-center">
               <div className="text-[10px] font-bold tracking-widest text-[var(--brand-green)]">{l}</div>
               <div className="display mt-2 text-base">{v}</div>
-            </div>
+            </div></Reveal>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div>
+          <Reveal><div>
             <h3 className="display text-xl">Token distribution</h3>
             <img src={pieChart} alt="Token distribution pie chart" className="mt-4 w-full object-contain" />
-          </div>
-          <div>
+          </div></Reveal>
+          <Reveal delay={120}><div>
             <h3 className="display text-xl">Token overview</h3>
             <div className="mt-4 rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-sm">
               {[
@@ -93,23 +94,23 @@ function TokenPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </div></Reveal>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 text-center">
-        <h2 className="display text-3xl md:text-5xl">STAKE CEXT.</h2>
-        <p className="display mt-2 text-2xl text-foreground/80">EARN UP TO 15% APR.</p>
-        <p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
+        <Reveal><h2 className="display text-3xl md:text-5xl">STAKE CEXT.</h2></Reveal>
+        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80">EARN UP TO 15% APR.</p></Reveal>
+        <Reveal delay={240}><p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
           Put your CEXT to work. Stake and earn up to 15% annual returns paid in CEXT. Lock tokens for longer periods to multiply your score and maximize rewards. The longer you lock, the more you earn.
-        </p>
+        </p></Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="display text-center text-3xl md:text-5xl uppercase">4 tiers - many advantages</h2>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">4 tiers - many advantages</h2></Reveal>
+        <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
-        </p>
+        </p></Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
           {[
@@ -117,8 +118,8 @@ function TokenPage() {
             { name: "SILVER", img: silverBadge, balance: "≥ 100,000 CEXT", fee: "30%", ref: "1.5x", sup: "Priority", news: "+12 Hours", list: "Moderate" },
             { name: "GOLD", img: goldBadge, balance: "≥ 1,000,000 CEXT", fee: "40%", ref: "2x", sup: "Premium", news: "+24 Hours", list: "High" },
             { name: "DIAMOND", img: diamondBadge, balance: "≥ 10,000,000 CEXT", fee: "50%", ref: "3x", sup: "Direct", news: "+24 Hours", list: "Full + Proposal Rights" },
-          ].map((t) => (
-            <div key={t.name} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
+          ].map((t, i) => (
+            <Reveal key={t.name} delay={i * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
               <img src={t.img} alt={`${t.name} tier badge`} className="mx-auto h-32 w-32 object-contain" />
               <h3 className="display mt-4 text-2xl">{t.name}</h3>
               <div className="mt-3 text-xs text-muted-foreground">{t.balance}<br/>Average Locked Balance</div>
@@ -127,23 +128,23 @@ function TokenPage() {
               <Row v={t.sup} l="Support Access" />
               <Row v={t.news} l="News Access" />
               <Row v={t.list} l="Listing Discount" />
-            </div>
+            </div></Reveal>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Card eyebrow="STAKING" title="UP TO 15% APR" body="Buy CEXT in-app, send to the designated staking address shown in-app. Your tokens, your staking, your rewards." footnote="* Staking is a service provided by a third party. STAKING REWARDS are not guaranteed. Rates fluctuate based on network conditions. Chimera Wallet carry no liability for this service." />
+        <Reveal><Card eyebrow="STAKING" title="UP TO 15% APR" body="Buy CEXT in-app, send to the designated staking address shown in-app. Your tokens, your staking, your rewards." footnote="* Staking is a service provided by a third party. STAKING REWARDS are not guaranteed. Rates fluctuate based on network conditions. Chimera Wallet carry no liability for this service." /></Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="display text-center text-3xl md:text-5xl uppercase">Exchange Tokens Comparison</h2>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">Exchange Tokens Comparison</h2></Reveal>
+        <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
-        </p>
-        <p className="mx-auto mt-2 max-w-3xl text-center text-xs text-muted-foreground/70">
+        </p></Reveal>
+        <Reveal delay={240}><p className="mx-auto mt-2 max-w-3xl text-center text-xs text-muted-foreground/70">
           Data accurate as of 05/2026
-        </p>
+        </p></Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
           {[
@@ -208,7 +209,7 @@ function TokenPage() {
               ] as [string, string][],
             },
           ].map(({ n, sub, icon, rows }, i) => (
-            <div
+            <Reveal key={n} delay={i * 120}><div
               key={n}
               className={`rounded-2xl border border-white/10 p-6 text-center ${i === 0 ? "" : "bg-[var(--brand-navy-card)]"}`}
               style={i === 0 ? { background: "#1F3BDB" } : undefined}
@@ -219,13 +220,13 @@ function TokenPage() {
               {rows.map(([v, l]) => (
                 <Row key={l} v={v} l={l} />
               ))}
-            </div>
+            </div></Reveal>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2></Reveal>
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
           {[
             ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Chimera Protocol VTXO technology."],
@@ -237,23 +238,23 @@ function TokenPage() {
             ["June 2026", "P2P Swaps", "Peer-to-peer swaps directly in-app."],
             ["2027", "Decentralised Governance", ""],
             ["2028", "DAO Transition", ""],
-          ].map(([d, t, b]) => (
-            <div key={t} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+          ].map(([d, t, b], i) => (
+            <Reveal key={t} delay={(i % 3) * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
               <div className="text-xs font-bold tracking-widest text-[var(--brand-green)]">{d}</div>
               <div className="display mt-2 text-lg">{t}</div>
               {b && <p className="mt-2 text-xs text-muted-foreground">{b}</p>}
-            </div>
+            </div></Reveal>
           ))}
         </div>
-        <p className="mx-auto mt-8 max-w-4xl text-center text-xs text-muted-foreground">
+        <Reveal><p className="mx-auto mt-8 max-w-4xl text-center text-xs text-muted-foreground">
           CEXT is issued by Outlogic SAGL and reviewed in accordance with FINMA guidance. Not a security. Not a payment token. Not an investment contract. A utility token — with regulatory clarity most tokens never achieve.
-        </p>
+        </p></Reveal>
       </section>
 
       <TgeCountdownSection />
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="rounded-2xl p-10">
+        <Reveal><div className="rounded-2xl p-10">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             <img src={floatingCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain" />
             <div>
@@ -262,11 +263,11 @@ function TokenPage() {
               <p className="mt-4 text-sm">After TGE, active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
             </div>
           </div>
-        </div>
+        </div></Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <a
+        <Reveal><a
           href={whitepaperPdf}
           target="_blank"
           rel="noopener noreferrer"
@@ -275,7 +276,7 @@ function TokenPage() {
         >
           READ THE WHITE PAPER
           <span aria-hidden="true">→</span>
-        </a>
+        </a></Reveal>
       </section>
     </main>
   );
@@ -334,14 +335,14 @@ function TgeCountdownSection() {
   }, []);
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 text-center">
-      <h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2>
-      <p className="display mt-2 text-4xl md:text-6xl uppercase">27 May 2026</p>
+      <Reveal><h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2></Reveal>
+      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase">27 May 2026</p></Reveal>
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {t.map(({ v, l }) => (
-          <div key={l} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+        {t.map(({ v, l }, i) => (
+          <Reveal key={l} delay={i * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
             <div className="display text-4xl">{v}</div>
             <div className="mt-2 text-[10px] tracking-widest text-muted-foreground">{l}</div>
-          </div>
+          </div></Reveal>
         ))}
       </div>
     </section>

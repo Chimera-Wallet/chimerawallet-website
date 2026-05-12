@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Reveal } from "@/components/reveal";
 
 export const Route = createFileRoute("/privacy-manifesto")({
   head: () => ({
@@ -23,10 +24,10 @@ export const Route = createFileRoute("/privacy-manifesto")({
 function PrivacyManifestoPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 pt-16 pb-24">
-      <p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA</p>
-      <h1 className="hero-title mt-6">PRIVACY MANIFESTO</h1>
+      <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA</p></Reveal>
+      <Reveal delay={120}><h1 className="hero-title mt-6">PRIVACY MANIFESTO</h1></Reveal>
 
-      <div className="mt-10 space-y-6 text-sm leading-relaxed text-foreground/85">
+      <Reveal delay={240}><div className="mt-10 space-y-6 text-sm leading-relaxed text-foreground/85">
         <p className="text-base font-medium text-foreground">
           Most companies write privacy policies; we write code that doesn't need one.
         </p>
@@ -66,10 +67,10 @@ function PrivacyManifestoPage() {
           You may directly share your data with third parties through our platforms in order to access
           certain services please check the individual policies of the providers.
         </p>
-      </div>
+      </div></Reveal>
 
-      <h2 className="display mt-12 text-2xl text-[var(--brand-green)]">PROVIDERS</h2>
-      <ul className="mt-6 space-y-3 text-sm">
+      <Reveal><h2 className="display mt-12 text-2xl text-[var(--brand-green)]">PROVIDERS</h2></Reveal>
+      <Reveal delay={120}><ul className="mt-6 space-y-3 text-sm">
         <li>
           Plausible —{" "}
           <a
@@ -103,7 +104,7 @@ function PrivacyManifestoPage() {
             https://lendasat.com/docs/p2p-loans/legal/terms
           </a>
         </li>
-      </ul>
+      </ul></Reveal>
     </main>
   );
 }

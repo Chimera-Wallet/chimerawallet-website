@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
+import { Reveal } from "@/components/reveal";
 import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
 import arkLogo from "@/assets/site/arkade-logo.svg";
 import coinChimera from "@/assets/site/Coins/coin-front-chimera.png";
@@ -38,20 +39,20 @@ function AppPage() {
   return (
     <main>
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-12 text-center">
-        <p className="hero-eyebrow text-[var(--brand-green)]">PROGRESSIVE APP</p>
-        <h1 className="hero-title mx-auto mt-6 max-w-3xl">
+        <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">PROGRESSIVE APP</p></Reveal>
+        <Reveal delay={120}><h1 className="hero-title mx-auto mt-6 max-w-3xl">
           NO INSTALL.
           <br />
           NO MEMORY. NO RISK.
-        </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
+        </h1></Reveal>
+        <Reveal delay={240}><p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
           Bitcoin doesn't ask Apple for permission. Why should your wallet?
-        </p>
-        <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
+        </p></Reveal>
+        <Reveal delay={340}><p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
           Every native crypto app lives at the mercy of app stores. Wallets get removed on a Wednesday afternoon
           because someone in Cupertino or Mountain View changed their mind.
-        </p>
-        <a
+        </p></Reveal>
+        <Reveal delay={460}><a
           href="https://app.chimerawallet.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -59,18 +60,18 @@ function AppPage() {
           style={{ backgroundColor: "var(--brand-green)" }}
         >
           OPEN CHIMERA
-        </a>
+        </a></Reveal>
 
-        <img
+        <Reveal delay={580}><img
           src={mockupAppPage1}
           alt="Chimera app phone mockups"
           className="mx-auto mt-12 w-full max-w-5xl h-auto"
-        />
+        /></Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2">
-          <div>
+          <Reveal><div>
             <p className="text-sm tracking-widest text-foreground/80">CHIMERA WALLET</p>
             <h2 className="display mt-3 text-3xl md:text-5xl">RUNS IN YOUR BROWSER.</h2>
             <p className="mt-6 text-base font-medium">No gatekeeper can touch it.</p>
@@ -97,7 +98,7 @@ function AppPage() {
               </div>
               <span className="text-xl">↗</span>
             </div>
-          </div>
+          </div></Reveal>
         </div>
 
         {/* asset row */}
@@ -109,20 +110,20 @@ function AppPage() {
             { a: "ETH", img: coinEthereum },
             { a: "TRON", img: coinTron },
             { a: "POLYGON", img: coinPolygon },
-          ].map(({ a, img }) => (
-            <img key={a} src={img} alt={`${a} coin`} className="aspect-square w-full object-contain" />
+          ].map(({ a, img }, i) => (
+            <Reveal key={a} delay={i * 80}><img src={img} alt={`${a} coin`} className="aspect-square w-full object-contain" /></Reveal>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <Tile
+          <Reveal><Tile
             icon={iconBolt}
             title={<>WHAT <span className="text-[var(--brand-green)]">YOU GET</span></>}
             body="Bitcoin. Lightning. Chimera. All in one — and nothing missing. Mainchain for settlement. Lightning for instant payments. Chimera Protocol for the next generation. No switching apps. No compromise."
-          />
-          <Tile
+          /></Reveal>
+          <Reveal delay={120}><Tile
             icon={iconPaperplane}
             title={
               <>
@@ -132,13 +133,13 @@ function AppPage() {
               </>
             }
             body="Chimera eliminates Lightning's most painful friction. No inbound liquidity. No channel opens. Receive from day one."
-          />
-          <Tile
+          /></Reveal>
+          <Reveal delay={240}><Tile
             icon={iconFaceID}
             title={<><span className="text-[var(--brand-green)]">NO ID</span> REQUIRED.</>}
             body="Access your wallet in minutes. Start trading. Regulated services provided by third parties."
-          />
-          <Tile
+          /></Reveal>
+          <Reveal delay={360}><Tile
             icon={iconCard}
             title={
               <>
@@ -148,19 +149,19 @@ function AppPage() {
               </>
             }
             body="BTC, USDT, ETH, TRON, POLYGON, FIAT and expanding. Everything modern finance offers — without handing over custody."
-          />
+          /></Reveal>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 text-center">
-        <img src={arkLogo} alt="Chimera" className="mx-auto h-16 w-auto object-contain" />
+        <Reveal><img src={arkLogo} alt="Chimera" className="mx-auto h-16 w-auto object-contain" /></Reveal>
         <div className="mx-auto max-w-3xl">
-          <h2 className="display mt-6 text-3xl md:text-5xl">
+          <Reveal delay={120}><h2 className="display mt-6 text-3xl md:text-5xl">
             ARKADE SWAP
             <br />
             AND WRAPPED ASSETS
-          </h2>
-          <p
+          </h2></Reveal>
+          <Reveal delay={240}><p
             className="mt-6 text-center text-foreground/80"
             style={{
               fontFamily: '"Funnel Display", sans-serif',
@@ -171,9 +172,9 @@ function AppPage() {
             }}
           >
             Unstoppable cross chain p2p trading with a level of privacy you never seen before. All the feature of a CEX with all the freedom of a DEX all wrapped in a progressive web app out of stores grasp. The future of trading is coming soon to Chimera.
-          </p>
+          </p></Reveal>
         </div>
-        <img src={cardSwap} alt="Chimera card swap" className="mx-auto mt-10 w-72 object-contain" />
+        <Reveal delay={360}><img src={cardSwap} alt="Chimera card swap" className="mx-auto mt-10 w-72 object-contain" /></Reveal>
       </section>
 
       <section
@@ -181,7 +182,7 @@ function AppPage() {
         style={{ background: "linear-gradient(180deg, var(--brand-blue-bright) 0%, var(--brand-blue) 100%)" }}
       >
         <div className="mx-auto max-w-5xl px-6">
-          <div
+          <Reveal><div
             className="flex items-center justify-between rounded-2xl border border-white/15 px-6 py-5 backdrop-blur"
             style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
           >
@@ -192,7 +193,7 @@ function AppPage() {
                 <div className="display mt-1 text-xl">OPEN CHIMERA</div>
             </div>
             <span className="text-xl">↗</span>
-          </div>
+          </div></Reveal>
         </div>
       </section>
     </main>

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Reveal } from "@/components/reveal";
 import coinmarketcapImg from "@/assets/news-images/coinmarketcap.jpg";
 import coinliveImg from "@/assets/news-images/coinlive.jpg";
 import ainvestImg from "@/assets/news-images/ainvest.webp";
@@ -105,10 +106,10 @@ const newsItems = [
 function NewsPage() {
   return (
     <main className="mx-auto max-w-7xl px-6 py-24">
-      <h1 className="hero-title text-center">NEWS</h1>
+      <Reveal delay={120}><h1 className="hero-title text-center">NEWS</h1></Reveal>
       <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {newsItems.map((item) => (
-          <a
+        {newsItems.map((item, i) => (
+          <Reveal key={item.url} delay={(i % 3) * 120}><a
             key={item.url}
             href={item.url}
             target="_blank"
@@ -131,7 +132,7 @@ function NewsPage() {
                 {item.title}
               </h2>
             </div>
-          </a>
+          </a></Reveal>
         ))}
       </div>
     </main>
