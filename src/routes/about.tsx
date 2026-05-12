@@ -78,7 +78,7 @@ function AboutPage() {
               className="mt-8 inline-flex items-center rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
               style={{ backgroundColor: "var(--brand-green)" }}
             >
-              CHECK OUT GITHUB
+               CHECK OUR GITHUB
             </a>
           </div>
           <img src={openSource} alt="Open source code" className="aspect-[4/3] w-full object-contain" />
