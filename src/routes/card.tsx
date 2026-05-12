@@ -93,8 +93,8 @@ function CardPage() {
 
       <section className="py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
-          <img src={cardCoins} alt="Chimera card with floating coins" className="aspect-[4/3] w-full object-contain" />
-          <div>
+          <Reveal><img src={cardCoins} alt="Chimera card with floating coins" className="aspect-[4/3] w-full object-contain" /></Reveal>
+          <Reveal delay={120}><div>
             <h2 className="display text-4xl md:text-5xl">1,000 SPOTS.</h2>
             <p className="display mt-1 text-2xl text-foreground/80">THAT'S IT.</p>
             <p className="mt-6 text-sm text-foreground/85">
@@ -113,43 +113,43 @@ function CardPage() {
                 SECURE YOUR SPOT NOW
               </button>
             </ReserveForm>
-          </div>
+          </div></Reveal>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <h2 className="display text-3xl md:text-4xl">THREE BENEFITS</h2>
-        <p className="display text-2xl text-foreground/80">THAT DON'T EXPIRE:</p>
+        <Reveal><h2 className="display text-3xl md:text-4xl">THREE BENEFITS</h2></Reveal>
+        <Reveal delay={120}><p className="display text-2xl text-foreground/80">THAT DON'T EXPIRE:</p></Reveal>
 
         <div className="mt-10 space-y-4">
-          <BenefitRow
+          <Reveal><BenefitRow
             tag="FOREVER"
             title="1.5% TRANSACTION FEE FOR LIFE"
             body="Locked for life. Pre-order customers lock in 1.5% forever. Standard rate is 2% — and may rise. Yours won't."
             badge="1.5%"
             strike="STANDARD 2%"
             filled
-          />
-          <BenefitRow
+          /></Reveal>
+          <Reveal delay={120}><BenefitRow
             tag="FREE FOREVER"
             title="ZERO MONTHLY FEE"
             body="No subscription. No maintenance charge. No annual fee. No bill."
             badge="FREE"
             strike="FOREVER"
-          />
-          <BenefitRow
+          /></Reveal>
+          <Reveal delay={240}><BenefitRow
             tag="FOREVER"
             title="ZERO TOP-UP FEES"
             body="Load from your Chimera Wallet at zero cost. Every time."
             badge="0.0%"
             strike="STANDARD 1%"
-          />
+          /></Reveal>
         </div>
 
-        <p className="mt-8 text-center text-xs italic text-muted-foreground">
+        <Reveal><p className="mt-8 text-center text-xs italic text-muted-foreground">
           *Card programme provided in partnership with Wirex Pay. KYC is required to access the Wirex platform —
           separate from Chimera's own KYC. Chimera collects no fee or financial advantage for this service.
-        </p>
+        </p></Reveal>
       </section>
 
       <section className="mx-auto max-w-4xl px-6 py-16">
