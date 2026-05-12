@@ -151,6 +151,21 @@ function CardPage() {
         </p>
       </section>
 
+      <section className="mx-auto max-w-4xl px-6 py-16">
+        <h2 className="display text-center text-3xl md:text-4xl">SUPPORTED COUNTRIES</h2>
+        <p className="mt-4 text-center text-sm text-foreground/85">
+          Chimera Card works anywhere Visa is accepted. Residents of the following countries can apply:
+        </p>
+        <ul className="mt-10 grid grid-cols-1 gap-x-10 gap-y-2 text-sm text-foreground/90 sm:grid-cols-2">
+          {SUPPORTED_COUNTRIES.map(([flag, name]) => (
+            <li key={name} className="flex items-center gap-3 border-b border-white/5 py-2">
+              <span className="text-lg leading-none">{flag}</span>
+              <span>{name}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section
         className="py-20"
         style={{ background: "linear-gradient(180deg, var(--brand-navy) 0%, var(--brand-blue) 100%)" }}
@@ -251,3 +266,19 @@ function Faq({ q, children, defaultOpen = false }: { q: string; children?: React
     </div>
   );
 }
+
+const SUPPORTED_COUNTRIES: [string, string][] = [
+  ["🇦🇩", "Andorra"], ["🇦🇹", "Austria"], ["🇧🇪", "Belgium"], ["🇧🇬", "Bulgaria"],
+  ["🇭🇷", "Croatia"], ["🇨🇾", "Cyprus"], ["🇨🇿", "Czech Republic"], ["🇩🇰", "Denmark"],
+  ["🇪🇪", "Estonia"], ["🇫🇮", "Finland"], ["🇫🇷", "France"], ["🇩🇪", "Germany"],
+  ["🇬🇮", "Gibraltar"], ["🇬🇷", "Greece"], ["🇭🇺", "Hungary"], ["🇮🇸", "Iceland"],
+  ["🇮🇪", "Ireland"], ["🇮🇹", "Italy"], ["🇱🇻", "Latvia"], ["🇱🇹", "Lithuania"],
+  ["🇱🇺", "Luxembourg"], ["🇲🇹", "Malta"], ["🇲🇨", "Monaco"], ["🇲🇪", "Montenegro"],
+  ["🇳🇱", "Netherlands"], ["🇳🇴", "Norway"], ["🇵🇱", "Poland"], ["🇵🇹", "Portugal"],
+  ["🇷🇴", "Romania"], ["🇸🇰", "Slovakia"], ["🇸🇮", "Slovenia"], ["🇪🇸", "Spain"],
+  ["🇸🇪", "Sweden"], ["🇨🇭", "Switzerland"], ["🇬🇧", "United Kingdom"], ["🇦🇺", "Australia"],
+  ["🇭🇰", "Hong Kong"], ["🇮🇩", "Indonesia"], ["🇲🇾", "Malaysia"], ["🇵🇭", "Philippines"],
+  ["🇸🇬", "Singapore"], ["🇹🇼", "Taiwan"], ["🇹🇭", "Thailand"], ["🇻🇳", "Vietnam"],
+  ["🇦🇷", "Argentina"], ["🇧🇷", "Brazil"], ["🇨🇱", "Chile"], ["🇨🇴", "Colombia"],
+  ["🇪🇨", "Ecuador"], ["🇲🇽", "Mexico"], ["🇵🇪", "Peru"],
+];
