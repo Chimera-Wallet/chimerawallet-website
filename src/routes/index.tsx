@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Placeholder } from "@/components/placeholder";
+import { Reveal } from "@/components/reveal";
 import heroPhoneLeft from "@/assets/site/hero-phone-left.png";
 import heroPhoneRight from "@/assets/site/hero-phone-right.png";
 import wallet1 from "@/assets/site/wallet-1.png";
@@ -101,25 +102,25 @@ function Index() {
 
           {/* CTA cards */}
           <div className="mx-auto mt-16 max-w-3xl space-y-4">
-            <CtaCard
+            <Reveal delay={0}><CtaCard
               eyebrow="CHIMERA WALLET"
               title="LAUNCH THE APP"
               eyebrowColor="text-[var(--brand-green)]"
               filled
               href="https://app.chimerawallet.com"
-            />
-            <CtaCard
+            /></Reveal>
+            <Reveal delay={120}><CtaCard
               eyebrow={<TgeCountdown />}
               title="JOIN CEXT WAITLIST"
               eyebrowColor="text-[var(--brand-green)]"
               scrollTo="waitlist"
-            />
-            <CtaCard
+            /></Reveal>
+            <Reveal delay={240}><CtaCard
               eyebrow="NOTIFY ME"
               title="JOIN THE COMMUNITY"
               eyebrowColor="text-[var(--brand-green)]"
               href="https://t.me/Chimera_Community"
-            />
+            /></Reveal>
           </div>
         </div>
       </section>
@@ -144,21 +145,21 @@ function Index() {
               />
             </div>
             <div className="space-y-4">
-              <FeatureCard
+              <Reveal><FeatureCard
                 iconSrc={controlIcon}
                 title="CONTROL"
                 body="Your keys. Your coins. Full stop. Bitcoin mainchain, Lightning, Chimera Protocol VTXO - the complete Bitcoin stack, non-custodial from the first second to the last."
-              />
-              <FeatureCard
+              /></Reveal>
+              <Reveal delay={120}><FeatureCard
                 iconSrc={tradeIcon}
                 title="TRADE"
                 body="Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial Chimera swaps coming soon."
-              />
-              <FeatureCard
+              /></Reveal>
+              <Reveal delay={240}><FeatureCard
                 iconSrc={earnIcon}
                 title="EARN"
                 body="Refer friends and earn a share of platform fees - up to 20%, no cap, no expiry. Not points. Real revenue. P2P loans."
-              />
+              /></Reveal>
             </div>
           </div>
         </div>
@@ -172,22 +173,22 @@ function Index() {
           <p className="mt-4 text-center text-sm text-foreground/80">Three layers. One interface. Zero compromise.</p>
 
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
-            <LayerCard
+            <Reveal><LayerCard
               iconSrc={bitcoinLogo}
               title="MAINCHAIN"
               body="Full BTC on-chain deposits and withdrawals and Fiat on/off ramp via third party providers."
-            />
-            <LayerCard
+            /></Reveal>
+            <Reveal delay={120}><LayerCard
               iconSrc={arkLogo}
               iconClassName="h-16 w-16 -my-3"
               title="ARKADE PROTOCOL"
               body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Arkade Protocol."
-            />
-            <LayerCard
+            /></Reveal>
+            <Reveal delay={240}><LayerCard
               iconSrc={lightningLogo}
               title="LIGHTNING"
               body="Full Lightning invoice support, enhanced by Boltz. Every merchant, every exchange, zero channel management."
-            />
+            /></Reveal>
           </div>
         </div>
       </section>
@@ -204,7 +205,7 @@ function Index() {
       {/* ARKADE PROTOCOL — comparison */}
       <section className="mx-auto max-w-4xl px-6 pb-20">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <ComparisonCard
+          <Reveal><ComparisonCard
             title="CEX"
             rows={[
               ["Custodial", "Custody"],
@@ -213,8 +214,8 @@ function Index() {
               ["High", "Counterparty risk"],
               ["No", "Unilateral exit"],
             ]}
-          />
-          <ComparisonCard
+          /></Reveal>
+          <Reveal delay={120}><ComparisonCard
             title="DEX"
             rows={[
               ["Non-custodial", "Custody"],
@@ -223,8 +224,8 @@ function Index() {
               ["Low", "Counterparty risk"],
               ["Yes", "Unilateral exit"],
             ]}
-          />
-          <ComparisonCard
+          /></Reveal>
+          <Reveal delay={240}><ComparisonCard
             title="CHIMERA"
             rows={[
               ["Non-custodial", "Custody"],
@@ -233,7 +234,7 @@ function Index() {
               ["Minimal", "Counterparty risk"],
               ["Yes", "Unilateral exit"],
             ]}
-          />
+          /></Reveal>
         </div>
       </section>
 
