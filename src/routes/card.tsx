@@ -10,12 +10,14 @@ export const Route = createFileRoute("/card")({
       { title: "Chimera Card — Self-custody Visa" },
       {
         name: "description",
-        content: "Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.",
+        content:
+          "Use the Chimera Card anywhere Visa is accepted. Powered by licensed partners. Top up via the Chimera Wallet and use your balance in 50+ countries.",
       },
       { property: "og:title", content: "Chimera Card — Self-custody Visa" },
       {
         property: "og:description",
-        content: "Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.",
+        content:
+          "Use the Chimera Card anywhere Visa is accepted. Powered by licensed partners. Top up via the Chimera Wallet and use your balance in 50+ countries.",
       },
     ],
   }),
