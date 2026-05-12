@@ -491,9 +491,16 @@ function LayerCard({
   );
 }
 
-function ComparisonCard({ title, rows }: { title: string; rows: [string, string][] }) {
+function ComparisonCard({ title, rows, highlight = false }: { title: string; rows: [string, string][]; highlight?: boolean }) {
   return (
-    <div className="rounded-2xl border border-white/10 p-6" style={{ background: "rgba(255, 255, 255, 0.1)" }}>
+    <div
+      className="rounded-2xl border p-6"
+      style={
+        highlight
+          ? { background: "rgba(135, 206, 250, 0.18)", borderColor: "rgba(135, 206, 250, 0.45)" }
+          : { background: "rgba(255, 255, 255, 0.1)", borderColor: "rgba(255, 255, 255, 0.1)" }
+      }
+    >
       <h3 className="display text-center text-2xl">{title}</h3>
       <div className="mt-4 divide-y divide-white/5">
         {rows.map(([val, label]) => (
