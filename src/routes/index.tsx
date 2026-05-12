@@ -174,6 +174,7 @@ function Index() {
             />
             <LayerCard
               iconSrc={arkLogo}
+              iconClassName="h-16 w-16 -my-3"
               title="ARKADE PROTOCOL"
               body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Arkade Protocol."
             />
