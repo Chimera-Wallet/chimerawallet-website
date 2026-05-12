@@ -121,7 +121,7 @@ function AppPage() {
           <Reveal><Tile
             icon={iconBolt}
             title={<>WHAT <span className="text-[var(--brand-green)]">YOU GET</span></>}
-            body="Bitcoin. Lightning. Chimera. All in one — and nothing missing. Mainchain for settlement. Lightning for instant payments. Chimera Protocol for the next generation. No switching apps. No compromise."
+            body="Bitcoin. Lightning. Arkade. All in one — and nothing missing. Mainchain for settlement. Lightning for instant payments. Arkade Protocol for the next generation. No switching apps. No compromise."
           /></Reveal>
           <Reveal delay={120}><Tile
             icon={iconPaperplane}
