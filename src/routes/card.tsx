@@ -151,6 +151,21 @@ function CardPage() {
         </p>
       </section>
 
+      <section className="mx-auto max-w-4xl px-6 py-16">
+        <h2 className="display text-center text-3xl md:text-4xl">SUPPORTED COUNTRIES</h2>
+        <p className="mt-4 text-center text-sm text-foreground/85">
+          Chimera Card works anywhere Visa is accepted. Residents of the following countries can apply:
+        </p>
+        <ul className="mt-10 grid grid-cols-1 gap-x-10 gap-y-2 text-sm text-foreground/90 sm:grid-cols-2">
+          {SUPPORTED_COUNTRIES.map(([flag, name]) => (
+            <li key={name} className="flex items-center gap-3 border-b border-white/5 py-2">
+              <span className="text-lg leading-none">{flag}</span>
+              <span>{name}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section
         className="py-20"
         style={{ background: "linear-gradient(180deg, var(--brand-navy) 0%, var(--brand-blue) 100%)" }}
