@@ -335,14 +335,14 @@ function TgeCountdownSection() {
   }, []);
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 text-center">
-      <h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2>
-      <p className="display mt-2 text-4xl md:text-6xl uppercase">27 May 2026</p>
+      <Reveal><h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2></Reveal>
+      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase">27 May 2026</p></Reveal>
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {t.map(({ v, l }) => (
-          <div key={l} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+        {t.map(({ v, l }, i) => (
+          <Reveal key={l} delay={i * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
             <div className="display text-4xl">{v}</div>
             <div className="mt-2 text-[10px] tracking-widest text-muted-foreground">{l}</div>
-          </div>
+          </div></Reveal>
         ))}
       </div>
     </section>
