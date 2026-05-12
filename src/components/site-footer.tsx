@@ -1,5 +1,5 @@
 import chimeraLogo from "@/assets/site/chimera-logo.png";
-import chimeraMark from "@/assets/site/Chimera 1.svg";
+import arkadeLogo from "@/assets/site/arkade-logo.png";
 import outlogicLogo from "@/assets/site/Outlogic_LOGO.png";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
@@ -19,9 +19,9 @@ export function SiteFooter() {
               <a href="https://bitcoin.org" target="_blank" rel="noopener noreferrer" className="opacity-80 transition hover:opacity-100">
                 <img src={bitcoinLogo} alt="Bitcoin" className="h-5 w-auto object-contain" />
               </a>
-              <Link to="/" className="opacity-80 transition hover:opacity-100">
-                <img src={chimeraMark} alt="Chimera" className="h-5 w-auto object-contain" />
-              </Link>
+              <a href="https://arkadeos.com" target="_blank" rel="noopener noreferrer" className="opacity-80 transition hover:opacity-100">
+                <img src={arkadeLogo} alt="Arkade" className="h-5 w-auto object-contain" />
+              </a>
               <a href="https://lightning.network" target="_blank" rel="noopener noreferrer" className="opacity-80 transition hover:opacity-100">
                 <img src={lightningLogo} alt="Lightning" className="h-5 w-auto object-contain" />
               </a>
