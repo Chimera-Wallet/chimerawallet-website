@@ -125,10 +125,9 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <Card title="AFTER THE TIERS LIKE" body="Example: A Gold holder executing $100K in trades saves ~$100 in fees, earns 2x on referrals, and receives market intelligence 24 hours before public release." />
           <Card eyebrow="STAKING" title="UP TO 15% APR" body="Buy CEXT in-app, send to the designated staking address shown in-app. Your tokens, your staking, your rewards." footnote="* Staking is a service provided by a third party. STAKING REWARDS are not guaranteed. Rates fluctuate based on network conditions. Chimera Wallet carry no liability for this service." />
-          <Card title="PLATFORM BUY PROGRAMME" body="A majority of operational profits are used to purchase CEXT on the open market. Consistent buying pressure. A structure where company performance and holder outcomes move in the same direction by design." footnote="* Subject to operational performance. Does not constitute a guaranteed return or investment instrument." />
         </div>
       </section>
 
