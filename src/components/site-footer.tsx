@@ -1,5 +1,5 @@
 import chimeraLogo from "@/assets/site/chimera-logo.png";
-import arkadeLogo from "@/assets/site/arkade-logo.png";
+import arkadeLogo from "@/assets/site/arkade-logo.svg";
 import outlogicLogo from "@/assets/site/Outlogic_LOGO.png";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
