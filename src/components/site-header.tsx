@@ -19,7 +19,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-[var(--brand-navy)]/80 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-6 py-4">
         <Link to="/" className="flex items-center">
-          <img src={chimeraLogo} alt="Chimera" className="h-16 w-auto md:h-14" />
+          <img src={chimeraLogo} alt="Chimera" className="h-16 w-auto md:h-20" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2 py-1.5">
@@ -40,7 +40,7 @@ export function SiteHeader() {
             href="https://app.chimerawallet.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center rounded-full px-5 text-xs font-bold tracking-widest text-[var(--brand-navy)] md:h-auto md:px-4 md:py-2"
+            className="inline-flex h-11 items-center rounded-full px-5 text-xs font-bold tracking-widest text-[var(--brand-navy)] md:h-12 md:px-7"
             style={{ backgroundColor: "var(--brand-green)" }}
           >
             OPEN CHIMERA
