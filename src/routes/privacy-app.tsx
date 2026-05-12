@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Reveal } from "@/components/reveal";
 
 export const Route = createFileRoute("/privacy-app")({
   head: () => ({
@@ -14,17 +15,17 @@ export const Route = createFileRoute("/privacy-app")({
 
 function Section({ title, children }: { title?: string; children: React.ReactNode }) {
   return (
-    <section className="mt-10">
+    <Reveal as="section" className="mt-10">
       {title && <h2 className="display text-2xl md:text-3xl text-[var(--brand-green)]">{title}</h2>}
       <div className="mt-4 space-y-4 text-sm md:text-base text-foreground/85 leading-relaxed">{children}</div>
-    </section>
+    </Reveal>
   );
 }
 
 function AppPrivacyPolicy() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
-      <h1 className="hero-title">Chimera Wallet App Privacy Policy</h1>
+      <Reveal delay={120}><h1 className="hero-title">Chimera Wallet App Privacy Policy</h1></Reveal>
 
       <Section>
         <p>
@@ -66,7 +67,7 @@ function AppPrivacyPolicy() {
         </p>
       </Section>
 
-      <p className="mt-12 text-xs text-muted-foreground">This policy is effective as of April 15, 2025.</p>
+      <Reveal><p className="mt-12 text-xs text-muted-foreground">This policy is effective as of April 15, 2025.</p></Reveal>
     </main>
   );
 }
