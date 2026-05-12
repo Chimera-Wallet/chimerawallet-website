@@ -32,16 +32,11 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">POLICIES</h4>
+            <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">PRIVACY</h4>
             <ul className="mt-4 space-y-2 text-sm text-foreground/90">
               <li>
-                <Link to="/privacy-app" className="hover:text-[var(--brand-green)]">
-                  App Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy-web" className="hover:text-[var(--brand-green)]">
-                  Web Privacy Policy
+                <Link to="/privacy-manifesto" className="hover:text-[var(--brand-green)]">
+                  Chimera Privacy Manifesto
                 </Link>
               </li>
             </ul>
