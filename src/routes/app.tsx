@@ -154,12 +154,16 @@ function AppPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-20 text-center">
         <img src={arkLogo} alt="Chimera" className="mx-auto h-16 w-auto object-contain" />
-        <h2 className="display mt-6 text-3xl md:text-5xl">
-          ARKADE SWAP
-          <br />
-          AND WRAPPED ASSETS
-        </h2>
-        <p className="display mt-3 text-xl tracking-widest text-[var(--brand-green)]">COMING SOON</p>
+        <div className="mx-auto max-w-3xl">
+          <h2 className="display mt-6 text-3xl md:text-5xl">
+            ARKADE SWAP
+            <br />
+            AND WRAPPED ASSETS
+          </h2>
+          <p className="mt-6 text-base font-medium leading-relaxed text-foreground/90">
+            Unstoppable cross chain p2p trading with a level of privacy you never seen before. All the feature of a CEX with all the freedom of a DEX all wrapped in a progressive web app out of stores grasp. The future of trading is coming soon to Chimera.
+          </p>
+        </div>
         <img src={cardSwap} alt="Chimera card swap" className="mx-auto mt-10 w-72 object-contain" />
       </section>
 
