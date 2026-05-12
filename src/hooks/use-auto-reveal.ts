@@ -18,20 +18,33 @@ export function useAutoReveal({ skipPaths = [] as string[] } = {}) {
     // Defer to next frame so the DOM has rendered for this route.
     const raf = requestAnimationFrame(() => {
       const sections = document.querySelectorAll<HTMLElement>("main section");
-      const targets: HTMLElement[] = [];
-
+      const all: HTMLElement[] = [];
       sections.forEach((section) => {
         Array.from(section.children).forEach((child) => {
           const el = child as HTMLElement;
           if (el.dataset.revealed) return;
-          targets.push(el);
+          all.push(el);
         });
       });
 
-      if (targets.length === 0) return;
+      if (all.length === 0) return;
 
-      // Set initial hidden state.
-      targets.forEach((el) => {
+      const viewportH = window.innerHeight;
+
+      // Split: anything currently visible or already scrolled past stays
+      // visible. Only truly below-the-fold elements get hidden + observed.
+      const heroSet: HTMLElement[] = [];
+      const belowFold: HTMLElement[] = [];
+      all.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < viewportH * 0.9) {
+          heroSet.push(el);
+        } else {
+          belowFold.push(el);
+        }
+      });
+
+      belowFold.forEach((el) => {
         el.dataset.revealed = "pending";
         el.style.opacity = "0";
         el.style.transform = "translateY(24px)";
@@ -40,6 +53,9 @@ export function useAutoReveal({ skipPaths = [] as string[] } = {}) {
       });
 
       const reveal = (el: HTMLElement, delay = 0) => {
+        if (el.dataset.revealed === "done") return;
+        el.style.transition = "opacity 700ms ease-out, transform 700ms ease-out";
+        el.style.willChange = "opacity, transform";
         window.setTimeout(() => {
           el.style.opacity = "1";
           el.style.transform = "translateY(0)";
@@ -48,21 +64,19 @@ export function useAutoReveal({ skipPaths = [] as string[] } = {}) {
       };
 
       if (reduce) {
-        targets.forEach((el) => reveal(el));
+        all.forEach((el) => reveal(el));
         return;
       }
 
-      // Hero: stagger anything currently above the fold.
-      const viewportH = window.innerHeight;
-      let heroIndex = 0;
-      const heroSet = new Set<HTMLElement>();
-      targets.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < viewportH * 0.9) {
-          heroSet.add(el);
-          reveal(el, heroIndex * 120);
-          heroIndex++;
-        }
+      // Hero stagger for anything above the fold (already painted by SSR —
+      // we apply transitions but don't pre-hide, so they fade from current state).
+      heroSet.forEach((el, i) => {
+        // Set starting state, then animate next frame.
+        el.dataset.revealed = "pending";
+        el.style.opacity = "0";
+        el.style.transform = "translateY(24px)";
+        el.style.transition = "opacity 700ms ease-out, transform 700ms ease-out";
+        requestAnimationFrame(() => reveal(el, i * 120));
       });
 
       // Below the fold: reveal on scroll.
@@ -78,9 +92,7 @@ export function useAutoReveal({ skipPaths = [] as string[] } = {}) {
         { threshold: 0.15, rootMargin: "0px 0px -40px 0px" },
       );
 
-      targets.forEach((el) => {
-        if (!heroSet.has(el)) obs.observe(el);
-      });
+      belowFold.forEach((el) => obs.observe(el));
 
       // Store on cleanup closure.
       cleanup = () => obs.disconnect();
