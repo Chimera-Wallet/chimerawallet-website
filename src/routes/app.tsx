@@ -21,13 +21,13 @@ export const Route = createFileRoute("/app")({
       {
         name: "description",
         content:
-          "Chimera Wallet runs in your browser. Bitcoin, Lightning and Chimera in one progressive web app.",
+          "Open Chimera Wallet in your browser. No download, no App Store, no custody layer. Instant access on any device.",
       },
       { property: "og:title", content: "Chimera App — Progressive Web App" },
       {
         property: "og:description",
         content:
-          "Chimera Wallet runs in your browser. Bitcoin, Lightning and Chimera in one progressive web app.",
+          "Open Chimera Wallet in your browser. No download, no App Store, no custody layer. Instant access on any device.",
       },
     ],
   }),
