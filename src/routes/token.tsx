@@ -73,11 +73,11 @@ function TokenPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div>
+          <Reveal><div>
             <h3 className="display text-xl">Token distribution</h3>
             <img src={pieChart} alt="Token distribution pie chart" className="mt-4 w-full object-contain" />
-          </div>
-          <div>
+          </div></Reveal>
+          <Reveal delay={120}><div>
             <h3 className="display text-xl">Token overview</h3>
             <div className="mt-4 rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-sm">
               {[
@@ -94,23 +94,23 @@ function TokenPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </div></Reveal>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 text-center">
-        <h2 className="display text-3xl md:text-5xl">STAKE CEXT.</h2>
-        <p className="display mt-2 text-2xl text-foreground/80">EARN UP TO 15% APR.</p>
-        <p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
+        <Reveal><h2 className="display text-3xl md:text-5xl">STAKE CEXT.</h2></Reveal>
+        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80">EARN UP TO 15% APR.</p></Reveal>
+        <Reveal delay={240}><p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
           Put your CEXT to work. Stake and earn up to 15% annual returns paid in CEXT. Lock tokens for longer periods to multiply your score and maximize rewards. The longer you lock, the more you earn.
-        </p>
+        </p></Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="display text-center text-3xl md:text-5xl uppercase">4 tiers - many advantages</h2>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">4 tiers - many advantages</h2></Reveal>
+        <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
-        </p>
+        </p></Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
           {[
@@ -118,8 +118,8 @@ function TokenPage() {
             { name: "SILVER", img: silverBadge, balance: "≥ 100,000 CEXT", fee: "30%", ref: "1.5x", sup: "Priority", news: "+12 Hours", list: "Moderate" },
             { name: "GOLD", img: goldBadge, balance: "≥ 1,000,000 CEXT", fee: "40%", ref: "2x", sup: "Premium", news: "+24 Hours", list: "High" },
             { name: "DIAMOND", img: diamondBadge, balance: "≥ 10,000,000 CEXT", fee: "50%", ref: "3x", sup: "Direct", news: "+24 Hours", list: "Full + Proposal Rights" },
-          ].map((t) => (
-            <div key={t.name} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
+          ].map((t, i) => (
+            <Reveal key={t.name} delay={i * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
               <img src={t.img} alt={`${t.name} tier badge`} className="mx-auto h-32 w-32 object-contain" />
               <h3 className="display mt-4 text-2xl">{t.name}</h3>
               <div className="mt-3 text-xs text-muted-foreground">{t.balance}<br/>Average Locked Balance</div>
@@ -128,7 +128,7 @@ function TokenPage() {
               <Row v={t.sup} l="Support Access" />
               <Row v={t.news} l="News Access" />
               <Row v={t.list} l="Listing Discount" />
-            </div>
+            </div></Reveal>
           ))}
         </div>
       </section>
