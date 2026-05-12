@@ -153,16 +153,16 @@ function CardPage() {
       </section>
 
       <section className="mx-auto max-w-4xl px-6 py-16">
-        <h2 className="display text-center text-3xl md:text-4xl">SUPPORTED COUNTRIES</h2>
-        <p className="mt-4 text-center text-sm text-foreground/85">
+        <Reveal><h2 className="display text-center text-3xl md:text-4xl">SUPPORTED COUNTRIES</h2></Reveal>
+        <Reveal delay={120}><p className="mt-4 text-center text-sm text-foreground/85">
           Chimera Card works anywhere Visa is accepted. Residents of the following countries can apply:
-        </p>
+        </p></Reveal>
         <ul className="mt-10 grid grid-cols-1 gap-x-10 gap-y-2 text-sm text-foreground/90 sm:grid-cols-2">
           {SUPPORTED_COUNTRIES.map(([flag, name]) => (
-            <li key={name} className="flex items-center gap-3 border-b border-white/5 py-2">
+            <Reveal key={name} as="li" className="flex items-center gap-3 border-b border-white/5 py-2">
               <span className="text-lg leading-none">{flag}</span>
               <span>{name}</span>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </section>
@@ -172,26 +172,26 @@ function CardPage() {
         style={{ background: "linear-gradient(180deg, var(--brand-navy) 0%, var(--brand-blue) 100%)" }}
       >
         <div className="mx-auto max-w-3xl px-6">
-          <h2 className="display text-center text-4xl md:text-5xl">FAQ</h2>
+          <Reveal><h2 className="display text-center text-4xl md:text-5xl">FAQ</h2></Reveal>
           <div className="mt-10 space-y-3">
-            <Faq q="How do I apply for a Chimera Card?">
+            <Reveal><Faq q="How do I apply for a Chimera Card?">
               Click "PRE-ORDER NOW" below to reserve your card and lock in lifetime pre-order benefits.
-            </Faq>
-            <Faq q="What happens if I miss the pre-order window?">
+            </Faq></Reveal>
+            <Reveal delay={120}><Faq q="What happens if I miss the pre-order window?">
               You'll pay standard rates with no grandfathered pricing. Pre-order members receive permanent rate protection.
-            </Faq>
-            <Faq q="Are pre-order rates really locked forever?">
+            </Faq></Reveal>
+            <Reveal delay={240}><Faq q="Are pre-order rates really locked forever?">
               Yes. Your fees are frozen at pre-order levels for the lifetime of your account. Standard rates may increase over time, but yours won't.
-            </Faq>
-            <Faq q="Is Chimera Card secure?">
+            </Faq></Reveal>
+            <Reveal delay={360}><Faq q="Is Chimera Card secure?">
               Yes. Chimera Card uses the same Visa security infrastructure as traditional bank cards.
-            </Faq>
-            <Faq q="How do I top up my Chimera Card?">
+            </Faq></Reveal>
+            <Reveal delay={480}><Faq q="How do I top up my Chimera Card?">
               Top up directly from your non-custodial Chimera Wallet. It's quick, easy, and secure.
-            </Faq>
+            </Faq></Reveal>
           </div>
 
-          <a
+          <Reveal><a
             href="https://app.chimerawallet.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -205,7 +205,7 @@ function CardPage() {
                 <div className="display mt-1 text-xl">OPEN CHIMERA</div>
             </div>
             <span className="text-xl">↗</span>
-          </a>
+          </a></Reveal>
         </div>
       </section>
     </main>
