@@ -63,6 +63,15 @@ function AboutPage() {
             <p className="display text-3xl md:text-4xl">PUBLIC AND FREE.</p>
             <p className="mt-6 text-sm text-foreground/85">Every line of code is public on GitHub.<br/>Auditable by anyone, free to fork.</p>
             <p className="mt-4 text-sm text-foreground/85">Financial services run through regulated third parties.<br/>We don't hold your funds. The architecture makes it impossible.</p>
+            <a
+              href="https://github.com/Chimera-Wallet/chimera-wallet-pwa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
+              style={{ backgroundColor: "var(--brand-green)" }}
+            >
+              CHECK OUT GITHUB
+            </a>
           </div>
           <img src={openSource} alt="Open source code" className="aspect-[4/3] w-full object-contain" />
         </div>
