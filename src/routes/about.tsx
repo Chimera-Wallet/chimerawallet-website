@@ -67,7 +67,7 @@ function AboutPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-          <div>
+          <Reveal><div>
             <h2 className="display text-2xl">ALL CODE</h2>
             <p className="display text-3xl md:text-4xl">PUBLIC AND FREE.</p>
             <p className="mt-6 text-sm text-foreground/85">Every line of code is public on GitHub.<br/>Auditable by anyone, free to fork.</p>
@@ -81,26 +81,26 @@ function AboutPage() {
             >
                CHECK OUR GITHUB
             </a>
-          </div>
-          <img src={openSource} alt="Open source code" className="aspect-[4/3] w-full object-contain" />
+          </div></Reveal>
+          <Reveal delay={120}><img src={openSource} alt="Open source code" className="aspect-[4/3] w-full object-contain" /></Reveal>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-          <img src={mockupAppPage1} alt="Chimera Wallet phone mockups" className="aspect-[5/4] w-full object-contain" />
-          <div>
+          <Reveal><img src={mockupAppPage1} alt="Chimera Wallet phone mockups" className="aspect-[5/4] w-full object-contain" /></Reveal>
+          <Reveal delay={120}><div>
             <h2 className="display text-2xl">CHIMERA</h2>
             <p className="display text-3xl md:text-4xl">WALLET.</p>
             <p className="mt-6 text-sm">Swiss non-profit association.<br/>Writes and publishes open-source code.</p>
             <p className="mt-4 text-sm text-muted-foreground">No custody. No financial services. No profit motive.</p>
-          </div>
+          </div></Reveal>
         </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-16 text-center">
-        <h2 className="display text-2xl">WHAT WE</h2>
-        <p className="display text-3xl md:text-5xl">STAND FOR.</p>
+        <Reveal><h2 className="display text-2xl">WHAT WE</h2></Reveal>
+        <Reveal delay={120}><p className="display text-3xl md:text-5xl">STAND FOR.</p></Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-16">
@@ -110,18 +110,18 @@ function AboutPage() {
             ["NON-CUSTODIAL BY DESIGN.", "Not a policy that can change. Not a promise that can be broken."],
             ["SWISS NON-PROFIT ASSOCIATION.", "No extraction. No VC pressure. A legal structure built to align with the mission, not against it."],
             ["SELF-SOVEREIGNTY.", "The word the financial system has spent decades trying not to normalise. We're normalising it — one wallet at a time."],
-          ].map(([t, b]) => (
-            <div key={t} className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+          ].map(([t, b], i) => (
+            <Reveal key={t} delay={i * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
               <h3 className="display text-xl text-[var(--brand-green)]">{t}</h3>
               <p className="mt-3 text-sm text-foreground/85">{b}</p>
-            </div>
+            </div></Reveal>
           ))}
         </div>
-        <div className="mt-10 text-center">
+        <Reveal><div className="mt-10 text-center">
           <button className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10">
             DOWNLOAD BRAND KIT
           </button>
-        </div>
+        </div></Reveal>
       </section>
     </main>
   );
