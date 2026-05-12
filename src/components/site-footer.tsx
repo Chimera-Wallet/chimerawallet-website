@@ -16,10 +16,18 @@ export function SiteFooter() {
             </div>
             <div className="mt-6 text-xs text-muted-foreground">Powered by:</div>
             <div className="mt-3 flex items-center gap-4">
-              <img src={bitcoinLogo} alt="Bitcoin" className="h-5 w-auto object-contain opacity-80" />
-              <img src={chimeraMark} alt="Chimera" className="h-5 w-auto object-contain opacity-80" />
-              <img src={lightningLogo} alt="Lightning" className="h-5 w-auto object-contain opacity-80" />
-              <img src={outlogicLogo} alt="Outlogic" className="h-5 w-auto object-contain opacity-80" />
+              <a href="https://bitcoin.org" target="_blank" rel="noopener noreferrer" className="opacity-80 transition hover:opacity-100">
+                <img src={bitcoinLogo} alt="Bitcoin" className="h-5 w-auto object-contain" />
+              </a>
+              <Link to="/" className="opacity-80 transition hover:opacity-100">
+                <img src={chimeraMark} alt="Chimera" className="h-5 w-auto object-contain" />
+              </Link>
+              <a href="https://lightning.network" target="_blank" rel="noopener noreferrer" className="opacity-80 transition hover:opacity-100">
+                <img src={lightningLogo} alt="Lightning" className="h-5 w-auto object-contain" />
+              </a>
+              <a href="https://outlogic.net" target="_blank" rel="noopener noreferrer" className="opacity-80 transition hover:opacity-100">
+                <img src={outlogicLogo} alt="Outlogic" className="h-5 w-auto object-contain" />
+              </a>
             </div>
           </div>
 
