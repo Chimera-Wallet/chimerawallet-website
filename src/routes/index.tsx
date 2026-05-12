@@ -8,7 +8,7 @@ import wallet2 from "@/assets/site/wallet-2.png";
 import chimeraCard from "@/assets/site/chimera-card.png";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
-import arkLogo from "@/assets/site/ark-logo.png";
+import arkLogo from "@/assets/site/arkade-logo.svg";
 import controlIcon from "@/assets/site/chimera-logo-control.svg";
 import tradeIcon from "@/assets/site/chimera-logo-trade.svg";
 import earnIcon from "@/assets/site/chimera-logo-earn.svg";
