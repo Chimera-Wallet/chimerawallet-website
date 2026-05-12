@@ -159,6 +159,24 @@
     text-transform: uppercase;
   }
 
+  .hero-eyebrow {
+    font-family: "Titillium Web", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    font-family: "Titillium Web", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 6vw, 85px);
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
   h1 {
     font-family: "Titillium Web", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
