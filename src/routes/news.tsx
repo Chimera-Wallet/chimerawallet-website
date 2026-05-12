@@ -15,7 +15,17 @@ export const Route = createFileRoute("/news")({
   head: () => ({
     meta: [
       { title: "Chimera — News" },
-      { name: "description", content: "News and updates from Chimera." },
+      {
+        name: "description",
+        content:
+          "The latest from Chimera Wallet — updates, ecosystem news, and Bitcoin L2 developments. Stay informed as we build toward the full super-app.",
+      },
+      { property: "og:title", content: "Chimera — News" },
+      {
+        property: "og:description",
+        content:
+          "The latest from Chimera Wallet — updates, ecosystem news, and Bitcoin L2 developments. Stay informed as we build toward the full super-app.",
+      },
       { name: "robots", content: "noindex, nofollow, noarchive, nosnippet" },
       { name: "googlebot", content: "noindex, nofollow, noarchive, nosnippet" },
     ],
