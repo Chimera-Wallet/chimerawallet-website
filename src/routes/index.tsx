@@ -108,7 +108,12 @@ function Index() {
               filled
               href="https://app.chimerawallet.com"
             />
-            <CtaCard eyebrow={<TgeCountdown />} title="JOIN CEXT WAITLIST" eyebrowColor="text-[var(--brand-green)]" />
+            <CtaCard
+              eyebrow={<TgeCountdown />}
+              title="JOIN CEXT WAITLIST"
+              eyebrowColor="text-[var(--brand-green)]"
+              scrollTo="waitlist"
+            />
             <CtaCard
               eyebrow="NOTIFY ME"
               title="JOIN THE COMMUNITY"
@@ -299,7 +304,7 @@ function Index() {
       </section>
 
       {/* WAITLIST SIGNUP */}
-      <section className="mx-auto max-w-3xl px-6 pb-20">
+      <section id="waitlist" className="mx-auto max-w-3xl px-6 pb-20 scroll-mt-24">
         <div
           className="rounded-2xl border border-white/10 p-8 md:p-10"
           style={{
@@ -390,6 +395,7 @@ function CtaCard({
   filled = false,
   eyebrowColor = "text-[var(--brand-green)]",
   href,
+  scrollTo,
 }: {
   eyebrow?: ReactNode;
   title: string;
@@ -397,9 +403,20 @@ function CtaCard({
   filled?: boolean;
   eyebrowColor?: string;
   href?: string;
+  scrollTo?: string;
 }) {
   const Tag: any = href ? "a" : "button";
-  const linkProps = href ? { href, target: "_blank", rel: "noopener noreferrer" } : {};
+  const linkProps: Record<string, unknown> = href
+    ? { href, target: "_blank", rel: "noopener noreferrer" }
+    : scrollTo
+      ? {
+          type: "button",
+          onClick: () => {
+            const el = document.getElementById(scrollTo);
+            if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+          },
+        }
+      : {};
   return (
     <Tag
       {...linkProps}
