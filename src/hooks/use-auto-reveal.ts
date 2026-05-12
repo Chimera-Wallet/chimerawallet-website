@@ -122,5 +122,5 @@ export function useAutoReveal({ skipPaths = DEFAULT_SKIP_PATHS }: { skipPaths?: 
       timers.forEach((id) => window.clearTimeout(id));
       cleanup?.();
     };
-  }, [pathname, skipKey, skipPaths]);
+  }, [pathname, skipKey]);
 }
