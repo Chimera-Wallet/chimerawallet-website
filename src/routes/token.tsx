@@ -138,13 +138,69 @@ function TokenPage() {
           Learn how you can supercharge your experience with the Chimera Token
         </p>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
           {[
-            { n: "CEXT", icon: cextIcon },
-            { n: "BNB", icon: bnbIcon },
-            { n: "KCS", icon: kcsIcon },
-            { n: "OKB", icon: okbIcon },
-          ].map(({ n, icon }, i) => (
+            {
+              n: "CEXT",
+              sub: "Chimera",
+              icon: cextIcon,
+              rows: [
+                ["1,000,000,000 — FIXED, non-inflationary", "Total Supply"],
+                ["Up to 50%", "Trading Fee Discount"],
+                ["10,000,000 CEXT", "Min. Threshold for Max Discount"],
+                ["Up to 3x multiplier", "Referral Bonus"],
+                ["Yes (Tier 3+)", "Premium Support"],
+                ["Yes (24h)", "Early News Access"],
+                ["Yes (Tier 4)", "Listing Influence"],
+                ["Planned (Diamond tier)", "Governance Rights"],
+              ] as [string, string][],
+            },
+            {
+              n: "BNB",
+              sub: "Binance",
+              icon: bnbIcon,
+              rows: [
+                ["~140,000,000 (post-burn)", "Total Supply"],
+                ["Up to 25% direct / ~78% combined VIP9", "Trading Fee Discount"],
+                ["$4,000,000,000 volume + 5,500 BNB", "Min. Threshold for Max Discount"],
+                ["Standard", "Referral Bonus"],
+                ["VIP Only", "Premium Support"],
+                ["No", "Early News Access"],
+                ["No", "Listing Influence"],
+                ["Limited", "Governance Rights"],
+              ] as [string, string][],
+            },
+            {
+              n: "KCS",
+              sub: "KuCoin",
+              icon: kcsIcon,
+              rows: [
+                ["170,000,000", "Total Supply"],
+                ["Up to 20% direct / negative maker at VIP12", "Trading Fee Discount"],
+                ["150,000 KCS or $500,000,000 volume", "Min. Threshold for Max Discount"],
+                ["Standard", "Referral Bonus"],
+                ["Limited", "Premium Support"],
+                ["No", "Early News Access"],
+                ["GemVote (limited)", "Listing Influence"],
+                ["Limited", "Governance Rights"],
+              ] as [string, string][],
+            },
+            {
+              n: "OKB",
+              sub: "OKX",
+              icon: okbIcon,
+              rows: [
+                ["21,000,000 (post-burn 2025)", "Total Supply"],
+                ["Tier-based, phasing out", "Trading Fee Discount"],
+                ["N/A", "Min. Threshold for Max Discount"],
+                ["Standard", "Referral Bonus"],
+                ["Limited", "Premium Support"],
+                ["No", "Early News Access"],
+                ["No", "Listing Influence"],
+                ["Limited", "Governance Rights"],
+              ] as [string, string][],
+            },
+          ].map(({ n, sub, icon, rows }, i) => (
             <div
               key={n}
               className={`rounded-2xl border border-white/10 p-6 text-center ${i === 0 ? "" : "bg-[var(--brand-navy-card)]"}`}
@@ -152,13 +208,10 @@ function TokenPage() {
             >
               <img src={icon} alt={`${n} logo`} className="mx-auto h-16 w-16 object-contain" />
               <h3 className="display mt-4 text-xl">{n}</h3>
-              <Row v="50%" l="Max Fee Discount" />
-              <Row v="20%" l="Referral Bonus" />
-              <Row v="1x" l="Premium Support" />
-              <Row v="Standard" l="Early News Access" />
-              <Row v="Public" l="Listing Influence" />
-              <Row v="Basic" l="Governance Rights" />
-              <Row v="Basic" l="Profit Buyback" />
+              <p className="text-[10px] tracking-widest text-foreground/60">{sub}</p>
+              {rows.map(([v, l]) => (
+                <Row key={l} v={v} l={l} />
+              ))}
             </div>
           ))}
         </div>
