@@ -134,17 +134,17 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Card eyebrow="STAKING" title="UP TO 15% APR" body="Buy CEXT in-app, send to the designated staking address shown in-app. Your tokens, your staking, your rewards." footnote="* Staking is a service provided by a third party. STAKING REWARDS are not guaranteed. Rates fluctuate based on network conditions. Chimera Wallet carry no liability for this service." />
+        <Reveal><Card eyebrow="STAKING" title="UP TO 15% APR" body="Buy CEXT in-app, send to the designated staking address shown in-app. Your tokens, your staking, your rewards." footnote="* Staking is a service provided by a third party. STAKING REWARDS are not guaranteed. Rates fluctuate based on network conditions. Chimera Wallet carry no liability for this service." /></Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="display text-center text-3xl md:text-5xl uppercase">Exchange Tokens Comparison</h2>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">Exchange Tokens Comparison</h2></Reveal>
+        <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
-        </p>
-        <p className="mx-auto mt-2 max-w-3xl text-center text-xs text-muted-foreground/70">
+        </p></Reveal>
+        <Reveal delay={240}><p className="mx-auto mt-2 max-w-3xl text-center text-xs text-muted-foreground/70">
           Data accurate as of 05/2026
-        </p>
+        </p></Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
           {[
@@ -209,7 +209,7 @@ function TokenPage() {
               ] as [string, string][],
             },
           ].map(({ n, sub, icon, rows }, i) => (
-            <div
+            <Reveal key={n} delay={i * 120}><div
               key={n}
               className={`rounded-2xl border border-white/10 p-6 text-center ${i === 0 ? "" : "bg-[var(--brand-navy-card)]"}`}
               style={i === 0 ? { background: "#1F3BDB" } : undefined}
@@ -220,7 +220,7 @@ function TokenPage() {
               {rows.map(([v, l]) => (
                 <Row key={l} v={v} l={l} />
               ))}
-            </div>
+            </div></Reveal>
           ))}
         </div>
       </section>
