@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TokenRouteImport } from './routes/token'
 import { Route as ReferralsRouteImport } from './routes/referrals'
 import { Route as PrivacyWebRouteImport } from './routes/privacy-web'
+import { Route as PrivacyManifestoRouteImport } from './routes/privacy-manifesto'
 import { Route as PrivacyAppRouteImport } from './routes/privacy-app'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as CardRouteImport } from './routes/card'
@@ -32,6 +33,11 @@ const ReferralsRoute = ReferralsRouteImport.update({
 const PrivacyWebRoute = PrivacyWebRouteImport.update({
   id: '/privacy-web',
   path: '/privacy-web',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyManifestoRoute = PrivacyManifestoRouteImport.update({
+  id: '/privacy-manifesto',
+  path: '/privacy-manifesto',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyAppRoute = PrivacyAppRouteImport.update({
@@ -72,6 +78,7 @@ export interface FileRoutesByFullPath {
   '/card': typeof CardRoute
   '/news': typeof NewsRoute
   '/privacy-app': typeof PrivacyAppRoute
+  '/privacy-manifesto': typeof PrivacyManifestoRoute
   '/privacy-web': typeof PrivacyWebRoute
   '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
@@ -83,6 +90,7 @@ export interface FileRoutesByTo {
   '/card': typeof CardRoute
   '/news': typeof NewsRoute
   '/privacy-app': typeof PrivacyAppRoute
+  '/privacy-manifesto': typeof PrivacyManifestoRoute
   '/privacy-web': typeof PrivacyWebRoute
   '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
@@ -95,6 +103,7 @@ export interface FileRoutesById {
   '/card': typeof CardRoute
   '/news': typeof NewsRoute
   '/privacy-app': typeof PrivacyAppRoute
+  '/privacy-manifesto': typeof PrivacyManifestoRoute
   '/privacy-web': typeof PrivacyWebRoute
   '/referrals': typeof ReferralsRoute
   '/token': typeof TokenRoute
@@ -108,6 +117,7 @@ export interface FileRouteTypes {
     | '/card'
     | '/news'
     | '/privacy-app'
+    | '/privacy-manifesto'
     | '/privacy-web'
     | '/referrals'
     | '/token'
@@ -119,6 +129,7 @@ export interface FileRouteTypes {
     | '/card'
     | '/news'
     | '/privacy-app'
+    | '/privacy-manifesto'
     | '/privacy-web'
     | '/referrals'
     | '/token'
@@ -130,6 +141,7 @@ export interface FileRouteTypes {
     | '/card'
     | '/news'
     | '/privacy-app'
+    | '/privacy-manifesto'
     | '/privacy-web'
     | '/referrals'
     | '/token'
@@ -142,6 +154,7 @@ export interface RootRouteChildren {
   CardRoute: typeof CardRoute
   NewsRoute: typeof NewsRoute
   PrivacyAppRoute: typeof PrivacyAppRoute
+  PrivacyManifestoRoute: typeof PrivacyManifestoRoute
   PrivacyWebRoute: typeof PrivacyWebRoute
   ReferralsRoute: typeof ReferralsRoute
   TokenRoute: typeof TokenRoute
@@ -168,6 +181,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy-web'
       fullPath: '/privacy-web'
       preLoaderRoute: typeof PrivacyWebRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-manifesto': {
+      id: '/privacy-manifesto'
+      path: '/privacy-manifesto'
+      fullPath: '/privacy-manifesto'
+      preLoaderRoute: typeof PrivacyManifestoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-app': {
@@ -222,6 +242,7 @@ const rootRouteChildren: RootRouteChildren = {
   CardRoute: CardRoute,
   NewsRoute: NewsRoute,
   PrivacyAppRoute: PrivacyAppRoute,
+  PrivacyManifestoRoute: PrivacyManifestoRoute,
   PrivacyWebRoute: PrivacyWebRoute,
   ReferralsRoute: ReferralsRoute,
   TokenRoute: TokenRoute,
