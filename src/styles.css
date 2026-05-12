@@ -148,7 +148,7 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: "Titillium Web", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-family: "Funnel Display", "Barlow Condensed", "Oswald", ui-sans-serif, system-ui, sans-serif;
     /* background dots hidden */
   }
 
@@ -186,6 +186,18 @@
   }
 
   h1 {
+    font-family: "Titillium Web", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+
+  h2 {
+    font-family: "Funnel Display", "Barlow Condensed", "Oswald", ui-sans-serif, sans-serif;
+  }
+
+  p {
+    font-family: "Funnel Display", "Barlow Condensed", "Oswald", ui-sans-serif, sans-serif;
+  }
+
+  button, a, input, textarea, select {
     font-family: "Titillium Web", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
 
