@@ -20,7 +20,7 @@ export function SiteFooter() {
                 <img src={bitcoinLogo} alt="Bitcoin" className="h-5 w-auto object-contain" />
               </a>
               <a href="https://arkadeos.com" target="_blank" rel="noopener noreferrer" className="opacity-80 transition hover:opacity-100">
-                <img src={arkadeLogo} alt="Chimera" className="h-7 w-auto object-contain" />
+                <img src={arkadeLogo} alt="Arkade" className="h-7 w-auto object-contain" />
               </a>
               <a href="https://lightning.network" target="_blank" rel="noopener noreferrer" className="opacity-80 transition hover:opacity-100">
                 <img src={lightningLogo} alt="Lightning" className="h-5 w-auto object-contain" />
