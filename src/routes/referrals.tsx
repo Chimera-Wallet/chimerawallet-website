@@ -8,9 +8,17 @@ export const Route = createFileRoute("/referrals")({
   head: () => ({
     meta: [
       { title: "Chimera Referrals — Your link. Their trades. Your cut." },
-      { name: "description", content: "Real platform revenue, credited automatically. No cap. No expiry." },
+      {
+        name: "description",
+        content:
+          "20% of platform fees from every user you refer. Scale up to 60% with CEXT tier multipliers. No cap, no expiry.",
+      },
       { property: "og:title", content: "Chimera Referrals" },
-      { property: "og:description", content: "Real platform revenue, credited automatically. No cap. No expiry." },
+      {
+        property: "og:description",
+        content:
+          "20% of platform fees from every user you refer. Scale up to 60% with CEXT tier multipliers. No cap, no expiry.",
+      },
     ],
   }),
   component: ReferralsPage,
