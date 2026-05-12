@@ -45,13 +45,13 @@ function Index() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 pt-12 pb-20">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_4fr_1fr]">
-            <img
+            <Reveal delay={400}><img
               src={heroPhoneLeft}
               alt="Chimera wallet app showing balance and transactions"
               className="hidden lg:block w-[160%] max-w-none h-auto -ml-[60%]"
-            />
+            /></Reveal>
             <div className="text-center">
-              <p
+              <Reveal delay={0}><p
                 className="text-center uppercase text-[var(--brand-green)]"
                 style={{
                   fontFamily: '"Titillium Web", sans-serif',
@@ -62,8 +62,8 @@ function Index() {
                 }}
               >
                 CHIMERAWALLET, FINANCE EVOLVED
-              </p>
-              <h1
+              </p></Reveal>
+              <Reveal delay={120}><h1
                 className="mt-6 text-center uppercase"
                 style={{
                   fontFamily: '"Titillium Web", sans-serif',
@@ -74,8 +74,8 @@ function Index() {
                 }}
               >
                 THE ONLY BITCOIN SUPER-APP BUILT SO NOBODY CAN EVER TAKE YOUR MONEY AWAY.
-              </h1>
-              <p
+              </h1></Reveal>
+              <Reveal delay={240}><p
                 className="mt-6 text-center text-foreground/80"
                 style={{
                   fontFamily: '"Funnel Display", sans-serif',
@@ -86,18 +86,18 @@ function Index() {
                 }}
               >
                 Not a promise. Not a policy. Mathematics.
-              </p>
-              <p className="mt-2 text-sm text-muted-foreground">
+              </p></Reveal>
+              <Reveal delay={340}><p className="mt-2 text-sm text-muted-foreground">
                 Mainchain. Lightning. Chimera Protocol. One app.
                 <br />
                 Your keys. Nobody in between.
-              </p>
+              </p></Reveal>
             </div>
-            <img
+            <Reveal delay={520}><img
               src={heroPhoneRight}
               alt="Chimera card balance and transactions"
               className="hidden lg:block w-[160%] max-w-none h-auto -mr-[60%]"
-            />
+            /></Reveal>
           </div>
 
           {/* CTA cards */}
