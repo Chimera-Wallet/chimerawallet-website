@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { Reveal } from "@/components/reveal";
 import bronzeBadge from "@/assets/site/Tiers/Bronze.png";
 import silverBadge from "@/assets/site/Tiers/Silver.png";
 import goldBadge from "@/assets/site/Tiers/Gold.png";
@@ -36,7 +37,7 @@ function TokenPage() {
   return (
     <main>
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-10">
-        <div className="rounded-3xl border border-white/10 bg-[var(--brand-navy-card)] p-10 text-center opacity-90">
+        <Reveal><div className="rounded-3xl border border-white/10 bg-[var(--brand-navy-card)] p-10 text-center opacity-90">
           <p className="hero-eyebrow text-[var(--brand-green)]">HOLD CEXT</p>
           <h1 className="hero-title mx-auto mt-6 max-w-3xl">
             PAY LESS. EARN MORE.
@@ -50,7 +51,7 @@ function TokenPage() {
           <button className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10">
             JOIN THE WAITLIST
           </button>
-        </div>
+        </div></Reveal>
 
         <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-7">
           {[
@@ -61,11 +62,11 @@ function TokenPage() {
             ["PRIORITY INCREASE", "as you move up"],
             ["SWISS ISSUED", "1 billion tokens"],
             ["NO INFLATION", "or diluition"],
-          ].map(([l, v]) => (
-            <div key={l} className="rounded-xl border border-white/10 bg-[var(--brand-navy-card)] p-4 text-center">
+          ].map(([l, v], i) => (
+            <Reveal key={l} delay={i * 80}><div className="rounded-xl border border-white/10 bg-[var(--brand-navy-card)] p-4 text-center">
               <div className="text-[10px] font-bold tracking-widest text-[var(--brand-green)]">{l}</div>
               <div className="display mt-2 text-base">{v}</div>
-            </div>
+            </div></Reveal>
           ))}
         </div>
       </section>
