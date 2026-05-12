@@ -24,13 +24,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "The only Bitcoin super-app built so nobody can ever take your money away. Mainchain. Lightning. Chimera Protocol. One app.",
+          "Chimera Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
       },
       { property: "og:title", content: "Chimera — The Bitcoin Super-App" },
       {
         property: "og:description",
         content:
-          "The only Bitcoin super-app built so nobody can ever take your money away. Mainchain. Lightning. Chimera Protocol. One app.",
+          "Chimera Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
       },
     ],
   }),
