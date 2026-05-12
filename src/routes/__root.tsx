@@ -1,7 +1,6 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, useRouterState } from "@tanstack/react-router";
 import { useEffect } from "react";
 
-import appCss from "../styles.css?url";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -43,51 +42,38 @@ export const Route = createRootRoute({
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7dd2e4a0-c2ff-4f8f-8c19-e5ec01a2c402/id-preview-3e2172de--c1c26671-6d8a-47c2-8082-e76e22fa0bd2.lovable.app-1777985302818.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7dd2e4a0-c2ff-4f8f-8c19-e5ec01a2c402/id-preview-3e2172de--c1c26671-6d8a-47c2-8082-e76e22fa0bd2.lovable.app-1777985302818.png" },
     ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
-      },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Funnel+Display:wght@400;500;600;700;800&display=swap",
-      },
-    ],
-    scripts: [
-      {
-        src: "https://plausible.io/js/pa-O9g29d40_pHpvC6a8romr.js",
-        async: true,
-      },
-      {
-        children:
-          "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()",
-      },
-    ],
   }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
 
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
-
 function RootComponent() {
+  // Apply per-route head() meta to the document in SPA mode.
+  const matches = useRouterState({ select: (s) => s.matches });
+  useEffect(() => {
+    const allMeta = matches.flatMap((m) => (m.meta as any[]) ?? []);
+    const titleEntry = [...allMeta].reverse().find((m) => m && m.title);
+    if (titleEntry?.title) document.title = titleEntry.title;
+
+    const seen = new Set<string>();
+    const managed = "data-tsr-meta";
+    document.querySelectorAll(`meta[${managed}]`).forEach((el) => el.remove());
+
+    for (let i = allMeta.length - 1; i >= 0; i--) {
+      const m = allMeta[i];
+      if (!m || m.title) continue;
+      const key = m.name ? `name:${m.name}` : m.property ? `property:${m.property}` : null;
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      const tag = document.createElement("meta");
+      if (m.name) tag.setAttribute("name", m.name);
+      if (m.property) tag.setAttribute("property", m.property);
+      if (m.content) tag.setAttribute("content", m.content);
+      tag.setAttribute(managed, "");
+      document.head.appendChild(tag);
+    }
+  }, [matches]);
+
   useEffect(() => {
     if (typeof window === "undefined") return;
     const w = window as any;
