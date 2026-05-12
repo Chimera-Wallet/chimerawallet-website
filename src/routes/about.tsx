@@ -28,7 +28,7 @@ function AboutPage() {
   return (
     <main>
       <section className="mx-auto max-w-5xl px-6 pt-16 pb-12 text-center">
-        <p className="display text-xs tracking-[0.3em] text-[var(--brand-green)]">ABOUT</p>
+        <p className="hero-eyebrow text-[var(--brand-green)]">ABOUT</p>
         <h1 className="display mt-6 text-4xl md:text-6xl">
           BUILT BY PEOPLE
           <br />

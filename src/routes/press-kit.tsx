@@ -45,7 +45,7 @@ const COLORS = [
 function PressKitPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 pt-16 pb-24">
-      <p className="display text-xs tracking-[0.3em] text-[var(--brand-green)]">PRESS KIT</p>
+      <p className="hero-eyebrow text-[var(--brand-green)]">PRESS KIT</p>
       <h1 className="display mt-6 text-4xl md:text-6xl">WHERE FINANCE MEETS INNOVATION!</h1>
       <p className="mt-4 display text-lg md:text-xl text-foreground/80">
         The Next-Generation Financial Platform Inspired by Myth and Driven by Innovation

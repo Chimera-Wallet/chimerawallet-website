@@ -48,7 +48,7 @@ function CardPage() {
   return (
     <main>
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-10 text-center">
-        <p className="display text-xs tracking-[0.3em] text-[var(--brand-green)]">CHIMERA CARD</p>
+        <p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA CARD</p>
         <h1 className="display mx-auto mt-6 max-w-4xl text-4xl md:text-6xl">
           SELF-CUSTODY IN YOUR WALLET.
           <br />
