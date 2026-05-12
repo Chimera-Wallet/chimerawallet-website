@@ -68,7 +68,7 @@ export function SiteFooter() {
                   rel="noopener noreferrer"
                   className="hover:text-[var(--brand-green)]"
                 >
-                  Chimera API Documentation
+                  API Documentation
                 </a>
               </li>
               <li>
