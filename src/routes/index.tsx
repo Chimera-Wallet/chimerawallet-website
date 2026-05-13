@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Placeholder } from "@/components/placeholder";
 import { Reveal } from "@/components/reveal";
+import { CtaCard } from "@/components/cta-card";
 import heroPhoneLeft from "@/assets/site/hero-phone-left.png";
 import heroPhoneRight from "@/assets/site/hero-phone-right.png";
 import wallet1 from "@/assets/site/wallet-1.png";
