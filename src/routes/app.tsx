@@ -174,26 +174,25 @@ function AppPage() {
             Unstoppable cross chain p2p trading with a level of privacy you never seen before. All the feature of a CEX with all the freedom of a DEX all wrapped in a progressive web app out of stores grasp. The future of trading is coming soon to Arkade.
           </p></Reveal>
         </div>
-        <Reveal delay={360}><img src={cardSwap} alt="Chimera card swap" className="mx-auto mt-10 w-72 object-contain" /></Reveal>
-      </section>
-
-      <section
-        className="py-16"
-        style={{ background: "linear-gradient(180deg, var(--brand-blue-bright) 0%, var(--brand-blue) 100%)" }}
-      >
-        <div className="mx-auto max-w-5xl px-6">
-          <Reveal><div
-            className="flex items-center justify-between rounded-2xl border border-white/15 px-6 py-5 backdrop-blur"
-            style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
-          >
-            <div>
-              <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
-                YOUR MONEY. YOUR DEVICE. YOUR RULES.
-              </div>
+        <div className="relative">
+          <Reveal delay={360}><img src={cardSwap} alt="Chimera card swap" className="mx-auto mt-10 w-72 object-contain" /></Reveal>
+          <div className="mx-auto max-w-5xl px-6 -mt-16 relative z-10">
+            <Reveal><a
+              href="https://app.chimerawallet.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between rounded-2xl border border-white/15 px-6 py-5 backdrop-blur transition-colors hover:bg-[var(--brand-blue-bright)]"
+              style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
+            >
+              <div className="text-left">
+                <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
+                  YOUR MONEY. YOUR DEVICE. YOUR RULES.
+                </div>
                 <div className="display mt-1 text-xl">OPEN CHIMERA</div>
-            </div>
-            <span className="text-xl">↗</span>
-          </div></Reveal>
+              </div>
+              <span className="text-xl">↗</span>
+            </a></Reveal>
+          </div>
         </div>
       </section>
     </main>
