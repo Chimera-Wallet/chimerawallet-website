@@ -50,6 +50,8 @@ export const Route = createRootRoute({
 function RootComponent() {
   // Apply per-route head() meta to the document in SPA mode.
   const matches = useRouterState({ select: (s) => s.matches });
+  const searchStr = useRouterState({ select: (s) => s.location.searchStr });
+  const embed = /(?:^|[?&])embed=1(?:&|$)/.test(searchStr ?? "");
   useEffect(() => {
     const allMeta = matches.flatMap((m) => (m.meta as any[]) ?? []);
     const titleEntry = [...allMeta].reverse().find((m) => m && m.title);
@@ -113,9 +115,9 @@ function RootComponent() {
 
   return (
     <div className="min-h-screen text-foreground">
-      <SiteHeader />
+      {!embed && <SiteHeader />}
       <Outlet />
-      <SiteFooter />
+      {!embed && <SiteFooter />}
     </div>
   );
 }
