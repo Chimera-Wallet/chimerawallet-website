@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
 import { Reveal } from "@/components/reveal";
+import { CtaCard } from "@/components/cta-card";
 import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
 import arkLogo from "@/assets/site/arkade-logo.svg";
 import coinChimera from "@/assets/site/Coins/coin-front-chimera.png";
@@ -177,21 +178,13 @@ function AppPage() {
         <div className="relative">
           <Reveal delay={360}><img src={cardSwap} alt="Chimera card swap" className="mx-auto mt-10 w-72 object-contain" /></Reveal>
           <div className="mx-auto max-w-5xl px-6 -mt-16 relative z-10">
-            <Reveal><a
-              href="https://app.chimerawallet.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between rounded-2xl border border-white/15 px-6 py-5 backdrop-blur transition-colors hover:bg-[var(--brand-blue-bright)]"
-              style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
-            >
-              <div className="text-left">
-                <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
-                  YOUR MONEY. YOUR DEVICE. YOUR RULES.
-                </div>
-                <div className="display mt-1 text-xl">OPEN CHIMERA</div>
-              </div>
-              <span className="text-xl">↗</span>
-            </a></Reveal>
+            <Reveal>
+              <CtaCard
+                href="https://app.chimerawallet.com"
+                eyebrow="YOUR MONEY. YOUR DEVICE. YOUR RULES."
+                title="OPEN CHIMERA"
+              />
+            </Reveal>
           </div>
         </div>
       </section>
