@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Send } from "lucide-react";
 import chimeraLogo from "@/assets/site/chimera-logo.png";
 
 const navItems = [
@@ -80,6 +80,28 @@ export function SiteHeader() {
                 >
                    OPEN CHIMERA
                 </a>
+                <div className="mt-6 flex items-center justify-center gap-3">
+                  <a
+                    href="https://x.com/chimera_wallet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="X (Twitter)"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                      <path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.84l-5.36-6.96L4.5 22H1.24l8.02-9.16L1 2h7.02l4.84 6.4L18.244 2Zm-1.2 18h1.9L7.06 4H5.06l11.984 16Z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://t.me/Chimera_Community"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Telegram"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10"
+                  >
+                    <Send className="h-4 w-4" />
+                  </a>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
