@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { useRouterState } from "@tanstack/react-router";
 import { Placeholder } from "@/components/placeholder";
 import { Reveal } from "@/components/reveal";
 import cardHero from "@/assets/site/Chimera_Card.png";
@@ -26,6 +27,8 @@ export const Route = createFileRoute("/card")({
 });
 
 function CardPage() {
+  const searchStr = useRouterState({ select: (s) => s.location.searchStr });
+  const embed = /(?:^|[?&])embed=1(?:&|$)/.test(searchStr ?? "");
   const ReserveForm = ({ children }: { children: React.ReactNode }) => (
     <form
       target="_blank"
@@ -191,7 +194,7 @@ function CardPage() {
             </Faq></Reveal>
           </div>
 
-          <Reveal><a
+          {!embed && <Reveal><a
             href="https://app.chimerawallet.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -205,7 +208,7 @@ function CardPage() {
                 <div className="display mt-1 text-xl">OPEN CHIMERA</div>
             </div>
             <span className="text-xl">↗</span>
-          </a></Reveal>
+          </a></Reveal>}
         </div>
       </section>
     </main>
