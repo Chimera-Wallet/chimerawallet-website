@@ -13,7 +13,7 @@ import iconBolt from "@/assets/site/Icons/icon_Bolt.svg";
 import iconPaperplane from "@/assets/site/Icons/icon_Paperplane.svg";
 import iconFaceID from "@/assets/site/Icons/icon_FaceID.svg";
 import iconCard from "@/assets/site/Icons/icon_Card.svg";
-import cardSwap from "@/assets/site/Coins/Chimera-card-2-3.png";
+ import cardSwap from "@/assets/site/Coins/Arkade-card-2-3.png";
 
 export const Route = createFileRoute("/app")({
   head: () => ({
