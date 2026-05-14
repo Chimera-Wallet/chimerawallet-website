@@ -196,8 +196,8 @@ function Index() {
 
       {/* ARKADE PROTOCOL — comparison */}
       <section className="mx-auto max-w-4xl px-6 pb-20">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <Reveal><ComparisonCard
+        <div className="-mx-6 flex gap-4 overflow-x-auto px-6 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 md:snap-none">
+          <Reveal className="w-[80%] shrink-0 snap-start sm:w-[60%] md:w-auto"><ComparisonCard
             title="CEX"
             rows={[
               ["Custodial", "Custody"],
@@ -207,7 +207,7 @@ function Index() {
               ["No", "Unilateral exit"],
             ]}
           /></Reveal>
-          <Reveal delay={120}><ComparisonCard
+          <Reveal delay={120} className="w-[80%] shrink-0 snap-start sm:w-[60%] md:w-auto"><ComparisonCard
             title="DEX"
             rows={[
               ["Non-custodial", "Custody"],
@@ -217,7 +217,7 @@ function Index() {
               ["Yes", "Unilateral exit"],
             ]}
           /></Reveal>
-          <Reveal delay={240}><ComparisonCard
+          <Reveal delay={240} className="w-[80%] shrink-0 snap-start sm:w-[60%] md:w-auto"><ComparisonCard
              title="Chimera"
              highlight
             rows={[
