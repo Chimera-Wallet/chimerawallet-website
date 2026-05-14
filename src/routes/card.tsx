@@ -261,7 +261,10 @@ function BenefitRow({
 function Faq({ q, children, defaultOpen = false }: { q: string; children?: React.ReactNode; defaultOpen?: boolean }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur">
+    <div
+      className="rounded-2xl border border-white/10 backdrop-blur"
+      style={{ background: "#15132633" }}
+    >
       <button
         onClick={() => setOpen((o) => !o)}
         className="flex w-full items-center justify-between px-6 py-4 text-left"
