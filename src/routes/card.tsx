@@ -326,7 +326,7 @@ function ContinentPanel({
         <span className="text-xl">{open ? "×" : "+"}</span>
       </button>
       {open && (
-        <ul className="grid grid-cols-1 gap-x-10 gap-y-2 border-t border-white/10 px-6 py-4 text-sm text-foreground/90 sm:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-x-10 gap-y-2 border-t border-white/10 px-6 py-4 text-sm text-foreground/90 sm:grid-cols-2 md:grid-cols-3">
           {countries.map(([flag, name]) => (
             <li key={name} className="flex items-center gap-3 border-b border-white/5 py-2">
               <span className="text-lg leading-none">{flag}</span>
