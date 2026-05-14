@@ -38,7 +38,7 @@ function ReferralsPage() {
             <br />
             NO CAP. NO EXPIRY.
           </h1></Reveal>
-          <Reveal delay={240}><p className="mt-6 text-base text-foreground/85">Real platform revenue, credited automatically</p></Reveal>
+          <Reveal delay={240}><h2 className="mt-6 text-base text-foreground/85">Real platform revenue, credited automatically</h2></Reveal>
           <Reveal delay={340}><p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground">
             Every trade your referrals complete earns you a direct cut of the platform fee — for as long as they keep trading.
           </p></Reveal>

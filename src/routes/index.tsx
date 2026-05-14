@@ -76,7 +76,7 @@ function Index() {
               >
                 THE ONLY BITCOIN SUPER-APP BUILT SO NOBODY CAN EVER TAKE YOUR MONEY AWAY.
               </h1></Reveal>
-              <Reveal delay={240}><p
+              <Reveal delay={240}><h2
                 className="mt-6 text-center text-foreground/80"
                 style={{
                   fontFamily: '"Funnel Display", sans-serif',
@@ -87,7 +87,7 @@ function Index() {
                 }}
               >
                 Not a promise. Not a policy. Mathematics.
-              </p></Reveal>
+              </h2></Reveal>
               <Reveal delay={340}><p className="mt-2 text-sm text-muted-foreground">
                  Mainchain. Lightning. Arkade Protocol. One app.
                 <br />
