@@ -1,8 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
-import { useRouterState } from "@tanstack/react-router";
-import { Placeholder } from "@/components/placeholder";
 import { Reveal } from "@/components/reveal";
+import { Section, Card, Eyebrow, BrandButton, GhostButton } from "@/components/ui";
 import cardHero from "@/assets/site/Chimera_Card.png";
 import cardCoins from "@/assets/site/chimera-card.png";
 
@@ -51,7 +50,7 @@ function CardPage() {
   );
   return (
     <main>
-      <section className="mx-auto max-w-7xl px-6 pt-16 pb-10 text-center">
+      <Section size="none" className="pt-16 pb-10 text-center">
         <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA CARD</p></Reveal>
         <Reveal delay={120}><h1 className="hero-title mx-auto mt-6 max-w-5xl">
           SELF-CUSTODY IN YOUR WALLET.
@@ -61,41 +60,35 @@ function CardPage() {
         <Reveal delay={240}><h2 className="mx-auto mt-6 max-w-2xl text-base md:text-lg text-foreground/85">
           Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
         </h2></Reveal>
-        <Reveal delay={340}><ReserveForm>
-          <button
-            type="submit"
-            className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10"
-          >
-            RESERVE YOUR CARD
-          </button>
-        </ReserveForm></Reveal>
+        <Reveal delay={340}>
+          <ReserveForm>
+            <GhostButton type="submit" className="mt-8">RESERVE YOUR CARD</GhostButton>
+          </ReserveForm>
+        </Reveal>
         <Reveal delay={460}><img src={cardHero} alt="Chimera cards" className="mx-auto mt-10 w-full max-w-md object-contain" /></Reveal>
-      </section>
+      </Section>
 
-      <section className="mx-auto max-w-7xl px-6 py-6">
-        <Reveal><ReserveForm>
-          <button type="submit" className="block w-full text-left">
-        <div
-          className="relative flex items-center justify-center rounded-2xl border border-white/10 px-6 py-8"
-          style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
-        >
-          <div className="w-full text-center">
-            <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
-              SPEND ANYWHERE VISA IS ACCEPTED
-            </div>
-            <div className="display mt-1 text-xl">RESERVE YOUR CARD</div>
-            <div className="mt-1 text-xs text-muted-foreground">
-              Top up your card directly from Chimera Wallet. No extra steps.
-            </div>
-          </div>
-          <span className="absolute right-6 text-xl">↗</span>
-        </div>
-          </button>
-        </ReserveForm></Reveal>
-      </section>
+      <Section size="none" className="py-6">
+        <Reveal>
+          <ReserveForm>
+            <button type="submit" className="block w-full text-left">
+              <Card variant="glow" padding="px-6 py-8" className="relative flex items-center justify-center">
+                <div className="w-full text-center">
+                  <Eyebrow>SPEND ANYWHERE VISA IS ACCEPTED</Eyebrow>
+                  <div className="display mt-1 text-xl">RESERVE YOUR CARD</div>
+                  <div className="mt-1 text-xs text-muted-foreground">
+                    Top up your card directly from Chimera Wallet. No extra steps.
+                  </div>
+                </div>
+                <span className="absolute right-6 text-xl">↗</span>
+              </Card>
+            </button>
+          </ReserveForm>
+        </Reveal>
+      </Section>
 
-      <section className="py-20">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
+      <Section size="lg">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
           <Reveal><img src={cardCoins} alt="Chimera card with floating coins" className="aspect-[4/3] w-full object-contain" /></Reveal>
           <Reveal delay={120}><div>
             <h2 className="display text-4xl md:text-5xl">1,000 SPOTS.</h2>
@@ -108,19 +101,13 @@ function CardPage() {
               Chimera Card Rolling out mid 2026.
             </p>
             <ReserveForm>
-              <button
-                type="submit"
-                className="mt-8 rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
-                style={{ backgroundColor: "var(--brand-green)" }}
-              >
-                SECURE YOUR SPOT NOW
-              </button>
+              <BrandButton type="submit" className="mt-8">SECURE YOUR SPOT NOW</BrandButton>
             </ReserveForm>
           </div></Reveal>
         </div>
-      </section>
+      </Section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <Section size="lg">
         <Reveal><h2 className="display text-3xl md:text-4xl">THREE BENEFITS</h2></Reveal>
         <Reveal delay={120}><p className="display text-2xl text-foreground/80">THAT DON'T EXPIRE:</p></Reveal>
 
@@ -152,7 +139,7 @@ function CardPage() {
           *Card programme provided in partnership with Wirex Pay. KYC is required to access the Wirex platform —
           separate from Chimera's own KYC. Chimera collects no fee or financial advantage for this service.
         </p></Reveal>
-      </section>
+      </Section>
 
       <section className="mx-auto max-w-4xl px-6 py-16">
         <Reveal><h2 className="display text-center text-3xl md:text-4xl">SUPPORTED COUNTRIES</h2></Reveal>
@@ -192,21 +179,22 @@ function CardPage() {
             </Faq></Reveal>
           </div>
 
-          {!embed && <Reveal><a
-            href="https://app.chimerawallet.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-12 flex items-center justify-between rounded-2xl border border-white/10 px-6 py-5 transition-colors hover:border-white/30"
-            style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
-          >
-            <div>
-              <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
-                WORKS ON ANY DEVICE
-              </div>
-                <div className="display mt-1 text-xl">OPEN CHIMERA</div>
-            </div>
-            <span className="text-xl">↗</span>
-          </a></Reveal>}
+          {!embed && (
+            <Reveal>
+              <a
+                href="https://app.chimerawallet.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="surface-glow mt-12 flex items-center justify-between px-6 py-5 transition-colors hover:border-white/30"
+              >
+                <div>
+                  <Eyebrow>WORKS ON ANY DEVICE</Eyebrow>
+                  <div className="display mt-1 text-xl">OPEN CHIMERA</div>
+                </div>
+                <span className="text-xl">↗</span>
+              </a>
+            </Reveal>
+          )}
         </div>
       </section>
     </main>
@@ -219,23 +207,15 @@ function BenefitRow({
   body,
   badge,
   strike,
-  filled = false,
 }: {
   tag: string;
   title: string;
   body: string;
   badge: string;
   strike: string;
-  filled?: boolean;
 }) {
   return (
-    <div
-      className="grid grid-cols-1 items-center gap-6 rounded-2xl border border-white/10 px-6 py-6 md:grid-cols-[1fr_auto]"
-      style={{
-        background: filled ? "var(--brand-blue)" : "var(--brand-navy-card)",
-        boxShadow: filled ? undefined : "0px 0px 40px 0px rgba(31, 59, 219, 0.5)",
-      }}
-    >
+    <Card padding="px-6 py-6" className="grid grid-cols-1 items-center gap-6 md:grid-cols-[1fr_auto]">
       <div>
         <span className="inline-block rounded-md bg-[var(--brand-green)] px-2 py-1 text-[10px] font-bold tracking-widest text-[var(--brand-navy)]">
           {tag}
@@ -257,17 +237,14 @@ function BenefitRow({
         </div>
         <div className="mt-1 text-[10px] tracking-widest text-foreground/70 line-through">{strike}</div>
       </div>
-    </div>
+    </Card>
   );
 }
 
 function Faq({ q, children, defaultOpen = false }: { q: string; children?: React.ReactNode; defaultOpen?: boolean }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div
-      className="rounded-2xl border border-white/10 backdrop-blur"
-      style={{ background: "#15132633" }}
-    >
+    <div className="surface-glass">
       <button
         onClick={() => setOpen((o) => !o)}
         className="flex w-full items-center justify-between px-6 py-4 text-left"
@@ -316,7 +293,7 @@ function ContinentPanel({
 }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)]">
+    <Card padding="">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
@@ -338,6 +315,6 @@ function ContinentPanel({
           ))}
         </ul>
       )}
-    </div>
+    </Card>
   );
 }
