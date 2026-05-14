@@ -241,11 +241,21 @@ function BenefitRow({
         <span className="inline-block rounded-md bg-[var(--brand-green)] px-2 py-1 text-[10px] font-bold tracking-widest text-[var(--brand-navy)]">
           {tag}
         </span>
-        <h3 className="display mt-3 text-2xl">{title}</h3>
+        <h3
+          className="mt-3 text-2xl font-bold uppercase tracking-wide"
+          style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}
+        >
+          {title}
+        </h3>
         <p className="mt-2 text-sm text-foreground/85">{body}</p>
       </div>
       <div className="rounded-md border border-[var(--brand-green)] px-6 py-3 text-center">
-        <div className="display text-3xl text-[var(--brand-green)]">{badge}</div>
+        <div
+          className="text-3xl font-bold text-[var(--brand-green)]"
+          style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}
+        >
+          {badge}
+        </div>
         <div className="mt-1 text-[10px] tracking-widest text-foreground/70 line-through">{strike}</div>
       </div>
     </div>
