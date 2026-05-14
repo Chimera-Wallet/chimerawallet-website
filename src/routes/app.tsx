@@ -167,9 +167,9 @@ function AppPage() {
             style={{
               fontFamily: '"Funnel Display", sans-serif',
               fontWeight: 400,
-              fontSize: "clamp(1rem, 2.4vw, 32px)",
-              lineHeight: "100%",
-              letterSpacing: "1px",
+              fontSize: "clamp(0.875rem, 1.6vw, 20px)",
+              lineHeight: "1.4",
+              letterSpacing: "0.5px",
             }}
           >
             Unstoppable cross chain p2p trading with a level of privacy you never seen before. All the feature of a CEX with all the freedom of a DEX all wrapped in a progressive web app out of stores grasp. The future of trading is coming soon to Arkade.
