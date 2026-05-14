@@ -58,7 +58,7 @@ function CardPage() {
           <br />
           VISA IN YOUR POCKET.
         </h1></Reveal>
-        <Reveal delay={240}><h2 className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
+        <Reveal delay={240}><h2 className="mx-auto mt-6 max-w-2xl text-base md:text-lg text-foreground/85">
           Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
         </h2></Reveal>
         <Reveal delay={340}><ReserveForm>

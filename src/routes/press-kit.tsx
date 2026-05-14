@@ -48,7 +48,7 @@ function PressKitPage() {
     <main className="mx-auto max-w-6xl px-6 pt-16 pb-24">
       <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">PRESS KIT</p></Reveal>
       <Reveal delay={120}><h1 className="hero-title mt-6">WHERE FINANCE MEETS INNOVATION!</h1></Reveal>
-      <Reveal delay={240}><h2 className="mt-4 display text-lg md:text-xl text-foreground/80">
+      <Reveal delay={240}><h2 className="mt-4 display text-xl md:text-2xl text-foreground/80">
         The Next-Generation Financial Platform Inspired by Myth and Driven by Innovation
       </h2></Reveal>
       <Reveal delay={340}><p className="mt-6 max-w-3xl text-sm text-foreground/85">
