@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Placeholder } from "@/components/placeholder";
+import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/reveal";
 import { CtaCard } from "@/components/cta-card";
 import { ScrollableComparison } from "@/components/scrollable-comparison";
@@ -244,10 +243,7 @@ function Index() {
             <p className="mt-6 text-sm text-foreground/85">
               Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
             </p>
-            <button
-              className="mt-8 rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
-              style={{ backgroundColor: "var(--brand-green)" }}
-            >
+            <button className="btn-brand mt-8">
               RESERVE YOUR SPOT
             </button>
           </div>
@@ -300,14 +296,8 @@ function Index() {
 
       {/* WAITLIST SIGNUP */}
       <section id="waitlist" className="mx-auto max-w-3xl px-6 pb-20 scroll-mt-24">
-        <div
-          className="rounded-2xl border border-white/10 p-8 md:p-10"
-          style={{
-            background: "var(--brand-navy-card)",
-            boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)",
-          }}
-        >
-          <p className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">JOIN THE WAITLIST</p>
+        <div className="surface-card p-8 md:p-10">
+          <p className="eyebrow">JOIN THE WAITLIST</p>
           <h2 className="display mt-2 text-2xl md:text-3xl">JOIN CEXT WAITLIST!</h2>
           <WaitlistForm />
         </div>
@@ -365,12 +355,7 @@ function WaitlistForm() {
         <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
           <input type="text" name="b_00a079f682daf0fd064fd51a8_e89b2f090c" tabIndex={-1} defaultValue="" />
         </div>
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)] transition-opacity disabled:opacity-60"
-          style={{ backgroundColor: "var(--brand-green)" }}
-        >
+        <button type="submit" disabled={status === "loading"} className="btn-brand">
           {status === "loading" ? "JOINING..." : "JOIN NOW!"}
         </button>
       </div>
