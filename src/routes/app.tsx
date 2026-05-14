@@ -46,9 +46,9 @@ function AppPage() {
           <br />
           NO MEMORY. NO RISK.
         </h1></Reveal>
-        <Reveal delay={240}><p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
+        <Reveal delay={240}><h2 className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
           Bitcoin doesn't ask Apple for permission. Why should your wallet?
-        </p></Reveal>
+        </h2></Reveal>
         <Reveal delay={340}><p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
           Every native crypto app lives at the mercy of app stores. Wallets get removed on a Wednesday afternoon
           because someone in Cupertino or Mountain View changed their mind.

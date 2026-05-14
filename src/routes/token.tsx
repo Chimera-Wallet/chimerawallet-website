@@ -44,7 +44,7 @@ function TokenPage() {
             <br />
             KNOW FIRST. GOVERN MORE.
           </h1>
-          <p className="mt-6 text-sm text-foreground/85">TGE: 27 May 2026. Fixed supply. Zero inflation. Four tiers.</p>
+          <h2 className="mt-6 text-sm text-foreground/85">TGE: 27 May 2026. Fixed supply. Zero inflation. Four tiers.</h2>
           <p className="mx-auto mt-4 max-w-3xl text-sm text-muted-foreground">
             Fee discounts up to 50%. Referral multipliers up to 3x. Market intelligence 12-24 hours before public release. Human support at every tier - priority increase as you move up. Swiss issued. 1 Billion tokens. No inflation. No dilution. Utility Token according to Swiss classification.
           </p>
