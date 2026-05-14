@@ -39,7 +39,7 @@ function TokenPage() {
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-10">
         <Reveal><div className="rounded-3xl border border-white/10 bg-[var(--brand-navy-card)] p-10 text-center opacity-90">
           <p className="hero-eyebrow text-[var(--brand-green)]">HOLD CEXT</p>
-          <h1 className="hero-title mx-auto mt-6 max-w-3xl">
+          <h1 className="hero-title mx-auto mt-6 max-w-5xl">
             PAY LESS. EARN MORE.
             <br />
             KNOW FIRST. GOVERN MORE.
