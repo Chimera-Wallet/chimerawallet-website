@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Placeholder } from "@/components/placeholder";
 import { Reveal } from "@/components/reveal";
+import { Section, Card, BrandButton, GhostButton } from "@/components/ui";
 import arkLogo from "@/assets/site/ark-logo.png";
 import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
 import openSource from "@/assets/site/open_source.png";
@@ -55,10 +55,10 @@ function AboutPage() {
         </Reveal>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12">
+      <Section size="sm">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <Reveal>
-            <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+            <Card>
               <img src={arkLogo} alt="Chimera logo" className="h-10 w-10 object-contain" />
               <div className="mt-6 text-xs tracking-widest text-foreground/80">
                 ARKADE MAINNET
@@ -66,10 +66,10 @@ function AboutPage() {
                 LIVE SINCE
               </div>
               <div className="display mt-2 text-2xl text-[var(--brand-green)]">OCTOBER 2025</div>
-            </div>
+            </Card>
           </Reveal>
           <Reveal delay={120}>
-            <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+            <Card>
               <div className="display text-2xl text-[var(--brand-green)]">
                 VERIFIABLE
                 <br />
@@ -77,21 +77,21 @@ function AboutPage() {
               </div>
               <p className="mt-4 text-sm">NOT A ROADMAP PROMISE. SHIPPED.</p>
               <p className="mt-2 text-xs text-muted-foreground">THREE YEARS OF R&amp;D BEFORE PUBLIC MAINNET.</p>
-            </div>
+            </Card>
           </Reveal>
           <Reveal delay={240}>
-            <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+            <Card>
               <div className="text-xs tracking-widest text-foreground/80">ARKADE PROTOCOL RAISED</div>
               <div className="display mt-2 text-3xl">$7.7M.</div>
               <p className="mt-2 text-xs text-muted-foreground">
                 THE INFRASTRUCTURE CHIMERA IS BUILT ON IS TRUSTED BY THE BEST IN THE SPACE.
               </p>
-            </div>
+            </Card>
           </Reveal>
         </div>
-      </section>
+      </Section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <Section>
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
           <Reveal>
             <div>
@@ -107,24 +107,23 @@ function AboutPage() {
                 <br />
                 We don't hold your funds. The architecture makes it impossible.
               </p>
-              <a
+              <BrandButton
                 href="https://github.com/Chimera-Wallet"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
-                style={{ backgroundColor: "var(--brand-green)" }}
+                className="mt-8"
               >
                 CHECK OUR GITHUB
-              </a>
+              </BrandButton>
             </div>
           </Reveal>
           <Reveal delay={120}>
             <img src={openSource} alt="Open source code" className="aspect-[4/3] w-full object-contain" />
           </Reveal>
         </div>
-      </section>
+      </Section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <Section>
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
           <Reveal>
             <img
@@ -146,7 +145,7 @@ function AboutPage() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </Section>
 
       <section className="mx-auto max-w-5xl px-6 py-16 text-center">
         <Reveal>
@@ -157,7 +156,7 @@ function AboutPage() {
         </Reveal>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-16">
+      <Section size="none" className="pb-16">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {[
             ["OPEN SOURCE.", "Every line published. No black boxes. Code that belongs to everyone who uses it."],
@@ -172,21 +171,19 @@ function AboutPage() {
             ],
           ].map(([t, b], i) => (
             <Reveal key={t} delay={i * 120}>
-              <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+              <Card>
                 <h3 className="display text-xl text-[var(--brand-green)]">{t}</h3>
                 <p className="mt-3 text-sm text-foreground/85">{b}</p>
-              </div>
+              </Card>
             </Reveal>
           ))}
         </div>
         <Reveal>
           <div className="mt-10 text-center">
-            <button className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10">
-              DOWNLOAD BRAND KIT
-            </button>
+            <GhostButton>DOWNLOAD BRAND KIT</GhostButton>
           </div>
         </Reveal>
-      </section>
+      </Section>
     </main>
   );
 }
