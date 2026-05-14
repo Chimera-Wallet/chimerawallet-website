@@ -279,18 +279,62 @@ function Faq({ q, children, defaultOpen = false }: { q: string; children?: React
   );
 }
 
-const SUPPORTED_COUNTRIES: [string, string][] = [
-  ["🇦🇩", "Andorra"], ["🇦🇹", "Austria"], ["🇧🇪", "Belgium"], ["🇧🇬", "Bulgaria"],
-  ["🇭🇷", "Croatia"], ["🇨🇾", "Cyprus"], ["🇨🇿", "Czech Republic"], ["🇩🇰", "Denmark"],
-  ["🇪🇪", "Estonia"], ["🇫🇮", "Finland"], ["🇫🇷", "France"], ["🇩🇪", "Germany"],
-  ["🇬🇮", "Gibraltar"], ["🇬🇷", "Greece"], ["🇭🇺", "Hungary"], ["🇮🇸", "Iceland"],
-  ["🇮🇪", "Ireland"], ["🇮🇹", "Italy"], ["🇱🇻", "Latvia"], ["🇱🇹", "Lithuania"],
-  ["🇱🇺", "Luxembourg"], ["🇲🇹", "Malta"], ["🇲🇨", "Monaco"], ["🇲🇪", "Montenegro"],
-  ["🇳🇱", "Netherlands"], ["🇳🇴", "Norway"], ["🇵🇱", "Poland"], ["🇵🇹", "Portugal"],
-  ["🇷🇴", "Romania"], ["🇸🇰", "Slovakia"], ["🇸🇮", "Slovenia"], ["🇪🇸", "Spain"],
-  ["🇸🇪", "Sweden"], ["🇨🇭", "Switzerland"], ["🇬🇧", "United Kingdom"], ["🇦🇺", "Australia"],
-  ["🇭🇰", "Hong Kong"], ["🇮🇩", "Indonesia"], ["🇲🇾", "Malaysia"], ["🇵🇭", "Philippines"],
-  ["🇸🇬", "Singapore"], ["🇹🇼", "Taiwan"], ["🇹🇭", "Thailand"], ["🇻🇳", "Vietnam"],
-  ["🇦🇷", "Argentina"], ["🇧🇷", "Brazil"], ["🇨🇱", "Chile"], ["🇨🇴", "Colombia"],
-  ["🇪🇨", "Ecuador"], ["🇲🇽", "Mexico"], ["🇵🇪", "Peru"],
+const SUPPORTED_COUNTRIES_BY_CONTINENT: [string, [string, string][]][] = [
+  ["Europe", [
+    ["🇦🇩", "Andorra"], ["🇦🇹", "Austria"], ["🇧🇪", "Belgium"], ["🇧🇬", "Bulgaria"],
+    ["🇭🇷", "Croatia"], ["🇨🇾", "Cyprus"], ["🇨🇿", "Czech Republic"], ["🇩🇰", "Denmark"],
+    ["🇪🇪", "Estonia"], ["🇫🇮", "Finland"], ["🇫🇷", "France"], ["🇩🇪", "Germany"],
+    ["🇬🇮", "Gibraltar"], ["🇬🇷", "Greece"], ["🇭🇺", "Hungary"], ["🇮🇸", "Iceland"],
+    ["🇮🇪", "Ireland"], ["🇮🇹", "Italy"], ["🇱🇻", "Latvia"], ["🇱🇹", "Lithuania"],
+    ["🇱🇺", "Luxembourg"], ["🇲🇹", "Malta"], ["🇲🇨", "Monaco"], ["🇲🇪", "Montenegro"],
+    ["🇳🇱", "Netherlands"], ["🇳🇴", "Norway"], ["🇵🇱", "Poland"], ["🇵🇹", "Portugal"],
+    ["🇷🇴", "Romania"], ["🇸🇰", "Slovakia"], ["🇸🇮", "Slovenia"], ["🇪🇸", "Spain"],
+    ["🇸🇪", "Sweden"], ["🇨🇭", "Switzerland"], ["🇬🇧", "United Kingdom"],
+  ]],
+  ["Asia & Pacific", [
+    ["🇦🇺", "Australia"], ["🇭🇰", "Hong Kong"], ["🇮🇩", "Indonesia"], ["🇲🇾", "Malaysia"],
+    ["🇵🇭", "Philippines"], ["🇸🇬", "Singapore"], ["🇹🇼", "Taiwan"], ["🇹🇭", "Thailand"],
+    ["🇻🇳", "Vietnam"],
+  ]],
+  ["Latin America", [
+    ["🇦🇷", "Argentina"], ["🇧🇷", "Brazil"], ["🇨🇱", "Chile"], ["🇨🇴", "Colombia"],
+    ["🇪🇨", "Ecuador"], ["🇲🇽", "Mexico"], ["🇵🇪", "Peru"],
+  ]],
 ];
+
+function ContinentPanel({
+  continent,
+  countries,
+  defaultOpen = false,
+}: {
+  continent: string;
+  countries: [string, string][];
+  defaultOpen?: boolean;
+}) {
+  const [open, setOpen] = useState(defaultOpen);
+  return (
+    <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)]">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="flex w-full items-center justify-between px-6 py-4 text-left"
+      >
+        <span className="text-sm font-semibold uppercase tracking-widest">
+          {continent}
+          <span className="ml-3 text-xs font-normal text-muted-foreground">({countries.length})</span>
+        </span>
+        <span className="text-xl">{open ? "×" : "+"}</span>
+      </button>
+      {open && (
+        <ul className="grid grid-cols-1 gap-x-10 gap-y-2 border-t border-white/10 px-6 py-4 text-sm text-foreground/90 sm:grid-cols-2">
+          {countries.map(([flag, name]) => (
+            <li key={name} className="flex items-center gap-3 border-b border-white/5 py-2">
+              <span className="text-lg leading-none">{flag}</span>
+              <span>{name}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
