@@ -171,7 +171,8 @@ function AboutPage() {
             ],
           ].map(([t, b], i) => (
             <Reveal key={t} delay={i * 120}>
-              <Card>
+            <Reveal key={t} delay={i * 120} className="h-full">
+              <Card className="h-full">
                 <h3 className="display text-xl text-[var(--brand-green)]">{t}</h3>
                 <p className="mt-3 text-sm text-foreground/85">{b}</p>
               </Card>
