@@ -31,7 +31,7 @@ function ReferralsPage() {
     <main>
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-5xl px-6 pt-16 pb-24 text-center">
-          <Reveal delay={0}><Eyebrow className="hero-eyebrow text-base">REFERRALS</Eyebrow></Reveal>
+          <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">REFERRALS</p></Reveal>
           <Reveal delay={120}><h1 className="hero-title mx-auto mt-6">
             YOUR LINK. THEIR TRADES.
             <br />
