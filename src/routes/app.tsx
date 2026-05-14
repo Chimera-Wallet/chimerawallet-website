@@ -41,7 +41,7 @@ function AppPage() {
     <main>
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-12 text-center">
         <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">PROGRESSIVE APP</p></Reveal>
-        <Reveal delay={120}><h1 className="hero-title mx-auto mt-6 max-w-3xl">
+        <Reveal delay={120}><h1 className="hero-title mx-auto mt-6 max-w-5xl">
           NO INSTALL.
           <br />
           NO MEMORY. NO RISK.
