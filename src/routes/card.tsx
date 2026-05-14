@@ -159,14 +159,13 @@ function CardPage() {
         <Reveal delay={120}><p className="mt-4 text-center text-sm text-foreground/85">
           Chimera Card works anywhere Visa is accepted. Residents of the following countries can apply:
         </p></Reveal>
-        <ul className="mt-10 grid grid-cols-1 gap-x-10 gap-y-2 text-sm text-foreground/90 sm:grid-cols-2">
-          {SUPPORTED_COUNTRIES.map(([flag, name]) => (
-            <Reveal key={name} as="li" className="flex items-center gap-3 border-b border-white/5 py-2">
-              <span className="text-lg leading-none">{flag}</span>
-              <span>{name}</span>
+        <div className="mt-10 space-y-3">
+          {SUPPORTED_COUNTRIES_BY_CONTINENT.map(([continent, countries], i) => (
+            <Reveal key={continent} delay={i * 80}>
+              <ContinentPanel continent={continent} countries={countries} defaultOpen={i === 0} />
             </Reveal>
           ))}
-        </ul>
+        </div>
       </section>
 
       <section
