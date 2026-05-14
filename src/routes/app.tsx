@@ -156,7 +156,7 @@ function AppPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-20 text-center">
         <Reveal><img src={arkLogo} alt="Chimera" className="mx-auto h-16 w-auto object-contain" /></Reveal>
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-3xl md:max-w-5xl">
           <Reveal delay={120}><h2 className="display mt-6 text-3xl md:text-5xl">
             ARKADE SWAP
             <br />
