@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Placeholder } from "@/components/placeholder";
 import { Reveal } from "@/components/reveal";
 import { CtaCard } from "@/components/cta-card";
+import { Section, Card, Eyebrow, BrandButton } from "@/components/ui";
 import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
 import arkLogo from "@/assets/site/arkade-logo.svg";
 import coinChimera from "@/assets/site/Coins/coin-front-chimera.png";
@@ -39,7 +39,7 @@ export const Route = createFileRoute("/app")({
 function AppPage() {
   return (
     <main>
-      <section className="mx-auto max-w-7xl px-6 pt-16 pb-12 text-center">
+      <Section size="none" className="pt-16 pb-12 text-center">
         <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">PROGRESSIVE APP</p></Reveal>
         <Reveal delay={120}><h1 className="hero-title mx-auto mt-6 max-w-5xl">
           NO INSTALL.
@@ -53,24 +53,25 @@ function AppPage() {
           Every native crypto app lives at the mercy of app stores. Wallets get removed on a Wednesday afternoon
           because someone in Cupertino or Mountain View changed their mind.
         </p></Reveal>
-        <Reveal delay={460}><a
-          href="https://app.chimerawallet.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center rounded-full px-6 py-3 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
-          style={{ backgroundColor: "var(--brand-green)" }}
-        >
-          OPEN CHIMERA
-        </a></Reveal>
+        <Reveal delay={460}>
+          <BrandButton
+            href="https://app.chimerawallet.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8"
+          >
+            OPEN CHIMERA
+          </BrandButton>
+        </Reveal>
 
         <Reveal delay={580}><img
           src={mockupAppPage1}
           alt="Chimera app phone mockups"
           className="mx-auto mt-12 w-full max-w-5xl h-auto"
         /></Reveal>
-      </section>
+      </Section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12">
+      <Section size="sm">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2">
           <Reveal><div>
             <p className="text-sm tracking-widest text-foreground/80">CHIMERA WALLET</p>
@@ -87,18 +88,13 @@ function AppPage() {
               Architecture.
             </p>
 
-            <div
-              className="mt-8 flex items-center justify-between rounded-2xl border border-white/15 px-6 py-5"
-              style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
-            >
+            <Card variant="glow" padding="px-6 py-5" className="mt-8 flex items-center justify-between">
               <div>
-                <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
-                  WORKS ON ANY DEVICE
-                </div>
+                <Eyebrow>WORKS ON ANY DEVICE</Eyebrow>
                 <div className="display mt-1 text-xl">OPEN IN BROWSER</div>
               </div>
               <span className="text-xl">↗</span>
-            </div>
+            </Card>
           </div></Reveal>
         </div>
 
@@ -115,9 +111,9 @@ function AppPage() {
             <Reveal key={a} delay={i * 80}><img src={img} alt={`${a} coin`} className="aspect-square w-full object-contain" /></Reveal>
           ))}
         </div>
-      </section>
+      </Section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12">
+      <Section size="sm">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-stretch">
           <Reveal className="h-full"><Tile
             icon={iconBolt}
@@ -152,9 +148,9 @@ function AppPage() {
             body="BTC, USDT, ETH, TRON, POLYGON, FIAT and expanding. Everything modern finance offers — without handing over custody."
           /></Reveal>
         </div>
-      </section>
+      </Section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 text-center">
+      <Section size="lg" className="text-center">
         <Reveal><img src={arkLogo} alt="Chimera" className="mx-auto h-16 w-auto object-contain" /></Reveal>
         <div className="mx-auto max-w-3xl md:max-w-5xl">
           <Reveal delay={120}><h2 className="display mt-6 text-3xl md:text-5xl">
@@ -187,7 +183,7 @@ function AppPage() {
             </Reveal>
           </div>
         </div>
-      </section>
+      </Section>
     </main>
   );
 }
@@ -202,10 +198,10 @@ function Tile({
   body: string;
 }) {
   return (
-    <div className="flex h-full min-h-[260px] flex-col justify-end rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-8">
+    <Card padding="p-8" className="flex h-full min-h-[260px] flex-col justify-end">
       <img src={icon} alt="" className="h-10 w-10 object-contain" />
       <h3 className="display mt-6 text-2xl">{title}</h3>
       <p className="mt-4 text-sm text-foreground/80">{body}</p>
-    </div>
+    </Card>
   );
 }

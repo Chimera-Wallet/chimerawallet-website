@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/reveal";
+import { Card, BrandButton } from "@/components/ui";
 
 export const Route = createFileRoute("/press-kit")({
   head: () => ({
@@ -62,12 +63,11 @@ function PressKitPage() {
       <Reveal><h2 className="display mt-16 text-2xl text-[var(--brand-green)]">LOGOS</h2></Reveal>
       <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
         {LOGOS.map((src, i) => (
-          <Reveal key={src} delay={(i % 4) * 100}><div
-            key={src}
-            className="flex aspect-square items-center justify-center rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6"
-          >
-            <img src={src} alt="Chimera logo variant" className="max-h-full max-w-full object-contain" />
-          </div></Reveal>
+          <Reveal key={src} delay={(i % 4) * 100}>
+            <Card className="flex aspect-square items-center justify-center">
+              <img src={src} alt="Chimera logo variant" className="max-h-full max-w-full object-contain" />
+            </Card>
+          </Reveal>
         ))}
       </div>
 
@@ -84,17 +84,18 @@ function PressKitPage() {
         ))}
       </div>
 
-      <Reveal><div className="mt-16 text-center">
-        <a
-          href="https://chimerawallet.com/wp-content/uploads/2025/12/ChimeraWallet-MediaKit.zip"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full px-8 py-4 text-xs font-bold tracking-widest text-[var(--brand-navy)]"
-          style={{ backgroundColor: "var(--brand-green)" }}
-        >
-          DOWNLOAD MEDIA KIT
-        </a>
-      </div></Reveal>
+      <Reveal>
+        <div className="mt-16 text-center">
+          <BrandButton
+            href="https://chimerawallet.com/wp-content/uploads/2025/12/ChimeraWallet-MediaKit.zip"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4"
+          >
+            DOWNLOAD MEDIA KIT
+          </BrandButton>
+        </div>
+      </Reveal>
     </main>
   );
 }
