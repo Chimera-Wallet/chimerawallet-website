@@ -53,7 +53,7 @@ function CardPage() {
     <main>
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-10 text-center">
         <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA CARD</p></Reveal>
-        <Reveal delay={120}><h1 className="hero-title mx-auto mt-6 max-w-4xl">
+        <Reveal delay={120}><h1 className="hero-title mx-auto mt-6 max-w-5xl">
           SELF-CUSTODY IN YOUR WALLET.
           <br />
           VISA IN YOUR POCKET.
