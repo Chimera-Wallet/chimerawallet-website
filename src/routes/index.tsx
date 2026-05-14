@@ -164,19 +164,19 @@ function Index() {
           <h2 className="display mt-4 text-center text-4xl md:text-5xl">SUPERCHARGING BITCOIN</h2>
           <p className="mt-4 text-center text-sm text-foreground/80">Three layers. One interface. Zero compromise.</p>
 
-          <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
-            <Reveal><LayerCard
+          <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:items-stretch">
+            <Reveal className="h-full"><LayerCard
               iconSrc={bitcoinLogo}
               title="MAINCHAIN"
               body="Full BTC on-chain deposits and withdrawals and Fiat on/off ramp via third party providers."
             /></Reveal>
-            <Reveal delay={120}><LayerCard
+            <Reveal delay={120} className="h-full"><LayerCard
               iconSrc={arkLogo}
               iconClassName="h-16 w-16 -my-3"
               title="ARKADE PROTOCOL"
                body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Arkade Protocol."
             /></Reveal>
-            <Reveal delay={240}><LayerCard
+            <Reveal delay={240} className="h-full"><LayerCard
               iconSrc={lightningLogo}
               title="LIGHTNING"
               body="Full Lightning invoice support, enhanced by Boltz. Every merchant, every exchange, zero channel management."
@@ -424,7 +424,7 @@ function LayerCard({
 }) {
   return (
     <div
-      className="rounded-2xl border border-white/10 p-6 backdrop-blur"
+      className="flex h-full min-h-[260px] flex-col justify-end rounded-2xl border border-white/10 p-6 backdrop-blur"
       style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
     >
       <img src={iconSrc} alt="" className={`${iconClassName} object-contain`} />
