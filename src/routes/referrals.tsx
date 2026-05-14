@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/reveal";
-import { Section, Card, Eyebrow, BrandButton } from "@/components/ui";
+import { Section, Card, BrandButton } from "@/components/ui";
 import bronzeBadge from "@/assets/site/Tiers/Bronze.png";
 import silverBadge from "@/assets/site/Tiers/Silver.png";
 import goldBadge from "@/assets/site/Tiers/Gold.png";
