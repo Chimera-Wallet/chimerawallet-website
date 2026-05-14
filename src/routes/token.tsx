@@ -78,20 +78,22 @@ function TokenPage() {
             <h3 className="display text-xl">Token distribution</h3>
             <img src={pieChart} alt="Token distribution pie chart" className="mt-4 w-full object-contain" />
           </div></Reveal>
-          <Reveal delay={120}><div>
+          <Reveal delay={120}><div className="flex h-full flex-col">
             <h3 className="display text-xl">Token overview</h3>
-            <div className="surface-card mt-4 text-sm">
+            <div className="surface-card mt-4 flex flex-1 flex-col justify-center !p-8 text-center">
               {[
-                ["Token Name", "Chimera Exchange Token"],
-                ["Token Ticker", "CEXT"],
-                ["Total Supply", "1,000,000,000 CEXT"],
-                ["Blockchain", "Multichain"],
-                ["Token Type", "Utility Token"],
-                ["TGE", "27th May 2026"],
-              ].map(([k, v]) => (
-                <div key={k} className="flex justify-between border-b border-white/5 py-3 last:border-0">
-                  <span className="text-muted-foreground">{k}</span>
-                  <span className="font-semibold">{v}</span>
+                ["Chimera Exchange Token", "Token Name"],
+                ["CEXT", "Ticker"],
+                ["1,000,000,000 CEXT", "Total Supply"],
+                ["Multichain", "Blockchain"],
+                ["Utility Token", "Type"],
+                ["27th May 2026", "TGE"],
+              ].map(([v, k], idx) => (
+                <div key={k} className={idx === 0 ? "" : "mt-5"}>
+                  <div className="display text-lg md:text-xl">{v}</div>
+                  <span className="mt-2 inline-block rounded-full bg-[var(--brand-blue)]/40 px-3 py-0.5 text-[10px] tracking-widest text-foreground/80">
+                    {k}
+                  </span>
                 </div>
               ))}
             </div>
