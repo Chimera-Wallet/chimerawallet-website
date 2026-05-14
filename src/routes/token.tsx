@@ -64,7 +64,7 @@ function TokenPage() {
             ["SWISS ISSUED", "1 billion tokens"],
             ["NO INFLATION", "or diluition"],
           ].map(([l, v], i) => (
-            <Reveal key={l} delay={i * 80}><div className="surface-card !rounded-xl p-4 text-center">
+            <Reveal key={l} delay={i * 80} className="h-full"><div className="surface-card h-full !rounded-xl !p-4 text-center flex flex-col justify-center">
               <div className="eyebrow">{l}</div>
               <div className="display mt-2 text-base">{v}</div>
             </div></Reveal>
@@ -242,7 +242,7 @@ function TokenPage() {
             ["2027", "Decentralised Governance", ""],
             ["2028", "DAO Transition", ""],
           ].map(([d, t, b], i) => (
-            <Reveal key={t} delay={(i % 3) * 120}><div className="surface-card">
+            <Reveal key={t} delay={(i % 3) * 120} className="h-full"><div className="surface-card h-full">
               <div className="eyebrow">{d}</div>
               <div className="display mt-2 text-lg">{t}</div>
               {b && <p className="mt-2 text-xs text-muted-foreground">{b}</p>}
