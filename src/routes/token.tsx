@@ -49,7 +49,7 @@ function TokenPage() {
           <p className="mx-auto mt-4 max-w-3xl text-sm text-muted-foreground">
             Fee discounts up to 50%. Referral multipliers up to 3x. Market intelligence 12-24 hours before public release. Human support at every tier - priority increase as you move up. Swiss issued. 1 Billion tokens. No inflation. No dilution. Utility Token according to Swiss classification.
           </p>
-          <button className="mt-8 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold tracking-widest hover:bg-white/10">
+          <button className="btn-ghost mt-8">
             JOIN THE WAITLIST
           </button>
         </div></Reveal>
@@ -64,8 +64,8 @@ function TokenPage() {
             ["SWISS ISSUED", "1 billion tokens"],
             ["NO INFLATION", "or diluition"],
           ].map(([l, v], i) => (
-            <Reveal key={l} delay={i * 80}><div className="rounded-xl border border-white/10 bg-[var(--brand-navy-card)] p-4 text-center">
-              <div className="text-[10px] font-bold tracking-widest text-[var(--brand-green)]">{l}</div>
+            <Reveal key={l} delay={i * 80}><div className="surface-card !rounded-xl p-4 text-center">
+              <div className="eyebrow">{l}</div>
               <div className="display mt-2 text-base">{v}</div>
             </div></Reveal>
           ))}
@@ -80,7 +80,7 @@ function TokenPage() {
           </div></Reveal>
           <Reveal delay={120}><div>
             <h3 className="display text-xl">Token overview</h3>
-            <div className="mt-4 rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-sm">
+            <div className="surface-card mt-4 text-sm">
               {[
                 ["Token Name", "Chimera Exchange Token"],
                 ["Token Ticker", "CEXT"],
@@ -120,7 +120,7 @@ function TokenPage() {
             { name: "GOLD", img: goldBadge, balance: "≥ 1,000,000 CEXT", fee: "40%", ref: "2x", sup: "Premium", news: "+24 Hours", list: "High" },
             { name: "DIAMOND", img: diamondBadge, balance: "≥ 10,000,000 CEXT", fee: "50%", ref: "3x", sup: "Direct", news: "+24 Hours", list: "Full + Proposal Rights" },
           ].map((t, i) => (
-            <Reveal key={t.name} delay={i * 120}><div className="h-full rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
+            <Reveal key={t.name} delay={i * 120}><div className="surface-card h-full text-center">
               <img src={t.img} alt={`${t.name} tier badge`} className="mx-auto h-32 w-32 object-contain" />
               <h3 className="display mt-4 text-2xl">{t.name}</h3>
               <div className="mt-3 text-xs text-muted-foreground">{t.balance}<br/>Average Locked Balance</div>
@@ -212,7 +212,9 @@ function TokenPage() {
           ].map(({ n, sub, icon, rows }, i) => (
             <Reveal key={n} delay={i * 120}><div
               key={n}
-              className={`h-full rounded-2xl border border-white/10 p-6 text-center ${i === 0 ? "" : "bg-[var(--brand-navy-card)]"}`}
+              className={i === 0
+                ? "h-full rounded-2xl border border-white/10 p-6 text-center"
+                : "surface-card h-full text-center"}
               style={i === 0 ? { background: "#1F3BDB" } : undefined}
             >
               <img src={icon} alt={`${n} logo`} className="mx-auto h-16 w-16 object-contain" />
@@ -240,8 +242,8 @@ function TokenPage() {
             ["2027", "Decentralised Governance", ""],
             ["2028", "DAO Transition", ""],
           ].map(([d, t, b], i) => (
-            <Reveal key={t} delay={(i % 3) * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
-              <div className="text-xs font-bold tracking-widest text-[var(--brand-green)]">{d}</div>
+            <Reveal key={t} delay={(i % 3) * 120}><div className="surface-card">
+              <div className="eyebrow">{d}</div>
               <div className="display mt-2 text-lg">{t}</div>
               {b && <p className="mt-2 text-xs text-muted-foreground">{b}</p>}
             </div></Reveal>
@@ -272,8 +274,7 @@ function TokenPage() {
           href={whitepaperPdf}
           target="_blank"
           rel="noopener noreferrer"
-          className="display inline-flex items-center gap-3 rounded-full px-8 py-4 text-lg md:text-xl tracking-widest text-[var(--brand-navy)] shadow-lg transition-transform hover:scale-105"
-          style={{ backgroundColor: "var(--brand-green)" }}
+          className="btn-brand display gap-3 px-8 py-4 text-lg md:text-xl shadow-lg transition-transform hover:scale-105"
         >
           READ THE WHITE PAPER
           <span aria-hidden="true">→</span>
@@ -305,8 +306,8 @@ function Card({
   footnote?: string;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
-      {eyebrow && <div className="text-[10px] font-bold tracking-widest text-[var(--brand-green)]">{eyebrow}</div>}
+    <div className="surface-card">
+      {eyebrow && <div className="eyebrow">{eyebrow}</div>}
       <h3 className="display mt-2 text-xl text-[var(--brand-green)]">{title}</h3>
       <p className="mt-3 text-sm text-foreground/85">{body}</p>
       {footnote && <p className="mt-3 text-[10px] text-muted-foreground">{footnote}</p>}
@@ -340,7 +341,7 @@ function TgeCountdownSection() {
       <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase">27 May 2026</p></Reveal>
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
         {t.map(({ v, l }, i) => (
-          <Reveal key={l} delay={i * 120}><div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6">
+          <Reveal key={l} delay={i * 120}><div className="surface-card">
             <div className="display text-4xl">{v}</div>
             <div className="mt-2 text-[10px] tracking-widest text-muted-foreground">{l}</div>
           </div></Reveal>

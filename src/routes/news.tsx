@@ -114,7 +114,7 @@ function NewsPage() {
             href={item.url}
             target="_blank"
             rel="nofollow noopener noreferrer"
-            className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] transition-transform hover:-translate-y-1"
+            className="surface-card group flex flex-col overflow-hidden p-0 transition-transform hover:-translate-y-1"
           >
             <div className="aspect-[3/2] w-full overflow-hidden">
               <img
