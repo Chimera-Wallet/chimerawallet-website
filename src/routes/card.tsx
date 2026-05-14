@@ -168,10 +168,7 @@ function CardPage() {
         </div>
       </section>
 
-      <section
-        className="py-20"
-        style={{ background: "linear-gradient(180deg, var(--brand-navy) 0%, var(--brand-blue) 100%)" }}
-      >
+      <section className="py-20">
         <div className="mx-auto max-w-3xl px-6">
           <Reveal><h2 className="display text-center text-4xl md:text-5xl">FAQ</h2></Reveal>
           <div className="mt-10 space-y-3">
@@ -264,7 +261,7 @@ function BenefitRow({
 function Faq({ q, children, defaultOpen = false }: { q: string; children?: React.ReactNode; defaultOpen?: boolean }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)]">
+    <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur">
       <button
         onClick={() => setOpen((o) => !o)}
         className="flex w-full items-center justify-between px-6 py-4 text-left"
