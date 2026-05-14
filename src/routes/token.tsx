@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/reveal";
+import { ScrollableComparison } from "@/components/scrollable-comparison";
 import bronzeBadge from "@/assets/site/Tiers/Bronze.png";
 import silverBadge from "@/assets/site/Tiers/Silver.png";
 import goldBadge from "@/assets/site/Tiers/Gold.png";
@@ -112,14 +113,14 @@ function TokenPage() {
           Learn how you can supercharge your experience with the Chimera Token
         </p></Reveal>
 
-        <div className="-mx-6 mt-10 flex gap-4 overflow-x-auto px-[12%] snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0 md:snap-none">
+        <ScrollableComparison columns={4} className="mt-10">
           {[
             { name: "BRONZE", img: bronzeBadge, balance: "≥ 10,000 CEXT", fee: "20%", ref: "1x", sup: "Standard", news: "Public", list: "Basic" },
             { name: "SILVER", img: silverBadge, balance: "≥ 100,000 CEXT", fee: "30%", ref: "1.5x", sup: "Priority", news: "+12 Hours", list: "Moderate" },
             { name: "GOLD", img: goldBadge, balance: "≥ 1,000,000 CEXT", fee: "40%", ref: "2x", sup: "Premium", news: "+24 Hours", list: "High" },
             { name: "DIAMOND", img: diamondBadge, balance: "≥ 10,000,000 CEXT", fee: "50%", ref: "3x", sup: "Direct", news: "+24 Hours", list: "Full + Proposal Rights" },
           ].map((t, i) => (
-            <Reveal key={t.name} delay={i * 120} className="w-[75%] shrink-0 snap-center sm:w-[55%] md:w-auto"><div className="h-full rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
+            <Reveal key={t.name} delay={i * 120}><div className="h-full rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-6 text-center">
               <img src={t.img} alt={`${t.name} tier badge`} className="mx-auto h-32 w-32 object-contain" />
               <h3 className="display mt-4 text-2xl">{t.name}</h3>
               <div className="mt-3 text-xs text-muted-foreground">{t.balance}<br/>Average Locked Balance</div>
@@ -130,7 +131,7 @@ function TokenPage() {
               <Row v={t.list} l="Listing Discount" />
             </div></Reveal>
           ))}
-        </div>
+        </ScrollableComparison>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
