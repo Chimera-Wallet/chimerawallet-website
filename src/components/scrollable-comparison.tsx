@@ -64,7 +64,7 @@ export function ScrollableComparison({ children, columns, className = "" }: Prop
         className={`-mx-6 flex gap-4 overflow-x-auto ${padX} snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:grid ${colsClass} md:gap-4 md:overflow-visible md:px-0 md:snap-none`}
       >
         {items.map((child, i) => (
-          <div key={i} className={`${itemWidth} shrink-0 snap-center md:w-auto`}>
+          <div key={i} className={`${itemWidth} shrink-0 snap-center md:w-auto md:h-full [&>*]:h-full`}>
             {child}
           </div>
         ))}
