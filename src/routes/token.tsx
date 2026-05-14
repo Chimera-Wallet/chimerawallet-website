@@ -78,11 +78,11 @@ function TokenPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <Reveal><div>
+          <Reveal className="h-full"><div className="flex h-full flex-col">
             <h3 className="display text-xl">Token distribution</h3>
-            <img src={pieChart} alt="Token distribution pie chart" className="mt-4 w-full object-contain" />
+            <img src={pieChart} alt="Token distribution pie chart" className="mt-4 w-full flex-1 object-contain" />
           </div></Reveal>
-          <Reveal delay={120}><div className="flex h-full flex-col">
+          <Reveal delay={120} className="h-full"><div className="flex h-full flex-col">
             <h3 className="display text-xl">Token overview</h3>
             <div className="surface-card mt-4 flex flex-1 flex-col justify-center !p-8 text-center">
               {[
