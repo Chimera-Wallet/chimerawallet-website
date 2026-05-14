@@ -131,7 +131,6 @@ function CardPage() {
             body="Locked for life. Pre-order customers lock in 1.5% forever. Standard rate is 2% — and may rise. Yours won't."
             badge="1.5%"
             strike="STANDARD 2%"
-            filled
           /></Reveal>
           <Reveal delay={120}><BenefitRow
             tag="FREE FOREVER"
