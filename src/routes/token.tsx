@@ -147,7 +147,7 @@ function TokenPage() {
           Data accurate as of 05/2026
         </p></Reveal>
 
-        <div className="-mx-6 mt-10 flex gap-4 overflow-x-auto px-[11%] snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0 md:snap-none">
+        <ScrollableComparison columns={4} className="mt-10">
           {[
             {
               n: "CEXT",
@@ -210,7 +210,7 @@ function TokenPage() {
               ] as [string, string][],
             },
           ].map(({ n, sub, icon, rows }, i) => (
-            <Reveal key={n} delay={i * 120} className="w-[78%] shrink-0 snap-center sm:w-[55%] md:w-auto"><div
+            <Reveal key={n} delay={i * 120}><div
               key={n}
               className={`h-full rounded-2xl border border-white/10 p-6 text-center ${i === 0 ? "" : "bg-[var(--brand-navy-card)]"}`}
               style={i === 0 ? { background: "#1F3BDB" } : undefined}
@@ -223,7 +223,7 @@ function TokenPage() {
               ))}
             </div></Reveal>
           ))}
-        </div>
+        </ScrollableComparison>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
