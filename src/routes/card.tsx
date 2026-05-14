@@ -162,7 +162,7 @@ function CardPage() {
         <div className="mt-10 space-y-3">
           {SUPPORTED_COUNTRIES_BY_CONTINENT.map(([continent, countries], i) => (
             <Reveal key={continent} delay={i * 80}>
-              <ContinentPanel continent={continent} countries={countries} defaultOpen={i === 0} />
+              <ContinentPanel continent={continent} countries={countries} />
             </Reveal>
           ))}
         </div>
