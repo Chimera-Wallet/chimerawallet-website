@@ -168,7 +168,10 @@ function CardPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section
+        className="py-20"
+        style={{ background: "linear-gradient(180deg, transparent 0%, var(--brand-blue) 100%)" }}
+      >
         <div className="mx-auto max-w-3xl px-6">
           <Reveal><h2 className="display text-center text-4xl md:text-5xl">FAQ</h2></Reveal>
           <div className="mt-10 space-y-3">
