@@ -56,18 +56,22 @@ function TokenPage() {
 
         <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-7">
           {[
-            ["FEE DISCOUNTS", "Up to 50%"],
-            ["REFERRAL MULTIPLIERS", "Up to 3x"],
-            ["MARKET INTELLIGENCE", "12-24 h before public release"],
-            ["HUMAN SUPPORT", "at every TIER"],
-            ["PRIORITY INCREASE", "as you move up"],
-            ["SWISS ISSUED", "1 billion tokens"],
-            ["NO INFLATION", "or diluition"],
-          ].map(([l, v], i) => (
-            <Reveal key={l} delay={i * 80} className="h-full"><div className="surface-card h-full !rounded-xl !p-4 text-center flex flex-col justify-center">
-              <div className="eyebrow">{l}</div>
-              <div className="display mt-2 text-base">{v}</div>
-            </div></Reveal>
+            { label: "FEE DISCOUNTS", mid: "UP TO", value: "50%", valueClass: "text-[var(--brand-green)]" },
+            { label: "REFERRAL MULTIPLIERS", mid: "UP TO", value: "3x", valueClass: "text-[var(--brand-green)]" },
+            { label: "MARKET INTELLIGENCE", value: "12-24 h", valueClass: "text-[var(--brand-green)]", sub: "BEFORE PUBLIC RELEASE" },
+            { label: "HUMAN SUPPORT", labelClass: "text-[var(--brand-green)]", mid: "AT EVERY", value: "TIER" },
+            { label: "PRIORITY INCREASE", labelClass: "text-[var(--brand-green)]", mid: "AS YOU", value: "MOVE UP" },
+            { label: "SWISS ISSUED", value: "1 BILLION TOKENS" },
+            { value: "NO", valueClass: "text-[var(--brand-green)]", mid: "INFLATION OR", sub: "DILUTION" },
+          ].map((c, i) => (
+            <Reveal key={i} delay={i * 80} className="h-full">
+              <div className="surface-card h-full !rounded-xl !p-4 text-center flex flex-col justify-center gap-1">
+                {c.label && <div className={`eyebrow ${c.labelClass ?? ""}`}>{c.label}</div>}
+                {c.mid && <div className="text-[10px] tracking-widest text-foreground/70">{c.mid}</div>}
+                <div className={`display text-2xl md:text-3xl leading-tight ${c.valueClass ?? ""}`}>{c.value}</div>
+                {c.sub && <div className="text-[10px] tracking-widest text-foreground/70">{c.sub}</div>}
+              </div>
+            </Reveal>
           ))}
         </div>
       </section>
