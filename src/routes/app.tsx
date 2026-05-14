@@ -118,13 +118,13 @@ function AppPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-12">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <Reveal><Tile
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-stretch">
+          <Reveal className="h-full"><Tile
             icon={iconBolt}
             title={<>WHAT <span className="text-[var(--brand-green)]">YOU GET</span></>}
             body="Bitcoin. Lightning. Arkade. All in one — and nothing missing. Mainchain for settlement. Lightning for instant payments. Arkade Protocol for the next generation. No switching apps. No compromise."
           /></Reveal>
-          <Reveal delay={120}><Tile
+          <Reveal delay={120} className="h-full"><Tile
             icon={iconPaperplane}
             title={
               <>
@@ -135,12 +135,12 @@ function AppPage() {
             }
             body="Chimera eliminates Lightning's most painful friction. No inbound liquidity. No channel opens. Receive from day one."
           /></Reveal>
-          <Reveal delay={240}><Tile
+          <Reveal delay={240} className="h-full"><Tile
             icon={iconFaceID}
             title={<><span className="text-[var(--brand-green)]">NO ID</span> REQUIRED.</>}
             body="Access your wallet in minutes. Start trading. Regulated services provided by third parties."
           /></Reveal>
-          <Reveal delay={360}><Tile
+          <Reveal delay={360} className="h-full"><Tile
             icon={iconCard}
             title={
               <>
@@ -202,7 +202,7 @@ function Tile({
   body: string;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-8">
+    <div className="flex h-full min-h-[260px] flex-col justify-end rounded-2xl border border-white/10 bg-[var(--brand-navy-card)] p-8">
       <img src={icon} alt="" className="h-10 w-10 object-contain" />
       <h3 className="display mt-6 text-2xl">{title}</h3>
       <p className="mt-4 text-sm text-foreground/80">{body}</p>
