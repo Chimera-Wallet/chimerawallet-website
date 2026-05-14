@@ -76,10 +76,10 @@ function CardPage() {
         <Reveal><ReserveForm>
           <button type="submit" className="block w-full text-left">
         <div
-          className="flex items-center justify-between rounded-2xl border border-white/10 px-6 py-5"
+          className="relative flex items-center justify-center rounded-2xl border border-white/10 px-6 py-8"
           style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
         >
-          <div>
+          <div className="w-full text-center">
             <div className="text-[10px] font-bold tracking-[0.25em] text-[var(--brand-green)]">
               SPEND ANYWHERE VISA IS ACCEPTED
             </div>
@@ -88,7 +88,7 @@ function CardPage() {
               Top up your card directly from Chimera Wallet. No extra steps.
             </div>
           </div>
-          <span className="text-xl">↗</span>
+          <span className="absolute right-6 text-xl">↗</span>
         </div>
           </button>
         </ReserveForm></Reveal>
