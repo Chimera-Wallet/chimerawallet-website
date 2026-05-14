@@ -42,7 +42,7 @@ function AboutPage() {
           </h1>
         </Reveal>
         <Reveal delay={240}>
-          <h2 className="mx-auto mt-6 max-w-3xl text-sm text-foreground/85">
+          <h2 className="mx-auto mt-6 max-w-3xl text-base md:text-lg text-foreground/85">
             We write open-source code for people who understand that their money should belong to them. No shareholders.
             No venture capital. No one to answer to except the mission.
           </h2>

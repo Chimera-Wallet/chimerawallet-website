@@ -46,7 +46,7 @@ function AppPage() {
           <br />
           NO MEMORY. NO RISK.
         </h1></Reveal>
-        <Reveal delay={240}><h2 className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
+        <Reveal delay={240}><h2 className="mx-auto mt-6 max-w-2xl text-base md:text-lg text-foreground/85">
           Bitcoin doesn't ask Apple for permission. Why should your wallet?
         </h2></Reveal>
         <Reveal delay={340}><p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
