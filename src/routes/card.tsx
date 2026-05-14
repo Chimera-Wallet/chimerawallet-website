@@ -133,7 +133,7 @@ function CardPage() {
             strike="STANDARD 2%"
           /></Reveal>
           <Reveal delay={120}><BenefitRow
-            tag="FREE FOREVER"
+            tag="FOREVER"
             title="ZERO MONTHLY FEE"
             body="No subscription. No maintenance charge. No annual fee. No bill."
             badge="FREE"
