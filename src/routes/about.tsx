@@ -170,7 +170,6 @@ function AboutPage() {
               "The word the financial system has spent decades trying not to normalise. We're normalising it — one wallet at a time.",
             ],
           ].map(([t, b], i) => (
-            <Reveal key={t} delay={i * 120}>
             <Reveal key={t} delay={i * 120} className="h-full">
               <Card className="h-full">
                 <h3 className="display text-xl text-[var(--brand-green)]">{t}</h3>
