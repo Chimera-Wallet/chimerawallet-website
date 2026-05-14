@@ -76,16 +76,7 @@ function Index() {
               >
                 THE ONLY BITCOIN SUPER-APP BUILT SO NOBODY CAN EVER TAKE YOUR MONEY AWAY.
               </h1></Reveal>
-              <Reveal delay={240}><h2
-                className="mt-6 text-center text-foreground/80"
-                style={{
-                  fontFamily: '"Funnel Display", sans-serif',
-                  fontWeight: 400,
-                  fontSize: "clamp(1rem, 2.4vw, 32px)",
-                  lineHeight: "100%",
-                  letterSpacing: "1px",
-                }}
-              >
+              <Reveal delay={240}><h2 className="mx-auto mt-6 max-w-2xl text-center text-sm text-foreground/85">
                 Not a promise. Not a policy. Mathematics.
               </h2></Reveal>
               <Reveal delay={340}><p className="mt-2 text-sm text-muted-foreground">
