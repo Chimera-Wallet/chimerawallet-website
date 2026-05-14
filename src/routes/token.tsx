@@ -80,7 +80,9 @@ function TokenPage() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <Reveal className="h-full"><div className="flex h-full flex-col">
             <h3 className="display text-xl">Token distribution</h3>
-            <img src={pieChart} alt="Token distribution pie chart" className="mt-4 w-full flex-1 object-contain" />
+            <div className="mt-4 flex-1 min-h-0">
+              <img src={pieChart} alt="Token distribution pie chart" className="h-full w-full object-contain" />
+            </div>
           </div></Reveal>
           <Reveal delay={120} className="h-full"><div className="flex h-full flex-col">
             <h3 className="display text-xl">Token overview</h3>
