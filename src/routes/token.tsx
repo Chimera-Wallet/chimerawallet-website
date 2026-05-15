@@ -277,7 +277,7 @@ function TokenPage() {
         </div></Reveal>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section className="mx-auto max-w-7xl px-6 pt-8 pb-16 text-center">
         <Reveal><a
           href={whitepaperPdf}
           target="_blank"
