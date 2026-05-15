@@ -13,6 +13,7 @@ import kcsIcon from "@/assets/site/Icons/kucoin-token-kcs-logo.svg";
 import okbIcon from "@/assets/site/Icons/okb-okb-logo.svg";
 import floatingCoins from "@/assets/site/airdrop.png";
 import pieChart from "@/assets/site/pie_chart.png";
+import tokenOverview from "@/assets/site/token-overview.png";
 import whitepaperPdf from "@/assets/documents/CEXT_Whitepaper_V2.pdf?url";
 
 export const Route = createFileRoute("/token")({
@@ -87,22 +88,8 @@ function TokenPage() {
           </div></Reveal>
           <Reveal delay={120} className="h-full"><div className="flex h-full flex-col">
             <h3 className="display text-xl">Token overview</h3>
-            <div className="surface-card mt-4 flex flex-1 flex-col justify-center !p-8 text-center">
-              {[
-                ["Chimera Exchange Token", "Token Name"],
-                ["CEXT", "Ticker"],
-                ["1,000,000,000 CEXT", "Total Supply"],
-                ["Multichain", "Blockchain"],
-                ["Utility Token", "Type"],
-                ["27th May 2026", "TGE"],
-              ].map(([v, k], idx) => (
-                <div key={k} className={idx === 0 ? "" : "mt-5"}>
-                  <div className="display text-lg md:text-xl">{v}</div>
-                  <span className="mt-2 inline-block rounded-full bg-[var(--brand-blue)]/40 px-3 py-0.5 text-[10px] tracking-widest text-foreground/80">
-                    {k}
-                  </span>
-                </div>
-              ))}
+            <div className="mt-4 flex-1 min-h-0">
+              <img src={tokenOverview} alt="Token overview" className="h-full w-full object-contain" />
             </div>
           </div></Reveal>
         </div>
