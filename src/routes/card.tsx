@@ -65,7 +65,26 @@ function CardPage() {
             <GhostButton type="submit" className="mt-8">RESERVE YOUR CARD</GhostButton>
           </ReserveForm>
         </Reveal>
-        <Reveal delay={460}><img src={cardHero} alt="Chimera cards" className="mx-auto mt-10 w-full max-w-md object-contain" /></Reveal>
+        <Reveal delay={460}>
+          <div className="relative mx-auto mt-10 w-full max-w-md">
+            {/* Fanned transparent card silhouettes */}
+            <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <div
+                className="absolute aspect-[1.6/1] w-[110%] rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
+                style={{ transform: "rotate(-18deg) translateX(-12%)", boxShadow: "0 20px 60px rgba(0,0,0,0.35)" }}
+              />
+              <div
+                className="absolute aspect-[1.6/1] w-[110%] rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
+                style={{ transform: "rotate(12deg) translateX(10%)", boxShadow: "0 20px 60px rgba(0,0,0,0.35)" }}
+              />
+              <div
+                className="absolute aspect-[1.6/1] w-[105%] rounded-2xl border border-white/10 bg-white/[0.07] backdrop-blur-sm"
+                style={{ transform: "rotate(-4deg) translateY(4%)", boxShadow: "0 25px 70px rgba(0,0,0,0.4)" }}
+              />
+            </div>
+            <img src={cardHero} alt="Chimera cards" className="relative mx-auto w-full object-contain" />
+          </div>
+        </Reveal>
       </Section>
 
       <Section size="none" className="py-6">
