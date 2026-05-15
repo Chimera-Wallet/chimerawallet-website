@@ -15,6 +15,11 @@ import floatingCoins from "@/assets/site/airdrop.png";
 import pieChart from "@/assets/site/pie_chart.png";
 import tokenOverview from "@/assets/site/token-overview.png";
 import whitepaperPdf from "@/assets/documents/CEXT_Whitepaper_V2.pdf?url";
+import heroCoin1 from "@/assets/site/Coins/coin-1-a.png";
+import heroCoin2 from "@/assets/site/Coins/coin-2-a.png";
+import heroCoin3 from "@/assets/site/Coins/coin-3-a.png";
+import heroCoin4 from "@/assets/site/Coins/coin-4-a.png";
+import heroCoin5 from "@/assets/site/Coins/coin-5-a.png";
 
 export const Route = createFileRoute("/token")({
   head: () => ({
@@ -39,8 +44,15 @@ export const Route = createFileRoute("/token")({
 function TokenPage() {
   return (
     <main>
-      <section className="mx-auto max-w-7xl px-6 pt-16 pb-10">
-        <Reveal><div className="rounded-3xl border border-white/10 bg-[var(--brand-navy-card)] p-10 text-center opacity-90">
+      <section className="relative mx-auto max-w-7xl px-6 pt-16 pb-10">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10">
+          <img src={heroCoin1} alt="" className="absolute left-[-3%] top-[8%] w-28 md:w-36 lg:w-44 animate-[float_7s_ease-in-out_infinite] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+          <img src={heroCoin2} alt="" className="absolute right-[-2%] top-[4%] w-24 md:w-32 lg:w-40 animate-[float_8s_ease-in-out_infinite_-2s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+          <img src={heroCoin3} alt="" className="absolute right-[-4%] top-[42%] w-28 md:w-36 lg:w-44 animate-[float_9s_ease-in-out_infinite_-4s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+          <img src={heroCoin4} alt="" className="absolute left-[8%] bottom-[6%] w-28 md:w-36 lg:w-44 animate-[float_7.5s_ease-in-out_infinite_-1s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+          <img src={heroCoin5} alt="" className="absolute right-[14%] bottom-[2%] w-24 md:w-32 lg:w-40 animate-[float_8.5s_ease-in-out_infinite_-3s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+        </div>
+        <Reveal><div className="relative rounded-3xl border border-white/10 bg-[var(--brand-navy-card)] p-10 text-center opacity-90">
           <p className="hero-eyebrow text-[var(--brand-green)]">HOLD CEXT</p>
           <h1 className="hero-title mx-auto mt-6 max-w-5xl">
             PAY LESS. EARN MORE.
