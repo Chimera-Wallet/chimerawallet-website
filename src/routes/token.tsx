@@ -15,11 +15,11 @@ import floatingCoins from "@/assets/site/airdrop.png";
 import pieChart from "@/assets/site/pie_chart.png";
 import tokenOverview from "@/assets/site/token-overview.png";
 import whitepaperPdf from "@/assets/documents/CEXT_Whitepaper_V2.pdf?url";
-import heroCoin1 from "@/assets/site/Coins/coin-1-a.png";
-import heroCoin2 from "@/assets/site/Coins/coin-2-a.png";
-import heroCoin3 from "@/assets/site/Coins/coin-3-a.png";
-import heroCoin4 from "@/assets/site/Coins/coin-4-a.png";
-import heroCoin5 from "@/assets/site/Coins/coin-5-a.png";
+import heroCoin1 from "@/assets/site/Coins/Chimera-card-2-1.png";
+import heroCoin2 from "@/assets/site/Coins/Chimera-card-2-3.png";
+import heroCoin3 from "@/assets/site/Coins/Chimera-card-2-4.png";
+import heroCoin4 from "@/assets/site/Coins/Chimera-card-2-5.png";
+import heroCoin5 from "@/assets/site/Coins/Chimera-card-2-3.png";
 
 export const Route = createFileRoute("/token")({
   head: () => ({
