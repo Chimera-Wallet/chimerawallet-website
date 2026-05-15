@@ -149,7 +149,10 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: "Funnel Display", "Barlow Condensed", "Oswald", ui-sans-serif, system-ui, sans-serif;
-    /* background dots hidden */
+    background-image: radial-gradient(circle, rgba(255,255,255,0.18) 0.75px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0;
+    background-attachment: fixed;
   }
 
   .display {
