@@ -107,10 +107,10 @@ function TokenPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 text-center">
-        <Reveal><h2 className="display text-3xl md:text-5xl">STAKE CEXT.</h2></Reveal>
-        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80">EARN UP TO 15% APR.</p></Reveal>
-        <Reveal delay={240}><p className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85">
+      <section className="mx-auto mt-6 max-w-2xl text-sm text-foreground/85 text-left px-6">
+        <Reveal><h2 className="display text-3xl md:text-5xl text-center">STAKE CEXT.</h2></Reveal>
+        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80 text-center">EARN UP TO 15% APR.</p></Reveal>
+        <Reveal delay={240}><p className="mt-6">
           Put your CEXT to work. Stake and earn up to 15% annual returns paid in CEXT. Lock tokens for longer periods to multiply your score and maximize rewards. The longer you lock, the more you earn.
         </p></Reveal>
       </section>
@@ -266,13 +266,10 @@ function TokenPage() {
                   />
                   <div
                     className={
-                      "py-4 md:py-6 " +
-                      (left
-                        ? "md:col-start-1 md:pr-10 md:text-right"
-                        : "md:col-start-2 md:pl-10 md:text-left")
+                      "py-4 md:py-6 " + (left ? "md:col-start-1 md:pr-10 md:text-right" : "md:col-start-2 md:pl-10")
                     }
                   >
-                    <div className="surface-card inline-block w-full p-5">
+                    <div className="surface-card inline-block w-full p-5 text-left">
                       <div className="eyebrow">{d}</div>
                       <div className="display mt-2 text-lg">{t}</div>
                       {b && <p className="mt-2 text-xs text-muted-foreground">{b}</p>}
