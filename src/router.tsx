@@ -1,6 +1,7 @@
 import { createRouter } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { routeTree } from "./routeTree.gen";
+import "./styles.css";
 
 const RELOAD_KEY = "chimera:error-reload-attempted";
 
