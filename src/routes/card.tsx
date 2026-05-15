@@ -28,12 +28,12 @@ export const Route = createFileRoute("/card")({
 function CardPage() {
   const searchStr = useRouterState({ select: (s) => s.location.searchStr });
   const embed = /(?:^|[?&])embed=1(?:&|$)/.test(searchStr ?? "");
-  const ReserveForm = ({ children }: { children: React.ReactNode }) => (
+  const ReserveForm = ({ children, className }: { children: React.ReactNode; className?: string }) => (
     <form
       target="_blank"
       action="https://legacy.coinpayments.net/index.php"
       method="post"
-      className="inline-block"
+      className={className ?? "inline-block"}
     >
       <input type="hidden" name="cmd" value="_pay" />
       <input type="hidden" name="reset" value="1" />
@@ -89,7 +89,7 @@ function CardPage() {
 
       <Section size="none" className="py-6">
         <Reveal>
-          <ReserveForm>
+          <ReserveForm className="mx-auto block w-full max-w-4xl">
             <button type="submit" className="block w-full text-left">
               <Card variant="glow" padding="px-6 py-8" className="relative flex items-center justify-center">
                 <div className="w-full text-center">
