@@ -87,16 +87,18 @@ function AppPage() {
               App stores have done it before. They'll do it again. No warning. No appeal. Gone. Not a promise.
               Architecture.
             </p>
-
-            <div className="mt-8">
-              <CtaCard
-                href="https://app.chimerawallet.com"
-                eyebrow="WORKS ON ANY DEVICE"
-                title="OPEN IN BROWSER"
-              />
-            </div>
           </div></Reveal>
         </div>
+
+        <Reveal>
+          <div className="mx-auto mt-12 w-full max-w-5xl">
+            <CtaCard
+              href="https://app.chimerawallet.com"
+              eyebrow="WORKS ON ANY DEVICE"
+              title="OPEN IN BROWSER"
+            />
+          </div>
+        </Reveal>
 
         {/* asset row */}
         <div className="mt-16 grid grid-cols-3 gap-6 sm:grid-cols-6">
