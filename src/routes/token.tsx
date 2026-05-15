@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/reveal";
 import { ScrollableComparison } from "@/components/scrollable-comparison";
+import { CtaCard } from "@/components/cta-card";
 import bronzeBadge from "@/assets/site/Tiers/Bronze.png";
 import silverBadge from "@/assets/site/Tiers/Silver.png";
 import goldBadge from "@/assets/site/Tiers/Gold.png";
@@ -114,6 +115,17 @@ function TokenPage() {
           <p className="mt-6 max-w-2xl text-sm text-foreground/85">
             Put your CEXT to work. Stake and earn up to 15% annual returns paid in CEXT. Lock tokens for longer periods to multiply your score and maximize rewards. The longer you lock, the more you earn.
           </p>
+        </Reveal>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-8">
+        <Reveal>
+          <CtaCard
+            eyebrow="JOIN THE WAITLIST"
+            title="JOIN CEXT WAITLIST"
+            eyebrowColor="text-[var(--brand-green)]"
+            href="/#waitlist"
+          />
         </Reveal>
       </section>
 
