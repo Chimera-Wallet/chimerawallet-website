@@ -1,7 +1,7 @@
-import { createFileRoute, useRouterState } from "@tanstack/react-router";
-import { useState } from "react";
 import { Reveal } from "@/components/reveal";
+import { createFileRoute, useRouterState } from "@tanstack/react-router";
 import { Section, Card, Eyebrow, BrandButton, GhostButton } from "@/components/ui";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import cardHero from "@/assets/site/Chimera_Card.png";
 import cardCoins from "@/assets/site/chimera-card.png";
 
@@ -147,11 +147,13 @@ function CardPage() {
           Chimera Card works anywhere Visa is accepted. Residents of the following countries can apply:
         </p></Reveal>
         <div className="mt-10 space-y-3">
-          {SUPPORTED_COUNTRIES_BY_CONTINENT.map(([continent, countries], i) => (
-            <Reveal key={continent} delay={i * 80}>
-              <ContinentPanel continent={continent} countries={countries} />
-            </Reveal>
-          ))}
+          <Accordion type="multiple" className="space-y-3">
+            {SUPPORTED_COUNTRIES_BY_CONTINENT.map(([continent, countries], i) => (
+              <Reveal key={continent} delay={i * 80}>
+                <ContinentPanel continent={continent} countries={countries} />
+              </Reveal>
+            ))}
+          </Accordion>
         </div>
       </section>
 
@@ -162,21 +164,23 @@ function CardPage() {
         <div className="mx-auto max-w-3xl px-6">
           <Reveal><h2 className="display text-center text-4xl md:text-5xl">FAQ</h2></Reveal>
           <div className="mt-10 space-y-3">
-            <Reveal><Faq q="How do I apply for a Chimera Card?">
-              Click "PRE-ORDER NOW" below to reserve your card and lock in lifetime pre-order benefits.
-            </Faq></Reveal>
-            <Reveal delay={120}><Faq q="What happens if I miss the pre-order window?">
-              You'll pay standard rates with no grandfathered pricing. Pre-order members receive permanent rate protection.
-            </Faq></Reveal>
-            <Reveal delay={240}><Faq q="Are pre-order rates really locked forever?">
-              Yes. Your fees are frozen at pre-order levels for the lifetime of your account. Standard rates may increase over time, but yours won't.
-            </Faq></Reveal>
-            <Reveal delay={360}><Faq q="Is Chimera Card secure?">
-              Yes. Chimera Card uses the same Visa security infrastructure as traditional bank cards.
-            </Faq></Reveal>
-            <Reveal delay={480}><Faq q="How do I top up my Chimera Card?">
-              Top up directly from your non-custodial Chimera Wallet. It's quick, easy, and secure.
-            </Faq></Reveal>
+            <Accordion type="multiple" className="space-y-3">
+              <Reveal><Faq value="faq-1" q="How do I apply for a Chimera Card?">
+                Click "PRE-ORDER NOW" below to reserve your card and lock in lifetime pre-order benefits.
+              </Faq></Reveal>
+              <Reveal delay={120}><Faq value="faq-2" q="What happens if I miss the pre-order window?">
+                You'll pay standard rates with no grandfathered pricing. Pre-order members receive permanent rate protection.
+              </Faq></Reveal>
+              <Reveal delay={240}><Faq value="faq-3" q="Are pre-order rates really locked forever?">
+                Yes. Your fees are frozen at pre-order levels for the lifetime of your account. Standard rates may increase over time, but yours won't.
+              </Faq></Reveal>
+              <Reveal delay={360}><Faq value="faq-4" q="Is Chimera Card secure?">
+                Yes. Chimera Card uses the same Visa security infrastructure as traditional bank cards.
+              </Faq></Reveal>
+              <Reveal delay={480}><Faq value="faq-5" q="How do I top up my Chimera Card?">
+                Top up directly from your non-custodial Chimera Wallet. It's quick, easy, and secure.
+              </Faq></Reveal>
+            </Accordion>
           </div>
 
           {!embed && (
@@ -241,19 +245,17 @@ function BenefitRow({
   );
 }
 
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
-
-function Faq({ q, children, defaultOpen = false }: { q: string; children?: React.ReactNode; defaultOpen?: boolean }) {
+function Faq({ value, q, children }: { value: string; q: string; children?: React.ReactNode }) {
   return (
-    <Collapsible defaultOpen={defaultOpen} className="surface-glass">
-      <CollapsibleTrigger className="flex w-full cursor-pointer items-center justify-between px-6 py-4 text-left">
-        <span className="text-sm font-semibold">{q}</span>
-        <span className="text-xl transition-transform duration-200 data-[state=open]:rotate-45">+</span>
-      </CollapsibleTrigger>
-      <CollapsibleContent className="overflow-hidden text-xs text-foreground/85 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-        <div className="border-t border-white/10 px-6 py-4">{children}</div>
-      </CollapsibleContent>
-    </Collapsible>
+    <AccordionItem value={value} className="surface-glass border-b-0">
+      <AccordionTrigger className="group flex w-full cursor-pointer items-center justify-between px-6 py-4 text-left text-sm font-semibold hover:no-underline [&>svg]:hidden">
+        <span>{q}</span>
+        <span className="text-xl transition-transform duration-200 group-data-[state=open]:rotate-45">+</span>
+      </AccordionTrigger>
+      <AccordionContent className="border-t border-white/10 px-6 py-4 text-xs text-foreground/85">
+        {children}
+      </AccordionContent>
+    </AccordionItem>
   );
 }
 
@@ -283,27 +285,20 @@ const SUPPORTED_COUNTRIES_BY_CONTINENT: [string, [string, string][]][] = [
 function ContinentPanel({
   continent,
   countries,
-  defaultOpen = false,
 }: {
   continent: string;
   countries: [string, string][];
-  defaultOpen?: boolean;
 }) {
-  const [open, setOpen] = useState(defaultOpen);
   return (
-    <Card padding="">
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        className="flex w-full items-center justify-between px-6 py-4 text-left"
-      >
+    <AccordionItem value={continent} className="surface-card border-b-0">
+      <AccordionTrigger className="group flex w-full items-center justify-between px-6 py-4 text-left hover:no-underline [&>svg]:hidden">
         <span className="text-sm font-semibold uppercase tracking-widest">
           {continent}
           <span className="ml-3 text-xs font-normal text-muted-foreground">({countries.length})</span>
         </span>
-        <span className="text-xl">{open ? "×" : "+"}</span>
-      </button>
-      {open && (
+        <span className="text-xl transition-transform duration-200 group-data-[state=open]:rotate-45">+</span>
+      </AccordionTrigger>
+      <AccordionContent>
         <ul className="grid grid-cols-1 gap-x-10 gap-y-2 border-t border-white/10 px-6 py-4 text-sm text-foreground/90 sm:grid-cols-2 md:grid-cols-3">
           {countries.map(([flag, name]) => (
             <li key={name} className="flex items-center gap-3 border-b border-white/5 py-2">
@@ -312,7 +307,7 @@ function ContinentPanel({
             </li>
           ))}
         </ul>
-      )}
-    </Card>
+      </AccordionContent>
+    </AccordionItem>
   );
 }
