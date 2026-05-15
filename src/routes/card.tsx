@@ -89,7 +89,7 @@ function CardPage() {
 
       <Section size="none" className="py-6">
         <Reveal>
-          <ReserveForm>
+          <ReserveForm className="mx-auto block w-full max-w-4xl">
             <button type="submit" className="block w-full text-left">
               <Card variant="glow" padding="px-6 py-8" className="relative flex items-center justify-center">
                 <div className="w-full text-center">
