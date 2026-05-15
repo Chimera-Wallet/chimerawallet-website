@@ -1,5 +1,5 @@
-import { Outlet, Link, createRootRoute, useRouterState } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } from "@tanstack/react-router";
+import { useEffect, type ReactNode } from "react";
 
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -43,9 +43,36 @@ export const Route = createRootRoute({
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7dd2e4a0-c2ff-4f8f-8c19-e5ec01a2c402/id-preview-3e2172de--c1c26671-6d8a-47c2-8082-e76e22fa0bd2.lovable.app-1777985302818.png" },
     ],
   }),
+  shellComponent: RootDocument,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
+
+function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
+  return (
+    <html lang="en">
+      <head>
+        <HeadContent />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Funnel+Display:wght@400;500;600;700;800&display=swap"
+        />
+        <script defer data-domain="chimerawallet.com" src="https://plausible.io/js/pa-O9g29d40_pHpvC6a8romr.js" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments) }; plausible.init = plausible.init || function (i) { plausible.o = i || {} }; plausible.init();",
+          }}
+        />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
+    </html>
+  );
+}
 
 function RootComponent() {
   // Apply per-route head() meta to the document in SPA mode.
