@@ -299,29 +299,26 @@ function TokenPage() {
 
       <TgeCountdownSection />
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><div className="rounded-2xl p-10">
+      <section className="mx-auto max-w-7xl px-6 pt-16 pb-8">
+        <Reveal><div className="rounded-2xl p-10 pb-4">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             <img src={floatingCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain" />
             <div>
               <h3 className="display text-3xl">CEXT</h3>
               <p className="display text-2xl text-foreground/80">ACTIVITY AIRDROP.</p>
               <p className="mt-4 text-sm">After TGE, active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
+              <a
+                href={whitepaperPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-brand display mt-6 inline-flex gap-3 px-8 py-4 text-lg md:text-xl shadow-lg transition-transform hover:scale-105"
+              >
+                READ THE WHITE PAPER
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
         </div></Reveal>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 pt-8 pb-16 text-center">
-        <Reveal><a
-          href={whitepaperPdf}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-brand display gap-3 px-8 py-4 text-lg md:text-xl shadow-lg transition-transform hover:scale-105"
-        >
-          READ THE WHITE PAPER
-          <span aria-hidden="true">→</span>
-        </a></Reveal>
       </section>
     </main>
   );
