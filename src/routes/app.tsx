@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/reveal";
 import { CtaCard } from "@/components/cta-card";
-import { Section, Card, Eyebrow, BrandButton } from "@/components/ui";
+import { Section, Card, BrandButton } from "@/components/ui";
 import mockupAppPage1 from "@/assets/site/mockup-app-page-1.png";
 import arkLogo from "@/assets/site/arkade-logo.svg";
 import coinChimera from "@/assets/site/Coins/coin-front-chimera.png";
@@ -88,13 +88,13 @@ function AppPage() {
               Architecture.
             </p>
 
-            <Card variant="glow" padding="px-6 py-5" className="mt-8 flex items-center justify-between">
-              <div>
-                <Eyebrow>WORKS ON ANY DEVICE</Eyebrow>
-                <div className="display mt-1 text-xl">OPEN IN BROWSER</div>
-              </div>
-              <span className="text-xl">↗</span>
-            </Card>
+            <div className="mt-8">
+              <CtaCard
+                href="https://app.chimerawallet.com"
+                eyebrow="WORKS ON ANY DEVICE"
+                title="OPEN IN BROWSER"
+              />
+            </div>
           </div></Reveal>
         </div>
 
