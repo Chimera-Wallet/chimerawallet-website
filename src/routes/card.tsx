@@ -71,11 +71,11 @@ function CardPage() {
             <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
               <div
                 className="absolute aspect-[1.6/1] w-[85%] rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
-                style={{ transform: "translateX(-95%) translateY(-6%) rotate(22deg)", boxShadow: "0 20px 60px rgba(0,0,0,0.35)" }}
+                style={{ transform: "translateX(-95%) translateY(-28%) rotate(22deg)", boxShadow: "0 20px 60px rgba(0,0,0,0.35)" }}
               />
               <div
                 className="absolute aspect-[1.6/1] w-[85%] rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
-                style={{ transform: "translateX(95%) translateY(-6%) rotate(-22deg)", boxShadow: "0 20px 60px rgba(0,0,0,0.35)" }}
+                style={{ transform: "translateX(95%) translateY(-28%) rotate(-22deg)", boxShadow: "0 20px 60px rgba(0,0,0,0.35)" }}
               />
               <div
                 className="absolute aspect-[1.6/1] w-[90%] rounded-2xl border border-white/10 bg-white/[0.07] backdrop-blur-sm"
