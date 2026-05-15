@@ -72,6 +72,20 @@ function AppPage() {
       </Section>
 
       <Section size="sm">
+        {/* asset row */}
+        <div className="mb-16 grid grid-cols-3 gap-6 sm:grid-cols-6">
+          {[
+            { a: "Chimera", img: coinChimera },
+            { a: "BTC", img: coinBitcoin },
+            { a: "USDT", img: coinTether },
+            { a: "ETH", img: coinEthereum },
+            { a: "TRON", img: coinTron },
+            { a: "POLYGON", img: coinPolygon },
+          ].map(({ a, img }, i) => (
+            <Reveal key={a} delay={i * 80}><img src={img} alt={`${a} coin`} className="aspect-square w-full max-w-20 object-contain mx-auto" /></Reveal>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2">
           <Reveal><div>
             <p className="text-sm tracking-widest text-foreground/80">CHIMERA WALLET</p>
@@ -99,20 +113,6 @@ function AppPage() {
             />
           </div>
         </Reveal>
-
-        {/* asset row */}
-        <div className="mt-16 grid grid-cols-3 gap-6 sm:grid-cols-6">
-          {[
-            { a: "Chimera", img: coinChimera },
-            { a: "BTC", img: coinBitcoin },
-            { a: "USDT", img: coinTether },
-            { a: "ETH", img: coinEthereum },
-            { a: "TRON", img: coinTron },
-            { a: "POLYGON", img: coinPolygon },
-          ].map(({ a, img }, i) => (
-            <Reveal key={a} delay={i * 80}><img src={img} alt={`${a} coin`} className="aspect-square w-full max-w-20 object-contain mx-auto" /></Reveal>
-          ))}
-        </div>
       </Section>
 
       <Section size="sm">
