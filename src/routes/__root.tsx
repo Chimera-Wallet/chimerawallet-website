@@ -75,33 +75,8 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
 }
 
 function RootComponent() {
-  // Apply per-route head() meta to the document in SPA mode.
-  const matches = useRouterState({ select: (s) => s.matches });
   const searchStr = useRouterState({ select: (s) => s.location.searchStr });
   const embed = /(?:^|[?&])embed=1(?:&|$)/.test(searchStr ?? "");
-  useEffect(() => {
-    const allMeta = matches.flatMap((m) => (m.meta as any[]) ?? []);
-    const titleEntry = [...allMeta].reverse().find((m) => m && m.title);
-    if (titleEntry?.title) document.title = titleEntry.title;
-
-    const seen = new Set<string>();
-    const managed = "data-tsr-meta";
-    document.querySelectorAll(`meta[${managed}]`).forEach((el) => el.remove());
-
-    for (let i = allMeta.length - 1; i >= 0; i--) {
-      const m = allMeta[i];
-      if (!m || m.title) continue;
-      const key = m.name ? `name:${m.name}` : m.property ? `property:${m.property}` : null;
-      if (!key || seen.has(key)) continue;
-      seen.add(key);
-      const tag = document.createElement("meta");
-      if (m.name) tag.setAttribute("name", m.name);
-      if (m.property) tag.setAttribute("property", m.property);
-      if (m.content) tag.setAttribute("content", m.content);
-      tag.setAttribute(managed, "");
-      document.head.appendChild(tag);
-    }
-  }, [matches]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
