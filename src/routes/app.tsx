@@ -108,7 +108,7 @@ function AppPage() {
             { a: "TRON", img: coinTron },
             { a: "POLYGON", img: coinPolygon },
           ].map(({ a, img }, i) => (
-            <Reveal key={a} delay={i * 80}><img src={img} alt={`${a} coin`} className="aspect-square w-full object-contain" /></Reveal>
+            <Reveal key={a} delay={i * 80}><img src={img} alt={`${a} coin`} className="aspect-square w-full max-w-20 object-contain mx-auto" /></Reveal>
           ))}
         </div>
       </Section>
