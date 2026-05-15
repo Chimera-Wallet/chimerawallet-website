@@ -28,12 +28,12 @@ export const Route = createFileRoute("/card")({
 function CardPage() {
   const searchStr = useRouterState({ select: (s) => s.location.searchStr });
   const embed = /(?:^|[?&])embed=1(?:&|$)/.test(searchStr ?? "");
-  const ReserveForm = ({ children }: { children: React.ReactNode }) => (
+  const ReserveForm = ({ children, className }: { children: React.ReactNode; className?: string }) => (
     <form
       target="_blank"
       action="https://legacy.coinpayments.net/index.php"
       method="post"
-      className="inline-block"
+      className={className ?? "inline-block"}
     >
       <input type="hidden" name="cmd" value="_pay" />
       <input type="hidden" name="reset" value="1" />
