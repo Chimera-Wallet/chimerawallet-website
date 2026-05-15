@@ -241,21 +241,19 @@ function BenefitRow({
   );
 }
 
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
+
 function Faq({ q, children, defaultOpen = false }: { q: string; children?: React.ReactNode; defaultOpen?: boolean }) {
-  const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="surface-glass">
-      <button
-        onClick={() => setOpen((o) => !o)}
-        className="flex w-full items-center justify-between px-6 py-4 text-left"
-      >
+    <Collapsible defaultOpen={defaultOpen} className="surface-glass">
+      <CollapsibleTrigger className="flex w-full cursor-pointer items-center justify-between px-6 py-4 text-left">
         <span className="text-sm font-semibold">{q}</span>
-        <span className="text-xl">{open ? "×" : "+"}</span>
-      </button>
-      {open && children && (
-        <div className="border-t border-white/10 px-6 py-4 text-xs text-foreground/85">{children}</div>
-      )}
-    </div>
+        <span className="text-xl transition-transform duration-200 data-[state=open]:rotate-45">+</span>
+      </CollapsibleTrigger>
+      <CollapsibleContent className="overflow-hidden text-xs text-foreground/85 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+        <div className="border-t border-white/10 px-6 py-4">{children}</div>
+      </CollapsibleContent>
+    </Collapsible>
   );
 }
 
