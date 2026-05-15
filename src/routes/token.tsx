@@ -46,7 +46,7 @@ function TokenPage() {
     <main>
       <section className="relative mx-auto max-w-7xl px-6 pt-16 pb-10">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10">
-          <img src={heroCoin1} alt="" className="absolute left-[-8%] top-[8%] w-32 md:w-44 lg:w-56 animate-[float_7s_ease-in-out_infinite] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+          <img src={heroCoin1} alt="" className="absolute left-[4%] top-[8%] w-32 md:w-44 lg:w-56 animate-[float_7s_ease-in-out_infinite] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
           <img src={heroCoin2} alt="" className="absolute right-[-2%] top-[4%] w-24 md:w-32 lg:w-40 animate-[float_8s_ease-in-out_infinite_-2s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
           <img src={heroCoin3} alt="" className="absolute right-[-4%] top-[42%] w-28 md:w-36 lg:w-44 animate-[float_9s_ease-in-out_infinite_-4s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
           <img src={heroCoin4} alt="" className="absolute left-[6%] bottom-[28%] w-20 md:w-28 lg:w-32 animate-[float_7.5s_ease-in-out_infinite_-1s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
