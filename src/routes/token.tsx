@@ -111,10 +111,8 @@ function TokenPage() {
       <section className="mx-auto max-w-7xl px-6 py-16 text-left">
         <Reveal><h2 className="display text-3xl md:text-5xl">STAKE CEXT.</h2></Reveal>
         <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80">EARN UP TO 15% APR.</p></Reveal>
-        <Reveal delay={240}>
-          <p className="mt-6 max-w-2xl text-sm text-foreground/85">
-            Put your CEXT to work. Stake and earn up to 15% annual returns paid in CEXT. Lock tokens for longer periods to multiply your score and maximize rewards. The longer you lock, the more you earn.
-          </p>
+        <Reveal as="p" delay={240} className="mt-6 max-w-2xl text-sm text-foreground/85">
+          Put your CEXT to work. Stake and earn up to 15% annual returns paid in CEXT. Lock tokens for longer periods to multiply your score and maximize rewards. The longer you lock, the more you earn.
         </Reveal>
       </section>
 
