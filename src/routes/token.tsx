@@ -238,7 +238,12 @@ function TokenPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <Reveal><h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2></Reveal>
-        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="relative mx-auto mt-12 max-w-3xl">
+          {/* vertical spine */}
+          <div
+            aria-hidden="true"
+            className="absolute left-4 top-2 bottom-2 w-px bg-gradient-to-b from-[var(--brand-green)]/0 via-[var(--brand-green)]/60 to-[var(--brand-green)]/0 md:left-1/2 md:-translate-x-1/2"
+          />
           {[
             ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Chimera Protocol VTXO technology."],
             ["Q2 2026 — Coming", "DEX / CEX Listing", "CEXT listed on centralized and decentralized exchanges."],
@@ -249,13 +254,34 @@ function TokenPage() {
             ["June 2026", "P2P Swaps", "Peer-to-peer swaps directly in-app."],
             ["2027", "Decentralised Governance", ""],
             ["2028", "DAO Transition", ""],
-          ].map(([d, t, b], i) => (
-            <Reveal key={t} delay={(i % 3) * 120} className="h-full"><div className="surface-card h-full">
-              <div className="eyebrow">{d}</div>
-              <div className="display mt-2 text-lg">{t}</div>
-              {b && <p className="mt-2 text-xs text-muted-foreground">{b}</p>}
-            </div></Reveal>
-          ))}
+          ].map(([d, t, b], i) => {
+            const left = i % 2 === 0;
+            return (
+              <Reveal key={t} delay={80}>
+                <div className="relative pl-12 md:grid md:grid-cols-2 md:gap-10 md:pl-0">
+                  {/* dot */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-4 top-5 z-10 h-3 w-3 -translate-x-1/2 rounded-full bg-[var(--brand-green)] ring-4 ring-[var(--brand-green)]/20 md:left-1/2"
+                  />
+                  <div
+                    className={
+                      "py-4 md:py-6 " +
+                      (left
+                        ? "md:col-start-1 md:pr-10 md:text-right"
+                        : "md:col-start-2 md:pl-10 md:text-left")
+                    }
+                  >
+                    <div className="surface-card inline-block w-full p-5">
+                      <div className="eyebrow">{d}</div>
+                      <div className="display mt-2 text-lg">{t}</div>
+                      {b && <p className="mt-2 text-xs text-muted-foreground">{b}</p>}
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
         <Reveal><p className="mx-auto mt-8 max-w-4xl text-center text-xs text-muted-foreground">
           CEXT is issued by Outlogic SAGL and reviewed in accordance with FINMA guidance. Not a security. Not a payment token. Not an investment contract. A utility token — with regulatory clarity most tokens never achieve.
