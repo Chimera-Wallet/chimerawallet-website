@@ -253,33 +253,34 @@ function Index() {
 
       {/* CEXT TOKEN PREVIEW */}
       <section className="relative overflow-hidden px-6 py-20">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
-          {/* next to title CEXT, partially behind the C */}
-          <img
-            src={cextCoin1}
-            alt=""
-            className="absolute left-[calc(50%-22rem)] top-[8%] w-20 sm:w-28 md:w-36 lg:w-44 animate-[float_7s_ease-in-out_infinite] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
-          />
-          {/* right, in line with title, slightly down */}
-          <img
-            src={cextCoin4}
-            alt=""
-            className="absolute right-[-4%] sm:right-[2%] md:right-[8%] top-[18%] w-16 sm:w-24 md:w-32 lg:w-40 animate-[float_8s_ease-in-out_infinite_-2s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
-          />
-          {/* left, between text and CTA */}
-          <img
-            src={cextCoin3}
-            alt=""
-            className="absolute left-[-6%] sm:left-[0%] md:left-[6%] bottom-[18%] w-16 sm:w-20 md:w-28 lg:w-36 animate-[float_7.5s_ease-in-out_infinite_-1s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
-          />
-          {/* right, in line with text */}
-          <img
-            src={cextCoin2}
-            alt=""
-            className="absolute right-[-8%] sm:right-[-2%] md:right-[4%] top-[55%] w-14 sm:w-20 md:w-28 lg:w-32 animate-[float_9s_ease-in-out_infinite_-3s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
-          />
-        </div>
-        <div className="relative z-10 mx-auto max-w-3xl text-left">
+        <div className="relative mx-auto max-w-3xl text-left">
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
+            {/* next to title CEXT, partially behind the C */}
+            <img
+              src={cextCoin1}
+              alt=""
+              className="absolute -left-20 -top-6 w-24 animate-[float_7s_ease-in-out_infinite] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+            />
+            {/* right, in line with title, slightly down */}
+            <img
+              src={cextCoin4}
+              alt=""
+              className="absolute -right-24 top-6 w-28 animate-[float_8s_ease-in-out_infinite_-2s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+            />
+            {/* left, between text and CTA */}
+            <img
+              src={cextCoin3}
+              alt=""
+              className="absolute -left-28 bottom-8 w-24 animate-[float_7.5s_ease-in-out_infinite_-1s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+            />
+            {/* right, in line with text */}
+            <img
+              src={cextCoin2}
+              alt=""
+              className="absolute -right-20 top-1/2 w-20 animate-[float_9s_ease-in-out_infinite_-3s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+            />
+          </div>
+          <div className="relative z-10">
           <h2 className="display text-3xl md:text-4xl">CEXT TOKEN</h2>
           <p className="mt-6 text-base font-medium">The more you hold, the harder the platform works for you.</p>
           <p className="mt-3 text-sm text-muted-foreground">
@@ -288,6 +289,7 @@ function Index() {
           </p>
           <p className="mt-3 text-sm text-[var(--brand-green)] font-semibold">TGE: 27 May 2026.</p>
           <CtaCard className="mt-8" title="DISCOVER CEXT" href="/token" />
+          </div>
         </div>
       </section>
 
