@@ -279,7 +279,7 @@ function Index() {
             className="absolute right-[-8%] sm:right-[-2%] md:right-[4%] top-[55%] w-14 sm:w-20 md:w-28 lg:w-32 animate-[float_9s_ease-in-out_infinite_-3s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
           />
         </div>
-        <div className="relative z-10 mx-auto max-w-3xl text-center">
+        <div className="relative z-10 mx-auto max-w-3xl text-left">
           <h2 className="display text-3xl md:text-4xl">CEXT TOKEN</h2>
           <p className="mt-6 text-base font-medium">The more you hold, the harder the platform works for you.</p>
           <p className="mt-3 text-sm text-muted-foreground">
