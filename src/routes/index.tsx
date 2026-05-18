@@ -271,7 +271,7 @@ function Index() {
             <img
               src={cextCoin3}
               alt=""
-              className="absolute -left-28 bottom-8 w-24 animate-[float_7.5s_ease-in-out_infinite_-1s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+              className="absolute -left-20 bottom-8 w-16 animate-[float_7.5s_ease-in-out_infinite_-1s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
             />
             {/* right, in line with text */}
             <img
