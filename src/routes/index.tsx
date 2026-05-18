@@ -317,9 +317,9 @@ function Index() {
            <div className="relative aspect-[4/5] w-full">
              <img src={chart1Bg} alt="Chimera referral preview" className="absolute inset-0 h-full w-full object-contain" />
              {/* Order: Badge_03 (bottom), Badge_02 (middle), Badge_01 (top) */}
-             <img src={badge03} alt="" aria-hidden className="absolute left-1/2 bottom-[22%] w-[44%] -translate-x-1/2 z-10" />
-             <img src={badge02} alt="" aria-hidden className="absolute left-[18%] top-[20%] w-[44%] z-20" />
-             <img src={badge01} alt="" aria-hidden className="absolute right-[18%] top-1/2 w-[44%] -translate-y-1/2 z-30" />
+             <img src={badge03} alt="" aria-hidden className="absolute left-1/2 bottom-[22%] w-[44%] -translate-x-1/2 z-10 opacity-0 animate-[scale-in_0.5s_ease-out_0.1s_forwards]" />
+             <img src={badge02} alt="" aria-hidden className="absolute left-[18%] top-[20%] w-[44%] z-20 opacity-0 animate-[scale-in_0.5s_ease-out_0.5s_forwards]" />
+             <img src={badge01} alt="" aria-hidden className="absolute right-[18%] top-1/2 w-[44%] -translate-y-1/2 z-30 opacity-0 animate-[scale-in_0.5s_ease-out_0.9s_forwards]" />
            </div>
         </div>
       </section>
