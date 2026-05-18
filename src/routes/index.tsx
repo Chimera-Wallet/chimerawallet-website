@@ -15,10 +15,10 @@ import controlIcon from "@/assets/site/chimera-logo-control.svg";
 import tradeIcon from "@/assets/site/chimera-logo-trade.svg";
 import earnIcon from "@/assets/site/chimera-logo-earn.svg";
 import referralPreview from "@/assets/site/referral_preview.png";
-import cextCoin1 from "@/assets/site/Coins/coin-1-a.png";
-import cextCoin2 from "@/assets/site/Coins/coin-2-a.png";
-import cextCoin3 from "@/assets/site/Coins/coin-3-a.png";
-import cextCoin4 from "@/assets/site/Coins/coin-4-b.png";
+import cextCoin1 from "@/assets/site/Coins/coin-1-1.png";
+import cextCoin2 from "@/assets/site/Coins/coin-2-2.png";
+import cextCoin3 from "@/assets/site/Coins/coin-3-1.png";
+import cextCoin4 from "@/assets/site/Coins/coin-4-2.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
