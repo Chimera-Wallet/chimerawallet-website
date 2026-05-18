@@ -15,9 +15,10 @@ import controlIcon from "@/assets/site/chimera-logo-control.svg";
 import tradeIcon from "@/assets/site/chimera-logo-trade.svg";
 import earnIcon from "@/assets/site/chimera-logo-earn.svg";
 import referralPreview from "@/assets/site/referral_preview.png";
-import coinTopLeft from "@/assets/site/Coins/Chimera-card-2-3.png";
-import coinBottomLeft from "@/assets/site/Coins/Chimera-card-2-4.png";
-import coinRight from "@/assets/site/Coins/Chimera-card-2-1.png";
+import cextCoin1 from "@/assets/site/Coins/coin-1-a.png";
+import cextCoin2 from "@/assets/site/Coins/coin-2-a.png";
+import cextCoin3 from "@/assets/site/Coins/coin-3-a.png";
+import cextCoin4 from "@/assets/site/Coins/coin-4-b.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -251,27 +252,42 @@ function Index() {
       </section>
 
       {/* CEXT TOKEN PREVIEW */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_1.4fr]">
-          <div className="relative aspect-square w-full">
-            <img src={coinTopLeft} alt="" className="absolute left-0 top-0 w-1/2 h-auto object-contain" />
-            <img
-              src={coinBottomLeft}
-              alt="Floating CEXT coins"
-              className="absolute right-0 bottom-0 w-1/2 h-auto object-contain"
-            />
-          </div>
-          <div>
-            <h2 className="display text-3xl md:text-4xl">CEXT TOKEN</h2>
-            <p className="display text-3xl md:text-4xl text-foreground/70">​</p>
-            <p className="mt-6 text-base font-medium">The more you hold, the harder the platform works for you.</p>
-            <p className="mt-3 text-sm text-muted-foreground">
-              1 Billion fixed supply. Fee discounts up to 50%. Referral multipliers up to 3×. Governance at Diamond
-              tier. Zero inflation. Classified as a utility token under the Swiss regulation.
-            </p>
-            <p className="mt-3 text-sm text-[var(--brand-green)] font-semibold">TGE: 27 May 2026.</p>
-            <CtaCard className="mt-8" title="DISCOVER CEXT" />
-          </div>
+      <section className="relative overflow-hidden px-6 py-20">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
+          {/* next to title CEXT, partially behind the C */}
+          <img
+            src={cextCoin1}
+            alt=""
+            className="absolute left-[calc(50%-22rem)] top-[8%] w-20 sm:w-28 md:w-36 lg:w-44 animate-[float_7s_ease-in-out_infinite] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+          />
+          {/* right, in line with title, slightly down */}
+          <img
+            src={cextCoin4}
+            alt=""
+            className="absolute right-[-4%] sm:right-[2%] md:right-[8%] top-[18%] w-16 sm:w-24 md:w-32 lg:w-40 animate-[float_8s_ease-in-out_infinite_-2s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+          />
+          {/* left, between text and CTA */}
+          <img
+            src={cextCoin3}
+            alt=""
+            className="absolute left-[-6%] sm:left-[0%] md:left-[6%] bottom-[18%] w-16 sm:w-20 md:w-28 lg:w-36 animate-[float_7.5s_ease-in-out_infinite_-1s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+          />
+          {/* right, in line with text */}
+          <img
+            src={cextCoin2}
+            alt=""
+            className="absolute right-[-8%] sm:right-[-2%] md:right-[4%] top-[55%] w-14 sm:w-20 md:w-28 lg:w-32 animate-[float_9s_ease-in-out_infinite_-3s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+          />
+        </div>
+        <div className="relative z-10 mx-auto max-w-3xl text-center">
+          <h2 className="display text-3xl md:text-4xl">CEXT TOKEN</h2>
+          <p className="mt-6 text-base font-medium">The more you hold, the harder the platform works for you.</p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            1 Billion fixed supply. Fee discounts up to 50%. Referral multipliers up to 3×. Governance at Diamond
+            tier. Zero inflation. Classified as a utility token under the Swiss regulation.
+          </p>
+          <p className="mt-3 text-sm text-[var(--brand-green)] font-semibold">TGE: 27 May 2026.</p>
+          <CtaCard className="mt-8" title="DISCOVER CEXT" href="/token" />
         </div>
       </section>
 
