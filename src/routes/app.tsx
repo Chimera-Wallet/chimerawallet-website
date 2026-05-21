@@ -88,9 +88,9 @@ function AppPage() {
         </div>
 
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2">
-          <Reveal><div>
+          <Reveal><div className="relative z-20">
             <p className="text-sm tracking-widest text-foreground/80">CHIMERA WALLET</p>
-            <h2 className="display mt-3 whitespace-nowrap text-3xl md:text-5xl">RUNS IN YOUR BROWSER.</h2>
+            <h2 className="display mt-3 text-3xl md:whitespace-nowrap md:text-5xl">RUNS IN YOUR BROWSER.</h2>
             <p className="mt-6 text-base font-medium">No gatekeeper can touch it.</p>
             <ul className="mt-6 space-y-3 text-sm text-foreground/85">
               <li>• No download. You open a URL — the wallet is there.</li>
