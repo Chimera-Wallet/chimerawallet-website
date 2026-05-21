@@ -12,6 +12,10 @@ import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
 import arkLogo from "@/assets/site/arkade-logo.svg";
 import outlogicLogo from "@/assets/site/Outlogic_LOGO.png";
+import poweredByBitcoin from "@/assets/site/powered-by/bitcoin.png";
+import poweredByArkade from "@/assets/site/powered-by/arkade.png";
+import poweredByLightning from "@/assets/site/powered-by/lightning.png";
+import poweredByOutlogic from "@/assets/site/powered-by/outlogic.png";
 import controlIcon from "@/assets/site/chimera-logo-control.svg";
 import tradeIcon from "@/assets/site/chimera-logo-trade.svg";
 import earnIcon from "@/assets/site/chimera-logo-earn.svg";
@@ -296,29 +300,14 @@ function Index() {
       <section className="px-6 py-10">
         <div className="mx-auto max-w-6xl">
           <p className="text-center text-xs font-medium tracking-widest text-foreground/70">Powered by</p>
-          <div className="mt-6 grid grid-cols-2 gap-6 md:grid-cols-4 max-w-5xl mx-auto">
+          <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 max-w-5xl mx-auto">
             {[
-              { src: bitcoinLogo, alt: "Bitcoin", label: "bitcoin" },
-              { src: arkLogo, alt: "Arkade", label: "Arkade" },
-              { src: lightningLogo, alt: "Lightning Network", label: "Lightning\nNetwork" },
-              { src: outlogicLogo, alt: "Outlogic", label: "Outlogic", isImage: true },
+              { src: poweredByBitcoin, alt: "Bitcoin" },
+              { src: poweredByArkade, alt: "Arkade" },
+              { src: poweredByLightning, alt: "Lightning Network" },
+              { src: poweredByOutlogic, alt: "Outlogic" },
             ].map((item) => (
-              <div
-                key={item.alt}
-                className="flex aspect-square items-center justify-center rounded-2xl bg-[#0A0A1F] shadow-[0_0_80px_rgba(120,130,255,0.22)]"
-              >
-                <div className="flex items-center gap-2 px-4">
-                  <img src={item.src} alt={item.alt} className="h-10 w-auto md:h-14 object-contain" />
-                  {item.label && !item.isImage && (
-                    <span
-                      className="whitespace-pre-line text-left text-lg md:text-2xl font-semibold text-white leading-tight"
-                      style={{ fontFamily: '"Titillium Web", sans-serif' }}
-                    >
-                      {item.label}
-                    </span>
-                  )}
-                </div>
-              </div>
+              <img key={item.alt} src={item.src} alt={item.alt} className="w-full h-auto" />
             ))}
           </div>
         </div>
