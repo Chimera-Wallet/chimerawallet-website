@@ -207,12 +207,12 @@ function CardPage() {
           </div>
 
           {!embed && (
-            <Reveal>
+            <Reveal className="w-full">
               <a
                 href="https://app.chimerawallet.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="surface-glow mt-8 flex w-full items-center justify-between px-6 py-5 transition-colors hover:border-white/30"
+                className="surface-glow mt-2 flex w-full items-center justify-between px-6 py-5 transition-colors hover:border-white/30"
               >
                 <div className="w-full">
                   <Eyebrow>WORKS ON ANY DEVICE</Eyebrow>
