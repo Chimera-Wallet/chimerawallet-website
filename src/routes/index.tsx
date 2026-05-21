@@ -288,7 +288,7 @@ function Index() {
             />
           </div>
           <div className="relative z-10">
-          <h2 className="display text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>CEXT TOKEN</h2>
+          <h2 className="display text-7xl text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>CEXT TOKEN</h2>
           <p className="mt-6 text-base font-medium">The more you hold, the harder the platform works for you.</p>
           <p className="mt-3 text-sm text-muted-foreground">
             1 Billion fixed supply. Fee discounts up to 50%. Referral multipliers up to 3×. Governance at Diamond
