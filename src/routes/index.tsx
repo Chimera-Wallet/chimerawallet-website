@@ -11,6 +11,7 @@ import chimeraCard from "@/assets/site/chimera-card.png";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
 import arkLogo from "@/assets/site/arkade-logo.svg";
+import outlogicLogo from "@/assets/site/Outlogic_LOGO.png";
 import controlIcon from "@/assets/site/chimera-logo-control.svg";
 import tradeIcon from "@/assets/site/chimera-logo-trade.svg";
 import earnIcon from "@/assets/site/chimera-logo-earn.svg";
@@ -287,6 +288,38 @@ function Index() {
               Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
             </p>
             <button className="btn-brand mt-8">RESERVE YOUR SPOT</button>
+          </div>
+        </div>
+      </section>
+
+      {/* POWERED BY */}
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-center text-xs font-medium tracking-widest text-foreground/70">Powered by</p>
+          <div className="mt-8 grid grid-cols-2 gap-5 md:grid-cols-4">
+            {[
+              { src: bitcoinLogo, alt: "Bitcoin", label: "bitcoin" },
+              { src: arkLogo, alt: "Arkade", label: "Arkade" },
+              { src: lightningLogo, alt: "Lightning Network", label: "Lightning\nNetwork" },
+              { src: outlogicLogo, alt: "Outlogic", label: "Outlogic", isImage: true },
+            ].map((item) => (
+              <div
+                key={item.alt}
+                className="flex aspect-square items-center justify-center rounded-2xl bg-[#0A0A1F] shadow-[0_0_60px_rgba(120,130,255,0.18)]"
+              >
+                <div className="flex items-center gap-3 px-4">
+                  <img src={item.src} alt={item.alt} className="h-10 w-auto md:h-12 object-contain" />
+                  {item.label && !item.isImage && (
+                    <span
+                      className="whitespace-pre-line text-left text-lg md:text-xl font-semibold text-white"
+                      style={{ fontFamily: '"Titillium Web", sans-serif' }}
+                    >
+                      {item.label}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
