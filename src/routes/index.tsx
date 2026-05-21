@@ -26,20 +26,20 @@ import cextCoin4 from "@/assets/site/Coins/coin-4-2.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-     meta: [
-       { title: "Chimera — The Bitcoin Super-App" },
-       {
-         name: "description",
-         content:
-           "Chimera Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
-       },
-       { property: "og:title", content: "Chimera — The Bitcoin Super-App" },
-       {
-         property: "og:description",
-         content:
-           "Chimera Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
-       },
-     ],
+    meta: [
+      { title: "Chimera — The Bitcoin Super-App" },
+      {
+        name: "description",
+        content:
+          "Chimera Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
+      },
+      { property: "og:title", content: "Chimera — The Bitcoin Super-App" },
+      {
+        property: "og:description",
+        content:
+          "Chimera Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
+      },
+    ],
   }),
   component: Index,
 });
@@ -51,73 +51,91 @@ function Index() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 pt-12 pb-20">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_4fr_1fr]">
-            <Reveal delay={400}><img
-              src={heroPhoneLeft}
-              alt="Chimera wallet app showing balance and transactions"
-              className="hidden lg:block w-[160%] max-w-none h-auto -ml-[60%]"
-            /></Reveal>
+            <Reveal delay={400}>
+              <img
+                src={heroPhoneLeft}
+                alt="Chimera wallet app showing balance and transactions"
+                className="hidden lg:block w-[160%] max-w-none h-auto -ml-[60%]"
+              />
+            </Reveal>
             <div className="text-center">
-              <Reveal delay={0}><p
-                className="text-center uppercase text-[var(--brand-green)]"
-                style={{
-                  fontFamily: '"Titillium Web", sans-serif',
-                  fontWeight: 700,
-                  fontSize: "20px",
-                  lineHeight: "100%",
-                  letterSpacing: "2px",
-                }}
-              >
-                 CHIMERAWALLET, FINANCE EVOLVED
-              </p></Reveal>
-              <Reveal delay={120}><h1
-                className="mt-6 text-center uppercase"
-                style={{
-                  fontFamily: '"Titillium Web", sans-serif',
-                  fontWeight: 700,
-                  fontSize: "clamp(2rem, 6vw, 85px)",
-                  lineHeight: 1,
-                  letterSpacing: "1px",
-                }}
-              >
-                THE ONLY BITCOIN SUPER-APP BUILT SO NOBODY CAN EVER TAKE YOUR MONEY AWAY.
-              </h1></Reveal>
-              <Reveal delay={240}><h2 className="mx-auto mt-6 max-w-2xl text-center text-base md:text-lg text-foreground/85">
-                Not a promise. Not a policy. Mathematics.
-              </h2></Reveal>
-              <Reveal delay={340}><p className="mt-2 text-sm text-muted-foreground">
-                 Mainchain. Lightning. Arkade Protocol. One app.
-                <br />
-                Your keys. Nobody in between.
-              </p></Reveal>
+              <Reveal delay={0}>
+                <p
+                  className="text-center uppercase text-[var(--brand-green)]"
+                  style={{
+                    fontFamily: '"Titillium Web", sans-serif',
+                    fontWeight: 700,
+                    fontSize: "20px",
+                    lineHeight: "100%",
+                    letterSpacing: "2px",
+                  }}
+                >
+                  CHIMERAWALLET, FINANCE EVOLVED
+                </p>
+              </Reveal>
+              <Reveal delay={120}>
+                <h1
+                  className="mt-6 text-center uppercase"
+                  style={{
+                    fontFamily: '"Titillium Web", sans-serif',
+                    fontWeight: 700,
+                    fontSize: "clamp(2rem, 6vw, 85px)",
+                    lineHeight: 1,
+                    letterSpacing: "1px",
+                  }}
+                >
+                  THE ONLY BITCOIN SUPER-APP BUILT SO NOBODY CAN EVER TAKE YOUR MONEY AWAY.
+                </h1>
+              </Reveal>
+              <Reveal delay={240}>
+                <h2 className="mx-auto mt-6 max-w-2xl text-center text-base md:text-lg text-foreground/85">
+                  Not a promise. Not a policy. Mathematics.
+                </h2>
+              </Reveal>
+              <Reveal delay={340}>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Mainchain. Lightning. Arkade Protocol. One app.
+                  <br />
+                  Your keys. Nobody in between.
+                </p>
+              </Reveal>
             </div>
-            <Reveal delay={520}><img
-              src={heroPhoneRight}
-              alt="Chimera card balance and transactions"
-              className="hidden lg:block w-[160%] max-w-none h-auto -mr-[60%]"
-            /></Reveal>
+            <Reveal delay={520}>
+              <img
+                src={heroPhoneRight}
+                alt="Chimera card balance and transactions"
+                className="hidden lg:block w-[160%] max-w-none h-auto -mr-[60%]"
+              />
+            </Reveal>
           </div>
 
           {/* CTA cards */}
           <div className="mx-auto mt-16 max-w-3xl space-y-4">
-             <Reveal delay={0}><CtaCard
-               eyebrow="CHIMERA WALLET"
-               title="LAUNCH THE APP"
-              eyebrowColor="text-[var(--brand-green)]"
-              filled
-              href="https://app.chimerawallet.com"
-            /></Reveal>
-            <Reveal delay={120}><CtaCard
-              eyebrow={<TgeCountdown />}
-              title="JOIN CEXT WAITLIST"
-              eyebrowColor="text-[var(--brand-green)]"
-              scrollTo="waitlist"
-            /></Reveal>
-            <Reveal delay={240}><CtaCard
-              eyebrow="NOTIFY ME"
-              title="JOIN THE COMMUNITY"
-              eyebrowColor="text-[var(--brand-green)]"
-              href="https://t.me/Chimera_Community"
-            /></Reveal>
+            <Reveal delay={0}>
+              <CtaCard
+                eyebrow="CHIMERA WALLET"
+                title="LAUNCH THE APP"
+                eyebrowColor="text-[var(--brand-green)]"
+                filled
+                href="https://app.chimerawallet.com"
+              />
+            </Reveal>
+            <Reveal delay={120}>
+              <CtaCard
+                eyebrow={<TgeCountdown />}
+                title="JOIN CEXT WAITLIST"
+                eyebrowColor="text-[var(--brand-green)]"
+                scrollTo="waitlist"
+              />
+            </Reveal>
+            <Reveal delay={240}>
+              <CtaCard
+                eyebrow="NOTIFY ME"
+                title="JOIN THE COMMUNITY"
+                eyebrowColor="text-[var(--brand-green)]"
+                href="https://t.me/Chimera_Community"
+              />
+            </Reveal>
           </div>
         </div>
       </section>
@@ -132,31 +150,37 @@ function Index() {
             <div className="relative mx-auto aspect-[5/4] w-1/2 max-w-md pb-12 lg:w-3/4 lg:pb-20">
               <img
                 src={wallet1}
-               alt="Chimera wallet app — primary view"
+                alt="Chimera wallet app — primary view"
                 className="absolute left-0 top-0 w-[60%] h-auto object-contain"
               />
               <img
                 src={wallet2}
-                 alt="Chimera wallet app — secondary view"
+                alt="Chimera wallet app — secondary view"
                 className="absolute right-0 bottom-0 w-[60%] h-auto object-contain"
               />
             </div>
             <div className="space-y-4">
-              <Reveal><FeatureCard
-                iconSrc={controlIcon}
-                title="CONTROL"
-                 body="Your keys. Your coins. Full stop. Bitcoin mainchain, Lightning, Arkade Protocol VTXO - the complete Bitcoin stack, non-custodial from the first second to the last."
-              /></Reveal>
-              <Reveal delay={120}><FeatureCard
-                iconSrc={tradeIcon}
-                title="TRADE"
-                 body="Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial Chimera swaps coming soon."
-              /></Reveal>
-              <Reveal delay={240}><FeatureCard
-                iconSrc={earnIcon}
-                title="EARN"
-                body="Refer friends and earn a share of platform fees - up to 20%, no cap, no expiry. Not points. Real revenue. P2P loans."
-              /></Reveal>
+              <Reveal>
+                <FeatureCard
+                  iconSrc={controlIcon}
+                  title="CONTROL"
+                  body="Your keys. Your coins. Full stop. Bitcoin mainchain, Lightning, Arkade Protocol VTXO - the complete Bitcoin stack, non-custodial from the first second to the last."
+                />
+              </Reveal>
+              <Reveal delay={120}>
+                <FeatureCard
+                  iconSrc={tradeIcon}
+                  title="TRADE"
+                  body="Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial Chimera swaps coming soon."
+                />
+              </Reveal>
+              <Reveal delay={240}>
+                <FeatureCard
+                  iconSrc={earnIcon}
+                  title="EARN"
+                  body="Refer friends and earn a share of platform fees - up to 20%, no cap, no expiry. Not points. Real revenue. P2P loans."
+                />
+              </Reveal>
             </div>
           </div>
         </div>
@@ -165,36 +189,44 @@ function Index() {
       {/* SUPERCHARGING BITCOIN */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <p className="display text-7xl text-center text-sm tracking-[0.3em] text-foreground/80">SUPERCHARGING BITCOIN</p>
-          <h2 className="display text-7xl mt-4 text-center text-4xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>SUPERCHARGING BITCOIN</h2>
+          <p className="display text-center text-sm tracking-[0.3em] text-foreground/80">SUPERCHARGING BITCOIN</p>
+          <h2 className="display mt-4 text-center text-4xl md:text-5xl">SUPERCHARGING BITCOIN</h2>
           <p className="mt-4 text-center text-sm text-foreground/80">Three layers. One interface. Zero compromise.</p>
 
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:items-stretch">
-            <Reveal className="h-full"><LayerCard
-              iconSrc={bitcoinLogo}
-              title="MAINCHAIN"
-              body="Full BTC on-chain deposits and withdrawals and Fiat on/off ramp via third party providers."
-            /></Reveal>
-            <Reveal delay={120} className="h-full"><LayerCard
-              iconSrc={arkLogo}
-              iconClassName="h-16 w-16 -my-3"
-              title="ARKADE PROTOCOL"
-               body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Arkade Protocol."
-            /></Reveal>
-            <Reveal delay={240} className="h-full"><LayerCard
-              iconSrc={lightningLogo}
-              title="LIGHTNING"
-              body="Full Lightning invoice support, enhanced by Boltz. Every merchant, every exchange, zero channel management."
-            /></Reveal>
+            <Reveal className="h-full">
+              <LayerCard
+                iconSrc={bitcoinLogo}
+                title="MAINCHAIN"
+                body="Full BTC on-chain deposits and withdrawals and Fiat on/off ramp via third party providers."
+              />
+            </Reveal>
+            <Reveal delay={120} className="h-full">
+              <LayerCard
+                iconSrc={arkLogo}
+                iconClassName="h-16 w-16 -my-3"
+                title="ARKADE PROTOCOL"
+                body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Arkade Protocol."
+              />
+            </Reveal>
+            <Reveal delay={240} className="h-full">
+              <LayerCard
+                iconSrc={lightningLogo}
+                title="LIGHTNING"
+                body="Full Lightning invoice support, enhanced by Boltz. Every merchant, every exchange, zero channel management."
+              />
+            </Reveal>
           </div>
         </div>
       </section>
 
       {/* ARKADE PROTOCOL — heading */}
       <section className="mx-auto max-w-4xl px-6 pt-20 pb-24">
-        <h2 className="display text-7xl text-center text-5xl md:text-7xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>ARKADE PROTOCOL</h2>
-        <p className="display text-7xl mt-6 text-center text-base md:text-lg tracking-widest text-foreground/70" style={{ fontFamily: '"Titillium Web", sans-serif' }}>BACKED BY THE BEST</p>
-        <p className="display text-7xl mt-3 text-center tracking-[0.3em] text-foreground/60 text-[11px]">
+        <h2 className="display text-center text-5xl md:text-7xl">ARKADE PROTOCOL</h2>
+        <p className="display mt-6 text-center text-base md:text-lg tracking-widest text-foreground/70">
+          BACKED BY THE BEST
+        </p>
+        <p className="display mt-3 text-center tracking-[0.3em] text-foreground/60 text-[11px]">
           $7.7M raised across two rounds.
         </p>
       </section>
@@ -202,37 +234,43 @@ function Index() {
       {/* ARKADE PROTOCOL — comparison */}
       <section className="mx-auto max-w-4xl px-6 pb-20">
         <ScrollableComparison columns={3}>
-          <Reveal><ComparisonCard
-            title="CEX"
-            rows={[
-              ["Custodial", "Custody"],
-              ["Instant", "Speed"],
-              ["Required", "KYC"],
-              ["High", "Counterparty risk"],
-              ["No", "Unilateral exit"],
-            ]}
-          /></Reveal>
-          <Reveal delay={120}><ComparisonCard
-            title="DEX"
-            rows={[
-              ["Non-custodial", "Custody"],
-              ["Variable", "Speed"],
-              ["None", "KYC"],
-              ["Low", "Counterparty risk"],
-              ["Yes", "Unilateral exit"],
-            ]}
-          /></Reveal>
-          <Reveal delay={240}><ComparisonCard
-             title="Chimera"
-             highlight
-            rows={[
-              ["Non-custodial", "Custody"],
-              ["Instant", "Speed"],
-              ["Optional", "KYC"],
-              ["Minimal", "Counterparty risk"],
-              ["Yes", "Unilateral exit"],
-            ]}
-          /></Reveal>
+          <Reveal>
+            <ComparisonCard
+              title="CEX"
+              rows={[
+                ["Custodial", "Custody"],
+                ["Instant", "Speed"],
+                ["Required", "KYC"],
+                ["High", "Counterparty risk"],
+                ["No", "Unilateral exit"],
+              ]}
+            />
+          </Reveal>
+          <Reveal delay={120}>
+            <ComparisonCard
+              title="DEX"
+              rows={[
+                ["Non-custodial", "Custody"],
+                ["Variable", "Speed"],
+                ["None", "KYC"],
+                ["Low", "Counterparty risk"],
+                ["Yes", "Unilateral exit"],
+              ]}
+            />
+          </Reveal>
+          <Reveal delay={240}>
+            <ComparisonCard
+              title="Chimera"
+              highlight
+              rows={[
+                ["Non-custodial", "Custody"],
+                ["Instant", "Speed"],
+                ["Optional", "KYC"],
+                ["Minimal", "Counterparty risk"],
+                ["Yes", "Unilateral exit"],
+              ]}
+            />
+          </Reveal>
         </ScrollableComparison>
       </section>
 
@@ -242,16 +280,13 @@ function Index() {
         style={{ background: "linear-gradient(180deg, var(--brand-blue) 0%, transparent 100%)" }}
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
-           <img src={chimeraCard} alt="Chimera card with floating crypto coins" className="w-full h-auto rounded-2xl" />
+          <img src={chimeraCard} alt="Chimera card with floating crypto coins" className="w-full h-auto rounded-2xl" />
           <div>
-            <h2 className="display" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 700, fontSize: '85px', lineHeight: '85px', letterSpacing: '1px' }}>SELF-CUSTODY</h2>
-            <h2 className="display" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, fontSize: '52px', lineHeight: '52px', letterSpacing: '1px' }}>DOESN'T STOP AT THE CHECKOUT.</h2>
+            <h2 className="display text-7xl md:text-7xl">SELF-CUSTODY DOESN'T STOP AT THE CHECKOUT.</h2>
             <p className="mt-6 text-sm text-foreground/85">
               Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
             </p>
-            <button className="btn-brand mt-8">
-              RESERVE YOUR SPOT
-            </button>
+            <button className="btn-brand mt-8">RESERVE YOUR SPOT</button>
           </div>
         </div>
       </section>
@@ -288,14 +323,14 @@ function Index() {
             />
           </div>
           <div className="relative z-10">
-          <h2 className="display text-7xl text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>CEXT TOKEN</h2>
-          <p className="mt-6 text-base font-medium">The more you hold, the harder the platform works for you.</p>
-          <p className="mt-3 text-sm text-muted-foreground">
-            1 Billion fixed supply. Fee discounts up to 50%. Referral multipliers up to 3×. Governance at Diamond
-            tier. Zero inflation. Classified as a utility token under the Swiss regulation.
-          </p>
-          <p className="mt-3 text-sm text-[var(--brand-green)] font-semibold">TGE: 27 May 2026.</p>
-          <CtaCard className="mt-8" title="DISCOVER CEXT" href="/token" />
+            <h2 className="display text-3xl md:text-4xl">CEXT TOKEN</h2>
+            <p className="mt-6 text-base font-medium">The more you hold, the harder the platform works for you.</p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              1 Billion fixed supply. Fee discounts up to 50%. Referral multipliers up to 3×. Governance at Diamond
+              tier. Zero inflation. Classified as a utility token under the Swiss regulation.
+            </p>
+            <p className="mt-3 text-sm text-[var(--brand-green)] font-semibold">TGE: 27 May 2026.</p>
+            <CtaCard className="mt-8" title="DISCOVER CEXT" href="/token" />
           </div>
         </div>
       </section>
@@ -304,8 +339,8 @@ function Index() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.4fr_1fr]">
           <div>
-            <h2 className="display text-7xl text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>REFERRALS</h2>
-            <p className="display text-7xl text-3xl md:text-4xl text-foreground/70">​</p>
+            <h2 className="display text-3xl md:text-4xl">REFERRALS</h2>
+            <p className="display text-3xl md:text-4xl text-foreground/70">​</p>
             <p className="mt-6 text-base font-medium">Share once. Earn on every trade they make. Forever.</p>
             <p className="mt-3 text-sm text-muted-foreground">
               Up to 20% of platform fees. No cap. No expiry. Revenue share, not points.
@@ -315,21 +350,25 @@ function Index() {
             </p>
             <CtaCard className="mt-8" title="GET YOUR REFERRAL CODE" />
           </div>
-           <div className="relative aspect-[4/5] w-full">
-             <img src={chart1Bg} alt="Chimera referral preview" className="absolute inset-0 h-full w-full object-contain" />
-             {/* Order: Badge_03 (bottom), Badge_02 (middle), Badge_01 (top) */}
-             <Reveal className="absolute left-[28%] bottom-[22%] w-[44%] z-10" delay={100}>
-               <img src={badge03} alt="" aria-hidden className="w-full" />
-             </Reveal>
-             <Reveal className="absolute left-[18%] top-[20%] w-[44%] z-20" delay={500}>
-               <img src={badge02} alt="" aria-hidden className="w-full" />
-             </Reveal>
-             <div className="absolute right-[18%] top-0 bottom-0 w-[44%] z-30 flex items-center">
-               <Reveal className="w-full" delay={900}>
-                 <img src={badge01} alt="" aria-hidden className="w-full" />
-               </Reveal>
-             </div>
-           </div>
+          <div className="relative aspect-[4/5] w-full">
+            <img
+              src={chart1Bg}
+              alt="Chimera referral preview"
+              className="absolute inset-0 h-full w-full object-contain"
+            />
+            {/* Order: Badge_03 (bottom), Badge_02 (middle), Badge_01 (top) */}
+            <Reveal className="absolute left-[28%] bottom-[22%] w-[44%] z-10" delay={100}>
+              <img src={badge03} alt="" aria-hidden className="w-full" />
+            </Reveal>
+            <Reveal className="absolute left-[18%] top-[20%] w-[44%] z-20" delay={500}>
+              <img src={badge02} alt="" aria-hidden className="w-full" />
+            </Reveal>
+            <div className="absolute right-[18%] top-0 bottom-0 w-[44%] z-30 flex items-center">
+              <Reveal className="w-full" delay={900}>
+                <img src={badge01} alt="" aria-hidden className="w-full" />
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -337,7 +376,7 @@ function Index() {
       <section id="waitlist" className="mx-auto max-w-3xl px-6 pb-20 scroll-mt-24">
         <div className="surface-card p-8 md:p-10">
           <p className="eyebrow">JOIN THE WAITLIST</p>
-          <h2 className="display text-7xl mt-2 text-2xl md:text-3xl">JOIN CEXT WAITLIST!</h2>
+          <h2 className="display mt-2 text-2xl md:text-3xl">JOIN CEXT WAITLIST!</h2>
           <WaitlistForm />
         </div>
       </section>
@@ -411,7 +450,7 @@ function FeatureCard({ iconSrc, title, body }: { iconSrc: string; title: string;
   return (
     <div className="rounded-2xl border border-white/10 p-6" style={{ background: "rgba(21, 19, 38, 0.2)" }}>
       <img src={iconSrc} alt="" className="h-10 w-auto object-contain" />
-      <h3 className="display mt-3 text-2xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", sans-serif' }}>{title}</h3>
+      <h3 className="display mt-3 text-2xl text-[var(--brand-green)]">{title}</h3>
       <p className="mt-3 text-sm text-foreground/80">{body}</p>
     </div>
   );
@@ -453,21 +492,28 @@ function LayerCard({
       style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
     >
       <img src={iconSrc} alt="" className={`${iconClassName} object-contain`} />
-      <h3 className="display mt-3 text-xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", sans-serif' }}>{title}</h3>
+      <h3 className="display mt-3 text-xl text-[var(--brand-green)]">{title}</h3>
       <p className="mt-3 text-sm text-foreground/80">{body}</p>
     </div>
   );
 }
 
-function ComparisonCard({ title, rows, highlight = false }: { title: string; rows: [string, string][]; highlight?: boolean }) {
+function ComparisonCard({
+  title,
+  rows,
+  highlight = false,
+}: {
+  title: string;
+  rows: [string, string][];
+  highlight?: boolean;
+}) {
   return (
     <div
       className="rounded-2xl border p-6"
       style={
         highlight
           ? {
-              background:
-                "linear-gradient(90deg, var(--brand-blue) 0%, var(--brand-blue-bright) 100%)",
+              background: "linear-gradient(90deg, var(--brand-blue) 0%, var(--brand-blue-bright) 100%)",
               borderColor: "rgba(255, 255, 255, 0.1)",
             }
           : { background: "rgba(255, 255, 255, 0.1)", borderColor: "rgba(255, 255, 255, 0.1)" }
