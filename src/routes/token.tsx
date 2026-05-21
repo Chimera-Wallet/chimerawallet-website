@@ -108,14 +108,14 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 text-left">
-        <Reveal><h2 className="display text-3xl md:text-5xl">STAKE CEXT.</h2></Reveal>
-        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80">EARN UP TO 15% APR.</p></Reveal>
+        <Reveal><h2 className="display text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>STAKE CEXT.</h2></Reveal>
+        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>EARN UP TO 15% APR.</p></Reveal>
         <Reveal as="p" delay={240} className="mt-6 max-w-2xl text-sm text-foreground/85">
           Put your CEXT to work. Stake and earn up to 15% annual returns paid in CEXT. Lock tokens for longer periods to multiply your score and maximize rewards. The longer you lock, the more you earn.
         </Reveal>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-8">
+      <section className="mx-auto max-w-7xl px-6 pb-8">
         <Reveal>
           <CtaCard
             eyebrow="JOIN THE WAITLIST"
@@ -127,7 +127,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">4 tiers - many advantages</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>4 tiers - many advantages</h2></Reveal>
         <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
         </p></Reveal>
