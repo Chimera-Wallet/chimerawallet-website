@@ -307,7 +307,7 @@ function Index() {
               { src: poweredByLightning, alt: "Lightning Network" },
               { src: poweredByOutlogic, alt: "Outlogic" },
             ].map((item) => (
-              <img key={item.alt} src={item.src} alt={item.alt} className="relative h-auto w-[130%] max-w-none -m-[15%] md:m-0 md:w-[160%] md:-mx-[30%]" />
+              <img key={item.alt} src={item.src} alt={item.alt} className="relative h-auto w-[115%] max-w-none -m-[7.5%] md:m-0 md:w-[140%] md:-mx-[20%]" />
             ))}
           </div>
         </div>
