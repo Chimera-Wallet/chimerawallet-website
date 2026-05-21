@@ -122,6 +122,7 @@ function TokenPage() {
             title="JOIN CEXT WAITLIST"
             eyebrowColor="text-[var(--brand-green)]"
             href="/#waitlist"
+            className="mx-auto w-[1024px] max-w-full"
           />
         </Reveal>
       </section>
