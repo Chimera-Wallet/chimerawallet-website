@@ -107,7 +107,7 @@ function AppPage() {
             <img
               src={coinsSet}
               alt="Bitcoin, Ethereum and Tether coins"
-              className="mx-auto w-full max-w-[260px] h-auto object-contain -mb-10"
+              className="relative z-10 mx-auto w-full max-w-[420px] h-auto object-contain -mb-32"
             />
           </Reveal>
         </div>
