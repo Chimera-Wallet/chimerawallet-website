@@ -292,6 +292,38 @@ function Index() {
         </div>
       </section>
 
+      {/* POWERED BY */}
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-center text-xs font-medium tracking-widest text-foreground/70">Powered by</p>
+          <div className="mt-8 grid grid-cols-2 gap-5 md:grid-cols-4">
+            {[
+              { src: bitcoinLogo, alt: "Bitcoin", label: "bitcoin" },
+              { src: arkLogo, alt: "Arkade", label: "Arkade" },
+              { src: lightningLogo, alt: "Lightning Network", label: "Lightning\nNetwork" },
+              { src: outlogicLogo, alt: "Outlogic", label: "Outlogic", isImage: true },
+            ].map((item) => (
+              <div
+                key={item.alt}
+                className="flex aspect-square items-center justify-center rounded-2xl bg-[#0A0A1F] shadow-[0_0_60px_rgba(120,130,255,0.18)]"
+              >
+                <div className="flex items-center gap-3 px-4">
+                  <img src={item.src} alt={item.alt} className="h-10 w-auto md:h-12 object-contain" />
+                  {item.label && !item.isImage && (
+                    <span
+                      className="whitespace-pre-line text-left text-lg md:text-xl font-semibold text-white"
+                      style={{ fontFamily: '"Titillium Web", sans-serif' }}
+                    >
+                      {item.label}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CEXT TOKEN PREVIEW */}
       <section className="relative overflow-hidden px-6 py-20">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
