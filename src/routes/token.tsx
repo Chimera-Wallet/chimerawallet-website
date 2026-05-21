@@ -11,7 +11,7 @@ import cextIcon from "@/assets/site/Coins/coin-front-chimera.png";
 import bnbIcon from "@/assets/site/Icons/bnb-bnb-logo.svg";
 import kcsIcon from "@/assets/site/Icons/kucoin-token-kcs-logo.svg";
 import okbIcon from "@/assets/site/Icons/okb-okb-logo.svg";
-import floatingCoins from "@/assets/site/airdrop-coins.png";
+import floatingCoins from "@/assets/site/airdrop.png";
 import pieChart from "@/assets/site/pie_chart.png";
 import tokenOverview from "@/assets/site/token-overview.png";
 import whitepaperPdf from "@/assets/documents/CEXT_Whitepaper_V2.pdf?url";
