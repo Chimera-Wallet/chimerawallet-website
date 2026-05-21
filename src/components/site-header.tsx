@@ -22,7 +22,7 @@ export function SiteHeader() {
            <img src={chimeraLogo} alt="Chimera" className="h-16 w-auto md:h-20" />
         </Link>
 
-        <nav className="hidden md:flex self-end items-center gap-1 rounded-full border border-white/15 bg-white/15 px-2 py-1.5 backdrop-blur mb-2">
+        <nav className="hidden md:flex self-end items-center gap-1 rounded-full border border-white/15 bg-white/15 px-2 py-1.5 backdrop-blur mb-4">
           {navItems.map((n) => (
             <Link
               key={n.to}
