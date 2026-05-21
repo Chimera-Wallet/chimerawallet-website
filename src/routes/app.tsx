@@ -210,7 +210,12 @@ function Tile({
   return (
     <Card padding="p-8" className="flex h-full min-h-[260px] flex-col justify-end">
       <img src={icon} alt="" className="h-10 w-10 object-contain" />
-      <h3 className="display mt-6 text-2xl">{title}</h3>
+      <h3
+        className="mt-6 text-2xl font-bold uppercase"
+        style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif', letterSpacing: '0.005em' }}
+      >
+        {title}
+      </h3>
       <p className="mt-4 text-sm text-foreground/80">{body}</p>
     </Card>
   );
