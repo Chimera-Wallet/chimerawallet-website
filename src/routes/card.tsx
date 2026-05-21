@@ -131,8 +131,8 @@ function CardPage() {
       </Section>
 
       <Section size="lg">
-        <Reveal><h2 className="display text-3xl md:text-4xl">THREE BENEFITS</h2></Reveal>
-        <Reveal delay={120}><p className="display text-2xl text-foreground/80">THAT DON'T EXPIRE:</p></Reveal>
+        <Reveal><h2 className="text-3xl font-bold uppercase tracking-wide md:text-4xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>THREE BENEFITS</h2></Reveal>
+        <Reveal delay={120}><p className="text-2xl font-bold uppercase tracking-wide text-foreground/80" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>THAT DON'T EXPIRE:</p></Reveal>
 
         <div className="mt-10 space-y-4">
           <Reveal><BenefitRow
