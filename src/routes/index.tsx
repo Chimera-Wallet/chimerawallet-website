@@ -9,7 +9,6 @@ import wallet1 from "@/assets/site/wallet-1.png";
 import wallet2 from "@/assets/site/wallet-2.png";
 import chimeraCard from "@/assets/site/chimera-card.png";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
-import bitcoinPoweredBy from "@/assets/site/bitcoin-poweredby.png";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
 import arkLogo from "@/assets/site/arkade-logo.svg";
 import outlogicLogo from "@/assets/site/Outlogic_LOGO.png";
@@ -299,7 +298,7 @@ function Index() {
           <p className="text-center text-xs font-medium tracking-widest text-foreground/70">Powered by</p>
           <div className="mt-6 grid grid-cols-2 gap-6 md:grid-cols-4 max-w-5xl mx-auto">
             {[
-              { src: bitcoinPoweredBy, alt: "Bitcoin", label: "", isImage: true },
+              { src: bitcoinLogo, alt: "Bitcoin", label: "bitcoin" },
               { src: arkLogo, alt: "Arkade", label: "Arkade" },
               { src: lightningLogo, alt: "Lightning Network", label: "Lightning\nNetwork" },
               { src: outlogicLogo, alt: "Outlogic", label: "Outlogic", isImage: true },
