@@ -9,6 +9,7 @@ import wallet1 from "@/assets/site/wallet-1.png";
 import wallet2 from "@/assets/site/wallet-2.png";
 import chimeraCard from "@/assets/site/chimera-card.png";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
+import bitcoinPoweredBy from "@/assets/site/bitcoin-poweredby.png";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
 import arkLogo from "@/assets/site/arkade-logo.svg";
 import outlogicLogo from "@/assets/site/Outlogic_LOGO.png";
