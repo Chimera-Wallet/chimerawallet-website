@@ -212,11 +212,11 @@ function CardPage() {
                 href="https://app.chimerawallet.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="surface-glow mt-12 flex items-center justify-between px-6 py-5 transition-colors hover:border-white/30"
+                className="surface-glow mt-8 flex w-full items-center justify-between px-6 py-5 transition-colors hover:border-white/30"
               >
-                <div>
+                <div className="w-full">
                   <Eyebrow>WORKS ON ANY DEVICE</Eyebrow>
-                  <div className="display mt-1 text-xl">OPEN CHIMERA</div>
+                  <div className="mt-1 text-xl font-bold uppercase tracking-wide" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>OPEN CHIMERA</div>
                 </div>
                 <span className="text-xl">↗</span>
               </a>
