@@ -249,7 +249,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>WHAT'S NEXT?</h2></Reveal>
         <div className="relative mx-auto mt-12 max-w-3xl">
           {/* vertical spine */}
           <div
@@ -283,7 +283,7 @@ function TokenPage() {
                   >
                     <div className="surface-card inline-block w-full p-5 text-left">
                       <div className="eyebrow">{d}</div>
-                      <div className="display mt-2 text-lg">{t}</div>
+                      <div className="display mt-2 text-lg" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>{t}</div>
                       {b && <p className="mt-2 text-xs text-muted-foreground">{b}</p>}
                     </div>
                   </div>
