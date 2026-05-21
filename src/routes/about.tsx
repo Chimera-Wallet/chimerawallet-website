@@ -28,7 +28,7 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <main>
-      <section className="mx-auto max-w-5xl px-6 pt-16 pb-12 text-center">
+      <section className="mx-auto max-w-7xl px-6 pt-16 pb-12 text-center">
         <Reveal delay={0}>
           <p className="hero-eyebrow text-[var(--brand-green)]">ABOUT</p>
         </Reveal>
