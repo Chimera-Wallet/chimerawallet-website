@@ -293,7 +293,7 @@ function Index() {
       </section>
 
       {/* POWERED BY */}
-      <section className="px-6 py-20">
+      <section className="px-6 py-10">
         <div className="mx-auto max-w-6xl">
           <p className="text-center text-xs font-medium tracking-widest text-foreground/70">Powered by</p>
           <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 max-w-3xl mx-auto">
