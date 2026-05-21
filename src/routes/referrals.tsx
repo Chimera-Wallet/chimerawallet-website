@@ -33,7 +33,9 @@ function ReferralsPage() {
         <div className="mx-auto max-w-5xl px-6 pt-16 pb-24 text-center">
           <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">REFERRALS</p></Reveal>
           <Reveal delay={120}><h1 className="hero-title mx-auto mt-6">
-            <span className="whitespace-nowrap">YOUR LINK. THEIR TRADES.</span>
+            YOUR LINK.
+            <br />
+            THEIR TRADE.
             <br />
             YOUR CUT. FOREVER.
             <br />
