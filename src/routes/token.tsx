@@ -304,8 +304,8 @@ function TokenPage() {
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             <img src={floatingCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain" />
             <div>
-              <h3 className="display text-3xl">CEXT</h3>
-              <p className="display text-2xl text-foreground/80">ACTIVITY AIRDROP.</p>
+              <h3 className="display text-3xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>CEXT</h3>
+              <p className="display text-2xl text-foreground/80" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>ACTIVITY AIRDROP.</p>
               <p className="mt-4 text-sm">After TGE, active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
               <a
                 href={whitepaperPdf}
@@ -377,8 +377,8 @@ function TgeCountdownSection() {
   }, []);
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 text-center">
-      <Reveal><h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2></Reveal>
-      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase">27 May 2026</p></Reveal>
+      <Reveal><h2 className="display text-2xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>CEXT TGE</h2></Reveal>
+      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>27 May 2026</p></Reveal>
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
         {t.map(({ v, l }, i) => (
           <Reveal key={l} delay={i * 120}><div className="surface-card">
