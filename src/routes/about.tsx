@@ -56,9 +56,9 @@ function AboutPage() {
       </section>
 
       <Section size="sm">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <Reveal>
-            <Card>
+        <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-3">
+          <Reveal className="h-full">
+            <Card className="h-full">
               <img src={arkLogo} alt="Chimera logo" className="h-10 w-10 object-contain" />
               <div className="mt-6 text-xs tracking-widest text-foreground/80" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>
                 ARKADE MAINNET
@@ -68,8 +68,8 @@ function AboutPage() {
               <div className="display mt-2 text-2xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>OCTOBER 2025</div>
             </Card>
           </Reveal>
-          <Reveal delay={120}>
-            <Card>
+          <Reveal delay={120} className="h-full">
+            <Card className="h-full">
               <div className="display text-2xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>
                 VERIFIABLE
                 <br />
@@ -79,8 +79,8 @@ function AboutPage() {
               <p className="mt-2 text-xs text-muted-foreground">THREE YEARS OF R&amp;D BEFORE PUBLIC MAINNET.</p>
             </Card>
           </Reveal>
-          <Reveal delay={240}>
-            <Card>
+          <Reveal delay={240} className="h-full">
+            <Card className="h-full">
               <div className="text-xs tracking-widest text-foreground/80" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>ARKADE PROTOCOL RAISED</div>
               <div className="display mt-2 text-3xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>$7.7M.</div>
               <p className="mt-2 text-xs text-muted-foreground">
