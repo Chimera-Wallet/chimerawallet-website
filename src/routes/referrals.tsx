@@ -48,19 +48,19 @@ function ReferralsPage() {
       </section>
 
       <Section>
-        <Reveal><h2 className="display text-3xl md:text-5xl">HOW IT WORKS.</h2></Reveal>
+        <Reveal><h2 className="display text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>HOW IT WORKS.</h2></Reveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 items-stretch gap-4 md:grid-cols-4">
           {[
             { n: 1, t: <>RECEIVE YOUR UNIQUE <span className="text-[var(--brand-green)]">REFERRAL CODE</span></>, b: "WHEN YOU JOIN." },
             { n: 2, t: <><span className="text-[var(--brand-green)]">SHARE IT ANYWHERE</span></>, b: "SOCIAL MEDIA, DMS, COMMUNITY GROUPS." },
             { n: 3, t: <>THEY SIGN UP, COMPLETE KYC, START TRADING. <span className="text-[var(--brand-green)]">YOU START EARNING.</span></>, b: "" },
             { n: 4, t: <>IT ACCUMULATES <span className="text-[var(--brand-green)]">FOREVER.</span></>, b: "EVERY TRADE NO CAP. NO EXPIRY." },
           ].map((s, i) => (
-            <Reveal key={s.n} delay={i * 120}>
-              <Card>
+            <Reveal key={s.n} delay={i * 120} className="h-full">
+              <Card className="h-full">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-sm">{s.n}</div>
-                <div className="display mt-6 text-lg">{s.t}</div>
+                <div className="display mt-6 text-lg" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>{s.t}</div>
                 {s.b && <div className="mt-2 text-xs text-muted-foreground">{s.b}</div>}
               </Card>
             </Reveal>
@@ -69,20 +69,20 @@ function ReferralsPage() {
       </Section>
 
       <Section className="text-center">
-        <Reveal><h2 className="display text-3xl md:text-5xl">CEXT MULTIPLIERS</h2></Reveal>
+        <Reveal><h2 className="display text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>CEXT MULTIPLIERS</h2></Reveal>
         <Reveal delay={120}><p className="display mt-2 text-xl text-foreground/80">THE HIGHER YOUR TIER, THE BIGGER YOUR CUT.</p></Reveal>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 items-stretch gap-4 md:grid-cols-4">
           {[
             { n: "BRONZE", m: "1x", img: bronzeBadge },
             { n: "SILVER", m: "1.5x", img: silverBadge },
             { n: "GOLD", m: "2x", img: goldBadge },
             { n: "DIAMOND", m: "3x", img: diamondBadge },
           ].map(({ n, m, img }, i) => (
-            <Reveal key={n} delay={i * 120}>
-              <Card>
+            <Reveal key={n} delay={i * 120} className="h-full">
+              <Card className="h-full">
                 <img src={img} alt={`${n} tier badge`} className="mx-auto h-40 w-40 object-contain" />
-                <h3 className="display mt-4 text-2xl">{n}</h3>
+                <h3 className="display mt-4 text-2xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>{n}</h3>
                 <div className="mt-3 border-t border-white/10 pt-3">
                   <div className="display text-xl">{m}</div>
                   <div className="text-[10px] text-muted-foreground">Referral Bonus</div>
