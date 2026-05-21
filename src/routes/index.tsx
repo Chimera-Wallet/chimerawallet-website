@@ -165,8 +165,8 @@ function Index() {
       {/* SUPERCHARGING BITCOIN */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <p className="display text-center text-sm tracking-[0.3em] text-foreground/80">SUPERCHARGING BITCOIN</p>
-          <h2 className="display mt-4 text-center text-4xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>SUPERCHARGING BITCOIN</h2>
+          <p className="display text-7xl text-center text-sm tracking-[0.3em] text-foreground/80">SUPERCHARGING BITCOIN</p>
+          <h2 className="display text-7xl mt-4 text-center text-4xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>SUPERCHARGING BITCOIN</h2>
           <p className="mt-4 text-center text-sm text-foreground/80">Three layers. One interface. Zero compromise.</p>
 
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:items-stretch">
@@ -192,9 +192,9 @@ function Index() {
 
       {/* ARKADE PROTOCOL — heading */}
       <section className="mx-auto max-w-4xl px-6 pt-20 pb-24">
-        <h2 className="display text-center text-5xl md:text-7xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>ARKADE PROTOCOL</h2>
-        <p className="display mt-6 text-center text-base md:text-lg tracking-widest text-foreground/70" style={{ fontFamily: '"Titillium Web", sans-serif' }}>BACKED BY THE BEST</p>
-        <p className="display mt-3 text-center tracking-[0.3em] text-foreground/60 text-[11px]">
+        <h2 className="display text-7xl text-center text-5xl md:text-7xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>ARKADE PROTOCOL</h2>
+        <p className="display text-7xl mt-6 text-center text-base md:text-lg tracking-widest text-foreground/70" style={{ fontFamily: '"Titillium Web", sans-serif' }}>BACKED BY THE BEST</p>
+        <p className="display text-7xl mt-3 text-center tracking-[0.3em] text-foreground/60 text-[11px]">
           $7.7M raised across two rounds.
         </p>
       </section>
@@ -244,8 +244,8 @@ function Index() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
            <img src={chimeraCard} alt="Chimera card with floating crypto coins" className="w-full h-auto rounded-2xl" />
           <div>
-            <h2 className="display" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 700, fontSize: '85px', lineHeight: 1.1 }}>SELF-CUSTODY</h2>
-            <h2 className="display" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, fontSize: '52px', lineHeight: 1.1 }}>DOESN'T STOP AT THE CHECKOUT.</h2>
+            <h2 className="display text-7xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 700, fontSize: '85px', lineHeight: 1.1 }}>SELF-CUSTODY</h2>
+            <h2 className="display text-7xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, fontSize: '52px', lineHeight: 1.1 }}>DOESN'T STOP AT THE CHECKOUT.</h2>
             <p className="mt-6 text-sm text-foreground/85">
               Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
             </p>
@@ -288,7 +288,7 @@ function Index() {
             />
           </div>
           <div className="relative z-10">
-          <h2 className="display text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>CEXT TOKEN</h2>
+          <h2 className="display text-7xl text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>CEXT TOKEN</h2>
           <p className="mt-6 text-base font-medium">The more you hold, the harder the platform works for you.</p>
           <p className="mt-3 text-sm text-muted-foreground">
             1 Billion fixed supply. Fee discounts up to 50%. Referral multipliers up to 3×. Governance at Diamond
@@ -304,8 +304,8 @@ function Index() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.4fr_1fr]">
           <div>
-            <h2 className="display text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>REFERRALS</h2>
-            <p className="display text-3xl md:text-4xl text-foreground/70">​</p>
+            <h2 className="display text-7xl text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>REFERRALS</h2>
+            <p className="display text-7xl text-3xl md:text-4xl text-foreground/70">​</p>
             <p className="mt-6 text-base font-medium">Share once. Earn on every trade they make. Forever.</p>
             <p className="mt-3 text-sm text-muted-foreground">
               Up to 20% of platform fees. No cap. No expiry. Revenue share, not points.
@@ -337,7 +337,7 @@ function Index() {
       <section id="waitlist" className="mx-auto max-w-3xl px-6 pb-20 scroll-mt-24">
         <div className="surface-card p-8 md:p-10">
           <p className="eyebrow">JOIN THE WAITLIST</p>
-          <h2 className="display mt-2 text-2xl md:text-3xl">JOIN CEXT WAITLIST!</h2>
+          <h2 className="display text-7xl mt-2 text-2xl md:text-3xl">JOIN CEXT WAITLIST!</h2>
           <WaitlistForm />
         </div>
       </section>
