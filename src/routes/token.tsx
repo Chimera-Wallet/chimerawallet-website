@@ -249,7 +249,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>WHAT'S NEXT?</h2></Reveal>
         <div className="relative mx-auto mt-12 max-w-3xl">
           {/* vertical spine */}
           <div
