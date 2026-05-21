@@ -166,7 +166,7 @@ function Index() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
           <p className="display text-center text-sm tracking-[0.3em] text-foreground/80">SUPERCHARGING BITCOIN</p>
-          <h2 className="display mt-4 text-center text-4xl md:text-5xl">SUPERCHARGING BITCOIN</h2>
+          <h2 className="display mt-4 text-center text-4xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>SUPERCHARGING BITCOIN</h2>
           <p className="mt-4 text-center text-sm text-foreground/80">Three layers. One interface. Zero compromise.</p>
 
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:items-stretch">
@@ -192,8 +192,8 @@ function Index() {
 
       {/* ARKADE PROTOCOL — heading */}
       <section className="mx-auto max-w-4xl px-6 pt-20 pb-24">
-        <h2 className="display text-center text-5xl md:text-7xl">ARKADE PROTOCOL</h2>
-        <p className="display mt-6 text-center text-base md:text-lg tracking-widest text-foreground/70">BACKED BY THE BEST</p>
+        <h2 className="display text-center text-5xl md:text-7xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>ARKADE PROTOCOL</h2>
+        <p className="display mt-6 text-center text-base md:text-lg tracking-widest text-foreground/70" style={{ fontFamily: '"Titillium Web", sans-serif' }}>BACKED BY THE BEST</p>
         <p className="display mt-3 text-center tracking-[0.3em] text-foreground/60 text-[11px]">
           $7.7M raised across two rounds.
         </p>
@@ -452,7 +452,7 @@ function LayerCard({
       style={{ background: "#100E1C", boxShadow: "0px 0px 40px 0px rgba(31, 59, 219, 0.5)" }}
     >
       <img src={iconSrc} alt="" className={`${iconClassName} object-contain`} />
-      <h3 className="display mt-3 text-xl text-[var(--brand-green)]">{title}</h3>
+      <h3 className="display mt-3 text-xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", sans-serif' }}>{title}</h3>
       <p className="mt-3 text-sm text-foreground/80">{body}</p>
     </div>
   );
