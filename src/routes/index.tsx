@@ -337,7 +337,7 @@ function Index() {
       <section id="waitlist" className="mx-auto max-w-3xl px-6 pb-20 scroll-mt-24">
         <div className="surface-card p-8 md:p-10">
           <p className="eyebrow">JOIN THE WAITLIST</p>
-          <h2 className="display mt-2 text-2xl md:text-3xl">JOIN CEXT WAITLIST!</h2>
+          <h2 className="display text-7xl mt-2 text-2xl md:text-3xl">JOIN CEXT WAITLIST!</h2>
           <WaitlistForm />
         </div>
       </section>
