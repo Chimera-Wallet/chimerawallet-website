@@ -410,7 +410,7 @@ function FeatureCard({ iconSrc, title, body }: { iconSrc: string; title: string;
   return (
     <div className="rounded-2xl border border-white/10 p-6" style={{ background: "rgba(21, 19, 38, 0.2)" }}>
       <img src={iconSrc} alt="" className="h-10 w-auto object-contain" />
-      <h3 className="display mt-3 text-2xl text-[var(--brand-green)]">{title}</h3>
+      <h3 className="display mt-3 text-2xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", sans-serif' }}>{title}</h3>
       <p className="mt-3 text-sm text-foreground/80">{body}</p>
     </div>
   );
