@@ -50,7 +50,7 @@ function ReferralsPage() {
       <Section>
         <Reveal><h2 className="display text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>HOW IT WORKS.</h2></Reveal>
 
-        <div className="mt-10 grid grid-cols-1 items-stretch gap-4 md:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:grid-cols-4">
           {[
             { n: 1, t: <>RECEIVE YOUR UNIQUE <span className="text-[var(--brand-green)]">REFERRAL CODE</span></>, b: "WHEN YOU JOIN." },
             { n: 2, t: <><span className="text-[var(--brand-green)]">SHARE IT ANYWHERE</span></>, b: "SOCIAL MEDIA, DMS, COMMUNITY GROUPS." },
