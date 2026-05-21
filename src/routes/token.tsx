@@ -159,7 +159,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">Exchange Tokens Comparison</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>Exchange Tokens Comparison</h2></Reveal>
         <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
         </p></Reveal>
@@ -348,7 +348,7 @@ function Card({
   return (
     <div className="surface-card">
       {eyebrow && <div className="eyebrow">{eyebrow}</div>}
-      <h3 className="display mt-2 text-xl text-[var(--brand-green)]">{title}</h3>
+      <h3 className="display mt-2 text-xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>{title}</h3>
       <p className="mt-3 text-sm text-foreground/85">{body}</p>
       {footnote && <p className="mt-3 text-[10px] text-muted-foreground">{footnote}</p>}
     </div>
