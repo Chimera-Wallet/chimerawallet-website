@@ -348,7 +348,7 @@ function Card({
   return (
     <div className="surface-card">
       {eyebrow && <div className="eyebrow">{eyebrow}</div>}
-      <h3 className="display mt-2 text-xl text-[var(--brand-green)]">{title}</h3>
+      <h3 className="display mt-2 text-xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>{title}</h3>
       <p className="mt-3 text-sm text-foreground/85">{body}</p>
       {footnote && <p className="mt-3 text-[10px] text-muted-foreground">{footnote}</p>}
     </div>
