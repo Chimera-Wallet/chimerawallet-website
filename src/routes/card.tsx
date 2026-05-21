@@ -165,7 +165,7 @@ function CardPage() {
       </Section>
 
       <section className="mx-auto max-w-4xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-4xl">SUPPORTED COUNTRIES</h2></Reveal>
+        <Reveal><h2 className="text-center text-3xl font-bold uppercase tracking-wide md:text-4xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>SUPPORTED COUNTRIES</h2></Reveal>
         <Reveal delay={120}><p className="mt-4 text-center text-sm text-foreground/85">
           Chimera Card works anywhere Visa is accepted. Residents of the following countries can apply:
         </p></Reveal>
@@ -185,7 +185,7 @@ function CardPage() {
         style={{ background: "linear-gradient(180deg, transparent 0%, var(--brand-blue) 100%)" }}
       >
         <div className="mx-auto max-w-3xl px-6">
-          <Reveal><h2 className="display text-center text-4xl md:text-5xl">FAQ</h2></Reveal>
+          <Reveal><h2 className="text-center text-4xl font-bold uppercase tracking-wide md:text-5xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>FAQ</h2></Reveal>
           <div className="mt-10 space-y-3">
             <Accordion type="multiple" className="space-y-3">
               <Reveal><Faq value="faq-1" q="How do I apply for a Chimera Card?">
