@@ -300,7 +300,7 @@ function Index() {
       <section className="px-6 py-10">
         <div className="mx-auto max-w-6xl">
           <p className="text-center text-xs font-medium tracking-widest text-foreground/70">Powered by</p>
-          <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 max-w-5xl mx-auto">
+          <div className="mt-6 grid grid-cols-2 gap-2 md:grid-cols-4 max-w-6xl mx-auto">
             {[
               { src: poweredByBitcoin, alt: "Bitcoin" },
               { src: poweredByArkade, alt: "Arkade" },
