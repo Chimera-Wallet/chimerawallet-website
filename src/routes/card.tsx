@@ -205,24 +205,26 @@ function CardPage() {
               </Faq></Reveal>
             </Accordion>
           </div>
+        </div>
 
-          {!embed && (
-            <Reveal className="w-screen relative left-1/2 -translate-x-1/2">
+        {!embed && (
+          <div className="mx-auto mt-3 max-w-7xl px-6">
+            <Reveal className="w-full">
               <a
                 href="https://app.chimerawallet.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="surface-glow mt-3 flex w-full items-center justify-between px-6 py-5 transition-colors hover:border-white/30"
+                className="surface-glow relative flex w-full items-center justify-between px-6 py-8 transition-colors hover:border-white/30"
               >
                 <div className="w-full">
                   <Eyebrow>WORKS ON ANY DEVICE</Eyebrow>
                   <div className="mt-1 text-xl font-bold uppercase tracking-wide" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>OPEN CHIMERA</div>
                 </div>
-                <span className="text-xl">↗</span>
+                <span className="absolute right-6 text-xl">↗</span>
               </a>
             </Reveal>
-          )}
-        </div>
+          </div>
+        )}
       </section>
     </main>
   );
