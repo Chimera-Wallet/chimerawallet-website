@@ -33,10 +33,9 @@ function ReferralsPage() {
         <div className="mx-auto max-w-5xl px-6 pt-16 pb-24 text-center">
           <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">REFERRALS</p></Reveal>
           <Reveal delay={120}><h1 className="hero-title mx-auto mt-6">
-            YOUR LINK.<br className="md:hidden" />
-            <span className="hidden md:inline"> </span>
-            THEIR TRADE.
-            <br />
+            <span className="md:whitespace-nowrap">YOUR LINK.<span className="hidden md:inline"> </span><br className="md:hidden" />THEIR TRADE.</span>
+            <br className="hidden md:inline" />
+            <br className="md:hidden" />
             YOUR CUT. FOREVER.
             <br />
             NO CAP. NO EXPIRY.
