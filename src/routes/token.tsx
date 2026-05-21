@@ -283,7 +283,7 @@ function TokenPage() {
                   >
                     <div className="surface-card inline-block w-full p-5 text-left">
                       <div className="eyebrow">{d}</div>
-                      <div className="display mt-2 text-lg">{t}</div>
+                      <div className="display mt-2 text-lg" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>{t}</div>
                       {b && <p className="mt-2 text-xs text-muted-foreground">{b}</p>}
                     </div>
                   </div>
