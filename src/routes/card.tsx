@@ -61,8 +61,8 @@ function CardPage() {
           Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
         </h2></Reveal>
         <Reveal delay={340}>
-          <ReserveForm>
-            <GhostButton type="submit" className="mt-8">RESERVE YOUR CARD</GhostButton>
+          <ReserveForm className="mx-auto block w-full max-w-4xl">
+            <GhostButton type="submit" className="mt-8 w-full">RESERVE YOUR CARD</GhostButton>
           </ReserveForm>
         </Reveal>
         <Reveal delay={460}>
