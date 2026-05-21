@@ -308,7 +308,7 @@ function Index() {
                 className="flex aspect-square items-center justify-center rounded-2xl bg-[#0A0A1F] shadow-[0_0_60px_rgba(120,130,255,0.18)]"
               >
                 <div className="flex items-center gap-2 px-4">
-                  <img src={item.src} alt={item.alt} className="h-12 w-auto md:h-16 object-contain" />
+                  <img src={item.src} alt={item.alt} className="h-16 w-auto md:h-20 object-contain" />
                   {item.label && !item.isImage && (
                     <span
                       className="whitespace-pre-line text-left text-xl md:text-2xl font-semibold text-white"
