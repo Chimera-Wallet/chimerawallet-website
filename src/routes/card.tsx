@@ -214,7 +214,7 @@ function CardPage() {
                 href="https://app.chimerawallet.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cta-card relative flex w-full items-center justify-between px-6 py-8"
+                className="cta-card relative flex w-full items-center justify-between rounded-2xl px-6 py-8"
               >
                 <div className="w-full">
                   <Eyebrow>WORKS ON ANY DEVICE</Eyebrow>
