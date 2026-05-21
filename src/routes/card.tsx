@@ -114,8 +114,8 @@ function CardPage() {
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
           <Reveal><img src={cardCoins} alt="Chimera card with floating coins" className="aspect-[4/3] w-full object-contain" /></Reveal>
           <Reveal delay={120}><div>
-            <h2 className="display text-4xl md:text-5xl">1,000 SPOTS.</h2>
-            <p className="display mt-1 text-2xl text-foreground/80">THAT'S IT.</p>
+            <h2 className="display text-4xl md:text-5xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>1,000 SPOTS.</h2>
+            <p className="display mt-1 text-2xl text-foreground/80" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>THAT'S IT.</p>
             <p className="mt-6 text-sm text-foreground/85">
               Once all 1,000 spots are claimed, standard pricing applies — permanently. No waitlist, no
               retroactive pricing, no exceptions.
