@@ -192,9 +192,9 @@ function Index() {
 
       {/* ARKADE PROTOCOL — heading */}
       <section className="mx-auto max-w-4xl px-6 pt-20 pb-24">
-        <h2 className="display text-center text-5xl md:text-7xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>ARKADE PROTOCOL</h2>
-        <p className="display mt-6 text-center text-base md:text-lg tracking-widest text-foreground/70" style={{ fontFamily: '"Titillium Web", sans-serif' }}>BACKED BY THE BEST</p>
-        <p className="display mt-3 text-center tracking-[0.3em] text-foreground/60 text-[11px]">
+        <h2 className="display text-7xl text-center text-5xl md:text-7xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>ARKADE PROTOCOL</h2>
+        <p className="display text-7xl mt-6 text-center text-base md:text-lg tracking-widest text-foreground/70" style={{ fontFamily: '"Titillium Web", sans-serif' }}>BACKED BY THE BEST</p>
+        <p className="display text-7xl mt-3 text-center tracking-[0.3em] text-foreground/60 text-[11px]">
           $7.7M raised across two rounds.
         </p>
       </section>
