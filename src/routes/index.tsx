@@ -311,7 +311,7 @@ function Index() {
                   <img src={item.src} alt={item.alt} className="h-10 w-auto md:h-12 object-contain" />
                   {item.label && !item.isImage && (
                     <span
-                      className="whitespace-pre-line text-left text-sm md:text-base font-semibold text-white"
+                      className="whitespace-pre-line text-left text-base md:text-lg font-semibold text-white"
                       style={{ fontFamily: '"Titillium Web", sans-serif' }}
                     >
                       {item.label}
