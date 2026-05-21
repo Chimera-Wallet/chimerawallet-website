@@ -89,7 +89,7 @@ function AppPage() {
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2">
           <Reveal><div>
             <p className="text-sm tracking-widest text-foreground/80">CHIMERA WALLET</p>
-            <h2 className="display mt-3 text-3xl md:text-5xl">RUNS IN YOUR BROWSER.</h2>
+            <h2 className="display mt-3 whitespace-nowrap text-3xl md:text-5xl">RUNS IN YOUR BROWSER.</h2>
             <p className="mt-6 text-base font-medium">No gatekeeper can touch it.</p>
             <ul className="mt-6 space-y-3 text-sm text-foreground/85">
               <li>• No download. You open a URL — the wallet is there.</li>
@@ -105,7 +105,7 @@ function AppPage() {
         </div>
 
         <Reveal>
-          <div className="mx-auto mt-12 w-full max-w-5xl">
+          <div className="mx-auto mt-12 w-full">
             <CtaCard
               href="https://app.chimerawallet.com"
               eyebrow="WORKS ON ANY DEVICE"
