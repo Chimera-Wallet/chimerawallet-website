@@ -304,8 +304,8 @@ function Index() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.4fr_1fr]">
           <div>
-            <h2 className="display text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>REFERRALS</h2>
-            <p className="display text-3xl md:text-4xl text-foreground/70">​</p>
+            <h2 className="display text-7xl text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>REFERRALS</h2>
+            <p className="display text-7xl text-3xl md:text-4xl text-foreground/70">​</p>
             <p className="mt-6 text-base font-medium">Share once. Earn on every trade they make. Forever.</p>
             <p className="mt-3 text-sm text-muted-foreground">
               Up to 20% of platform fees. No cap. No expiry. Revenue share, not points.
