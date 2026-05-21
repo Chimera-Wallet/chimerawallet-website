@@ -300,14 +300,14 @@ function Index() {
       <section className="overflow-hidden px-6 py-4">
         <div className="mx-auto max-w-[96rem]">
           <p className="text-center text-xs font-medium tracking-widest text-foreground/70">Powered by</p>
-          <div className="-mt-2 grid grid-cols-2 gap-0 md:-mt-10 md:grid-cols-4 md:gap-0">
+          <div className="-mt-2 grid grid-cols-2 gap-x-2 gap-y-2 md:-mt-10 md:grid-cols-4 md:gap-0">
             {[
               { src: poweredByBitcoin, alt: "Bitcoin" },
               { src: poweredByArkade, alt: "Arkade" },
               { src: poweredByLightning, alt: "Lightning Network" },
               { src: poweredByOutlogic, alt: "Outlogic" },
             ].map((item) => (
-              <img key={item.alt} src={item.src} alt={item.alt} className="relative -my-2 h-auto w-[160%] max-w-none -mx-[30%] md:-my-0" />
+              <img key={item.alt} src={item.src} alt={item.alt} className="relative h-auto w-[130%] max-w-none -m-[15%] md:m-0 md:w-[160%] md:-mx-[30%]" />
             ))}
           </div>
         </div>
