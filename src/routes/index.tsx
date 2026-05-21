@@ -165,8 +165,8 @@ function Index() {
       {/* SUPERCHARGING BITCOIN */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <p className="display text-center text-sm tracking-[0.3em] text-foreground/80">SUPERCHARGING BITCOIN</p>
-          <h2 className="display mt-4 text-center text-4xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>SUPERCHARGING BITCOIN</h2>
+          <p className="display text-7xl text-center text-sm tracking-[0.3em] text-foreground/80">SUPERCHARGING BITCOIN</p>
+          <h2 className="display text-7xl mt-4 text-center text-4xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>SUPERCHARGING BITCOIN</h2>
           <p className="mt-4 text-center text-sm text-foreground/80">Three layers. One interface. Zero compromise.</p>
 
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:items-stretch">
