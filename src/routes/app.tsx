@@ -163,7 +163,7 @@ function AppPage() {
       <Section size="lg" className="text-center">
         <Reveal><img src={arkLogo} alt="Chimera" className="mx-auto h-16 w-auto object-contain" /></Reveal>
         <div className="mx-auto max-w-3xl md:max-w-5xl">
-          <Reveal delay={120}><h2 className="display mt-6 text-3xl md:text-5xl">
+          <Reveal delay={120}><h2 className="display mt-6 text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>
             ARKADE SWAP
             <br />
             AND WRAPPED ASSETS
