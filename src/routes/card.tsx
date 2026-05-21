@@ -95,7 +95,7 @@ function CardPage() {
         <Reveal>
           <ReserveForm className="block w-full">
             <button type="submit" className="block w-full text-left">
-              <Card variant="glow" padding="px-6 py-8" className="relative flex w-full items-center justify-center">
+              <Card variant="glow" padding="px-6 py-8" className="cta-card relative flex w-full items-center justify-center">
                 <div className="w-full text-left">
                   <Eyebrow>SPEND ANYWHERE VISA IS ACCEPTED</Eyebrow>
                   <div className="display mt-1 text-xl">RESERVE YOUR CARD</div>
@@ -214,7 +214,7 @@ function CardPage() {
                 href="https://app.chimerawallet.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="surface-glow relative flex w-full items-center justify-between px-6 py-8 transition-colors hover:border-white/30"
+                className="cta-card relative flex w-full items-center justify-between px-6 py-8"
               >
                 <div className="w-full">
                   <Eyebrow>WORKS ON ANY DEVICE</Eyebrow>
