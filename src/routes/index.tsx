@@ -299,7 +299,7 @@ function Index() {
           <p className="text-center text-xs font-medium tracking-widest text-foreground/70">Powered by</p>
           <div className="mt-6 grid grid-cols-2 gap-6 md:grid-cols-4 max-w-5xl mx-auto">
             {[
-              { src: bitcoinLogo, alt: "Bitcoin", label: "bitcoin" },
+              { src: bitcoinPoweredBy, alt: "Bitcoin", label: "", isImage: true },
               { src: arkLogo, alt: "Arkade", label: "Arkade" },
               { src: lightningLogo, alt: "Lightning Network", label: "Lightning\nNetwork" },
               { src: outlogicLogo, alt: "Outlogic", label: "Outlogic", isImage: true },
