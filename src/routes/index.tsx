@@ -244,7 +244,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
            <img src={chimeraCard} alt="Chimera card with floating crypto coins" className="w-full h-auto rounded-2xl" />
           <div>
-            <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY DOESN'T STOP AT THE CHECKOUT.</h2>
+            <h2 className="display text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>SELF-CUSTODY DOESN'T STOP AT THE CHECKOUT.</h2>
             <p className="mt-6 text-sm text-foreground/85">
               Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
             </p>
@@ -287,7 +287,7 @@ function Index() {
             />
           </div>
           <div className="relative z-10">
-          <h2 className="display text-3xl md:text-4xl">CEXT TOKEN</h2>
+          <h2 className="display text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>CEXT TOKEN</h2>
           <p className="mt-6 text-base font-medium">The more you hold, the harder the platform works for you.</p>
           <p className="mt-3 text-sm text-muted-foreground">
             1 Billion fixed supply. Fee discounts up to 50%. Referral multipliers up to 3×. Governance at Diamond
@@ -303,7 +303,7 @@ function Index() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.4fr_1fr]">
           <div>
-            <h2 className="display text-3xl md:text-4xl">REFERRALS</h2>
+            <h2 className="display text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", sans-serif' }}>REFERRALS</h2>
             <p className="display text-3xl md:text-4xl text-foreground/70">​</p>
             <p className="mt-6 text-base font-medium">Share once. Earn on every trade they make. Forever.</p>
             <p className="mt-3 text-sm text-muted-foreground">
