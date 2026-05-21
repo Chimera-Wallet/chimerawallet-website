@@ -15,6 +15,7 @@ import iconPaperplane from "@/assets/site/Icons/icon_Paperplane.svg";
 import iconFaceID from "@/assets/site/Icons/icon_FaceID.svg";
 import iconCard from "@/assets/site/Icons/icon_Card.svg";
  import cardSwap from "@/assets/site/Coins/Arkade-card-2-3.png";
+import coinsSet from "@/assets/site/coins-set.png";
 
 export const Route = createFileRoute("/app")({
   head: () => ({
@@ -102,6 +103,13 @@ function AppPage() {
               Architecture.
             </p>
           </div></Reveal>
+          <Reveal delay={120}>
+            <img
+              src={coinsSet}
+              alt="Bitcoin, Ethereum and Tether coins"
+              className="mx-auto w-full max-w-sm h-auto object-contain"
+            />
+          </Reveal>
         </div>
 
         <Reveal>
