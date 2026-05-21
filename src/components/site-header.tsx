@@ -17,12 +17,12 @@ export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 w-full bg-transparent">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-6 py-4">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-3 px-6 py-4">
         <Link to="/" className="flex items-center">
            <img src={chimeraLogo} alt="Chimera" className="h-16 w-auto md:h-20" />
         </Link>
 
-        <nav className="hidden md:flex self-end items-center gap-1 rounded-full border border-white/15 bg-white/15 px-2 py-1.5 backdrop-blur mb-4">
+        <nav className="hidden md:absolute md:left-1/2 md:flex md:-translate-x-1/2 self-end items-center gap-1 rounded-full border border-white/15 bg-white/15 px-2 py-1.5 backdrop-blur mb-4">
           {navItems.map((n) => (
             <Link
               key={n.to}
