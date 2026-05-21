@@ -296,7 +296,7 @@ function Index() {
       <section className="px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-center text-xs font-medium tracking-widest text-foreground/70">Powered by</p>
-          <div className="mt-8 grid grid-cols-2 gap-5 md:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 max-w-3xl mx-auto">
             {[
               { src: bitcoinLogo, alt: "Bitcoin", label: "bitcoin" },
               { src: arkLogo, alt: "Arkade", label: "Arkade" },
@@ -305,13 +305,13 @@ function Index() {
             ].map((item) => (
               <div
                 key={item.alt}
-                className="flex aspect-square items-center justify-center rounded-2xl bg-[#0A0A1F] shadow-[0_0_60px_rgba(120,130,255,0.18)]"
+                className="flex items-center justify-center rounded-2xl bg-[#0A0A1F] shadow-[0_0_60px_rgba(120,130,255,0.18)] h-28 md:h-32"
               >
-                <div className="flex items-center gap-3 px-4">
-                  <img src={item.src} alt={item.alt} className="h-10 w-auto md:h-12 object-contain" />
+                <div className="flex items-center gap-2 px-3">
+                  <img src={item.src} alt={item.alt} className="h-7 w-auto md:h-8 object-contain" />
                   {item.label && !item.isImage && (
                     <span
-                      className="whitespace-pre-line text-left text-lg md:text-xl font-semibold text-white"
+                      className="whitespace-pre-line text-left text-sm md:text-base font-semibold text-white"
                       style={{ fontFamily: '"Titillium Web", sans-serif' }}
                     >
                       {item.label}
