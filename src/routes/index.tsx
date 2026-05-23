@@ -351,7 +351,7 @@ function Index() {
               1 Billion fixed supply. Fee discounts up to 50%. Referral multipliers up to 3×. Governance at Diamond
               tier. Zero inflation. Classified as a utility token under the Swiss regulation.
             </p>
-            <p className="mt-3 text-sm text-[var(--brand-green)] font-semibold">TGE: 27 May 2026.</p>
+            <p className="mt-3 text-sm text-[var(--brand-green)] font-semibold">TGE: 7 July 2026.</p>
             <CtaCard className="mt-8" title="DISCOVER CEXT" href="/token" />
           </div>
         </div>
@@ -479,7 +479,7 @@ function FeatureCard({ iconSrc, title, body }: { iconSrc: string; title: string;
 }
 
 function TgeCountdown() {
-  const target = Date.UTC(2026, 4, 27, 12, 0, 0);
+  const target = Date.UTC(2026, 6, 7, 12, 0, 0);
   const compute = () => {
     const diff = Math.max(0, target - Date.now());
     const d = Math.floor(diff / 86400000);

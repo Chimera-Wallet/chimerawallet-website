@@ -59,7 +59,7 @@ function TokenPage() {
             <br />
             KNOW FIRST. GOVERN MORE.
           </h1>
-          <h2 className="mt-6 text-base md:text-lg text-foreground/85">TGE: 27 May 2026. Fixed supply. Zero inflation. Four tiers.</h2>
+          <h2 className="mt-6 text-base md:text-lg text-foreground/85">TGE: 7 July 2026. Fixed supply. Zero inflation. Four tiers.</h2>
           <p className="mx-auto mt-4 max-w-3xl text-sm text-muted-foreground">
             Fee discounts up to 50%. Referral multipliers up to 3x. Market intelligence 12-24 hours before public release. Human support at every tier - priority increase as you move up. Swiss issued. 1 Billion tokens. No inflation. No dilution. Utility Token according to Swiss classification.
           </p>
@@ -260,7 +260,7 @@ function TokenPage() {
             ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Chimera Protocol VTXO technology."],
             ["Q2 2026 — Coming", "DEX / CEX Listing", "CEXT listed on centralized and decentralized exchanges."],
             ["2026", "Cross Chain Support", "CEXT bridges to major L1/L2 networks. Multi-chain staking. Cross-chain swaps (coming soon)."],
-            ["Q2 2026: 27 May 2026", "TGE", "CEXT token generation event. Native on Ethereum, bridged to Chimera assets."],
+            ["Q2 2026: 7 July 2026", "TGE", "CEXT token generation event. Native on Ethereum, bridged to Chimera assets."],
             ["Mid 2026 — Coming", "Card Integration", "Chimera Card goes live."],
             ["June 2026", "Wrap", "Wrap assets across supported chains."],
             ["June 2026", "P2P Swaps", "Peer-to-peer swaps directly in-app."],
@@ -357,7 +357,7 @@ function Card({
 }
 
 function TgeCountdownSection() {
-  const target = Date.UTC(2026, 4, 27, 12, 0, 0);
+  const target = Date.UTC(2026, 6, 7, 12, 0, 0);
   const compute = () => {
     const diff = Math.max(0, target - Date.now());
     const d = Math.floor(diff / 86400000);
@@ -379,7 +379,7 @@ function TgeCountdownSection() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 text-center">
       <Reveal><h2 className="display text-2xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>CEXT TGE</h2></Reveal>
-      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>27 May 2026</p></Reveal>
+      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>7 July 2026</p></Reveal>
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
         {t.map(({ v, l }, i) => (
           <Reveal key={l} delay={i * 120}><div className="surface-card">
