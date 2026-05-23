@@ -149,7 +149,10 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: "Funnel Display", "Barlow Condensed", "Oswald", ui-sans-serif, system-ui, sans-serif;
-    /* background dots hidden */
+    background-image: radial-gradient(circle, rgba(255,255,255,0.18) 0.75px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0;
+    background-attachment: fixed;
   }
 
   .display {
@@ -184,6 +187,74 @@
   .cta-card:hover {
     background: linear-gradient(90deg, var(--brand-blue) 0%, var(--brand-blue-bright) 100%);
   }
+
+  /* ---------- Reusable component classes ---------- */
+
+  .surface-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--brand-navy-card);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 40px 0px rgba(31, 59, 219, 0.5);
+    padding: 1.5rem;
+  }
+
+  .surface-glow {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #100E1C;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 40px 0px rgba(31, 59, 219, 0.5);
+    padding: 1.5rem;
+  }
+
+  .surface-glass {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #15132633;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    padding: 1.5rem;
+  }
+
+  .eyebrow {
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--brand-green);
+  }
+
+  .btn-brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--brand-navy);
+    background-color: var(--brand-green);
+    transition: opacity 150ms ease;
+  }
+  .btn-brand:hover { opacity: 0.9; }
+  .btn-brand:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--foreground);
+    transition: background-color 150ms ease;
+  }
+  .btn-ghost:hover { background: rgba(255, 255, 255, 0.1); }
 
   h1 {
     font-family: "Titillium Web", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -221,4 +292,22 @@
     border-radius: var(--radius);
     padding: 1rem;
   }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(3deg); }
+}
+
+@keyframes badge-pop {
+  0% { opacity: 0; transform: scale(0.85); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes badge-pop-y {
+  0% { opacity: 0; transform: translateY(-50%) scale(0.85); }
+  100% { opacity: 1; transform: translateY(-50%) scale(1); }
+}
+@keyframes badge-pop-x {
+  0% { opacity: 0; transform: translateX(-50%) scale(0.85); }
+  100% { opacity: 1; transform: translateX(-50%) scale(1); }
 }
