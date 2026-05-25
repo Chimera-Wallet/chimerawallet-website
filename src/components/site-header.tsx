@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Send } from "lucide-react";
 import chimeraLogo from "@/assets/site/chimera-logo.png";
 
@@ -79,6 +79,10 @@ export function SiteHeader() {
               side="right"
               className="w-72 border-white/10 bg-[var(--brand-navy)] text-foreground"
             >
+              <SheetTitle className="sr-only">Navigation menu</SheetTitle>
+              <SheetDescription className="sr-only">
+                Mobile navigation links and social links for Chimera Wallet.
+              </SheetDescription>
               <div className="mt-8 flex flex-col gap-1">
                 {navItems.map((n) => (
                   <Link
