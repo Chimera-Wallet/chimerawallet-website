@@ -11,7 +11,7 @@ import cextIcon from "@/assets/site/Coins/coin-front-chimera.png";
 import bnbIcon from "@/assets/site/Icons/bnb-bnb-logo.svg";
 import kcsIcon from "@/assets/site/Icons/kucoin-token-kcs-logo.svg";
 import okbIcon from "@/assets/site/Icons/okb-okb-logo.svg";
-import floatingCoins from "@/assets/site/airdrop.png";
+import floatingCoins from "@/assets/site/light-coin-bg.png";
 import pieChart from "@/assets/site/pie_chart.png";
 import tokenOverview from "@/assets/site/token-overview.png";
 import whitepaperPdf from "@/assets/documents/CEXT_Whitepaper_V2.pdf?url";
@@ -302,7 +302,7 @@ function TokenPage() {
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-8">
         <Reveal><div className="rounded-2xl p-10 pb-4">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-            <img src={floatingCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain" />
+              <img src={floatingCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain rounded-2xl" />
             <div>
               <h3 className="display text-3xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>CEXT</h3>
               <p className="display text-2xl text-foreground/80" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>ACTIVITY AIRDROP.</p>
