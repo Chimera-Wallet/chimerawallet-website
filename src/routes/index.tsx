@@ -285,7 +285,7 @@ function Index() {
         style={{ background: "linear-gradient(180deg, var(--brand-blue) 0%, transparent 100%)" }}
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
-          <img src={chimeraCard} alt="Chimera card with floating crypto coins" className="w-full h-auto rounded-2xl" />
+          <img src={chimeraCard} alt="Chimera card with floating crypto coins" className="w-full h-auto rounded-2xl animate-[float_7s_ease-in-out_infinite]" />
           <div>
             <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY DOESN'T STOP AT THE CHECKOUT.</h2>
             <p className="mt-6 text-sm text-foreground/85">
