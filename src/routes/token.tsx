@@ -314,7 +314,7 @@ function TokenPage() {
                 className="btn-brand display mt-6 inline-flex gap-3 px-8 py-4 text-lg md:text-xl shadow-lg transition-transform hover:scale-105"
                 style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}
               >
-                READ THE WHITE PAPER
+                WHITEPAPER
                 <span aria-hidden="true">→</span>
               </a>
             </div>
