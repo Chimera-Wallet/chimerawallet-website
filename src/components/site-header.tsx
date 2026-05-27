@@ -11,6 +11,7 @@ const navItems = [
   { label: "Referrals", to: "/referrals" },
   { label: "About", to: "/about" },
   { label: "News", to: "/news" },
+  { label: "Press Kit", to: "/press-kit" },
 ] as const;
 
 export function SiteHeader() {
