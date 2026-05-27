@@ -260,10 +260,10 @@ function TokenPage() {
             ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Chimera Protocol VTXO technology."],
             ["Q2 2026 — Coming", "DEX / CEX Listing", "CEXT listed on centralized and decentralized exchanges."],
             ["2026", "Cross Chain Support", "CEXT bridges to major L1/L2 networks. Multi-chain staking. Cross-chain swaps (coming soon)."],
-            ["Mid 2026 — Coming", "Card Integration", "Chimera Card goes live."],
             ["June 2026", "Wrap", "Wrap assets across supported chains."],
             ["June 2026", "P2P Swaps", "Peer-to-peer swaps directly in-app."],
             ["7 July 2026", "TGE", "CEXT token generation event. Native on Ethereum, bridged to Chimera assets."],
+            ["July 2026", "Card Integration", "Chimera Card goes live."],
             ["2027", "Decentralised Governance", ""],
             ["2028", "DAO Transition", ""],
           ].map(([d, t, b], i) => {
