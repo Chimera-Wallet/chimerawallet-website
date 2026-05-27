@@ -50,6 +50,11 @@ export function SiteFooter() {
                   News
                 </Link>
               </li>
+              <li>
+                <Link to="/press-kit" className="hover:text-[var(--brand-green)]">
+                  Press Kit
+                </Link>
+              </li>
             </ul>
           </div>
 
