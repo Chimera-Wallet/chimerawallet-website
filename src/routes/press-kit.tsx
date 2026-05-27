@@ -87,9 +87,8 @@ function PressKitPage() {
       <Reveal>
         <div className="mt-16 text-center">
           <BrandButton
-            href="https://chimerawallet.com/wp-content/uploads/2025/12/ChimeraWallet-MediaKit.zip"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/ChimeraWallet-MediaKit.zip"
+            download
             className="px-8 py-4"
           >
             DOWNLOAD MEDIA KIT
