@@ -47,12 +47,12 @@ const COLORS = [
 function PressKitPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 pt-16 pb-24">
-      <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">PRESS KIT</p></Reveal>
-      <Reveal delay={120}><h1 className="hero-title mt-6">WHERE FINANCE MEETS INNOVATION!</h1></Reveal>
-      <Reveal delay={240}><h2 className="mt-4 display text-xl md:text-2xl text-foreground/80">
+      <Reveal delay={0}><p className="hero-eyebrow text-center text-[var(--brand-green)]">PRESS KIT</p></Reveal>
+      <Reveal delay={120}><h1 className="hero-title mt-6 text-center">WHERE FINANCE MEETS INNOVATION!</h1></Reveal>
+      <Reveal delay={240}><h2 className="mt-4 display text-center text-xl md:text-2xl text-foreground/80">
         The Next-Generation Financial Platform Inspired by Myth and Driven by Innovation
       </h2></Reveal>
-      <Reveal delay={340}><p className="mt-6 max-w-3xl text-sm text-foreground/85">
+      <Reveal delay={340}><p className="mt-6 max-w-3xl mx-auto text-center text-sm text-foreground/85">
         The Chimera Wallet logo draws inspiration from the ancient mythological creature, the
         Chimera — a being described by Plato as "many forms grown together in one." In ancient lore,
         the Chimera symbolised strength, resilience, and adaptability, qualities that resonate
