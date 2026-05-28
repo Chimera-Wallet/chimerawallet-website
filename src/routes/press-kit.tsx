@@ -63,8 +63,15 @@ function PressKitPage() {
       </p></Reveal>
 
       <Reveal><h2 className="display mt-16 text-2xl text-[var(--brand-green)]">LOGOS</h2></Reveal>
-      <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {LOGOS.map((src, i) => (
+      <Reveal delay={100}>
+        <img
+          src={banner1}
+          alt="Chimera banner"
+          className="mt-6 w-full rounded-2xl border border-white/10 object-contain"
+        />
+      </Reveal>
+      <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
+        {LOGOS.slice(1).map((src, i) => (
           <Reveal key={src} delay={(i % 4) * 100}>
             <Card className="flex aspect-square items-center justify-center">
               <img src={src} alt="Chimera logo variant" className="max-h-full max-w-full object-contain" />
