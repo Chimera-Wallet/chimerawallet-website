@@ -50,7 +50,7 @@ function TokenPage() {
           <img src={heroCoin2} alt="" className="absolute right-[-2%] top-[4%] w-12 sm:w-20 md:w-32 lg:w-40 animate-[float_8s_ease-in-out_infinite_-2s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
           <img src={heroCoin3} alt="" className="absolute right-[-4%] top-[42%] w-14 sm:w-24 md:w-36 lg:w-44 animate-[float_9s_ease-in-out_infinite_-4s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
           <img src={heroCoin4} alt="" className="absolute left-[6%] bottom-[36%] sm:bottom-[26%] md:bottom-[18%] w-12 sm:w-16 md:w-24 lg:w-28 animate-[float_7.5s_ease-in-out_infinite_-1s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
-          <img src={heroCoin5} alt="" className="absolute right-[14%] bottom-[42%] sm:bottom-[32%] md:bottom-[24%] w-12 sm:w-16 md:w-24 lg:w-32 animate-[float_8.5s_ease-in-out_infinite_-3s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+          <img src={heroCoin5} alt="" className="absolute right-[2%] bottom-[36%] sm:right-[18%] sm:bottom-[24%] md:right-[12%] md:bottom-[18%] w-12 sm:w-16 md:w-24 lg:w-32 animate-[float_8.5s_ease-in-out_infinite_-3s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
         </div>
         <Reveal><div className="relative rounded-3xl border border-white/10 bg-[var(--brand-navy-card)] p-10 text-center opacity-90">
           <p className="hero-eyebrow text-[var(--brand-green)]">HOLD CEXT</p>
@@ -260,10 +260,10 @@ function TokenPage() {
             ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Chimera Protocol VTXO technology."],
             ["Q2 2026 — Coming", "DEX / CEX Listing", "CEXT listed on centralized and decentralized exchanges."],
             ["2026", "Cross Chain Support", "CEXT bridges to major L1/L2 networks. Multi-chain staking. Cross-chain swaps (coming soon)."],
-            ["Mid 2026 — Coming", "Card Integration", "Chimera Card goes live."],
             ["June 2026", "Wrap", "Wrap assets across supported chains."],
             ["June 2026", "P2P Swaps", "Peer-to-peer swaps directly in-app."],
             ["7 July 2026", "TGE", "CEXT token generation event. Native on Ethereum, bridged to Chimera assets."],
+            ["July 2026", "Card Integration", "Chimera Card goes live."],
             ["2027", "Decentralised Governance", ""],
             ["2028", "DAO Transition", ""],
           ].map(([d, t, b], i) => {
@@ -314,7 +314,7 @@ function TokenPage() {
                 className="btn-brand display mt-6 inline-flex gap-3 px-8 py-4 text-lg md:text-xl shadow-lg transition-transform hover:scale-105"
                 style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}
               >
-                READ THE WHITE PAPER
+                WHITEPAPER
                 <span aria-hidden="true">→</span>
               </a>
             </div>

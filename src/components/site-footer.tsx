@@ -50,6 +50,11 @@ export function SiteFooter() {
                   News
                 </Link>
               </li>
+              <li>
+                <Link to="/press-kit" className="hover:text-[var(--brand-green)]">
+                  Press Kit
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -80,9 +85,9 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <p className="mt-10 max-w-5xl text-xs text-muted-foreground leading-relaxed">
-           CEXT, issued by Outlogic SAGL, is a utility token under Swiss regulation. Not security. Not a payment token. Not an investment contract. Staking rewards are not guaranteed. Fiat, card, trading and staking services are provided by third parties - not by Chimera Wallet.
-        </p>
+         <p className="mt-10 max-w-5xl text-xs text-muted-foreground leading-relaxed">
+            CEXT, issued by Outlogic SAGL, is a utility token under Swiss regulation. Not a security. Not a payment token. Not an investment contract. Staking rewards are not guaranteed. Fiat, card, trading and staking services are provided by third parties - not by Chimera Wallet.
+         </p>
 
          <div className="mt-8 border-t border-white/5 pt-6 text-xs text-muted-foreground">
            © 2026 Chimera Software Association - 6900 Lugano Switzerland. All rights reserved. Made with ❤️ in 🇨🇭
