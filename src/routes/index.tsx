@@ -287,7 +287,8 @@ function Index() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
           <img src={chimeraCard} alt="Chimera card with floating crypto coins" className="w-full h-auto rounded-2xl" />
           <div>
-            <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY DOESN'T STOP AT THE CHECKOUT.</h2>
+            <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY</h2>
+            <p className="display mt-1 text-3xl md:text-4xl" style={{ fontWeight: 300 }}>DOESN'T STOP AT THE CHECKOUT.</p>
             <p className="mt-6 text-sm text-foreground/85">
               Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
             </p>

@@ -304,7 +304,8 @@ function TokenPage() {
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             <img src={floatingCoins} alt="Floating CEXT coins" className="w-full max-w-[780px] rounded-2xl object-cover" style={{ aspectRatio: "780 / 490" }} />
             <div>
-              <h2 className="display text-3xl md:text-4xl">CEXT ACTIVITY AIRDROP.</h2>
+              <h2 className="display text-3xl md:text-4xl">CEXT</h2>
+              <p className="display mt-1 text-3xl md:text-4xl" style={{ fontWeight: 300 }}>ACTIVITY AIRDROP.</p>
               <p className="mt-6 text-sm text-foreground/85">After TGE, active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
               <a
                 href={whitepaperPdf}
