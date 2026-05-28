@@ -311,11 +311,14 @@ function TokenPage() {
                 href={whitepaperPdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-brand display mt-6 inline-flex gap-3 px-8 py-4 text-lg md:text-xl shadow-lg transition-transform hover:scale-105"
-                style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}
+                className="mt-6 inline-flex items-center justify-center rounded-full px-6 py-3 text-xs font-bold uppercase tracking-[0.15em] transition-opacity duration-150 hover:opacity-80"
+                style={{
+                  color: "var(--brand-navy)",
+                  backgroundColor: "var(--brand-green)",
+                }}
               >
                 WHITEPAPER
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true" className="ml-2">→</span>
               </a>
             </div>
           </div>
