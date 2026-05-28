@@ -302,7 +302,7 @@ function TokenPage() {
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-8">
         <Reveal><div className="rounded-2xl p-10 pb-4">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-            <img src={floatingCoins} alt="Floating CEXT coins" className="aspect-square w-full rounded-2xl object-contain" />
+            <img src={floatingCoins} alt="Floating CEXT coins" className="w-full max-w-[780px] rounded-2xl object-cover" style={{ aspectRatio: "780 / 490" }} />
             <div>
               <h3 className="display text-3xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>CEXT</h3>
               <p className="display text-2xl text-foreground/80" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>ACTIVITY AIRDROP.</p>
