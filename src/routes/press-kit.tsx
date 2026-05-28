@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/reveal";
-import { Card, BrandButton } from "@/components/ui";
+import { BrandButton } from "@/components/ui";
 import banner1 from "@/assets/site/press-banner1.png";
 
 export const Route = createFileRoute("/press-kit")({
@@ -22,18 +22,6 @@ export const Route = createFileRoute("/press-kit")({
   }),
   component: PressKitPage,
 });
-
-const LOGOS = [
-  banner1,
-  "https://chimerawallet.com/wp-content/uploads/2026/04/Asset-6.svg",
-  "https://chimerawallet.com/wp-content/uploads/2026/04/Asset-5.svg",
-  "https://chimerawallet.com/wp-content/uploads/2026/04/Asset-7.svg",
-  "https://chimerawallet.com/wp-content/uploads/2026/04/LOGO-CHIMERA-white-and-green-1.svg",
-  "https://chimerawallet.com/wp-content/uploads/2026/04/LOGO-CHIMERA-Blue-and-black.svg",
-  "https://chimerawallet.com/wp-content/uploads/2026/04/LOGO-CHIMERA-black-on-white.svg",
-  "https://chimerawallet.com/wp-content/uploads/2026/04/LOGO-CHIMERA-white.svg",
-  "https://chimerawallet.com/wp-content/uploads/2026/04/Chimera_LOGO_line.svg",
-];
 
 const COLORS = [
   { hex: "#9DFFC4", text: "#000627" },
