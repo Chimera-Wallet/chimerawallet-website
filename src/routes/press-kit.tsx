@@ -67,7 +67,7 @@ function PressKitPage() {
         <img
           src={banner1}
           alt="Chimera banner"
-          className="mt-6 w-full rounded-2xl border border-white/10 object-contain"
+          className="mt-6 w-full rounded-2xl object-contain"
         />
       </Reveal>
       <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
