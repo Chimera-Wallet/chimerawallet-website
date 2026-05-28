@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/reveal";
 import { Card, BrandButton } from "@/components/ui";
+import banner1 from "@/assets/site/press-banner1.png";
 
 export const Route = createFileRoute("/press-kit")({
   head: () => ({
@@ -23,6 +24,7 @@ export const Route = createFileRoute("/press-kit")({
 });
 
 const LOGOS = [
+  banner1,
   "https://chimerawallet.com/wp-content/uploads/2026/04/Asset-6.svg",
   "https://chimerawallet.com/wp-content/uploads/2026/04/Asset-5.svg",
   "https://chimerawallet.com/wp-content/uploads/2026/04/Asset-7.svg",
