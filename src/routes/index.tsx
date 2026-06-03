@@ -294,15 +294,15 @@ function Index() {
           <div className="relative w-full aspect-[830/663] rounded-2xl overflow-hidden">
             <img src={scBg.url} alt="" className="absolute inset-0 h-full w-full object-cover" />
             {/* BTC top middle — behind card */}
-            <img src={scBtc.url} alt="" className="absolute left-1/2 top-[2%] w-[28%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            <img src={scBtc.url} alt="" className="absolute left-[55%] top-[2%] w-[28%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
             {/* ETH bottom right — behind card */}
-            <img src={scEth.url} alt="" className="absolute right-[2%] bottom-[2%] w-[30%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            <img src={scEth.url} alt="" className="absolute right-[2%] bottom-[2%] w-[30%] opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
             {/* Chimera card dead centre */}
-            <img src={scCard.url} alt="Chimera card" className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            <img src={scCard.url} alt="Chimera card" className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
             {/* USDT overlapping card on middle-left */}
-            <img src={scUsdt.url} alt="" className="absolute left-[6%] top-1/2 w-[18%] -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            <img src={scUsdt.url} alt="" className="absolute left-[6%] top-1/2 w-[18%] -translate-y-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
             {/* Chim bottom — smaller, hint right and lower */}
-            <img src={scChim.url} alt="" className="absolute left-[56%] bottom-[-2%] w-[14%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            <img src={scChim.url} alt="" className="absolute left-[56%] bottom-[-2%] w-[14%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
           </div>
           <div>
             <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY</h2>
