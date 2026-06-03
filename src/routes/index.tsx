@@ -57,9 +57,7 @@ function SelfCustodyVisual() {
   }, []);
   const cls = visible ? "animate-fade-in" : "opacity-0";
   const style = (delay: number): React.CSSProperties =>
-    visible
-      ? { animationDelay: `${delay}s`, animationFillMode: "both", opacity: 0 }
-      : {};
+    visible ? { animationDelay: `${delay}s`, animationFillMode: "both" } : {};
   return (
     <div
       ref={ref}
