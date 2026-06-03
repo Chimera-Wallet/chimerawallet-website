@@ -55,21 +55,22 @@ function SelfCustodyVisual() {
     io.observe(el);
     return () => io.disconnect();
   }, []);
-  const cls = visible ? "animate-fade-in" : "opacity-0";
-  const style = (delay: number): React.CSSProperties =>
-    visible ? { animationDelay: `${delay}s`, animationFillMode: "both" } : {};
+  const revealStyle = (delay: number, opacity = 1): React.CSSProperties & { "--reveal-opacity"?: number } =>
+    visible
+      ? { "--reveal-opacity": opacity, animation: `self-custody-fade-in 0.6s ease-out ${delay}s both` }
+      : { opacity: 0 };
   return (
     <div
       ref={ref}
-      className={`relative w-full aspect-[830/663] rounded-2xl overflow-hidden border border-white/10 backdrop-blur-md ${cls}`}
-      style={style(0)}
+      className="relative w-full aspect-[830/663] rounded-2xl overflow-hidden border border-white/10 backdrop-blur-md"
+      style={revealStyle(0)}
     >
       <img src={scBg.url} alt="" className="absolute inset-0 h-full w-full object-cover" />
-      <img src={scBtc.url} alt="" style={style(0.45)} className={`absolute left-[55%] top-[2%] w-[28%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${cls}`} />
-      <img src={scEth.url} alt="" style={style(1.8)} className={`absolute right-[2%] bottom-[2%] w-[30%] opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${cls}`} />
-      <img src={scCard.url} alt="Chimera card" style={style(0)} className={`absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 opacity-70 brightness-200 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] drop-shadow-[0_0_12px_rgba(255,255,255,0.5)] ${cls}`} />
-      <img src={scUsdt.url} alt="" style={style(0.9)} className={`absolute left-[5%] top-1/2 w-[18%] -translate-y-1/2 opacity-80 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${cls}`} />
-      <img src={scChim.url} alt="" style={style(1.35)} className={`absolute left-[56%] bottom-[5%] w-[10%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${cls}`} />
+      <img src={scCard.url} alt="Chimera card" style={revealStyle(0, 0.7)} className="absolute left-1/2 top-1/2 z-10 w-[58%] -translate-x-1/2 -translate-y-1/2 brightness-200 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] drop-shadow-[0_0_12px_rgba(255,255,255,0.5)]" />
+      <img src={scBtc.url} alt="" style={revealStyle(0.2, 0.9)} className="absolute left-[55%] top-[2%] z-20 w-[28%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scUsdt.url} alt="" style={revealStyle(0.4, 0.8)} className="absolute left-[5%] top-1/2 z-20 w-[18%] -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scChim.url} alt="" style={revealStyle(0.6, 0.9)} className="absolute left-[56%] bottom-[5%] z-20 w-[10%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scEth.url} alt="" style={revealStyle(0.8, 0.9)} className="absolute right-[2%] bottom-[2%] z-20 w-[30%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
     </div>
   );
 }
