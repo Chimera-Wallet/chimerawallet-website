@@ -298,7 +298,7 @@ function Index() {
             {/* ETH bottom right — behind card */}
             <img src={scEth.url} alt="" className="absolute right-[2%] bottom-[2%] w-[30%] opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
             {/* Chimera card dead centre */}
-            <img src={scCard.url} alt="Chimera card" className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 opacity-70 brightness-125 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            <img src={scCard.url} alt="Chimera card" className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 opacity-70 brightness-150 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
             {/* USDT overlapping card on middle-left */}
             <img src={scUsdt.url} alt="" className="absolute left-[6%] top-1/2 w-[18%] -translate-y-1/2 opacity-70 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
             {/* Chim bottom — smaller, hint right and lower */}
