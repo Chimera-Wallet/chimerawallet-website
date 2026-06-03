@@ -291,19 +291,7 @@ function Index() {
         style={{ background: "linear-gradient(180deg, var(--brand-blue) 0%, transparent 100%)" }}
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
-          <div className="relative w-full aspect-[830/663] rounded-2xl overflow-hidden border border-white/10 backdrop-blur-md animate-fade-in [animation-fill-mode:both]">
-            <img src={scBg.url} alt="" className="absolute inset-0 h-full w-full object-cover" />
-            {/* BTC top middle — behind card */}
-            <img src={scBtc.url} alt="" className="absolute left-[55%] top-[2%] w-[28%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] animate-fade-in [animation-fill-mode:both] [animation-delay:0.2s]" />
-            {/* ETH bottom right — behind card */}
-            <img src={scEth.url} alt="" className="absolute right-[2%] bottom-[2%] w-[30%] opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] animate-fade-in [animation-fill-mode:both] [animation-delay:0.8s]" />
-            {/* Chimera card dead centre */}
-            <img src={scCard.url} alt="Chimera card" className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 opacity-70 brightness-200 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] drop-shadow-[0_0_12px_rgba(255,255,255,0.5)] animate-fade-in [animation-fill-mode:both] [animation-delay:0s]" />
-            {/* USDT overlapping card on middle-left */}
-            <img src={scUsdt.url} alt="" className="absolute left-[5%] top-1/2 w-[18%] -translate-y-1/2 opacity-80 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] animate-fade-in [animation-fill-mode:both] [animation-delay:0.4s]" />
-            {/* Chim bottom — smaller, hint right and lower */}
-            <img src={scChim.url} alt="" className="absolute left-[56%] bottom-[5%] w-[10%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] animate-fade-in [animation-fill-mode:both] [animation-delay:0.6s]" />
-          </div>
+          <SelfCustodyVisual />
           <div>
             <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY</h2>
             <p className="display mt-1 text-[18px] md:text-[22px]" style={{ fontWeight: 300 }}>DOESN'T STOP AT THE CHECKOUT.</p>
