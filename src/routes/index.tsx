@@ -298,10 +298,10 @@ function Index() {
             {/* ETH bottom right — behind card */}
             <img src={scEth.url} alt="" className="absolute right-[2%] bottom-[2%] w-[30%] opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
             {/* Chimera card dead centre — glassmorphic frame */}
-            <div className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 aspect-[1.586/1] rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/25 shadow-[0_20px_60px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.4),inset_0_-1px_0_rgba(255,255,255,0.08)] ring-1 ring-white/10">
-              <img src={scCard.url} alt="Chimera card" className="relative h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute -top-1/2 -left-1/4 w-[150%] h-[120%] bg-gradient-to-br from-white/25 via-transparent to-transparent rotate-12 pointer-events-none mix-blend-overlay" />
+            <div className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 aspect-[1.586/1] rounded-2xl overflow-hidden backdrop-blur-2xl bg-white/5 border border-white/30 shadow-[0_20px_60px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.45),inset_0_-1px_0_rgba(255,255,255,0.08)] ring-1 ring-white/10">
+              <img src={scCard.url} alt="Chimera card" className="relative h-full w-full object-cover opacity-60 saturate-200 brightness-125" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute -top-1/2 -left-1/4 w-[150%] h-[120%] bg-gradient-to-br from-white/20 via-transparent to-transparent rotate-12 pointer-events-none mix-blend-overlay" />
             </div>
             {/* USDT overlapping card on middle-left */}
             <img src={scUsdt.url} alt="" className="absolute left-[5%] top-1/2 w-[18%] -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
