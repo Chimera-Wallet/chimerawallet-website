@@ -300,7 +300,7 @@ function Index() {
             {/* Chimera card dead centre */}
             <img src={scCard.url} alt="Chimera card" className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 opacity-70 brightness-200 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] drop-shadow-[0_0_12px_rgba(255,255,255,0.5)]" />
             {/* USDT overlapping card on middle-left */}
-            <img src={scUsdt.url} alt="" className="absolute left-[6%] top-1/2 w-[18%] -translate-y-1/2 opacity-50 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            <img src={scUsdt.url} alt="" className="absolute left-[6%] top-1/2 w-[20%] -translate-y-1/2 -rotate-[18deg] opacity-70 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
             {/* Chim bottom — smaller, hint right and lower */}
             <img src={scChim.url} alt="" className="absolute left-[56%] bottom-[5%] w-[10%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
           </div>
