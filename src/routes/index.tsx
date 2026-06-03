@@ -8,6 +8,12 @@ import heroPhoneRight from "@/assets/site/hero-phone-right.png";
 import wallet1 from "@/assets/site/wallet-1.png";
 import wallet2 from "@/assets/site/wallet-2.png";
 import chimeraCard from "@/assets/site/chimera-card.png";
+import scBg from "@/assets/site/selfcustody/card-bg.png.asset.json";
+import scBtc from "@/assets/site/selfcustody/btc.png.asset.json";
+import scEth from "@/assets/site/selfcustody/eth.png.asset.json";
+import scChim from "@/assets/site/selfcustody/chim.png.asset.json";
+import scCard from "@/assets/site/selfcustody/chimera-card.png.asset.json";
+import scUsdt from "@/assets/site/selfcustody/usdt.png.asset.json";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
 import arkLogo from "@/assets/site/arkade-logo.svg";
@@ -285,7 +291,19 @@ function Index() {
         style={{ background: "linear-gradient(180deg, var(--brand-blue) 0%, transparent 100%)" }}
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
-          <img src={chimeraCard} alt="Chimera card with floating crypto coins" className="w-full h-auto rounded-2xl" />
+          <div className="relative w-full aspect-[830/663] rounded-2xl overflow-hidden">
+            <img src={scBg.url} alt="" className="absolute inset-0 h-full w-full object-cover" />
+            {/* Chimera card dead centre */}
+            <img src={scCard.url} alt="Chimera card" className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            {/* USDT overlapping card on middle-left */}
+            <img src={scUsdt.url} alt="" className="absolute left-[12%] top-1/2 w-[22%] -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            {/* BTC top middle */}
+            <img src={scBtc.url} alt="" className="absolute left-1/2 top-[4%] w-[20%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            {/* ETH bottom right */}
+            <img src={scEth.url} alt="" className="absolute right-[6%] bottom-[6%] w-[20%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            {/* Chim bottom middle */}
+            <img src={scChim.url} alt="" className="absolute left-1/2 bottom-[2%] w-[18%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+          </div>
           <div>
             <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY</h2>
             <p className="display mt-1 text-[18px] md:text-[22px]" style={{ fontWeight: 300 }}>DOESN'T STOP AT THE CHECKOUT.</p>
