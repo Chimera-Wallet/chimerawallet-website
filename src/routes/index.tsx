@@ -35,6 +35,45 @@ import cextCoin2 from "@/assets/site/Coins/coin-2-2.png";
 import cextCoin3 from "@/assets/site/Coins/coin-3-1.png";
 import cextCoin4 from "@/assets/site/Coins/coin-4-2.png";
 
+function SelfCustodyVisual() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            setVisible(true);
+            io.disconnect();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  const anim = (delay: string) =>
+    visible
+      ? `animate-fade-in [animation-fill-mode:both] [animation-delay:${delay}]`
+      : "opacity-0";
+  return (
+    <div
+      ref={ref}
+      className={`relative w-full aspect-[830/663] rounded-2xl overflow-hidden border border-white/10 backdrop-blur-md ${anim("0s")}`}
+    >
+      <img src={scBg.url} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={scBtc.url} alt="" className={`absolute left-[55%] top-[2%] w-[28%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${anim("0.2s")}`} />
+      <img src={scEth.url} alt="" className={`absolute right-[2%] bottom-[2%] w-[30%] opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${anim("0.8s")}`} />
+      <img src={scCard.url} alt="Chimera card" className={`absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 opacity-70 brightness-200 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] drop-shadow-[0_0_12px_rgba(255,255,255,0.5)] ${anim("0s")}`} />
+      <img src={scUsdt.url} alt="" className={`absolute left-[5%] top-1/2 w-[18%] -translate-y-1/2 opacity-80 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${anim("0.4s")}`} />
+      <img src={scChim.url} alt="" className={`absolute left-[56%] bottom-[5%] w-[10%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${anim("0.6s")}`} />
+    </div>
+  );
+}
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
