@@ -302,7 +302,7 @@ function Index() {
             {/* USDT overlapping card on middle-left */}
             <img src={scUsdt.url} alt="" className="absolute left-[6%] top-1/2 w-[18%] -translate-y-1/2 opacity-70 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
             {/* Chim bottom — smaller, hint right and lower */}
-            <img src={scChim.url} alt="" className="absolute left-[56%] bottom-[0%] w-[12%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+            <img src={scChim.url} alt="" className="absolute left-[56%] bottom-[2%] w-[10%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
           </div>
           <div>
             <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY</h2>
