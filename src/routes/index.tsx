@@ -55,23 +55,21 @@ function SelfCustodyVisual() {
     io.observe(el);
     return () => io.disconnect();
   }, []);
-  const base = "animate-fade-in [animation-fill-mode:both]";
-  const d0 = visible ? base : "opacity-0";
-  const d2 = visible ? `${base} [animation-delay:0.2s]` : "opacity-0";
-  const d4 = visible ? `${base} [animation-delay:0.4s]` : "opacity-0";
-  const d6 = visible ? `${base} [animation-delay:0.6s]` : "opacity-0";
-  const d8 = visible ? `${base} [animation-delay:0.8s]` : "opacity-0";
+  const cls = visible ? "animate-fade-in" : "opacity-0";
+  const style = (delay: number): React.CSSProperties =>
+    visible ? { animationDelay: `${delay}s`, animationFillMode: "both" } : {};
   return (
     <div
       ref={ref}
-      className={`relative w-full aspect-[830/663] rounded-2xl overflow-hidden border border-white/10 backdrop-blur-md ${d0}`}
+      className={`relative w-full aspect-[830/663] rounded-2xl overflow-hidden border border-white/10 backdrop-blur-md ${cls}`}
+      style={style(0)}
     >
       <img src={scBg.url} alt="" className="absolute inset-0 h-full w-full object-cover" />
-      <img src={scBtc.url} alt="" className={`absolute left-[55%] top-[2%] w-[28%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${d2}`} />
-      <img src={scEth.url} alt="" className={`absolute right-[2%] bottom-[2%] w-[30%] opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${d8}`} />
-      <img src={scCard.url} alt="Chimera card" className={`absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 opacity-70 brightness-200 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] drop-shadow-[0_0_12px_rgba(255,255,255,0.5)] ${d0}`} />
-      <img src={scUsdt.url} alt="" className={`absolute left-[5%] top-1/2 w-[18%] -translate-y-1/2 opacity-80 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${d4}`} />
-      <img src={scChim.url} alt="" className={`absolute left-[56%] bottom-[5%] w-[10%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${d6}`} />
+      <img src={scBtc.url} alt="" style={style(0.2)} className={`absolute left-[55%] top-[2%] w-[28%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${cls}`} />
+      <img src={scEth.url} alt="" style={style(0.8)} className={`absolute right-[2%] bottom-[2%] w-[30%] opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${cls}`} />
+      <img src={scCard.url} alt="Chimera card" style={style(0)} className={`absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 opacity-70 brightness-200 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] drop-shadow-[0_0_12px_rgba(255,255,255,0.5)] ${cls}`} />
+      <img src={scUsdt.url} alt="" style={style(0.4)} className={`absolute left-[5%] top-1/2 w-[18%] -translate-y-1/2 opacity-80 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${cls}`} />
+      <img src={scChim.url} alt="" style={style(0.6)} className={`absolute left-[56%] bottom-[5%] w-[10%] -translate-x-1/2 opacity-90 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] ${cls}`} />
     </div>
   );
 }
