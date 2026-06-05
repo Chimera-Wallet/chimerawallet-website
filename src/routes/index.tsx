@@ -423,7 +423,7 @@ function Index() {
             <img
               src={chart1Bg}
               alt="Chimera referral preview"
-              className="absolute inset-0 h-full w-full object-contain"
+              className="absolute inset-0 h-full w-full object-contain rounded-2xl"
             />
             {/* Order: Badge_03 (bottom), Badge_02 (middle), Badge_01 (top) */}
             <Reveal className="absolute left-[28%] bottom-[22%] w-[44%] z-10" delay={100}>
