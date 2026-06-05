@@ -156,7 +156,7 @@
   }
 
   .display {
-    font-family: "Funnel Display", "Barlow Condensed", "Oswald", Impact, ui-sans-serif, sans-serif;
+    font-family: "Titillium Web", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     font-weight: 700;
     letter-spacing: 0.005em;
     text-transform: uppercase;
@@ -262,6 +262,10 @@
 
   h2 {
     font-family: "Funnel Display", "Barlow Condensed", "Oswald", ui-sans-serif, sans-serif;
+  }
+
+  h3 {
+    font-family: "Titillium Web", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
 
   p {
