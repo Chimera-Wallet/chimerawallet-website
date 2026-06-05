@@ -419,12 +419,14 @@ function Index() {
             </p>
             <CtaCard className="mt-8" title="GET YOUR REFERRAL CODE" />
           </div>
-          <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden">
-            <img
-              src={chart1Bg}
-              alt="Chimera referral preview"
-              className="absolute inset-0 h-full w-full object-contain rounded-2xl"
-            />
+          <div className="relative aspect-[4/5] w-full">
+            <div className="absolute inset-x-0 top-1/2 aspect-square -translate-y-1/2 rounded-2xl overflow-hidden">
+              <img
+                src={chart1Bg}
+                alt="Chimera referral preview"
+                className="h-full w-full object-cover"
+              />
+            </div>
             {/* Order: Badge_03 (bottom), Badge_02 (middle), Badge_01 (top) */}
             <Reveal className="absolute left-[28%] bottom-[22%] w-[44%] z-10" delay={100}>
               <img src={badge03} alt="" aria-hidden className="w-full" />
