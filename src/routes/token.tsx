@@ -70,8 +70,8 @@ function TokenPage() {
 
         <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-7">
           {[
-            { label: "FEE DISCOUNTS", mid: "UP TO", value: "50%", valueClass: "text-[var(--brand-green)] !text-lg md:!text-xl" },
-            { label: "REFERRAL MULTIPLIERS", mid: "UP TO", value: "3x", valueClass: "text-[var(--brand-green)] !text-lg md:!text-xl" },
+            { label: "FEE DISCOUNTS", mid: "UP TO", value: "50%", valueClass: "text-[var(--brand-green)] !text-xl md:!text-2xl" },
+            { label: "REFERRAL MULTIPLIERS", mid: "UP TO", value: "3x", valueClass: "text-[var(--brand-green)] !text-xl md:!text-2xl" },
             { label: "MARKET INTELLIGENCE", value: "12-24 h", valueClass: "text-[var(--brand-green)]", sub: "BEFORE PUBLIC RELEASE" },
             { label: "HUMAN SUPPORT", labelClass: "text-[var(--brand-green)]", mid: "AT EVERY", value: "TIER", valueClass: "!text-lg md:!text-xl" },
             { label: "PRIORITY INCREASE", labelClass: "text-[var(--brand-green)]", mid: "AS YOU", value: "MOVE UP" },
