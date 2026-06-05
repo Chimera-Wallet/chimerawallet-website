@@ -75,7 +75,7 @@ function TokenPage() {
             { label: "MARKET INTELLIGENCE", value: "12-24 h", valueClass: "text-[var(--brand-green)]", sub: "BEFORE PUBLIC RELEASE" },
             { label: "HUMAN SUPPORT", labelClass: "text-[var(--brand-green)]", mid: "AT EVERY", value: "TIER", valueClass: "!text-lg md:!text-xl" },
             { label: "PRIORITY INCREASE", labelClass: "text-[var(--brand-green)]", mid: "AS YOU", value: "MOVE UP" },
-            { label: "SWISS ISSUED", value: "1 BILLION TOKENS", labelClass: "!text-base md:!text-lg", valueClass: "text-[var(--brand-green)]" },
+            { label: "SWISS ISSUED", value: "1 BILLION TOKENS", labelClass: "!text-sm md:!text-base", valueClass: "text-[var(--brand-green)] !text-sm md:!text-base" },
             { value: "NO", valueClass: "text-[var(--brand-green)] !text-xl md:!text-2xl", lines: [{ text: "INFLATION", lineClass: "!text-foreground" }, { text: "OR" }, { text: "DILUTION", lineClass: "!text-foreground" }] },
           ].map((c, i) => (
             <Reveal key={i} delay={i * 80} className="h-full">
