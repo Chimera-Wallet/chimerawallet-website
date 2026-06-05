@@ -48,7 +48,7 @@ function ReferralsPage() {
       </section>
 
       <Section>
-        <Reveal><h2 className="display text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>HOW IT WORKS.</h2></Reveal>
+        <Reveal><h2 className="display text-3xl md:text-5xl">HOW IT WORKS.</h2></Reveal>
 
         <div className="mt-10 grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:grid-cols-4">
           {[
@@ -69,8 +69,8 @@ function ReferralsPage() {
       </Section>
 
       <Section className="text-center">
-        <Reveal><h2 className="display text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>CEXT MULTIPLIERS</h2></Reveal>
-        <Reveal delay={120}><p className="display mt-2 text-xl text-foreground/80" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>THE HIGHER YOUR TIER, THE BIGGER YOUR CUT.</p></Reveal>
+        <Reveal><h2 className="display text-3xl md:text-5xl">CEXT MULTIPLIERS</h2></Reveal>
+        <Reveal delay={120}><p className="display mt-2 text-xl text-foreground/80">THE HIGHER YOUR TIER, THE BIGGER YOUR CUT.</p></Reveal>
 
         <div className="mt-10 grid grid-cols-2 items-stretch gap-4 md:grid-cols-4">
           {[

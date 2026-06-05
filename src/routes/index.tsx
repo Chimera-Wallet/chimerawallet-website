@@ -113,13 +113,6 @@ function Index() {
               <Reveal delay={0}>
                 <p
                   className="text-center uppercase text-[var(--brand-green)]"
-                  style={{
-                    fontFamily: '"Titillium Web", sans-serif',
-                    fontWeight: 700,
-                    fontSize: "20px",
-                    lineHeight: "100%",
-                    letterSpacing: "2px",
-                  }}
                 >
                   CHIMERAWALLET, FINANCE EVOLVED
                 </p>

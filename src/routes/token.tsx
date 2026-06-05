@@ -110,8 +110,8 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 text-left">
-        <Reveal><h2 className="display text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>STAKE CEXT.</h2></Reveal>
-        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>EARN UP TO 15% APR.</p></Reveal>
+        <Reveal><h2 className="display text-3xl md:text-5xl">STAKE CEXT.</h2></Reveal>
+        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80">EARN UP TO 15% APR.</p></Reveal>
         <Reveal as="p" delay={240} className="mt-6 max-w-2xl text-sm text-foreground/85">
           Put your CEXT to work. Stake and earn up to 15% annual returns paid in CEXT. Lock tokens for longer periods to multiply your score and maximize rewards. The longer you lock, the more you earn.
         </Reveal>
@@ -130,7 +130,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>4 tiers - many advantages</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">4 tiers - many advantages</h2></Reveal>
         <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
         </p></Reveal>
@@ -161,7 +161,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>Exchange Tokens Comparison</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">Exchange Tokens Comparison</h2></Reveal>
         <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
         </p></Reveal>
@@ -251,7 +251,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>WHAT'S NEXT?</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2></Reveal>
         <div className="relative mx-auto mt-12 max-w-3xl">
           {/* vertical spine */}
           <div
@@ -383,8 +383,8 @@ function TgeCountdownSection() {
   }, []);
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 text-center">
-      <Reveal><h2 className="display text-2xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>CEXT TGE</h2></Reveal>
-      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>7 July 2026</p></Reveal>
+      <Reveal><h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2></Reveal>
+      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase">7 July 2026</p></Reveal>
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
         {t.map(({ v, l }, i) => (
           <Reveal key={l} delay={i * 120}><div className="surface-card">
