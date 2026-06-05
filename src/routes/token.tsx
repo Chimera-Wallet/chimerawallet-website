@@ -83,7 +83,7 @@ function TokenPage() {
                 {c.label && (
                   <div
                     className={`font-bold leading-[22px] ${c.labelClass ?? "text-foreground/80"} ${i === 0 ? "" : "text-[9px] font-semibold tracking-widest leading-tight"}`}
-                    style={i === 0 ? { fontFamily: '"Titillium Web", sans-serif', fontWeight: 700, fontSize: "16px", letterSpacing: "1px" } : undefined}
+                    style={i === 0 ? { fontFamily: '"Titillium Web", sans-serif', fontWeight: 700, fontSize: "16px", letterSpacing: "1px", width: "148px", height: "22px" } : undefined}
                   >
                     {c.label}
                   </div>
