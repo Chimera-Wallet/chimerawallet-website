@@ -44,7 +44,7 @@ export const Route = createFileRoute("/token")({
 function TokenPage() {
   return (
     <main>
-      <section className="relative mx-auto max-w-7xl overflow-hidden px-6 pt-16 pb-10">
+      <section className="relative mx-auto max-w-7xl px-6 pt-16 pb-10">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10">
           <img src={heroCoin1} alt="" className="absolute left-[1%] top-[8%] w-16 sm:w-24 md:w-44 lg:w-56 animate-[float_7s_ease-in-out_infinite] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
           <img src={heroCoin2} alt="" className="absolute right-[-2%] top-[4%] w-12 sm:w-20 md:w-32 lg:w-40 animate-[float_8s_ease-in-out_infinite_-2s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
