@@ -76,13 +76,16 @@ function TokenPage() {
             { label: "HUMAN SUPPORT", labelClass: "text-[var(--brand-green)]", mid: "AT EVERY", value: "TIER", valueClass: "!text-lg md:!text-xl" },
             { label: "PRIORITY INCREASE", labelClass: "text-[var(--brand-green)]", mid: "AS YOU", value: "MOVE UP" },
             { label: "SWISS ISSUED", value: "1 BILLION TOKENS", labelClass: "!text-base md:!text-lg", valueClass: "text-[var(--brand-green)]" },
-            { value: "NO", valueClass: "text-[var(--brand-green)] !text-lg md:!text-xl", mid: "INFLATION OR DILUTION" },
+            { value: "NO", valueClass: "text-[var(--brand-green)] !text-lg md:!text-xl", lines: ["INFLATION", "OR", "DILUTION"] },
           ].map((c, i) => (
             <Reveal key={i} delay={i * 80} className="h-full">
               <div className="surface-card h-full !rounded-xl !p-3 text-center flex flex-col justify-center gap-1">
                 {c.label && <div className={`text-[9px] font-semibold tracking-widest leading-tight ${c.labelClass ?? "text-foreground/80"}`}>{c.label}</div>}
                 {c.mid && <div className="text-[9px] tracking-widest text-foreground/70 leading-tight">{c.mid}</div>}
                 <div className={`display text-base md:text-lg leading-tight break-words ${c.valueClass ?? ""}`}>{c.value}</div>
+                {c.lines?.map((line, li) => (
+                  <div key={li} className="text-[9px] tracking-widest text-foreground/70 leading-tight">{line}</div>
+                ))}
                 {c.sub && <div className="text-[9px] tracking-widest text-foreground/70 leading-tight">{c.sub}</div>}
               </div>
             </Reveal>
