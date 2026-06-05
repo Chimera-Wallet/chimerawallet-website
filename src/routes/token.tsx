@@ -70,13 +70,13 @@ function TokenPage() {
 
         <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-7">
           {[
-            { value: "NO", valueClass: "text-[var(--brand-green)] !text-lg md:!text-xl", mid: "INFLATION OR DILUTION" },
             { label: "FEE DISCOUNTS", mid: "UP TO", value: "50%", valueClass: "text-[var(--brand-green)] !text-lg md:!text-xl" },
             { label: "REFERRAL MULTIPLIERS", mid: "UP TO", value: "3x", valueClass: "text-[var(--brand-green)] !text-lg md:!text-xl" },
             { label: "MARKET INTELLIGENCE", value: "12-24 h", valueClass: "text-[var(--brand-green)]", sub: "BEFORE PUBLIC RELEASE" },
             { label: "HUMAN SUPPORT", labelClass: "text-[var(--brand-green)]", mid: "AT EVERY", value: "TIER", valueClass: "!text-lg md:!text-xl" },
             { label: "PRIORITY INCREASE", labelClass: "text-[var(--brand-green)]", mid: "AS YOU", value: "MOVE UP" },
             { label: "SWISS ISSUED", value: "1 BILLION TOKENS", labelClass: "!text-base md:!text-lg", valueClass: "text-[var(--brand-green)]" },
+            { value: "NO", valueClass: "text-[var(--brand-green)] !text-lg md:!text-xl", mid: "INFLATION OR DILUTION" },
           ].map((c, i) => (
             <Reveal key={i} delay={i * 80} className="h-full">
               <div className="surface-card h-full !rounded-xl !p-3 text-center flex flex-col justify-center gap-1">
