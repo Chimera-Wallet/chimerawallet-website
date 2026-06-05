@@ -75,7 +75,7 @@ function TokenPage() {
           </button>
         </div></Reveal>
 
-        <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-7">
+        <div className="mt-6 grid grid-cols-2 gap-1.5 md:grid-cols-7">
           {[
             { src: tokenCard1.url, alt: "Fee discounts up to 50%" },
             { src: tokenCard2.url, alt: "Referral multipliers up to 3x" },
