@@ -20,6 +20,13 @@ import heroCoin2 from "@/assets/site/Coins/Chimera-card-2-3.png";
 import heroCoin3 from "@/assets/site/Coins/Chimera-card-2-4.png";
 import heroCoin4 from "@/assets/site/Coins/Chimera-card-2-5.png";
 import heroCoin5 from "@/assets/site/Coins/Chimera-card-2-3.png";
+import tokenCard1 from "@/assets/site/token-cards/card1.png.asset.json";
+import tokenCard2 from "@/assets/site/token-cards/card2.png.asset.json";
+import tokenCard3 from "@/assets/site/token-cards/card3.png.asset.json";
+import tokenCard4 from "@/assets/site/token-cards/card4.png.asset.json";
+import tokenCard5 from "@/assets/site/token-cards/card5.png.asset.json";
+import tokenCard6 from "@/assets/site/token-cards/card6.png.asset.json";
+import tokenCard7 from "@/assets/site/token-cards/card7.png.asset.json";
 
 export const Route = createFileRoute("/token")({
   head: () => ({
@@ -70,28 +77,16 @@ function TokenPage() {
 
         <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-7">
           {[
-            { label: "FEE DISCOUNTS", mid: "UP TO", value: "50%", valueClass: "text-[var(--brand-green)] !text-xl md:!text-2xl" },
-            { label: "REFERRAL MULTIPLIERS", mid: "UP TO", value: "3x", valueClass: "text-[var(--brand-green)] !text-xl md:!text-2xl" },
-            { label: "MARKET INTELLIGENCE", value: "12-24 h", valueClass: "text-[var(--brand-green)]", sub: "BEFORE PUBLIC RELEASE" },
-            { label: "HUMAN SUPPORT", labelClass: "text-[var(--brand-green)]", mid: "AT EVERY", value: "TIER", valueClass: "!text-lg md:!text-xl" },
-            { label: "PRIORITY INCREASE", labelClass: "text-[var(--brand-green)]", mid: "AS YOU", value: "MOVE UP" },
-            { label: "SWISS ISSUED", value: "1 BILLION TOKENS", labelClass: "!text-sm md:!text-base", valueClass: "text-[var(--brand-green)] !text-sm md:!text-base" },
-            { value: "NO", valueClass: "text-[var(--brand-green)] !text-xl md:!text-2xl", lines: [{ text: "INFLATION", lineClass: "!text-foreground" }, { text: "OR" }, { text: "DILUTION", lineClass: "!text-foreground" }] },
+            { src: tokenCard1.url, alt: "Fee discounts up to 50%" },
+            { src: tokenCard2.url, alt: "Referral multipliers up to 3x" },
+            { src: tokenCard3.url, alt: "Market intelligence 12-24h before public release" },
+            { src: tokenCard4.url, alt: "Human support at every tier" },
+            { src: tokenCard5.url, alt: "Priority increase as you move up" },
+            { src: tokenCard6.url, alt: "Swiss issued, 1 billion tokens" },
+            { src: tokenCard7.url, alt: "No inflation or dilution" },
           ].map((c, i) => (
             <Reveal key={i} delay={i * 80} className="h-full">
-              <div className="surface-card h-full !rounded-xl !p-3 text-center flex flex-col justify-center gap-1">
-                {c.label && <div className={`text-[9px] font-semibold tracking-widest leading-tight ${c.labelClass ?? "text-foreground/80"}`}>{c.label}</div>}
-                {c.mid && <div className="text-[9px] tracking-widest text-foreground/70 leading-tight">{c.mid}</div>}
-                <div className={`display text-base md:text-lg leading-tight break-words ${c.valueClass ?? ""}`}>{c.value}</div>
-                {c.lines?.map((line, li) => {
-                  const text = typeof line === "string" ? line : line.text;
-                  const cls = typeof line === "string" ? "" : line.lineClass ?? "";
-                  return (
-                    <div key={li} className={`text-[9px] tracking-widest text-foreground/70 leading-tight ${cls}`}>{text}</div>
-                  );
-                })}
-                {c.sub && <div className="text-[9px] tracking-widest text-foreground/70 leading-tight">{c.sub}</div>}
-              </div>
+              <img src={c.src} alt={c.alt} className="h-full w-full aspect-square object-cover rounded-xl" />
             </Reveal>
           ))}
         </div>
