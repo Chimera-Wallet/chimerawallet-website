@@ -76,7 +76,7 @@ function TokenPage() {
             { label: "HUMAN SUPPORT", labelClass: "text-[var(--brand-green)]", mid: "AT EVERY", value: "TIER", valueClass: "!text-lg md:!text-xl" },
             { label: "PRIORITY INCREASE", labelClass: "text-[var(--brand-green)]", mid: "AS YOU", value: "MOVE UP" },
             { label: "SWISS ISSUED", value: "1 BILLION TOKENS", labelClass: "!text-base md:!text-lg", valueClass: "text-[var(--brand-green)]" },
-            { value: "NO", valueClass: "text-[var(--brand-green)] !text-lg md:!text-xl", mid: "INFLATION OR DILUTION" },
+            { value: "NO", valueClass: "text-[var(--brand-green)] !text-lg md:!text-xl", lines: ["INFLATION", "OR", "DILUTION"] },
           ].map((c, i) => (
             <Reveal key={i} delay={i * 80} className="h-full">
               <div className="surface-card h-full !rounded-xl !p-3 text-center flex flex-col justify-center gap-1">
