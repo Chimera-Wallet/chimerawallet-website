@@ -427,14 +427,14 @@ function Index() {
             />
             {/* Order: Badge_03 (bottom), Badge_02 (middle), Badge_01 (top) */}
             <Reveal className="absolute left-[28%] bottom-[22%] w-[44%] z-10" delay={100}>
-              <img src={badge03} alt="" aria-hidden className="w-full rounded-2xl" />
+              <img src={badge03} alt="" aria-hidden className="w-full" />
             </Reveal>
             <Reveal className="absolute left-[18%] top-[20%] w-[44%] z-20" delay={500}>
-              <img src={badge02} alt="" aria-hidden className="w-full rounded-2xl" />
+              <img src={badge02} alt="" aria-hidden className="w-full" />
             </Reveal>
             <div className="absolute right-[18%] top-0 bottom-0 w-[44%] z-30 flex items-center">
               <Reveal className="w-full" delay={900}>
-                <img src={badge01} alt="" aria-hidden className="w-full rounded-2xl" />
+                <img src={badge01} alt="" aria-hidden className="w-full" />
               </Reveal>
             </div>
           </div>
