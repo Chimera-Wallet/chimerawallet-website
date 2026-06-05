@@ -83,9 +83,13 @@ function TokenPage() {
                 {c.label && <div className={`text-[9px] font-semibold tracking-widest leading-tight ${c.labelClass ?? "text-foreground/80"}`}>{c.label}</div>}
                 {c.mid && <div className="text-[9px] tracking-widest text-foreground/70 leading-tight">{c.mid}</div>}
                 <div className={`display text-base md:text-lg leading-tight break-words ${c.valueClass ?? ""}`}>{c.value}</div>
-                {c.lines?.map((line, li) => (
-                  <div key={li} className="text-[9px] tracking-widest text-foreground/70 leading-tight">{line}</div>
-                ))}
+                {c.lines?.map((line, li) => {
+                  const text = typeof line === "string" ? line : line.text;
+                  const cls = typeof line === "string" ? "" : line.lineClass ?? "";
+                  return (
+                    <div key={li} className={`text-[9px] tracking-widest text-foreground/70 leading-tight ${cls}`}>{text}</div>
+                  );
+                })}
                 {c.sub && <div className="text-[9px] tracking-widest text-foreground/70 leading-tight">{c.sub}</div>}
               </div>
             </Reveal>
