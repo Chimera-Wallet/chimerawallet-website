@@ -80,14 +80,7 @@ function TokenPage() {
           ].map((c, i) => (
             <Reveal key={i} delay={i * 80} className="h-full">
               <div className="surface-card h-full !rounded-xl !p-3 text-center flex flex-col justify-center gap-1">
-                {c.label && (
-                  <div
-                    className={`font-bold leading-[22px] ${c.labelClass ?? "text-foreground/80"} ${i === 0 ? "" : "text-[9px] font-semibold tracking-widest leading-tight"}`}
-                    style={i === 0 ? { fontFamily: '"Titillium Web", sans-serif', fontWeight: 700, fontSize: "16px", letterSpacing: "1px", width: "148px", height: "22px" } : undefined}
-                  >
-                    {c.label}
-                  </div>
-                )}
+                {c.label && <div className={`text-[9px] font-semibold tracking-widest leading-tight ${c.labelClass ?? "text-foreground/80"}`}>{c.label}</div>}
                 {c.mid && <div className="text-[9px] tracking-widest text-foreground/70 leading-tight">{c.mid}</div>}
                 <div className={`display text-base md:text-lg leading-tight break-words ${c.valueClass ?? ""}`}>{c.value}</div>
                 {c.sub && <div className="text-[9px] tracking-widest text-foreground/70 leading-tight">{c.sub}</div>}
