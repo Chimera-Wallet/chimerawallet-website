@@ -116,8 +116,8 @@ function CardPage() {
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
           <Reveal><img src={cardCoins} alt="Chimera card with floating coins" className="aspect-[4/3] w-full object-contain" /></Reveal>
           <Reveal delay={120}><div>
-            <h2 className="text-4xl font-bold uppercase tracking-wide md:text-5xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>1,000 SPOTS.</h2>
-            <p className="mt-1 text-2xl font-bold uppercase tracking-wide text-foreground/80" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>THAT'S IT.</p>
+            <h2 className="text-4xl font-bold uppercase tracking-wide md:text-5xl">1,000 SPOTS.</h2>
+            <p className="mt-1 text-2xl font-bold uppercase tracking-wide text-foreground/80">THAT'S IT.</p>
             <p className="mt-6 text-sm text-foreground/85">
               Once all 1,000 spots are claimed, standard pricing applies — permanently. No waitlist, no
               retroactive pricing, no exceptions.
@@ -133,8 +133,8 @@ function CardPage() {
       </Section>
 
       <Section size="lg">
-        <Reveal><h2 className="text-3xl font-bold uppercase tracking-wide md:text-4xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>THREE BENEFITS</h2></Reveal>
-        <Reveal delay={120}><p className="text-2xl font-bold uppercase tracking-wide text-foreground/80" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>THAT DON'T EXPIRE:</p></Reveal>
+        <Reveal><h2 className="text-3xl font-bold uppercase tracking-wide md:text-4xl">THREE BENEFITS</h2></Reveal>
+        <Reveal delay={120}><p className="text-2xl font-bold uppercase tracking-wide text-foreground/80">THAT DON'T EXPIRE:</p></Reveal>
 
         <div className="mt-10 space-y-4">
           <Reveal><BenefitRow
@@ -167,7 +167,7 @@ function CardPage() {
       </Section>
 
       <section className="mx-auto max-w-4xl px-6 py-16">
-        <Reveal><h2 className="text-center text-3xl font-bold uppercase tracking-wide md:text-4xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>SUPPORTED COUNTRIES</h2></Reveal>
+        <Reveal><h2 className="text-center text-3xl font-bold uppercase tracking-wide md:text-4xl">SUPPORTED COUNTRIES</h2></Reveal>
         <Reveal delay={120}><p className="mt-4 text-center text-sm text-foreground/85">
           Chimera Card works anywhere Visa is accepted. Residents of the following countries can apply:
         </p></Reveal>
@@ -187,7 +187,7 @@ function CardPage() {
         style={{ background: "linear-gradient(180deg, transparent 0%, var(--brand-blue) 100%)" }}
       >
         <div className="mx-auto max-w-3xl px-6">
-          <Reveal><h2 className="text-center text-4xl font-bold uppercase tracking-wide md:text-5xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>FAQ</h2></Reveal>
+          <Reveal><h2 className="text-center text-4xl font-bold uppercase tracking-wide md:text-5xl">FAQ</h2></Reveal>
           <div className="mt-10 space-y-3">
             <Accordion type="multiple" className="space-y-3">
               <Reveal><Faq value="faq-1" q="How do I apply for a Chimera Card?">

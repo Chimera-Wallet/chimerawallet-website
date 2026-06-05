@@ -95,8 +95,8 @@ function AboutPage() {
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
           <Reveal>
             <div>
-              <h2 className="display text-2xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>ALL CODE</h2>
-              <p className="display text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>PUBLIC AND FREE.</p>
+              <h2 className="display text-2xl">ALL CODE</h2>
+              <p className="display text-3xl md:text-4xl">PUBLIC AND FREE.</p>
               <p className="mt-6 text-sm text-foreground/85">
                 Every line of code is public on GitHub.
                 <br />
@@ -134,8 +134,8 @@ function AboutPage() {
           </Reveal>
           <Reveal delay={120}>
             <div>
-              <h2 className="display text-2xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>CHIMERA</h2>
-              <p className="display text-3xl md:text-4xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>WALLET.</p>
+              <h2 className="display text-2xl">CHIMERA</h2>
+              <p className="display text-3xl md:text-4xl">WALLET.</p>
               <p className="mt-6 text-sm">
                 Swiss non-profit association.
                 <br />
@@ -149,10 +149,10 @@ function AboutPage() {
 
       <section className="mx-auto max-w-5xl px-6 py-16 text-center">
         <Reveal>
-          <h2 className="display text-2xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>WHAT WE</h2>
+          <h2 className="display text-2xl">WHAT WE</h2>
         </Reveal>
         <Reveal delay={120}>
-          <p className="display text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>STAND FOR.</p>
+          <p className="display text-3xl md:text-5xl">STAND FOR.</p>
         </Reveal>
       </section>
 
