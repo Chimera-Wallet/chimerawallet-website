@@ -167,7 +167,7 @@ function CardPage() {
       </Section>
 
       <section className="mx-auto max-w-4xl px-6 py-16">
-        <Reveal><h2 className="text-center text-3xl font-bold uppercase tracking-wide md:text-4xl" style={{ fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif' }}>SUPPORTED COUNTRIES</h2></Reveal>
+        <Reveal><h2 className="text-center text-3xl font-bold uppercase tracking-wide md:text-4xl">SUPPORTED COUNTRIES</h2></Reveal>
         <Reveal delay={120}><p className="mt-4 text-center text-sm text-foreground/85">
           Chimera Card works anywhere Visa is accepted. Residents of the following countries can apply:
         </p></Reveal>
