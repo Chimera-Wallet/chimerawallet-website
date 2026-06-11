@@ -133,8 +133,8 @@ function CardPage() {
       </Section>
 
       <Section size="lg">
-        <Reveal><h2 className="text-3xl font-bold uppercase tracking-wide md:text-4xl">THREE BENEFITS</h2></Reveal>
-        <Reveal delay={120}><p className="text-2xl font-bold uppercase tracking-wide text-foreground/80">THAT DON'T EXPIRE:</p></Reveal>
+        <Reveal><h2 className="h1 text-3xl font-bold uppercase tracking-wide md:text-4xl">THREE BENEFITS</h2></Reveal>
+        <Reveal delay={120}><p className="h1 text-2xl font-bold uppercase tracking-wide text-foreground/80">THAT DON'T EXPIRE:</p></Reveal>
 
         <div className="mt-10 space-y-4">
           <Reveal><BenefitRow
