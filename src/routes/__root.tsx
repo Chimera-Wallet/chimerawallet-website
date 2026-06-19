@@ -36,7 +36,7 @@ function RootComponent() {
   const embed = /(?:^|[?&])embed=1(?:&|$)/.test(searchStr ?? "");
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || embed) return;
     const w = window as any;
     w.intercomSettings = {
       api_base: "https://api-iam.intercom.io",

@@ -8,6 +8,12 @@ import heroPhoneRight from "@/assets/site/hero-phone-right.png";
 import wallet1 from "@/assets/site/wallet-1.png";
 import wallet2 from "@/assets/site/wallet-2.png";
 import chimeraCard from "@/assets/site/chimera-card.png";
+import scBg from "@/assets/site/selfcustody/card-bg.png.asset.json";
+import scBtc from "@/assets/site/selfcustody/btc.png.asset.json";
+import scEth from "@/assets/site/selfcustody/eth.png.asset.json";
+import scChim from "@/assets/site/selfcustody/chim.png.asset.json";
+import scCard from "@/assets/site/selfcustody/chimera-card.png.asset.json";
+import scUsdt from "@/assets/site/selfcustody/usdt.png.asset.json";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
 import arkLogo from "@/assets/site/arkade-logo.svg";
@@ -28,6 +34,46 @@ import cextCoin1 from "@/assets/site/Coins/coin-1-1.png";
 import cextCoin2 from "@/assets/site/Coins/coin-2-2.png";
 import cextCoin3 from "@/assets/site/Coins/coin-3-1.png";
 import cextCoin4 from "@/assets/site/Coins/coin-4-2.png";
+
+function SelfCustodyVisual() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            setVisible(true);
+            io.disconnect();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  const revealStyle = (delay: number, opacity = 1): React.CSSProperties & { "--reveal-opacity"?: number } =>
+    visible
+      ? { "--reveal-opacity": opacity, animation: `self-custody-fade-in 0.6s ease-out ${delay}s both` }
+      : { opacity: 0 };
+  return (
+    <div
+      ref={ref}
+      className="relative w-full aspect-[830/663] rounded-2xl overflow-hidden border border-white/10 backdrop-blur-md"
+      style={revealStyle(0)}
+    >
+      <img src={scBg.url} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={scBtc.url} alt="" style={revealStyle(0.2, 0.9)} className="absolute left-[55%] top-[2%] z-10 w-[28%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scEth.url} alt="" style={revealStyle(0.8, 0.9)} className="absolute right-[2%] bottom-[2%] z-10 w-[30%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scCard.url} alt="Chimera card" style={revealStyle(0, 0.85)} className="absolute left-1/2 top-1/2 z-20 w-[58%] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scUsdt.url} alt="" style={revealStyle(0.4, 0.8)} className="absolute left-[5%] top-1/2 z-30 w-[18%] -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scChim.url} alt="" style={revealStyle(0.6, 0.9)} className="absolute left-[56%] bottom-[5%] z-30 w-[10%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+    </div>
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -67,13 +113,6 @@ function Index() {
               <Reveal delay={0}>
                 <p
                   className="text-center uppercase text-[var(--brand-green)]"
-                  style={{
-                    fontFamily: '"Titillium Web", sans-serif',
-                    fontWeight: 700,
-                    fontSize: "20px",
-                    lineHeight: "100%",
-                    letterSpacing: "2px",
-                  }}
                 >
                   CHIMERAWALLET, FINANCE EVOLVED
                 </p>
@@ -285,9 +324,10 @@ function Index() {
         style={{ background: "linear-gradient(180deg, var(--brand-blue) 0%, transparent 100%)" }}
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
-          <img src={chimeraCard} alt="Chimera card with floating crypto coins" className="w-full h-auto rounded-2xl" />
+          <SelfCustodyVisual />
           <div>
-            <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY DOESN'T STOP AT THE CHECKOUT.</h2>
+            <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY</h2>
+            <p className="display mt-1 text-[18px] md:text-[22px]" style={{ fontWeight: 300 }}>DOESN'T STOP AT THE CHECKOUT.</p>
             <p className="mt-6 text-sm text-foreground/85">
               Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
             </p>
@@ -373,11 +413,13 @@ function Index() {
             <CtaCard className="mt-8" title="GET YOUR REFERRAL CODE" />
           </div>
           <div className="relative aspect-[4/5] w-full">
-            <img
-              src={chart1Bg}
-              alt="Chimera referral preview"
-              className="absolute inset-0 h-full w-full object-contain"
-            />
+            <div className="absolute inset-x-0 top-1/2 aspect-square -translate-y-1/2 rounded-2xl overflow-hidden">
+              <img
+                src={chart1Bg}
+                alt="Chimera referral preview"
+                className="h-full w-full object-cover"
+              />
+            </div>
             {/* Order: Badge_03 (bottom), Badge_02 (middle), Badge_01 (top) */}
             <Reveal className="absolute left-[28%] bottom-[22%] w-[44%] z-10" delay={100}>
               <img src={badge03} alt="" aria-hidden className="w-full" />

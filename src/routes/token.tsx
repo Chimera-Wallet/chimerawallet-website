@@ -20,6 +20,13 @@ import heroCoin2 from "@/assets/site/Coins/Chimera-card-2-3.png";
 import heroCoin3 from "@/assets/site/Coins/Chimera-card-2-4.png";
 import heroCoin4 from "@/assets/site/Coins/Chimera-card-2-5.png";
 import heroCoin5 from "@/assets/site/Coins/Chimera-card-2-3.png";
+import tokenCard1 from "@/assets/site/token-cards/card1.png.asset.json";
+import tokenCard2 from "@/assets/site/token-cards/card2.png.asset.json";
+import tokenCard3 from "@/assets/site/token-cards/card3.png.asset.json";
+import tokenCard4 from "@/assets/site/token-cards/card4.png.asset.json";
+import tokenCard5 from "@/assets/site/token-cards/card5.png.asset.json";
+import tokenCard6 from "@/assets/site/token-cards/card6.png.asset.json";
+import tokenCard7 from "@/assets/site/token-cards/card7.png.asset.json";
 
 export const Route = createFileRoute("/token")({
   head: () => ({
@@ -44,13 +51,13 @@ export const Route = createFileRoute("/token")({
 function TokenPage() {
   return (
     <main>
-      <section className="relative mx-auto max-w-7xl px-6 pt-16 pb-10">
+      <section className="relative mx-auto max-w-7xl overflow-hidden px-6 pt-16 pb-10 lg:overflow-visible">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10">
           <img src={heroCoin1} alt="" className="absolute left-[1%] top-[8%] w-16 sm:w-24 md:w-44 lg:w-56 animate-[float_7s_ease-in-out_infinite] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
           <img src={heroCoin2} alt="" className="absolute right-[-2%] top-[4%] w-12 sm:w-20 md:w-32 lg:w-40 animate-[float_8s_ease-in-out_infinite_-2s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
-          <img src={heroCoin3} alt="" className="absolute right-[-4%] top-[42%] w-14 sm:w-24 md:w-36 lg:w-44 animate-[float_9s_ease-in-out_infinite_-4s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
-          <img src={heroCoin4} alt="" className="absolute left-[6%] bottom-[36%] sm:bottom-[26%] md:bottom-[18%] w-12 sm:w-16 md:w-24 lg:w-28 animate-[float_7.5s_ease-in-out_infinite_-1s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
-          <img src={heroCoin5} alt="" className="absolute right-[2%] bottom-[36%] sm:right-[18%] sm:bottom-[24%] md:right-[12%] md:bottom-[18%] w-12 sm:w-16 md:w-24 lg:w-32 animate-[float_8.5s_ease-in-out_infinite_-3s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+          <img src={heroCoin3} alt="" className="absolute right-[-4%] md:right-[-14%] lg:right-[-4%] top-[42%] w-14 sm:w-24 md:w-36 lg:w-44 animate-[float_9s_ease-in-out_infinite_-4s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+          <img src={heroCoin4} alt="" className="absolute left-[6%] bottom-[36%] sm:bottom-[26%] md:bottom-[24%] lg:bottom-[18%] w-12 sm:w-16 md:w-24 lg:w-28 animate-[float_7.5s_ease-in-out_infinite_-1s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+          <img src={heroCoin5} alt="" className="absolute right-[2%] bottom-[36%] sm:right-[18%] sm:bottom-[24%] md:right-[12%] md:bottom-[30%] lg:bottom-[18%] w-12 sm:w-16 md:w-24 lg:w-32 animate-[float_8.5s_ease-in-out_infinite_-3s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
         </div>
         <Reveal><div className="relative rounded-3xl border border-white/10 bg-[var(--brand-navy-card)] p-10 text-center opacity-90">
           <p className="hero-eyebrow text-[var(--brand-green)]">HOLD CEXT</p>
@@ -68,23 +75,18 @@ function TokenPage() {
           </button>
         </div></Reveal>
 
-        <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-7">
+        <div className="mt-6 grid grid-cols-2 gap-1.5 md:grid-cols-7">
           {[
-            { label: "FEE DISCOUNTS", mid: "UP TO", value: "50%", valueClass: "text-[var(--brand-green)]" },
-            { label: "REFERRAL MULTIPLIERS", mid: "UP TO", value: "3x", valueClass: "text-[var(--brand-green)]" },
-            { label: "MARKET INTELLIGENCE", value: "12-24 h", valueClass: "text-[var(--brand-green)]", sub: "BEFORE PUBLIC RELEASE" },
-            { label: "HUMAN SUPPORT", labelClass: "text-[var(--brand-green)]", mid: "AT EVERY", value: "TIER" },
-            { label: "PRIORITY INCREASE", labelClass: "text-[var(--brand-green)]", mid: "AS YOU", value: "MOVE UP" },
-            { label: "SWISS ISSUED", value: "1 BILLION TOKENS" },
-            { value: "NO", valueClass: "text-[var(--brand-green)]", mid: "INFLATION OR", sub: "DILUTION" },
+            { src: tokenCard1.url, alt: "Fee discounts up to 50%" },
+            { src: tokenCard2.url, alt: "Referral multipliers up to 3x" },
+            { src: tokenCard3.url, alt: "Market intelligence 12-24h before public release" },
+            { src: tokenCard4.url, alt: "Human support at every tier" },
+            { src: tokenCard5.url, alt: "Priority increase as you move up" },
+            { src: tokenCard6.url, alt: "Swiss issued, 1 billion tokens" },
+            { src: tokenCard7.url, alt: "No inflation or dilution" },
           ].map((c, i) => (
             <Reveal key={i} delay={i * 80} className="h-full">
-              <div className="surface-card h-full !rounded-xl !p-3 text-center flex flex-col justify-center gap-1">
-                {c.label && <div className={`text-[9px] font-semibold tracking-widest leading-tight ${c.labelClass ?? "text-foreground/80"}`}>{c.label}</div>}
-                {c.mid && <div className="text-[9px] tracking-widest text-foreground/70 leading-tight">{c.mid}</div>}
-                <div className={`display text-base md:text-lg leading-tight break-words ${c.valueClass ?? ""}`}>{c.value}</div>
-                {c.sub && <div className="text-[9px] tracking-widest text-foreground/70 leading-tight">{c.sub}</div>}
-              </div>
+              <img src={c.src} alt={c.alt} className="h-full w-full aspect-square object-cover rounded-xl" />
             </Reveal>
           ))}
         </div>
@@ -108,8 +110,8 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 text-left">
-        <Reveal><h2 className="display text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>STAKE CEXT.</h2></Reveal>
-        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>EARN UP TO 15% APR.</p></Reveal>
+        <Reveal><h2 className="display text-3xl md:text-5xl">STAKE CEXT.</h2></Reveal>
+        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80">EARN UP TO 15% APR.</p></Reveal>
         <Reveal as="p" delay={240} className="mt-6 max-w-2xl text-sm text-foreground/85">
           Put your CEXT to work. Stake and earn up to 15% annual returns paid in CEXT. Lock tokens for longer periods to multiply your score and maximize rewards. The longer you lock, the more you earn.
         </Reveal>
@@ -128,7 +130,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>4 tiers - many advantages</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">4 tiers - many advantages</h2></Reveal>
         <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
         </p></Reveal>
@@ -159,7 +161,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>Exchange Tokens Comparison</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">Exchange Tokens Comparison</h2></Reveal>
         <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
           Learn how you can supercharge your experience with the Chimera Token
         </p></Reveal>
@@ -249,7 +251,7 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>WHAT'S NEXT?</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2></Reveal>
         <div className="relative mx-auto mt-12 max-w-3xl">
           {/* vertical spine */}
           <div
@@ -302,20 +304,23 @@ function TokenPage() {
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-8">
         <Reveal><div className="rounded-2xl p-10 pb-4">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-            <img src={floatingCoins} alt="Floating CEXT coins" className="aspect-square w-full object-contain" />
+            <img src={floatingCoins} alt="Floating CEXT coins" className="w-full max-w-[780px] rounded-2xl object-cover" style={{ aspectRatio: "780 / 490" }} />
             <div>
-              <h3 className="display text-3xl" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>CEXT</h3>
-              <p className="display text-2xl text-foreground/80" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>ACTIVITY AIRDROP.</p>
-              <p className="mt-4 text-sm">After TGE, active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
+              <h2 className="display text-3xl md:text-4xl">CEXT</h2>
+              <p className="display mt-1 text-[18px] md:text-[22px]" style={{ fontWeight: 300 }}>ACTIVITY AIRDROP.</p>
+              <p className="mt-6 text-sm text-foreground/85">After TGE, active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
               <a
                 href={whitepaperPdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-brand display mt-6 inline-flex gap-3 px-8 py-4 text-lg md:text-xl shadow-lg transition-transform hover:scale-105"
-                style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}
+                className="mt-6 inline-flex items-center justify-center rounded-full px-6 py-3 text-xs font-bold uppercase tracking-[0.15em] transition-opacity duration-150 hover:opacity-80"
+                style={{
+                  color: "var(--brand-navy)",
+                  backgroundColor: "var(--brand-green)",
+                }}
               >
                 WHITEPAPER
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true" className="ml-2">→</span>
               </a>
             </div>
           </div>
@@ -378,8 +383,8 @@ function TgeCountdownSection() {
   }, []);
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 text-center">
-      <Reveal><h2 className="display text-2xl text-[var(--brand-green)]" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>CEXT TGE</h2></Reveal>
-      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>7 July 2026</p></Reveal>
+      <Reveal><h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2></Reveal>
+      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase">7 July 2026</p></Reveal>
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
         {t.map(({ v, l }, i) => (
           <Reveal key={l} delay={i * 120}><div className="surface-card">
