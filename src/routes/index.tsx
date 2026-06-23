@@ -8,12 +8,12 @@ import heroPhoneRight from "@/assets/site/hero-phone-right.png";
 import wallet1 from "@/assets/site/wallet-1.png";
 import wallet2 from "@/assets/site/wallet-2.png";
 import chimeraCard from "@/assets/site/chimera-card.png";
-import scBg from "@/assets/site/selfcustody/card-bg.png.asset.json";
-import scBtc from "@/assets/site/selfcustody/btc.png.asset.json";
-import scEth from "@/assets/site/selfcustody/eth.png.asset.json";
-import scChim from "@/assets/site/selfcustody/chim.png.asset.json";
-import scCard from "@/assets/site/selfcustody/chimera-card.png.asset.json";
-import scUsdt from "@/assets/site/selfcustody/usdt.png.asset.json";
+import scBg from "@/assets/site/selfcustody/card-bg.png";
+import scBtc from "@/assets/site/selfcustody/btc.png";
+import scEth from "@/assets/site/selfcustody/eth.png";
+import scChim from "@/assets/site/selfcustody/chim.png";
+import scCard from "@/assets/site/selfcustody/chimera-card.png";
+import scUsdt from "@/assets/site/selfcustody/usdt.png";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
 import arkLogo from "@/assets/site/arkade-logo.svg";
@@ -65,12 +65,12 @@ function SelfCustodyVisual() {
       className="relative w-full aspect-[830/663] rounded-2xl overflow-hidden border border-white/10 backdrop-blur-md"
       style={revealStyle(0)}
     >
-      <img src={scBg.url} alt="" className="absolute inset-0 h-full w-full object-cover" />
-      <img src={scBtc.url} alt="" style={revealStyle(0.2, 0.9)} className="absolute left-[55%] top-[2%] z-10 w-[28%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
-      <img src={scEth.url} alt="" style={revealStyle(0.8, 0.9)} className="absolute right-[2%] bottom-[2%] z-10 w-[30%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
-      <img src={scCard.url} alt="Chimera card" style={revealStyle(0, 0.85)} className="absolute left-1/2 top-1/2 z-20 w-[58%] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
-      <img src={scUsdt.url} alt="" style={revealStyle(0.4, 0.8)} className="absolute left-[5%] top-1/2 z-30 w-[18%] -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
-      <img src={scChim.url} alt="" style={revealStyle(0.6, 0.9)} className="absolute left-[56%] bottom-[5%] z-30 w-[10%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scBg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={scBtc} alt="" style={revealStyle(0.2, 0.9)} className="absolute left-[55%] top-[2%] z-10 w-[28%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scEth} alt="" style={revealStyle(0.8, 0.9)} className="absolute right-[2%] bottom-[2%] z-10 w-[30%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scCard} alt="Chimera card" style={revealStyle(0, 0.85)} className="absolute left-1/2 top-1/2 z-20 w-[58%] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scUsdt} alt="" style={revealStyle(0.4, 0.8)} className="absolute left-[5%] top-1/2 z-30 w-[18%] -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scChim} alt="" style={revealStyle(0.6, 0.9)} className="absolute left-[56%] bottom-[5%] z-30 w-[10%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
     </div>
   );
 }
