@@ -362,7 +362,7 @@ function Card({
 }
 
 function TgeCountdownSection() {
-  const target = Date.UTC(2026, 6, 7, 12, 0, 0);
+  const target = Date.UTC(2026, 8, 8, 12, 0, 0);
   const compute = () => {
     const diff = Math.max(0, target - Date.now());
     const d = Math.floor(diff / 86400000);
