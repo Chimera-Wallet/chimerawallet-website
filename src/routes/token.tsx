@@ -103,7 +103,7 @@ function TokenPage() {
           <Reveal delay={120} className="h-full"><div className="flex h-full flex-col">
             <h3 className="display text-xl">Token overview</h3>
             <div className="mt-4 flex-1 min-h-0">
-              <img src={tokenOverview} alt="Token overview" className="h-full w-full object-contain rounded-2xl" />
+              <img src={tokenOverview} alt="Token overview" className="h-full w-full object-contain" />
             </div>
           </div></Reveal>
         </div>
