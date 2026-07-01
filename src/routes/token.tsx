@@ -20,13 +20,13 @@ import heroCoin2 from "@/assets/site/Coins/Chimera-card-2-3.png";
 import heroCoin3 from "@/assets/site/Coins/Chimera-card-2-4.png";
 import heroCoin4 from "@/assets/site/Coins/Chimera-card-2-5.png";
 import heroCoin5 from "@/assets/site/Coins/Chimera-card-2-3.png";
-import tokenCard1 from "@/assets/site/token-cards/card1.png.asset.json";
-import tokenCard2 from "@/assets/site/token-cards/card2.png.asset.json";
-import tokenCard3 from "@/assets/site/token-cards/card3.png.asset.json";
-import tokenCard4 from "@/assets/site/token-cards/card4.png.asset.json";
-import tokenCard5 from "@/assets/site/token-cards/card5.png.asset.json";
-import tokenCard6 from "@/assets/site/token-cards/card6.png.asset.json";
-import tokenCard7 from "@/assets/site/token-cards/card7.png.asset.json";
+import tokenCard1 from "@/assets/site/token-cards/card1.png";
+import tokenCard2 from "@/assets/site/token-cards/card2.png";
+import tokenCard3 from "@/assets/site/token-cards/card3.png";
+import tokenCard4 from "@/assets/site/token-cards/card4.png";
+import tokenCard5 from "@/assets/site/token-cards/card5.png";
+import tokenCard6 from "@/assets/site/token-cards/card6.png";
+import tokenCard7 from "@/assets/site/token-cards/card7.png";
 
 export const Route = createFileRoute("/token")({
   head: () => ({
@@ -77,13 +77,13 @@ function TokenPage() {
 
         <div className="mt-6 grid grid-cols-2 gap-1.5 md:grid-cols-7">
           {[
-            { src: tokenCard1.url, alt: "Fee discounts up to 50%" },
-            { src: tokenCard2.url, alt: "Referral multipliers up to 3x" },
-            { src: tokenCard3.url, alt: "Market intelligence 12-24h before public release" },
-            { src: tokenCard4.url, alt: "Human support at every tier" },
-            { src: tokenCard5.url, alt: "Priority increase as you move up" },
-            { src: tokenCard6.url, alt: "Swiss issued, 1 billion tokens" },
-            { src: tokenCard7.url, alt: "No inflation or dilution" },
+            { src: tokenCard1, alt: "Fee discounts up to 50%" },
+            { src: tokenCard2, alt: "Referral multipliers up to 3x" },
+            { src: tokenCard3, alt: "Market intelligence 12-24h before public release" },
+            { src: tokenCard4, alt: "Human support at every tier" },
+            { src: tokenCard5, alt: "Priority increase as you move up" },
+            { src: tokenCard6, alt: "Swiss issued, 1 billion tokens" },
+            { src: tokenCard7, alt: "No inflation or dilution" },
           ].map((c, i) => (
             <Reveal key={i} delay={i * 80} className="h-full">
               <img src={c.src} alt={c.alt} className="h-full w-full aspect-square object-cover rounded-xl" />
