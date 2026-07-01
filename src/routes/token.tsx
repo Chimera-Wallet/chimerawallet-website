@@ -66,7 +66,7 @@ function TokenPage() {
             <br />
             KNOW FIRST. GOVERN MORE.
           </h1>
-          <h2 className="mt-6 text-base md:text-lg text-foreground/85">TGE: 7 July 2026. Fixed supply. Zero inflation. Four tiers.</h2>
+          <h2 className="mt-6 text-base md:text-lg text-foreground/85">TGE: 8 September 2026. Fixed supply. Zero inflation. Four tiers.</h2>
           <p className="mx-auto mt-4 max-w-3xl text-sm text-muted-foreground">
             Fee discounts up to 50%. Referral multipliers up to 3x. Market intelligence 12-24 hours before public release. Human support at every tier - priority increase as you move up. Swiss issued. 1 Billion tokens. No inflation. No dilution. Utility Token according to Swiss classification.
           </p>
@@ -264,8 +264,8 @@ function TokenPage() {
             ["2026", "Cross Chain Support", "CEXT bridges to major L1/L2 networks. Multi-chain staking. Cross-chain swaps (coming soon)."],
             ["June 2026", "Wrap", "Wrap assets across supported chains."],
             ["June 2026", "P2P Swaps", "Peer-to-peer swaps directly in-app."],
-            ["7 July 2026", "TGE", "CEXT token generation event. Native on Ethereum, bridged to Chimera assets."],
-            ["July 2026", "Card Integration", "Chimera Card goes live."],
+            ["8 September 2026", "TGE", "CEXT token generation event. Native on Ethereum, bridged to Chimera assets."],
+            ["September 2026", "Card Integration", "Chimera Card goes live."],
             ["2027", "Decentralised Governance", ""],
             ["2028", "DAO Transition", ""],
           ].map(([d, t, b], i) => {
@@ -384,7 +384,7 @@ function TgeCountdownSection() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 text-center">
       <Reveal><h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2></Reveal>
-      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase">7 July 2026</p></Reveal>
+      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase">8th September 2026</p></Reveal>
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
         {t.map(({ v, l }, i) => (
           <Reveal key={l} delay={i * 120}><div className="surface-card">
