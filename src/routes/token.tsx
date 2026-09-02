@@ -252,17 +252,19 @@ function TokenPage() {
             className="absolute left-4 top-2 bottom-2 w-px bg-gradient-to-b from-[var(--brand-green)]/0 via-[var(--brand-green)]/60 to-[var(--brand-green)]/0 md:left-1/2 md:-translate-x-1/2"
           />
           {[
-            ["V0.0.9 — Done", "Onboarding Beta", "Same functionality as the current native app, design aligned with the sketch file as much as possible. Bitcoin only, published on the app.chimerawallet.com URL with staging environment and monitoring tools in place."],
-            ["V0.1 — Done", "Onboarding", "New order management system (RAMP), still Bitcoin only, with the full new design as per the sketch file."],
-            ["V0.2 — Done", "CEXT", "CEXT token page inside the app and CEXT banners."],
-            ["V0.3 — Done", "Mnemonic", "Delegates support, HD wallet, and mnemonic phrase."],
-            ["V1 — Testing / September", "Wrap and Swap", "WRAP integration for deposits and withdrawals. Support for Tether, Ethereum, Tron and Polygon in wallets. Tether buy/sell in RAMP. Integration of ARK p2p swaps in the trade section. Localization in English, French, Spanish, Russian, Japanese and Chinese."],
-            ["V1.1 — October", "Desktop", "App interface and app experience optimized for desktop usage."],
-            ["V2 — October", "Advanced Trading", "Advanced trading mode. Order book and limit orders management."],
-            ["V2.1 — October", "POS", "Point-of-sale integration."],
-            ["V3 — November", "Card", "Card integration live."],
-            ["V4 — December", "TGE", "CEXT staking, CEXT support in RAMP and CEXT buy."],
-          ].map(([d, t, b], i) => {
+            "Onboarding Beta",
+            "Onboarding",
+            "CEXT",
+            "Mnemonic",
+            "Wrap and Swap",
+            "Desktop",
+            "Advanced Trading",
+            "POS",
+            "Card",
+            "TGE",
+            "Decentralised Governance",
+            "DAO transition",
+          ].map((t, i) => {
             const left = i % 2 === 0;
             return (
               <Reveal key={t} delay={80}>
@@ -278,9 +280,7 @@ function TokenPage() {
                     }
                   >
                     <div className="surface-card inline-block w-full p-5 text-left">
-                      <div className="eyebrow">{d}</div>
-                      <div className="display mt-2 text-lg" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>{t}</div>
-                      {b && <p className="mt-2 text-xs text-muted-foreground">{b}</p>}
+                      <div className="display text-lg" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>{t}</div>
                     </div>
                   </div>
                 </div>
