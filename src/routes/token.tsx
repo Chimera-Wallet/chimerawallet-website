@@ -13,7 +13,6 @@ import kcsIcon from "@/assets/site/Icons/kucoin-token-kcs-logo.svg";
 import okbIcon from "@/assets/site/Icons/okb-okb-logo.svg";
 import floatingCoins from "@/assets/site/airdrop.png";
 import pieChart from "@/assets/site/pie_chart.png";
-import tokenOverview from "@/assets/site/token-overview.png";
 import whitepaperPdf from "@/assets/documents/CEXT_Whitepaper_V2.pdf?url";
 import heroCoin1 from "@/assets/site/Coins/Chimera-card-2-1.png";
 import heroCoin2 from "@/assets/site/Coins/Chimera-card-2-3.png";
@@ -66,7 +65,7 @@ function TokenPage() {
             <br />
             KNOW FIRST. GOVERN MORE.
           </h1>
-          <h2 className="mt-6 text-base md:text-lg text-foreground/85">TGE: 8 September 2026. Fixed supply. Zero inflation. Four tiers.</h2>
+          <h2 className="mt-6 text-base md:text-lg text-foreground/85">Fixed supply. Zero inflation. Four tiers.</h2>
           <p className="mx-auto mt-4 max-w-3xl text-sm text-muted-foreground">
             Fee discounts up to 50%. Referral multipliers up to 3x. Market intelligence 12-24 hours before public release. Human support at every tier - priority increase as you move up. Swiss issued. 1 Billion tokens. No inflation. No dilution. Utility Token according to Swiss classification.
           </p>
@@ -93,17 +92,11 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8">
           <Reveal className="h-full"><div className="flex h-full flex-col">
             <h3 className="display text-xl">Token distribution</h3>
             <div className="mt-4 flex-1 min-h-0">
               <img src={pieChart} alt="Token distribution pie chart" className="h-full w-full object-contain" />
-            </div>
-          </div></Reveal>
-          <Reveal delay={120} className="h-full"><div className="flex h-full flex-col">
-            <h3 className="display text-xl">Token overview</h3>
-            <div className="mt-4 flex-1 min-h-0">
-              <img src={tokenOverview} alt="Token overview" className="h-full w-full object-contain rounded-2xl" />
             </div>
           </div></Reveal>
         </div>
@@ -259,16 +252,19 @@ function TokenPage() {
             className="absolute left-4 top-2 bottom-2 w-px bg-gradient-to-b from-[var(--brand-green)]/0 via-[var(--brand-green)]/60 to-[var(--brand-green)]/0 md:left-1/2 md:-translate-x-1/2"
           />
           {[
-            ["April 2026", "Chimera Wallet PWA Live", "First Bitcoin Super App built on Chimera Protocol VTXO technology."],
-            ["Q2 2026 — Coming", "DEX / CEX Listing", "CEXT listed on centralized and decentralized exchanges."],
-            ["2026", "Cross Chain Support", "CEXT bridges to major L1/L2 networks. Multi-chain staking. Cross-chain swaps (coming soon)."],
-            ["June 2026", "Wrap", "Wrap assets across supported chains."],
-            ["June 2026", "P2P Swaps", "Peer-to-peer swaps directly in-app."],
-            ["8 September 2026", "TGE", "CEXT token generation event. Native on Ethereum, bridged to Chimera assets."],
-            ["September 2026", "Card Integration", "Chimera Card goes live."],
-            ["2027", "Decentralised Governance", ""],
-            ["2028", "DAO Transition", ""],
-          ].map(([d, t, b], i) => {
+            ["V0.0.9", "Onboarding Beta"],
+            ["V0.1", "Onboarding"],
+            ["V0.2", "CEXT"],
+            ["V0.3", "Mnemonic"],
+            ["V1 — September 2026", "Wrap and Swap"],
+            ["V1.1 — October 2026", "Desktop"],
+            ["V2 — October 2026", "Advanced Trading"],
+            ["V2.1 — October 2026", "POS"],
+            ["V3 — November 2026", "Card"],
+            ["V4 — December 2026", "TGE"],
+            ["2027", "Decentralised Governance"],
+            ["2028", "DAO transition"],
+          ].map(([d, t], i) => {
             const left = i % 2 === 0;
             return (
               <Reveal key={t} delay={80}>
@@ -286,7 +282,6 @@ function TokenPage() {
                     <div className="surface-card inline-block w-full p-5 text-left">
                       <div className="eyebrow">{d}</div>
                       <div className="display mt-2 text-lg" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>{t}</div>
-                      {b && <p className="mt-2 text-xs text-muted-foreground">{b}</p>}
                     </div>
                   </div>
                 </div>
@@ -299,7 +294,7 @@ function TokenPage() {
         </p></Reveal>
       </section>
 
-      <TgeCountdownSection />
+      
 
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-8">
         <Reveal><div className="rounded-2xl p-10 pb-4">
@@ -308,7 +303,7 @@ function TokenPage() {
             <div>
               <h2 className="display text-3xl md:text-4xl">CEXT</h2>
               <p className="display mt-1 text-[18px] md:text-[22px]" style={{ fontWeight: 300 }}>ACTIVITY AIRDROP.</p>
-              <p className="mt-6 text-sm text-foreground/85">After TGE, active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
+              <p className="mt-6 text-sm text-foreground/85">Active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
               <a
                 href={whitepaperPdf}
                 target="_blank"
@@ -358,41 +353,5 @@ function Card({
       <p className="mt-3 text-sm text-foreground/85">{body}</p>
       {footnote && <p className="mt-3 text-[10px] text-muted-foreground">{footnote}</p>}
     </div>
-  );
-}
-
-function TgeCountdownSection() {
-  const target = Date.UTC(2026, 8, 8, 12, 0, 0);
-  const compute = () => {
-    const diff = Math.max(0, target - Date.now());
-    const d = Math.floor(diff / 86400000);
-    const h = Math.floor((diff % 86400000) / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-    return [
-      { v: d.toString().padStart(2, "0"), l: "DAYS" },
-      { v: h.toString().padStart(2, "0"), l: "HOURS" },
-      { v: m.toString().padStart(2, "0"), l: "MINUTES" },
-      { v: s.toString().padStart(2, "0"), l: "SECONDS" },
-    ];
-  };
-  const [t, setT] = useState(compute);
-  useEffect(() => {
-    const id = setInterval(() => setT(compute()), 1000);
-    return () => clearInterval(id);
-  }, []);
-  return (
-    <section className="mx-auto max-w-5xl px-6 py-16 text-center">
-      <Reveal><h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2></Reveal>
-      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase">8th September 2026</p></Reveal>
-      <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {t.map(({ v, l }, i) => (
-          <Reveal key={l} delay={i * 120}><div className="surface-card">
-            <div className="display text-4xl">{v}</div>
-            <div className="mt-2 text-[10px] tracking-widest text-muted-foreground">{l}</div>
-          </div></Reveal>
-        ))}
-      </div>
-    </section>
   );
 }
