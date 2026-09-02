@@ -252,16 +252,16 @@ function TokenPage() {
             className="absolute left-4 top-2 bottom-2 w-px bg-gradient-to-b from-[var(--brand-green)]/0 via-[var(--brand-green)]/60 to-[var(--brand-green)]/0 md:left-1/2 md:-translate-x-1/2"
           />
           {[
-            ["Done", "Onboarding Beta"],
-            ["Done", "Onboarding"],
-            ["Done", "CEXT"],
-            ["Done", "Mnemonic"],
-            ["September 2026", "Wrap and Swap"],
-            ["October 2026", "Desktop"],
-            ["October 2026", "Advanced Trading"],
-            ["October 2026", "POS"],
-            ["November 2026", "Card"],
-            ["December 2026", "TGE"],
+            ["V0.0.9", "Onboarding Beta"],
+            ["V0.1", "Onboarding"],
+            ["V0.2", "CEXT"],
+            ["V0.3", "Mnemonic"],
+            ["V1 — September 2026", "Wrap and Swap"],
+            ["V1.1 — October 2026", "Desktop"],
+            ["V2 — October 2026", "Advanced Trading"],
+            ["V2.1 — October 2026", "POS"],
+            ["V3 — November 2026", "Card"],
+            ["V4 — December 2026", "TGE"],
             ["2027", "Decentralised Governance"],
             ["2028", "DAO transition"],
           ].map(([d, t], i) => {
