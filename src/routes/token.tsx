@@ -13,7 +13,6 @@ import kcsIcon from "@/assets/site/Icons/kucoin-token-kcs-logo.svg";
 import okbIcon from "@/assets/site/Icons/okb-okb-logo.svg";
 import floatingCoins from "@/assets/site/airdrop.png";
 import pieChart from "@/assets/site/pie_chart.png";
-import tokenOverview from "@/assets/site/token-overview.png";
 import whitepaperPdf from "@/assets/documents/CEXT_Whitepaper_V2.pdf?url";
 import heroCoin1 from "@/assets/site/Coins/Chimera-card-2-1.png";
 import heroCoin2 from "@/assets/site/Coins/Chimera-card-2-3.png";
@@ -93,17 +92,11 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8">
           <Reveal className="h-full"><div className="flex h-full flex-col">
             <h3 className="display text-xl">Token distribution</h3>
             <div className="mt-4 flex-1 min-h-0">
               <img src={pieChart} alt="Token distribution pie chart" className="h-full w-full object-contain" />
-            </div>
-          </div></Reveal>
-          <Reveal delay={120} className="h-full"><div className="flex h-full flex-col">
-            <h3 className="display text-xl">Token overview</h3>
-            <div className="mt-4 flex-1 min-h-0">
-              <img src={tokenOverview} alt="Token overview" className="h-full w-full object-contain rounded-2xl" />
             </div>
           </div></Reveal>
         </div>
