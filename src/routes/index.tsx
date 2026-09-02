@@ -519,24 +519,6 @@ function FeatureCard({ iconSrc, title, body }: { iconSrc: string; title: string;
   );
 }
 
-function TgeCountdown() {
-  const target = Date.UTC(2026, 8, 8, 12, 0, 0);
-  const compute = () => {
-    const diff = Math.max(0, target - Date.now());
-    const d = Math.floor(diff / 86400000);
-    const h = Math.floor((diff % 86400000) / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-    return { d, h, m, s };
-  };
-  const [t, setT] = useState(compute);
-  useEffect(() => {
-    const id = setInterval(() => setT(compute()), 1000);
-    return () => clearInterval(id);
-  }, []);
-  const pad = (n: number) => n.toString().padStart(2, "0");
-  return <span>{`${pad(t.d)} D | ${pad(t.h)} H | ${pad(t.m)} M | ${pad(t.s)} S to TGE`}</span>;
-}
 
 function LayerCard({
   iconSrc,

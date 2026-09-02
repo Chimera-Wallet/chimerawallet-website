@@ -359,39 +359,3 @@ function Card({
     </div>
   );
 }
-
-function TgeCountdownSection() {
-  const target = Date.UTC(2026, 8, 8, 12, 0, 0);
-  const compute = () => {
-    const diff = Math.max(0, target - Date.now());
-    const d = Math.floor(diff / 86400000);
-    const h = Math.floor((diff % 86400000) / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-    return [
-      { v: d.toString().padStart(2, "0"), l: "DAYS" },
-      { v: h.toString().padStart(2, "0"), l: "HOURS" },
-      { v: m.toString().padStart(2, "0"), l: "MINUTES" },
-      { v: s.toString().padStart(2, "0"), l: "SECONDS" },
-    ];
-  };
-  const [t, setT] = useState(compute);
-  useEffect(() => {
-    const id = setInterval(() => setT(compute()), 1000);
-    return () => clearInterval(id);
-  }, []);
-  return (
-    <section className="mx-auto max-w-5xl px-6 py-16 text-center">
-      <Reveal><h2 className="display text-2xl text-[var(--brand-green)]">CEXT TGE</h2></Reveal>
-      <Reveal delay={120}><p className="display mt-2 text-4xl md:text-6xl uppercase">8th September 2026</p></Reveal>
-      <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {t.map(({ v, l }, i) => (
-          <Reveal key={l} delay={i * 120}><div className="surface-card">
-            <div className="display text-4xl">{v}</div>
-            <div className="mt-2 text-[10px] tracking-widest text-muted-foreground">{l}</div>
-          </div></Reveal>
-        ))}
-      </div>
-    </section>
-  );
-}
