@@ -256,7 +256,7 @@ function TokenPage() {
             ["Done", "Onboarding"],
             ["Done", "CEXT"],
             ["Done", "Mnemonic"],
-            ["Testing / September 2026", "Wrap and Swap"],
+            ["September 2026", "Wrap and Swap"],
             ["October 2026", "Desktop"],
             ["October 2026", "Advanced Trading"],
             ["October 2026", "POS"],
