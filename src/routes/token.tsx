@@ -252,19 +252,19 @@ function TokenPage() {
             className="absolute left-4 top-2 bottom-2 w-px bg-gradient-to-b from-[var(--brand-green)]/0 via-[var(--brand-green)]/60 to-[var(--brand-green)]/0 md:left-1/2 md:-translate-x-1/2"
           />
           {[
-            "Onboarding Beta",
-            "Onboarding",
-            "CEXT",
-            "Mnemonic",
-            "Wrap and Swap",
-            "Desktop",
-            "Advanced Trading",
-            "POS",
-            "Card",
-            "TGE",
-            "Decentralised Governance",
-            "DAO transition",
-          ].map((t, i) => {
+            ["Done", "Onboarding Beta"],
+            ["Done", "Onboarding"],
+            ["Done", "CEXT"],
+            ["Done", "Mnemonic"],
+            ["Testing / September", "Wrap and Swap"],
+            ["October", "Desktop"],
+            ["October", "Advanced Trading"],
+            ["October", "POS"],
+            ["November", "Card"],
+            ["December", "TGE"],
+            ["2027", "Decentralised Governance"],
+            ["2028", "DAO transition"],
+          ].map(([d, t], i) => {
             const left = i % 2 === 0;
             return (
               <Reveal key={t} delay={80}>
@@ -280,7 +280,8 @@ function TokenPage() {
                     }
                   >
                     <div className="surface-card inline-block w-full p-5 text-left">
-                      <div className="display text-lg" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>{t}</div>
+                      <div className="eyebrow">{d}</div>
+                      <div className="display mt-2 text-lg" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>{t}</div>
                     </div>
                   </div>
                 </div>
