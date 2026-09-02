@@ -307,7 +307,7 @@ function TokenPage() {
             <div>
               <h2 className="display text-3xl md:text-4xl">CEXT</h2>
               <p className="display mt-1 text-[18px] md:text-[22px]" style={{ fontWeight: 300 }}>ACTIVITY AIRDROP.</p>
-              <p className="mt-6 text-sm text-foreground/85">After TGE, active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
+              <p className="mt-6 text-sm text-foreground/85">Active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
               <a
                 href={whitepaperPdf}
                 target="_blank"
