@@ -166,7 +166,6 @@ function Index() {
             </Reveal>
             <Reveal delay={120}>
               <CtaCard
-                eyebrow={<TgeCountdown />}
                 title="JOIN CEXT WAITLIST"
                 eyebrowColor="text-[var(--brand-green)]"
                 scrollTo="waitlist"
@@ -391,7 +390,7 @@ function Index() {
               1 Billion fixed supply. Fee discounts up to 50%. Referral multipliers up to 3×. Governance at Diamond
               tier. Zero inflation. Classified as a utility token under the Swiss regulation.
             </p>
-            <p className="mt-3 text-sm text-[var(--brand-green)] font-semibold">TGE: 8 September 2026.</p>
+            
             <CtaCard className="mt-8" title="DISCOVER CEXT" href="/token" />
           </div>
         </div>
