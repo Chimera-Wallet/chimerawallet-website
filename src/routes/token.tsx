@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useTranslation, Trans } from "react-i18next";
+import i18n from "@/i18n";
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/reveal";
 import { ScrollableComparison } from "@/components/scrollable-comparison";
@@ -30,17 +32,15 @@ import tokenCard7 from "@/assets/site/token-cards/card7.png";
 export const Route = createFileRoute("/token")({
   head: () => ({
     meta: [
-      { title: "CEXT Token — Pay Less. Earn More." },
+      { title: i18n.t("token.meta.title") },
       {
         name: "description",
-        content:
-          "CEXT. The utility token issued from Switzerland powering the Chimera ecosystem — fee sharing, staking, and referral multipliers.",
+        content: i18n.t("token.meta.description"),
       },
-      { property: "og:title", content: "CEXT Token — Pay Less. Earn More." },
+      { property: "og:title", content: i18n.t("token.meta.title") },
       {
         property: "og:description",
-        content:
-          "CEXT. The utility token issued from Switzerland powering the Chimera ecosystem — fee sharing, staking, and referral multipliers.",
+        content: i18n.t("token.meta.description"),
       },
     ],
   }),
@@ -48,6 +48,7 @@ export const Route = createFileRoute("/token")({
 });
 
 function TokenPage() {
+  const { t } = useTranslation();
   return (
     <main>
       <section className="relative mx-auto max-w-7xl overflow-hidden px-6 pt-16 pb-10 lg:overflow-visible">
@@ -59,30 +60,30 @@ function TokenPage() {
           <img src={heroCoin5} alt="" className="absolute right-[2%] bottom-[36%] sm:right-[18%] sm:bottom-[24%] md:right-[12%] md:bottom-[30%] lg:bottom-[18%] w-12 sm:w-16 md:w-24 lg:w-32 animate-[float_8.5s_ease-in-out_infinite_-3s] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
         </div>
         <Reveal><div className="relative rounded-3xl border border-white/10 bg-[var(--brand-navy-card)] p-10 text-center opacity-90">
-          <p className="hero-eyebrow text-[var(--brand-green)]">HOLD CEXT</p>
+          <p className="hero-eyebrow text-[var(--brand-green)]">{t("token.hero.eyebrow")}</p>
           <h1 className="hero-title mx-auto mt-6 max-w-5xl">
-            PAY LESS. EARN MORE.
+            {t("token.hero.title")}
             <br />
-            KNOW FIRST. GOVERN MORE.
+            {t("token.hero.titleLine2")}
           </h1>
-          <h2 className="mt-6 text-base md:text-lg text-foreground/85">Fixed supply. Zero inflation. Four tiers.</h2>
+          <h2 className="mt-6 text-base md:text-lg text-foreground/85">{t("token.hero.subtitle")}</h2>
           <p className="mx-auto mt-4 max-w-3xl text-sm text-muted-foreground">
-            Fee discounts up to 50%. Referral multipliers up to 3x. Market intelligence 12-24 hours before public release. Human support at every tier - priority increase as you move up. Swiss issued. 1 Billion tokens. No inflation. No dilution. Utility Token according to Swiss classification.
+            {t("token.hero.body")}
           </p>
           <button className="btn-ghost mt-8">
-            JOIN THE WAITLIST
+            {t("token.hero.cta")}
           </button>
         </div></Reveal>
 
         <div className="mt-6 grid grid-cols-2 gap-1.5 md:grid-cols-7">
           {[
-            { src: tokenCard1, alt: "Fee discounts up to 50%" },
-            { src: tokenCard2, alt: "Referral multipliers up to 3x" },
-            { src: tokenCard3, alt: "Market intelligence 12-24h before public release" },
-            { src: tokenCard4, alt: "Human support at every tier" },
-            { src: tokenCard5, alt: "Priority increase as you move up" },
-            { src: tokenCard6, alt: "Swiss issued, 1 billion tokens" },
-            { src: tokenCard7, alt: "No inflation or dilution" },
+            { src: tokenCard1, alt: t("token.cards.card1") },
+            { src: tokenCard2, alt: t("token.cards.card2") },
+            { src: tokenCard3, alt: t("token.cards.card3") },
+            { src: tokenCard4, alt: t("token.cards.card4") },
+            { src: tokenCard5, alt: t("token.cards.card5") },
+            { src: tokenCard6, alt: t("token.cards.card6") },
+            { src: tokenCard7, alt: t("token.cards.card7") },
           ].map((c, i) => (
             <Reveal key={i} delay={i * 80} className="h-full">
               <img src={c.src} alt={c.alt} className="h-full w-full aspect-square object-cover rounded-xl" />
@@ -94,27 +95,27 @@ function TokenPage() {
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 gap-8">
           <Reveal className="h-full"><div className="flex h-full flex-col">
-            <h3 className="display text-xl">Token distribution</h3>
+            <h3 className="display text-xl">{t("token.distribution.title")}</h3>
             <div className="mt-4 flex-1 min-h-0">
-              <img src={pieChart} alt="Token distribution pie chart" className="h-full w-full object-contain" />
+              <img src={pieChart} alt={t("token.distribution.chartAlt")} className="h-full w-full object-contain" />
             </div>
           </div></Reveal>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 text-left">
-        <Reveal><h2 className="display text-3xl md:text-5xl">STAKE CEXT.</h2></Reveal>
-        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80">EARN UP TO 15% APR.</p></Reveal>
+        <Reveal><h2 className="display text-3xl md:text-5xl">{t("token.stake.title")}</h2></Reveal>
+        <Reveal delay={120}><p className="display mt-2 text-2xl text-foreground/80">{t("token.stake.subtitle")}</p></Reveal>
         <Reveal as="p" delay={240} className="mt-6 max-w-2xl text-sm text-foreground/85">
-          Put your CEXT to work. Stake and earn up to 15% annual returns paid in CEXT. Lock tokens for longer periods to multiply your score and maximize rewards. The longer you lock, the more you earn.
+          {t("token.stake.body")}
         </Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-8">
         <Reveal>
           <CtaCard
-            eyebrow="JOIN THE WAITLIST"
-            title="JOIN CEXT WAITLIST"
+            eyebrow={t("token.waitlistCta.eyebrow")}
+            title={t("token.waitlistCta.title")}
             eyebrowColor="text-[var(--brand-green)]"
             href="/#waitlist"
             className="mx-auto w-[1024px] max-w-full"
