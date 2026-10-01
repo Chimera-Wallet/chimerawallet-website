@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
 import { Reveal } from "@/components/reveal";
 import { BrandButton } from "@/components/ui";
 import banner1 from "@/assets/site/press-banner1.png";
@@ -6,17 +8,15 @@ import banner1 from "@/assets/site/press-banner1.png";
 export const Route = createFileRoute("/press-kit")({
   head: () => ({
     meta: [
-      { title: "Press Kit — Chimera Wallet" },
+      { title: i18n.t("pressKit.meta.title") },
       {
         name: "description",
-        content:
-          "Chimera Wallet press kit — logos, brand colours and media assets. Where finance meets innovation.",
+        content: i18n.t("pressKit.meta.description"),
       },
-      { property: "og:title", content: "Press Kit — Chimera Wallet" },
+      { property: "og:title", content: i18n.t("pressKit.meta.title") },
       {
         property: "og:description",
-        content:
-          "Chimera Wallet press kit — logos, brand colours and media assets.",
+        content: i18n.t("pressKit.meta.ogDescription"),
       },
     ],
   }),
@@ -35,31 +35,28 @@ const COLORS = [
 ];
 
 function PressKitPage() {
+  const { t } = useTranslation();
   return (
     <main className="mx-auto max-w-6xl px-6 pt-16 pb-24">
-      <Reveal delay={0}><p className="hero-eyebrow text-center text-[var(--brand-green)]">PRESS KIT</p></Reveal>
-      <Reveal delay={120}><h1 className="hero-title mt-6 text-center">WHERE FINANCE MEETS INNOVATION!</h1></Reveal>
+      <Reveal delay={0}><p className="hero-eyebrow text-center text-[var(--brand-green)]">{t("pressKit.eyebrow")}</p></Reveal>
+      <Reveal delay={120}><h1 className="hero-title mt-6 text-center">{t("pressKit.title")}</h1></Reveal>
       <Reveal delay={240}><h2 className="mt-4 display text-center text-xl md:text-2xl text-foreground/80">
-        The Next-Generation Financial Platform Inspired by Myth and Driven by Innovation
+        {t("pressKit.subtitle")}
       </h2></Reveal>
       <Reveal delay={340}><p className="mt-6 max-w-3xl mx-auto text-center text-sm text-foreground/85">
-        The Chimera Wallet logo draws inspiration from the ancient mythological creature, the
-        Chimera — a being described by Plato as "many forms grown together in one." In ancient lore,
-        the Chimera symbolised strength, resilience, and adaptability, qualities that resonate
-        deeply with the vision of Chimera Wallet, with elements of a lion, goat, and serpent fused
-        into a single creature.
+        {t("pressKit.body")}
       </p></Reveal>
 
-      <Reveal><h2 className="display mt-16 text-2xl text-[var(--brand-green)]">LOGOS</h2></Reveal>
+      <Reveal><h2 className="display mt-16 text-2xl text-[var(--brand-green)]">{t("pressKit.logosTitle")}</h2></Reveal>
       <Reveal delay={100}>
         <img
           src={banner1}
-          alt="Chimera logos"
+          alt={t("pressKit.logosAlt")}
           className="mt-6 w-full object-contain"
         />
       </Reveal>
 
-      <Reveal><h2 className="display mt-16 text-2xl text-[var(--brand-green)]">BRAND COLOURS</h2></Reveal>
+      <Reveal><h2 className="display mt-16 text-2xl text-[var(--brand-green)]">{t("pressKit.colorsTitle")}</h2></Reveal>
       <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
         {COLORS.map(({ hex, text }, i) => (
           <Reveal key={`${hex}-${i}`} delay={(i % 4) * 100}><div
@@ -79,7 +76,7 @@ function PressKitPage() {
             download
             className="px-8 py-4"
           >
-            DOWNLOAD MEDIA KIT
+            {t("pressKit.cta")}
           </BrandButton>
         </div>
       </Reveal>
