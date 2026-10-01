@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "app": "APP",
+    "card": "Card",
+    "token": "Token",
+    "referrals": "Referrals",
+    "about": "About",
+    "news": "News"
+  },
+  "openChimera": "OPEN CHIMERA",
+  "openMenu": "Open menu",
+  "menuTitle": "Navigation menu",
+  "menuDescription": "Mobile navigation links and social links for Chimera Wallet.",
+  "language": "Language"
+}

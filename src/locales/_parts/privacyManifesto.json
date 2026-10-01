@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "Privacy Manifesto — Chimera Wallet",
+    "description": "Most companies write privacy policies; we write code that doesn't need one. Chimera's approach to privacy and transparency."
+  },
+  "eyebrow": "CHIMERA",
+  "title": "PRIVACY MANIFESTO",
+  "intro": {
+    "p1": "Most companies write privacy policies; we write code that doesn't need one.",
+    "p2": "At Chimera we take privacy and transparency seriously.",
+    "p3": "We are committed to protecting and preserving our users' privacy across all the platforms.",
+    "p4": "Our approach to protecting your data is simple: we don't collect it.",
+    "p5": "Our website at chimerawallet.com and Chimera wallet do not use cookies or other tracking technologies.",
+    "p6": "Our analytics come exclusively from Plausible (<a>https://plausible.io/about</a>) a privacy preserving open-source solution designed to protect your privacy while providing anonymized data for practical purposes.",
+    "p7": "Privacy, built in from the ground up.",
+    "p8": "You may directly share your data with third parties through our platforms in order to access certain services please check the individual policies of the providers."
+  },
+  "providersTitle": "PROVIDERS",
+  "providers": {
+    "plausible": "Plausible",
+    "outlogic": "Outlogic Sagl",
+    "lendasat": "Lendasat"
+  }
+}

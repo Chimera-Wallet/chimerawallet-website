@@ -4,8 +4,10 @@ import outlogicLogo from "@/assets/site/Outlogic_LOGO.png";
 import bitcoinLogo from "@/assets/site/bitcoin-logo.svg";
 import lightningLogo from "@/assets/site/lightning-logo.svg";
 import { Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 
 export function SiteFooter() {
+  const { t } = useTranslation();
   return (
     <footer className="border-t border-white/5 bg-[var(--brand-navy-deep)] text-foreground">
       <div className="mx-auto max-w-7xl px-6 py-12">
@@ -14,7 +16,7 @@ export function SiteFooter() {
             <div className="flex items-center gap-2">
                <img src={chimeraLogo} alt="Chimera" className="h-10 w-auto object-contain" />
             </div>
-            <div className="mt-6 text-xs text-muted-foreground">Powered by:</div>
+            <div className="mt-6 text-xs text-muted-foreground">{t("footer.poweredBy")}</div>
             <div className="mt-3 flex items-center gap-4">
               <a href="https://bitcoin.org" target="_blank" rel="noopener noreferrer" className="opacity-80 transition hover:opacity-100">
                 <img src={bitcoinLogo} alt="Bitcoin" className="h-5 w-auto object-contain" />
@@ -32,34 +34,34 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">PRIVACY</h4>
+            <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">{t("footer.privacy")}</h4>
             <ul className="mt-4 space-y-2 text-sm text-foreground/90">
               <li>
                  <Link to="/privacy-manifesto" className="hover:text-[var(--brand-green)]">
-                   Chimera Privacy Manifesto
+                   {t("footer.privacyManifesto")}
                  </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">PRESS AND MEDIA</h4>
+            <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">{t("footer.pressAndMedia")}</h4>
             <ul className="mt-4 space-y-2 text-sm text-foreground/90">
               <li>
                 <Link to="/news" className="hover:text-[var(--brand-green)]">
-                  News
+                  {t("footer.news")}
                 </Link>
               </li>
               <li>
                 <Link to="/press-kit" className="hover:text-[var(--brand-green)]">
-                  Press Kit
+                  {t("footer.pressKit")}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">SUPPORT</h4>
+            <h4 className="display text-xs text-[var(--brand-green)] tracking-widest">{t("footer.support")}</h4>
             <ul className="mt-4 space-y-2 text-sm text-foreground/90">
               <li>
                 <a
@@ -68,7 +70,7 @@ export function SiteFooter() {
                   rel="noopener noreferrer"
                   className="hover:text-[var(--brand-green)]"
                 >
-                  API Documentation
+                  {t("footer.apiDocs")}
                 </a>
               </li>
               <li>
@@ -78,7 +80,7 @@ export function SiteFooter() {
                   rel="noopener noreferrer"
                   className="hover:text-[var(--brand-green)]"
                 >
-                  Support Center
+                  {t("footer.supportCenter")}
                 </a>
               </li>
             </ul>
@@ -86,11 +88,11 @@ export function SiteFooter() {
         </div>
 
          <p className="mt-10 max-w-5xl text-xs text-muted-foreground leading-relaxed">
-            CEXT, issued by Outlogic SAGL, is a utility token under Swiss regulation. Not a security. Not a payment token. Not an investment contract. Staking rewards are not guaranteed. Fiat, card, trading and staking services are provided by third parties - not by Chimera Wallet.
+            {t("footer.disclaimer")}
          </p>
 
          <div className="mt-8 border-t border-white/5 pt-6 text-xs text-muted-foreground">
-           © 2026 Chimera Software Association - 6900 Lugano Switzerland. All rights reserved. Made with ❤️ in 🇨🇭
+           {t("footer.copyright")}
          </div>
       </div>
     </footer>

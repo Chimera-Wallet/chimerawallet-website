@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "About Chimera — Built by people who believe your money should belong to you",
+    "description": "Chimera Wallet holds no funds, takes no spread, and sells no order flow. Open source, browser-based, built on Chimera. Freedom the way it should be.",
+    "ogTitle": "About Chimera"
+  },
+  "hero": {
+    "eyebrow": "ABOUT",
+    "title": "BUILT BY PEOPLE<br></br>WHO BELIEVE YOUR MONEY<br></br>SHOULD BELONG TO YOU.",
+    "subtitle": "We write open-source code for people who understand that their money should belong to them. No shareholders. No venture capital. No one to answer to except the mission.",
+    "body": "Everything we build is published openly, auditable by anyone, free to fork. Financial services are provided by regulated third parties. We don't hold your funds. The architecture makes it impossible."
+  },
+  "stats": {
+    "mainnet": {
+      "logoAlt": "Chimera logo",
+      "label": "ARKADE MAINNET<br></br>LIVE SINCE",
+      "value": "OCTOBER 2025"
+    },
+    "verifiable": {
+      "label": "VERIFIABLE<br></br>ON-CHAIN",
+      "body": "NOT A ROADMAP PROMISE. SHIPPED.",
+      "note": "THREE YEARS OF R&D BEFORE PUBLIC MAINNET."
+    },
+    "raised": {
+      "label": "ARKADE PROTOCOL RAISED",
+      "value": "$7.7M.",
+      "note": "THE INFRASTRUCTURE CHIMERA IS BUILT ON IS TRUSTED BY THE BEST IN THE SPACE."
+    }
+  },
+  "code": {
+    "titleLine1": "ALL CODE",
+    "titleLine2": "PUBLIC AND FREE.",
+    "body1": "Every line of code is public on GitHub.<br></br>Auditable by anyone, free to fork.",
+    "body2": "Financial services run through regulated third parties.<br></br>We don't hold your funds. The architecture makes it impossible.",
+    "cta": "CHECK OUR GITHUB",
+    "openSourceAlt": "Open source code"
+  },
+  "wallet": {
+    "mockupAlt": "Chimera Wallet phone mockups",
+    "titleLine1": "CHIMERA",
+    "titleLine2": "WALLET.",
+    "body1": "Swiss non-profit association.<br></br>Writes and publishes open-source code.",
+    "body2": "No custody. No financial services. No profit motive."
+  },
+  "standFor": {
+    "titleLine1": "WHAT WE",
+    "titleLine2": "STAND FOR.",
+    "items": [
+      { "title": "OPEN SOURCE.", "body": "Every line published. No black boxes. Code that belongs to everyone who uses it." },
+      { "title": "NON-CUSTODIAL BY DESIGN.", "body": "Not a policy that can change. Not a promise that can be broken." },
+      { "title": "SWISS NON-PROFIT ASSOCIATION.", "body": "No extraction. No VC pressure. A legal structure built to align with the mission, not against it." },
+      { "title": "SELF-SOVEREIGNTY.", "body": "The word the financial system has spent decades trying not to normalise. We're normalising it — one wallet at a time." }
+    ],
+    "cta": "DOWNLOAD BRAND KIT"
+  }
+}
