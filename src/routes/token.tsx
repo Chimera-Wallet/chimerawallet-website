@@ -124,34 +124,34 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">4 tiers - many advantages</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">{t("token.tiers.title")}</h2></Reveal>
         <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
-          Learn how you can supercharge your experience with the Chimera Token
+          {t("token.tiers.subtitle")}
         </p></Reveal>
 
         <ScrollableComparison columns={4} className="mt-10">
-          {[
-            { name: "BRONZE", img: bronzeBadge, balance: "≥ 10,000 CEXT", fee: "20%", ref: "1x", sup: "Standard", news: "Public", list: "Basic" },
-            { name: "SILVER", img: silverBadge, balance: "≥ 100,000 CEXT", fee: "30%", ref: "1.5x", sup: "Priority", news: "+12 Hours", list: "Moderate" },
-            { name: "GOLD", img: goldBadge, balance: "≥ 1,000,000 CEXT", fee: "40%", ref: "2x", sup: "Premium", news: "+24 Hours", list: "High" },
-            { name: "DIAMOND", img: diamondBadge, balance: "≥ 10,000,000 CEXT", fee: "50%", ref: "3x", sup: "Direct", news: "+24 Hours", list: "Full + Proposal Rights" },
-          ].map((t, i) => (
-            <Reveal key={t.name} delay={i * 120}><div className="surface-card h-full text-center">
-              <img src={t.img} alt={`${t.name} tier badge`} className="mx-auto h-32 w-32 object-contain" />
-              <h3 className="display mt-4 text-2xl">{t.name}</h3>
-              <div className="mt-3 text-xs text-muted-foreground">{t.balance}<br/>Average Locked Balance</div>
-              <Row v={t.fee} l="Trading Fee Discount" />
-              <Row v={t.ref} l="Referral Bonus" />
-              <Row v={t.sup} l="Support Access" />
-              <Row v={t.news} l="News Access" />
-              <Row v={t.list} l="Listing Discount" />
-            </div></Reveal>
-          ))}
+          {(t("token.tiers.list", { returnObjects: true }) as any[]).map(
+            (tier: { name: string; balance: string; fee: string; ref: string; sup: string; news: string; list: string }, i: number) => {
+              const imgs = [bronzeBadge, silverBadge, goldBadge, diamondBadge];
+              return (
+                <Reveal key={tier.name} delay={i * 120}><div className="surface-card h-full text-center">
+                  <img src={imgs[i]} alt={t("token.tiers.badgeAlt", { name: tier.name })} className="mx-auto h-32 w-32 object-contain" />
+                  <h3 className="display mt-4 text-2xl">{tier.name}</h3>
+                  <div className="mt-3 text-xs text-muted-foreground">{tier.balance}<br/>{t("token.tiers.balanceLabel")}</div>
+                  <Row v={tier.fee} l={t("token.tiers.feeLabel")} />
+                  <Row v={tier.ref} l={t("token.tiers.refLabel")} />
+                  <Row v={tier.sup} l={t("token.tiers.supLabel")} />
+                  <Row v={tier.news} l={t("token.tiers.newsLabel")} />
+                  <Row v={tier.list} l={t("token.tiers.listLabel")} />
+                </div></Reveal>
+              );
+            }
+          )}
         </ScrollableComparison>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><Card eyebrow="STAKING" title="UP TO 15% APR" body="Buy CEXT in-app, send to the designated staking address shown in-app. Your tokens, your staking, your rewards." footnote="* Staking is a service provided by a third party. STAKING REWARDS are not guaranteed. Rates fluctuate based on network conditions. Chimera Wallet carry no liability for this service." /></Reveal>
+        <Reveal><Card eyebrow={t("token.staking.eyebrow")} title={t("token.staking.title")} body={t("token.staking.body")} footnote={t("token.staking.footnote")} /></Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
