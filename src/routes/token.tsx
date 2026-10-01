@@ -155,120 +155,79 @@ function TokenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">Exchange Tokens Comparison</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl uppercase">{t("token.comparison.title")}</h2></Reveal>
         <Reveal delay={120}><p className="mx-auto mt-4 max-w-3xl text-center text-sm text-muted-foreground">
-          Learn how you can supercharge your experience with the Chimera Token
+          {t("token.comparison.subtitle")}
         </p></Reveal>
         <Reveal delay={240}><p className="mx-auto mt-2 max-w-3xl text-center text-xs text-muted-foreground/70">
-          Data accurate as of 05/2026
+          {t("token.comparison.asOf")}
         </p></Reveal>
 
         <ScrollableComparison columns={4} className="mt-10">
-          {[
-            {
-              n: "CEXT",
-              sub: "Chimera",
-              icon: cextIcon,
-              rows: [
-                ["1,000,000,000 — FIXED, non-inflationary", "Total Supply"],
-                ["Up to 50%", "Trading Fee Discount"],
-                ["10,000,000 CEXT", "Min. Threshold for Max Discount"],
-                ["Up to 3x multiplier", "Referral Bonus"],
-                ["Yes (Tier 3+)", "Premium Support"],
-                ["Yes (24h)", "Early News Access"],
-                ["Yes (Tier 4)", "Listing Influence"],
-                ["Planned (Diamond tier)", "Governance Rights"],
-              ] as [string, string][],
-            },
-            {
-              n: "BNB",
-              sub: "Binance",
-              icon: bnbIcon,
-              rows: [
-                ["~140,000,000 (post-burn)", "Total Supply"],
-                ["Up to 25% direct / ~78% combined VIP9", "Trading Fee Discount"],
-                ["$4,000,000,000 volume + 5,500 BNB", "Min. Threshold for Max Discount"],
-                ["Standard", "Referral Bonus"],
-                ["VIP Only", "Premium Support"],
-                ["No", "Early News Access"],
-                ["No", "Listing Influence"],
-                ["Limited", "Governance Rights"],
-              ] as [string, string][],
-            },
-            {
-              n: "KCS",
-              sub: "KuCoin",
-              icon: kcsIcon,
-              rows: [
-                ["170,000,000", "Total Supply"],
-                ["Up to 20% direct / negative maker at VIP12", "Trading Fee Discount"],
-                ["150,000 KCS or $500,000,000 volume", "Min. Threshold for Max Discount"],
-                ["Standard", "Referral Bonus"],
-                ["Limited", "Premium Support"],
-                ["No", "Early News Access"],
-                ["GemVote (limited)", "Listing Influence"],
-                ["Limited", "Governance Rights"],
-              ] as [string, string][],
-            },
-            {
-              n: "OKB",
-              sub: "OKX",
-              icon: okbIcon,
-              rows: [
-                ["21,000,000 (post-burn 2025)", "Total Supply"],
-                ["Tier-based, phasing out", "Trading Fee Discount"],
-                ["N/A", "Min. Threshold for Max Discount"],
-                ["Standard", "Referral Bonus"],
-                ["Limited", "Premium Support"],
-                ["No", "Early News Access"],
-                ["No", "Listing Influence"],
-                ["Limited", "Governance Rights"],
-              ] as [string, string][],
-            },
-          ].map(({ n, sub, icon, rows }, i) => (
-            <Reveal key={n} delay={i * 120}><div
-              key={n}
-              className={i === 0
-                ? "h-full rounded-2xl border border-white/10 p-6 text-center"
-                : "surface-card h-full text-center"}
-              style={i === 0 ? { background: "#1F3BDB" } : undefined}
-            >
-              <img src={icon} alt={`${n} logo`} className="mx-auto h-16 w-16 object-contain" />
-              <h3 className="display mt-4 text-xl">{n}</h3>
-              <p className="text-[10px] tracking-widest text-foreground/60">{sub}</p>
-              {rows.map(([v, l]) => (
-                <Row key={l} v={v} l={l} />
-              ))}
-            </div></Reveal>
-          ))}
+          {(() => {
+            const labels = t("token.comparison.labels", { returnObjects: true }) as {
+              totalSupply: string;
+              feeDiscount: string;
+              minThreshold: string;
+              referralBonus: string;
+              premiumSupport: string;
+              earlyNews: string;
+              listingInfluence: string;
+              governance: string;
+            };
+            const labelOrder = [
+              labels.totalSupply,
+              labels.feeDiscount,
+              labels.minThreshold,
+              labels.referralBonus,
+              labels.premiumSupport,
+              labels.earlyNews,
+              labels.listingInfluence,
+              labels.governance,
+            ];
+            const tokens = t("token.comparison.tokens", { returnObjects: true }) as {
+              cext: { name: string; sub: string; values: string[] };
+              bnb: { name: string; sub: string; values: string[] };
+              kcs: { name: string; sub: string; values: string[] };
+              okb: { name: string; sub: string; values: string[] };
+            };
+            return [
+              { n: tokens.cext.name, sub: tokens.cext.sub, icon: cextIcon, values: tokens.cext.values },
+              { n: tokens.bnb.name, sub: tokens.bnb.sub, icon: bnbIcon, values: tokens.bnb.values },
+              { n: tokens.kcs.name, sub: tokens.kcs.sub, icon: kcsIcon, values: tokens.kcs.values },
+              { n: tokens.okb.name, sub: tokens.okb.sub, icon: okbIcon, values: tokens.okb.values },
+            ].map(({ n, sub, icon, values }, i) => (
+              <Reveal key={n} delay={i * 120}><div
+                key={n}
+                className={i === 0
+                  ? "h-full rounded-2xl border border-white/10 p-6 text-center"
+                  : "surface-card h-full text-center"}
+                style={i === 0 ? { background: "#1F3BDB" } : undefined}
+              >
+                <img src={icon} alt={t("token.comparison.logoAlt", { name: n })} className="mx-auto h-16 w-16 object-contain" />
+                <h3 className="display mt-4 text-xl">{n}</h3>
+                <p className="text-[10px] tracking-widest text-foreground/60">{sub}</p>
+                {values.map((v, idx) => (
+                  <Row key={labelOrder[idx]} v={v} l={labelOrder[idx]} />
+                ))}
+              </div></Reveal>
+            ));
+          })()}
         </ScrollableComparison>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <Reveal><h2 className="display text-center text-3xl md:text-5xl">WHAT'S NEXT?</h2></Reveal>
+        <Reveal><h2 className="display text-center text-3xl md:text-5xl">{t("token.roadmap.title")}</h2></Reveal>
         <div className="relative mx-auto mt-12 max-w-3xl">
           {/* vertical spine */}
           <div
             aria-hidden="true"
             className="absolute left-4 top-2 bottom-2 w-px bg-gradient-to-b from-[var(--brand-green)]/0 via-[var(--brand-green)]/60 to-[var(--brand-green)]/0 md:left-1/2 md:-translate-x-1/2"
           />
-          {[
-            ["V0.0.9", "Onboarding Beta"],
-            ["V0.1", "Onboarding"],
-            ["V0.2", "CEXT"],
-            ["V0.3", "Mnemonic"],
-            ["V1 — September 2026", "Wrap and Swap"],
-            ["V1.1 — October 2026", "Desktop"],
-            ["V2 — October 2026", "Advanced Trading"],
-            ["V2.1 — October 2026", "POS"],
-            ["V3 — November 2026", "Card"],
-            ["V4 — December 2026", "TGE"],
-            ["2027", "Decentralised Governance"],
-            ["2028", "DAO transition"],
-          ].map(([d, t], i) => {
+          {(t("token.roadmap.items", { returnObjects: true }) as { d: string; t: string }[]).map((item, i) => {
             const left = i % 2 === 0;
             return (
-              <Reveal key={t} delay={80}>
+              <Reveal key={item.t} delay={80}>
                 <div className="relative pl-12 md:grid md:grid-cols-2 md:gap-10 md:pl-0">
                   {/* dot */}
                   <span
@@ -281,8 +240,8 @@ function TokenPage() {
                     }
                   >
                     <div className="surface-card inline-block w-full p-5 text-left">
-                      <div className="eyebrow">{d}</div>
-                      <div className="display mt-2 text-lg" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>{t}</div>
+                      <div className="eyebrow">{item.d}</div>
+                      <div className="display mt-2 text-lg" style={{ fontFamily: '"Titillium Web", sans-serif', fontWeight: 300, letterSpacing: "1px" }}>{item.t}</div>
                     </div>
                   </div>
                 </div>
@@ -291,7 +250,7 @@ function TokenPage() {
           })}
         </div>
         <Reveal><p className="mx-auto mt-8 max-w-4xl text-center text-xs text-muted-foreground">
-          CEXT is issued by Outlogic SAGL and reviewed in accordance with FINMA guidance. Not a security. Not a payment token. Not an investment contract. A utility token — with regulatory clarity most tokens never achieve.
+          {t("token.roadmap.footnote")}
         </p></Reveal>
       </section>
 
@@ -300,11 +259,11 @@ function TokenPage() {
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-8">
         <Reveal><div className="rounded-2xl p-10 pb-4">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-            <img src={floatingCoins} alt="Floating CEXT coins" className="w-full max-w-[780px] rounded-2xl object-cover" style={{ aspectRatio: "780 / 490" }} />
+            <img src={floatingCoins} alt={t("token.airdrop.coinsAlt")} className="w-full max-w-[780px] rounded-2xl object-cover" style={{ aspectRatio: "780 / 490" }} />
             <div>
-              <h2 className="display text-3xl md:text-4xl">CEXT</h2>
-              <p className="display mt-1 text-[18px] md:text-[22px]" style={{ fontWeight: 300 }}>ACTIVITY AIRDROP.</p>
-              <p className="mt-6 text-sm text-foreground/85">Active Chimera users become eligible for a CEXT airdrop based on real usage. No farming. No bots. Real activity.</p>
+              <h2 className="display text-3xl md:text-4xl">{t("token.airdrop.title")}</h2>
+              <p className="display mt-1 text-[18px] md:text-[22px]" style={{ fontWeight: 300 }}>{t("token.airdrop.subtitle")}</p>
+              <p className="mt-6 text-sm text-foreground/85">{t("token.airdrop.body")}</p>
               <a
                 href={whitepaperPdf}
                 target="_blank"
@@ -315,7 +274,7 @@ function TokenPage() {
                   backgroundColor: "var(--brand-green)",
                 }}
               >
-                WHITEPAPER
+                {t("token.airdrop.whitepaperCta")}
                 <span aria-hidden="true" className="ml-2">→</span>
               </a>
             </div>
