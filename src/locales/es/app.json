@@ -7,527 +7,1094 @@
     },
     "hero": {
       "eyebrow": "ACERCA DE",
+      "title": "CONSTRUIDO POR PERSONAS<br></br>QUE CREEN QUE TU DINERO<br></br>DEBERÍA PERTENECERTE.",
       "subtitle": "Escribimos código abierto para personas que entienden que su dinero les pertenece. Sin accionistas. Sin capital de riesgo. Sin rendir cuentas a nadie más que a nuestra misión.",
       "body": "Todo lo que desarrollamos se publica abiertamente, es auditable por cualquiera y se puede bifurcar libremente. Los servicios financieros los proporcionan terceros regulados. No custodiamos sus fondos. La arquitectura lo hace imposible."
     },
     "stats": {
       "mainnet": {
-        "logoAlt": "Logo Chimera"
+        "logoAlt": "Logo Chimera",
+        "label": "RED PRINCIPAL DE ARKADE<br></br>EN VIVO DESDE",
+        "value": "OCTUBRE DE 2025"
       },
       "verifiable": {
-        "body": "NO ES UNA PROMESA DE HOJA DE RUTA. ENVIADO."
+        "label": "VERIFICABLE<br></br>EN LA CADENA",
+        "body": "NO ES UNA PROMESA DE HOJA DE RUTA. ENVIADO.",
+        "note": "TRES AÑOS DE INVESTIGACIÓN Y DESARROLLO ANTES DE LA RED PRINCIPAL PÚBLICA."
       },
       "raised": {
+        "label": "PROTOCOLO ARKADE ELEVADO",
+        "value": "7,7 millones de dólares.",
         "note": "LA INFRAESTRUCTURA SOBRE LA QUE SE CONSTRUYE CHIMERA CUENTA CON LA CONFIANZA DE LOS MEJORES DEL SECTOR."
       }
     },
     "code": {
+      "titleLine1": "TODO EL CÓDIGO",
+      "titleLine2": "PÚBLICO Y GRATUITO.",
+      "body1": "Cada línea de código es pública en GitHub.<br></br>Audible para cualquiera, libre de bifurcar.",
+      "body2": "Los servicios financieros se gestionan a través de terceros regulados.<br></br>No custodiamos sus fondos. La arquitectura lo hace imposible.",
+      "cta": "CONSULTA NUESTRO GITHUB",
+      "openSourceAlt": "Código fuente abierto"
     },
     "wallet": {
+      "mockupAlt": "Maquetas de teléfonos con la cartera Chimera",
+      "titleLine1": "QUIMERA",
+      "titleLine2": "BILLETERA.",
+      "body1": "Asociación suiza sin ánimo de lucro.<br></br>Escribe y publica código abierto.",
+      "body2": "Sin custodia. Sin servicios financieros. Sin ánimo de lucro."
     },
     "standFor": {
+      "titleLine1": "LO QUE NOSOTROS",
+      "titleLine2": "REPRESENTAR.",
       "items": [
         {
+          "title": "CÓDIGO ABIERTO.",
+          "body": "Cada línea publicada. Sin cajas negras. Código que pertenece a todos los que lo usan."
         },
         {
+          "title": "DISEÑADO SIN FUNCIONES DE CUIDADO.",
+          "body": "No es una política que se pueda cambiar. No es una promesa que se pueda romper."
         },
         {
+          "title": "ASOCIACIÓN SUIZA SIN FINES DE LUCRO.",
+          "body": "Sin extracción de capital. Sin presión de capital riesgo. Una estructura legal diseñada para alinearse con la misión, no para ir en contra de ella."
         },
         {
+          "title": "AUTOSOBERANÍA.",
+          "body": "La palabra que el sistema financiero ha intentado durante décadas no normalizar. La estamos normalizando, una cartera a la vez."
         }
-      ]
+      ],
+      "cta": "DESCARGAR KIT DE MARCA"
     }
   },
   "app": {
     "meta": {
+      "title": "Aplicación Chimera: sin instalación. Sin consumo de memoria. Sin riesgos.",
+      "description": "Abre Chimera Wallet en tu navegador. Sin descargas, sin App Store, sin capa de custodia. Acceso instantáneo en cualquier dispositivo.",
+      "ogTitle": "Aplicación Chimera — Aplicación web progresiva"
     },
     "hero": {
+      "eyebrow": "APLICACIÓN PROGRESIVA",
+      "title": "SIN INSTALACIÓN.<br></br>SIN MEMORIA. SIN RIESGO.",
+      "subtitle": "Bitcoin no le pide permiso a Apple. ¿Por qué debería hacerlo tu billetera?",
+      "body": "Todas las aplicaciones nativas de criptomonedas dependen de las tiendas de aplicaciones. Las carteras se eliminan un miércoles por la tarde porque alguien en Cupertino o Mountain View cambia de opinión.",
+      "cta": "QUIMERA ABIERTA",
+      "mockupAlt": "Maquetas de teléfonos con la aplicación Chimera"
     },
     "coins": {
+      "chimera": "Quimera",
+      "btc": "BTC",
+      "usdt": "USDT",
+      "eth": "ETH",
+      "tron": "TRON",
+      "polygon": "POLÍGONO",
+      "coinAlt": "{{name}} moneda"
     },
     "browser": {
+      "eyebrow": "CARTERA QUIMERA",
+      "title": "SE EJECUTA EN TU NAVEGADOR.",
+      "subtitle": "Ningún guardián puede tocarlo.",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "No es necesario descargar nada. Simplemente abres una URL y ahí está la billetera.",
+        "No hay comité de revisión. Nada pendiente de aprobación o eliminación.",
+        "Sin bloqueo geográfico. Ninguna plataforma que pueda intervenir y bloquear tu dinero.",
+        "Sin intermediarios. Nada se interpone entre usted y sus Bitcoin."
       ],
+      "body": "Las tiendas de aplicaciones ya lo han hecho antes. Lo volverán a hacer. Sin previo aviso. Sin posibilidad de apelación. Desaparecen. No es una promesa. Arquitectura.",
+      "coinsSetAlt": "Bitcoin, Ethereum y monedas Tether",
       "cta": {
+        "eyebrow": "FUNCIONA EN CUALQUIER DISPOSITIVO",
+        "title": "ABRIR EN EL NAVEGADOR"
       }
     },
     "tiles": {
       "get": {
+        "titlePrefix": "QUÉ ",
+        "titleHighlight": "TÚ LO CONSIGUES",
+        "body": "Bitcoin. Lightning. Arkade. Todo en uno, sin que falte nada. Mainchain para liquidaciones. Lightning para pagos instantáneos. Protocolo Arkade para la próxima generación. Sin cambiar de aplicación. Sin concesiones."
       },
       "send": {
+        "titleLine1": "SIN CANALES. SIN CONFIGURACIÓN.",
+        "titleHighlight": "SIMPLEMENTE ENVÍA.",
+        "body": "Chimera elimina la fricción más dolorosa de Lightning. Sin liquidez entrante. Sin apertura de canales. Reciba desde el primer día."
       },
       "id": {
+        "titleHighlight": "SIN IDENTIFICACIÓN",
+        "titleSuffix": " REQUERIDO.",
+        "body": "Acceda a su billetera en minutos. Comience a operar. Servicios regulados proporcionados por terceros."
       },
       "multiAsset": {
+        "titleLine1": "MULTIACTIVO.",
+        "titleHighlight": "UNA INTERFAZ.",
+        "body": "BTC, USDT, ETH, TRON, POLYGON, FIAT y en expansión. Todo lo que ofrecen las finanzas modernas, sin necesidad de ceder la custodia."
       }
     },
     "swap": {
+      "logoAlt": "Quimera",
+      "title": "INTERCAMBIO DE ARKADE<br></br>Y ACTIVOS ENVUELTOS",
+      "body": "Comercio P2P entre cadenas sin límites y con un nivel de privacidad nunca antes visto. Todas las funciones de un CEX con la libertad de un DEX, todo ello en una aplicación web progresiva que está fuera del alcance de las tiendas. El futuro del trading llegará pronto a Arkade.",
+      "cardAlt": "Intercambio de tarjetas de quimera",
       "cta": {
+        "eyebrow": "TU DINERO. TU DISPOSITIVO. TUS REGLAS.",
+        "title": "QUIMERA ABIERTA"
       }
     }
   },
   "card": {
     "meta": {
+      "title": "Tarjeta Quimera — Visa de autocustodia",
+      "description": "Usa la tarjeta Chimera en cualquier lugar donde se acepte Visa. Con el respaldo de socios autorizados. Recarga a través de la billetera Chimera y usa tu saldo en más de 50 países."
     },
     "hero": {
+      "eyebrow": "TARJETA QUIMERA",
+      "title": "AUTOCUSTODIA<br/>EN TU CARTERA.<br/>VISA EN TU BOLSILLO.",
+      "subtitle": "Sin cuota mensual. Sin cargo por recarga. Comisión por transacción del 1,5% fija de por vida. Solo para los primeros 1000 pedidos anticipados.",
+      "cta": "RESERVA TU TARJETA",
+      "imageAlt": "Cartas de quimera"
     },
     "ctaCard": {
+      "eyebrow": "GASTA EN CUALQUIER LUGAR DONDE SE ACEPTE VISA",
+      "title": "RESERVA TU TARJETA",
+      "body": "Recarga tu tarjeta directamente desde Chimera Wallet. Sin pasos adicionales."
     },
     "spots": {
+      "imageAlt": "Carta Quimera con monedas flotantes",
+      "heading": "1.000 PLAZAS.",
+      "subheading": "ESO ES TODO.",
+      "body": "Una vez que se hayan agotado las 1000 plazas, se aplicarán los precios estándar de forma permanente. Sin lista de espera, sin precios retroactivos, sin excepciones.",
+      "rollout": "La tarjeta Chimera se lanzará a mediados de 2026.",
+      "cta": "¡RESERVA TU PLAZA AHORA!"
     },
     "benefits": {
+      "heading": "TRES BENEFICIOS",
+      "subheading": "QUE NO CADUCAN:",
       "items": [
         {
+          "tag": "PARA SIEMPRE",
+          "title": "COMISIÓN POR TRANSACCIÓN DEL 1,5% DE POR VIDA",
+          "body": "Bloqueado de por vida. Los clientes que realicen su pedido anticipado obtienen un 1,5 % de interés fijo para siempre. La tasa estándar es del 2 %, y podría subir. La suya no.",
+          "badge": "1,5%",
+          "strike": "ESTÁNDAR 2%"
         },
         {
+          "tag": "PARA SIEMPRE",
+          "title": "CERO CUOTA MENSUAL",
+          "body": "Sin suscripción. Sin cargo de mantenimiento. Sin cuota anual. Sin factura.",
+          "badge": "GRATIS",
+          "strike": "PARA SIEMPRE"
         },
         {
+          "tag": "PARA SIEMPRE",
+          "title": "SIN CARGOS ADICIONALES",
+          "body": "Recarga desde tu billetera Chimera sin costo alguno. Siempre.",
+          "badge": "0,0%",
+          "strike": "ESTÁNDAR 1%"
         }
-      ]
+      ],
+      "disclaimer": "*El programa de tarjetas se ofrece en colaboración con Wirex Pay. Se requiere verificación de identidad (KYC) para acceder a la plataforma de Wirex, independientemente de la verificación de identidad de Chimera. Chimera no cobra ninguna comisión ni obtiene ningún beneficio económico por este servicio."
     },
     "countries": {
+      "heading": "PAÍSES APOYADOS",
+      "subheading": "La tarjeta Chimera funciona en cualquier lugar donde se acepte Visa. Pueden solicitarla los residentes de los siguientes países:",
       "continents": {
+        "Europe": "Europa",
+        "Asia & Pacific": "Asia y Pacífico",
+        "Latin America": "América Latina"
       },
       "names": {
+        "Andorra": "Andorra",
+        "Austria": "Austria",
+        "Belgium": "Bélgica",
+        "Bulgaria": "Bulgaria",
+        "Croatia": "Croacia",
+        "Cyprus": "Chipre",
+        "Czech Republic": "República Checa",
+        "Denmark": "Dinamarca",
+        "Estonia": "Estonia",
+        "Finland": "Finlandia",
+        "France": "Francia",
+        "Germany": "Alemania",
+        "Gibraltar": "Gibraltar",
+        "Greece": "Grecia",
+        "Hungary": "Hungría",
+        "Iceland": "Islandia",
+        "Ireland": "Irlanda",
+        "Italy": "Italia",
+        "Latvia": "Letonia",
+        "Lithuania": "Lituania",
+        "Luxembourg": "Luxemburgo",
+        "Malta": "Malta",
+        "Monaco": "Mónaco",
+        "Montenegro": "Montenegro",
+        "Netherlands": "Países Bajos",
+        "Norway": "Noruega",
+        "Poland": "Polonia",
+        "Portugal": "Portugal",
+        "Romania": "Rumania",
+        "Slovakia": "Eslovaquia",
+        "Slovenia": "Eslovenia",
+        "Spain": "España",
+        "Sweden": "Suecia",
+        "Switzerland": "Suiza",
+        "United Kingdom": "Reino Unido",
+        "Australia": "Australia",
+        "Hong Kong": "Hong Kong",
+        "Indonesia": "Indonesia",
+        "Malaysia": "Malasia",
+        "Philippines": "Filipinas",
+        "Singapore": "Singapur",
+        "Taiwan": "Taiwán",
+        "Thailand": "Tailandia",
+        "Vietnam": "Vietnam",
+        "Argentina": "Argentina",
+        "Brazil": "Brasil",
+        "Chile": "Chile",
+        "Colombia": "Colombia",
+        "Ecuador": "Ecuador",
+        "Mexico": "México",
+        "Peru": "Perú"
       }
     },
     "faq": {
+      "heading": "Preguntas frecuentes",
       "items": [
         {
+          "q": "¿Cómo puedo solicitar una tarjeta Chimera?",
+          "a": "Haz clic en \"RESERVAR AHORA\" a continuación para reservar tu tarjeta y obtener beneficios de por vida por reservar con anticipación."
         },
         {
+          "q": "¿Qué ocurre si pierdo el plazo para reservar?",
+          "a": "Pagarás las tarifas estándar, sin precios preferenciales. Los miembros que realicen el pedido anticipado recibirán protección de tarifa permanente."
         },
         {
+          "q": "¿Los precios de las reservas anticipadas son realmente fijos para siempre?",
+          "a": "Sí. Tus comisiones se mantienen congeladas al nivel de la preventa durante toda la vigencia de tu cuenta. Las tarifas estándar pueden aumentar con el tiempo, pero las tuyas no."
         },
         {
+          "q": "¿Es segura la tarjeta Chimera?",
+          "a": "Sí. La tarjeta Chimera utiliza la misma infraestructura de seguridad de Visa que las tarjetas bancarias tradicionales."
         },
         {
+          "q": "¿Cómo recargo mi tarjeta Chimera?",
+          "a": "Recarga directamente desde tu billetera Chimera sin custodia. Es rápido, fácil y seguro."
         }
       ]
     },
     "openChimera": {
+      "eyebrow": "FUNCIONA EN CUALQUIER DISPOSITIVO",
+      "title": "QUIMERA ABIERTA"
     }
   },
   "footer": {
+    "poweredBy": "Desarrollado por:",
+    "privacy": "PRIVACIDAD",
+    "privacyManifesto": "Manifiesto de privacidad de Chimera",
+    "pressAndMedia": "PRENSA Y MEDIOS DE COMUNICACIÓN",
+    "news": "Noticias",
+    "pressKit": "Kit de prensa",
+    "support": "APOYO",
+    "apiDocs": "Documentación de la API",
+    "supportCenter": "Centro de soporte",
+    "disclaimer": "CEXT, emitido por Outlogic SAGL, es un token de utilidad sujeto a la regulación suiza. No es un valor, ni un token de pago, ni un contrato de inversión. Las recompensas por staking no están garantizadas. Los servicios de moneda fiduciaria, tarjetas, trading y staking son proporcionados por terceros, no por Chimera Wallet.",
+    "copyright": "© 2026 Chimera Software Association - 6900 Lugano, Suiza. Todos los derechos reservados. Hecho con ❤️ en 🇨🇭"
   },
   "header": {
     "nav": {
-    }
+      "app": "APLICACIÓN",
+      "card": "Tarjeta",
+      "token": "Simbólico",
+      "referrals": "Referencias",
+      "about": "Acerca de",
+      "news": "Noticias"
+    },
+    "openChimera": "QUIMERA ABIERTA",
+    "openMenu": "Abrir menú",
+    "menuTitle": "Menú de navegación",
+    "menuDescription": "Enlaces de navegación móvil y enlaces a redes sociales para Chimera Wallet.",
+    "language": "Idioma"
   },
   "home": {
     "meta": {
+      "title": "Chimera: la superaplicación de Bitcoin.",
+      "description": "Chimera Wallet es la primera superaplicación de Bitcoin. Sin custodia, basada en navegador, no requiere instalación. Tus claves, tu control."
     },
     "hero": {
+      "heroLeftAlt": "La aplicación de billetera Chimera muestra el saldo y las transacciones.",
+      "heroRightAlt": "Saldo y transacciones de la tarjeta Chimera",
+      "eyebrow": "CHIMERAWALLET, FINANZAS EVOLUCIONADAS",
+      "title": "LA ÚNICA SUPERAPLICACIÓN DE BITCOIN DISEÑADA PARA QUE NADIE PUEDA QUITARTE TU DINERO.",
+      "subtitle": "No es una promesa. No es una política. Matemáticas.",
+      "tagline": "Mainchain. Lightning. Protocolo Arkade. Una sola aplicación.<br></br>Tus claves. Sin intermediarios.",
       "cta": {
         "launch": {
+          "eyebrow": "CARTERA QUIMERA",
+          "title": "INICIA LA APLICACIÓN"
         },
         "waitlist": {
+          "title": "ÚNETE A LA PRÓXIMA LISTA DE ESPERA"
         },
         "community": {
+          "eyebrow": "NOTIFICARME",
+          "title": "ÚNETE A LA COMUNIDAD"
         }
       }
     },
     "controlTradeEarn": {
+      "walletPrimaryAlt": "Aplicación de billetera Chimera: vista principal",
+      "walletSecondaryAlt": "Aplicación de billetera Chimera: vista secundaria",
       "control": {
+        "title": "CONTROL",
+        "body": "Tus claves. Tus monedas. Punto final. Cadena principal de Bitcoin, Lightning, Arkade Protocol VTXO: la pila completa de Bitcoin, sin custodia desde el primer segundo hasta el último."
       },
       "trade": {
+        "title": "COMERCIO",
+        "body": "Seguridad sin custodia. Compra, vende e intercambia sin comisiones, sin necesidad de transferir fondos a la billetera de otra persona. Compatible con moneda fiduciaria y muchos otros activos. Sin verificación de identidad (KYC) para transacciones inferiores a 1000 CHF al mes*. Próximamente, intercambios Chimera sin custodia."
       },
       "earn": {
+        "title": "GANAR",
+        "body": "Recomienda a tus amigos y gana una parte de las comisiones de la plataforma: hasta un 20 %, sin límite ni fecha de caducidad. No son puntos. Son ingresos reales. Préstamos P2P."
       }
     },
     "superchargingBitcoin": {
+      "eyebrow": "POTENCIAR BITCOIN",
+      "title": "POTENCIAR BITCOIN",
+      "subtitle": "Tres capas. Una interfaz. Sin concesiones.",
       "mainchain": {
+        "title": "CADENA PRINCIPAL",
+        "body": "Depósitos y retiros completos de BTC en la cadena de bloques y conversión de moneda fiduciaria a través de proveedores externos."
       },
       "arkadeProtocol": {
+        "title": "PROTOCOLO ARKADE",
+        "body": "Tecnología VTXO: seguridad de nivel mainchain, velocidad ultrarrápida sin los problemas típicos de los canales. Chimera es la primera superaplicación en el protocolo Arkade."
       },
       "lightning": {
+        "title": "ILUMINACIÓN",
+        "body": "Compatibilidad total con facturas Lightning, mejorada por Boltz. Para todos los comercios, en todas las plataformas de intercambio, sin necesidad de gestionar ningún canal."
       }
     },
     "arkadeProtocol": {
+      "title": "PROTOCOLO ARKADE",
+      "backedBy": "RESPALDADO POR LOS MEJORES",
+      "raised": "Se recaudaron 7,7 millones de dólares en dos rondas de financiación.",
       "comparison": {
         "cex": {
+          "title": "CEX",
           "rows": [
             [
-              null,
-              null
+              "Custodia",
+              "Custodia"
             ],
             [
-              null,
-              null
+              "Instante",
+              "Velocidad"
             ],
             [
-              null,
-              null
+              "Requerido",
+              "KYC"
             ],
             [
-              null,
-              null
+              "Alto",
+              "Riesgo de contraparte"
             ],
             [
-              null,
-              null
+              "No",
+              "Salida unilateral"
             ]
           ]
         },
         "dex": {
+          "title": "DEX",
           "rows": [
             [
-              null,
-              null
+              "Sin custodia",
+              "Custodia"
             ],
             [
-              null,
-              null
+              "Variable",
+              "Velocidad"
             ],
             [
-              null,
-              null
+              "Ninguno",
+              "KYC"
             ],
             [
-              null,
-              null
+              "Bajo",
+              "Riesgo de contraparte"
             ],
             [
-              null,
-              null
+              "Sí",
+              "Salida unilateral"
             ]
           ]
         },
         "chimera": {
+          "title": "Quimera",
           "rows": [
             [
-              null,
-              null
+              "Sin custodia",
+              "Custodia"
             ],
             [
-              null,
-              null
+              "Instante",
+              "Velocidad"
             ],
             [
-              null,
-              null
+              "Opcional",
+              "KYC"
             ],
             [
-              null,
-              null
+              "Mínimo",
+              "Riesgo de contraparte"
             ],
             [
-              null,
-              null
+              "Sí",
+              "Salida unilateral"
             ]
           ]
         }
       }
     },
     "selfCustody": {
+      "cardAlt": "Tarjeta Quimera",
+      "title": "AUTOCUSTODIA",
+      "subtitle": "NO TERMINA AL PAGAR.",
+      "body": "Sin cuota mensual. Sin cargo por recarga. Comisión por transacción del 1,5% fija de por vida. Solo para los primeros 1000 pedidos anticipados.",
+      "cta": "RESERVA TU PLAZA"
     },
     "poweredBy": {
+      "label": "Desarrollado por",
+      "bitcoin": "Bitcoin",
+      "arkade": "Arcada",
+      "lightning": "Red Lightning",
+      "outlogic": "Outlogic"
     },
     "cextToken": {
+      "title": "SIGUIENTE TOKEN",
+      "subtitle": "Cuanto más mantengas la plataforma, más trabajará para ti.",
+      "body": "Suministro fijo de 1.000 millones. Descuentos en comisiones de hasta el 50 %. Multiplicadores de referencias de hasta 3×. Gobernanza de nivel Diamante. Inflación cero. Clasificado como token de utilidad según la normativa suiza.",
+      "cta": "DESCUBRE EL SIGUIENTE"
     },
     "referrals": {
+      "title": "REFERENCIAS",
+      "subtitle": "Comparte una sola vez. Gana con cada transacción que realicen. Para siempre.",
+      "body": "Hasta el 20% de las comisiones de la plataforma. Sin límite. Sin fecha de caducidad. Reparto de ingresos, no puntos.",
+      "disclaimer": "* Las recompensas por referencias se aplican a los usuarios que completen la verificación KYC.",
+      "cta": "OBTÉN TU CÓDIGO DE REFERENCIA",
+      "previewAlt": "Vista previa de la referencia de Chimera"
     },
     "waitlist": {
+      "eyebrow": "ÚNETE A LA LISTA DE ESPERA",
+      "title": "¡ÚNETE A LA PRÓXIMA LISTA DE ESPERA!",
+      "emailPlaceholder": "Correo electrónico",
+      "joining": "UNIÓN...",
+      "joinNow": "¡ÚNETE AHORA!",
+      "success": "¡Gracias por suscribirte!",
+      "error": "Algo salió mal, por favor inténtalo de nuevo."
     }
   },
   "news": {
     "meta": {
+      "title": "Quimera — Noticias",
+      "description": "Lo último de Chimera Wallet: actualizaciones, noticias del ecosistema y novedades sobre Bitcoin L2. Mantente informado mientras desarrollamos la superaplicación completa."
     },
+    "title": "NOTICIAS",
     "items": [
       {
+        "source": "CoinMarketCap",
+        "title": "Nimbus Capital y Chimera Wallet anuncian una alianza estratégica de 15 millones de dólares para expandir la infraestructura DeFi en Bitcoin."
       },
       {
+        "source": "COINLIVE",
+        "title": "Nimbus Capital y Chimera Wallet forjan una alianza de 15 millones de dólares para impulsar las finanzas descentralizadas (DeFi) de Bitcoin."
       },
       {
+        "source": "Invertir",
+        "title": "Alianza Bitcoin DeFi: ¿Una señal de 15 millones de dólares o ruido?"
       },
       {
+        "source": "cointelegraph",
+        "title": "Nimbus Capital y Chimera Wallet anuncian una alianza estratégica de 15 millones de dólares para expandir la infraestructura DeFi en Bitcoin."
       },
       {
+        "source": "PR NEWSWIRE",
+        "title": "Bitcoin se une al comercio: Wirex y Chimera Wallet permiten que más de 80 millones de comercios paguen con Bitcoin."
       },
       {
+        "source": "FINTEC BUZZ",
+        "title": "Wirex y Chimera Wallet permiten que más de 80 millones de comercios utilicen Bitcoin para pagar."
       },
       {
+        "source": "México",
+        "title": "Wirex impulsa la tarjeta Chimera, llevando los pagos con Bitcoin a más de 80 millones de comercios en todo el mundo."
       },
       {
+        "source": "Binance",
+        "title": "Wirex y Chimera Wallet lanzan una tarjeta de débito basada en Bitcoin."
       },
       {
+        "source": "Globe News Wire",
+        "title": "Nimbus Capital y Chimera Wallet anuncian una alianza estratégica de 15 millones de dólares para expandir la infraestructura DeFi en Bitcoin."
       },
       {
+        "source": "0xzx",
+        "title": "Nimbus Capital y Chimera Wallet firman una alianza estratégica de 15 millones de dólares para expandir la infraestructura DeFi de Bitcoin."
       },
       {
+        "source": "Binance",
+        "title": "Nimbus Capital y Chimera Wallet se asocian por 15 millones de dólares en el sector DeFi."
       }
     ]
   },
   "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o se ha movido.",
+    "goHome": "Ir a casa"
   },
   "pressKit": {
     "meta": {
-    }
+      "title": "Kit de prensa — Cartera Chimera",
+      "description": "Kit de prensa de Chimera Wallet: logotipos, colores de marca y material multimedia. Donde las finanzas se unen a la innovación.",
+      "ogDescription": "Kit de prensa de Chimera Wallet: logotipos, colores de la marca y material multimedia."
+    },
+    "eyebrow": "KIT DE PRENSA",
+    "title": "¡DONDE LAS FINANZAS SE UNEN A LA INNOVACIÓN!",
+    "subtitle": "La plataforma financiera de próxima generación inspirada en el mito e impulsada por la innovación.",
+    "body": "El logotipo de Chimera Wallet se inspira en la antigua criatura mitológica, la Quimera, un ser descrito por Platón como \"muchas formas fusionadas en una sola\". En la tradición antigua, la Quimera simbolizaba la fuerza, la resistencia y la adaptabilidad, cualidades que resuenan profundamente con la visión de Chimera Wallet, que combina elementos de león, cabra y serpiente en una sola criatura.",
+    "logosTitle": "LOGOTIPOS",
+    "logosAlt": "Logotipos de quimera",
+    "colorsTitle": "COLORES DE LA MARCA",
+    "cta": "DESCARGAR KIT DE MEDIOS"
   },
   "privacyApp": {
     "meta": {
+      "title": "Política de privacidad de la aplicación — Cartera Chimera",
+      "description": "Política de privacidad de la aplicación Chimera Wallet. Arquitectura de conocimiento cero. Tus datos siguen siendo tuyos.",
+      "ogTitle": "Política de privacidad de la aplicación — Cartera Chimera",
+      "ogDescription": "Política de privacidad de la aplicación Chimera Wallet. Arquitectura de conocimiento cero. Tus datos siguen siendo tuyos."
     },
     "hero": {
+      "title": "Política de privacidad de la aplicación Chimera Wallet"
     },
     "intro": {
+      "body": "Toda persona tiene un derecho inalienable a la privacidad y a la soberanía total de sus datos. En un mundo donde la tecnología se utiliza cada vez más como arma para identificar, monitorear y rastrear a los usuarios, la aplicación Chimera Wallet adopta una postura decididamente opuesta. Chimera Wallet no recopila ni comparte su información personal. Sus datos le pertenecen exclusivamente a usted, nunca a nosotros.",
+      "nutshell": "Esa es nuestra política en pocas palabras."
     },
     "informationNotCollected": {
+      "heading": "Información que no recopilamos",
+      "body": "La aplicación Chimera Wallet no almacena información que identifique tu dispositivo, como tu dirección IP, agente de usuario o transacciones. Chimera Wallet está diseñada con una arquitectura de conocimiento cero, por lo que no almacena información personal. No necesitas un número de teléfono, correo electrónico ni ninguna información vinculada a tu identidad o tus activos para usar Chimera Wallet. Tu huella digital es exclusivamente tuya. Chimera Wallet es privada por defecto y por diseño."
     },
     "informationShared": {
+      "heading": "Información compartida con la aplicación de billetera Chimera",
+      "body": "Si utilizas la aplicación Chimera Wallet en tu teléfono Android o iOS, Google o Apple podrían almacenar información sobre tu uso. Pueden registrar cuándo se abre y se cierra la aplicación, cuánto tiempo la usas, los registros de errores y el modelo de tu dispositivo. Esta información de uso también podría asociarse a tu cuenta de Google o Apple. La única información que recibe Chimera Wallet es el número de descargas y errores. Si planeas usar Chimera Wallet, te recomendamos leer las políticas de privacidad de Apple o Google. Si usas iOS, consulta las Directrices de revisión de la App Store de Apple. Para Android, consulta la sección Datos de usuario del Centro de políticas para desarrolladores de Google."
     },
     "thirdPartyApi": {
+      "heading": "Integración de API de terceros",
+      "intro": "La aplicación de billetera Chimera se integra con varios servicios de terceros a través de sus API para mejorar la funcionalidad. Creemos en la transparencia absoluta sobre estas conexiones, manteniendo al mismo tiempo la soberanía sobre sus datos. Cuando utilice estas funciones:",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ]
-    }
+        "Chimera puede enviar los datos no identificativos necesarios a estos servicios de terceros para completar las operaciones solicitadas.",
+        "Estos servicios de terceros operan bajo sus propias políticas de privacidad, las cuales le recomendamos revisar.",
+        "Usted mantiene el control total y puede deshabilitar integraciones de API de terceros específicas a través de la configuración de la aplicación en cualquier momento.",
+        "Los servicios de terceros pueden recopilar y procesar datos de acuerdo con sus propios términos y políticas de privacidad cuando usted interactúa con sus servicios a través de Chimera.",
+        "La información transmitida a servicios de terceros puede incluir detalles de transacciones, datos de blockchain u otra información técnica necesaria para que el servicio funcione correctamente.",
+        "Chimera no comparte su identidad, información de contacto ni información de identificación personal con estos servicios de terceros.",
+        "Usted conserva la soberanía total sobre qué datos salen de su dispositivo y con qué servicios elige conectarse."
+      ],
+      "coingecko": "Para la conversión de cantidades FIAT, Chimera Wallet depende de las API públicas de CoinGecko. Además, la aplicación Chimera Wallet no tiene influencia ni conocimiento de si.",
+      "disclaimer": "Si bien la aplicación Chimera Wallet mantiene estrictos estándares de privacidad y respeta su derecho absoluto a la privacidad y la soberanía de sus datos, no podemos garantizar el mismo nivel de protección de la privacidad para los datos procesados ​​por servicios de terceros cuando usted decide utilizar sus funciones a través de nuestra aplicación. Le recomendamos encarecidamente que revise las políticas de privacidad de todos los servicios de terceros, realice su propio análisis y elija cuidadosamente con qué servicios desea interactuar a través de la aplicación Chimera Wallet."
+    },
+    "effectiveDate": "Esta política entrará en vigor el 15 de abril de 2025."
   },
   "privacyManifesto": {
     "meta": {
+      "title": "Manifiesto de privacidad — Cartera Chimera",
+      "description": "La mayoría de las empresas redactan políticas de privacidad; nosotros escribimos código que no las necesita. El enfoque de Chimera hacia la privacidad y la transparencia."
     },
+    "eyebrow": "QUIMERA",
+    "title": "MANIFIESTO DE PRIVACIDAD",
     "intro": {
+      "p1": "La mayoría de las empresas redactan políticas de privacidad; nosotros escribimos código que no las necesita.",
+      "p2": "En Chimera nos tomamos muy en serio la privacidad y la transparencia.",
+      "p3": "Nos comprometemos a proteger y preservar la privacidad de nuestros usuarios en todas las plataformas.",
+      "p4": "Nuestro enfoque para proteger sus datos es simple: no los recopilamos.",
+      "p5": "Nuestro sitio web chimerawallet.com y Chimera Wallet no utilizan cookies ni otras tecnologías de seguimiento.",
+      "p6": "Nuestros análisis provienen exclusivamente de Plausible (<a>https://plausible.io/about</a>), una solución de código abierto que preserva la privacidad y está diseñada para proteger su privacidad al tiempo que proporciona datos anonimizados con fines prácticos.",
+      "p7": "Privacidad integrada desde el primer momento.",
+      "p8": "Puedes compartir tus datos directamente con terceros a través de nuestras plataformas para acceder a determinados servicios. Consulta las políticas individuales de cada proveedor."
     },
+    "providersTitle": "PROVEEDORES",
     "providers": {
+      "plausible": "Plausible",
+      "outlogic": "Outlogic Sagl",
+      "lendasat": "Lendasat"
     }
   },
   "privacyWeb": {
     "meta": {
+      "title": "Política de privacidad del sitio web — Cartera Chimera",
+      "description": "Política de privacidad del sitio web de Chimera. Cómo gestionamos sus datos en chimerawallet.com.",
+      "ogTitle": "Política de privacidad del sitio web — Cartera Chimera",
+      "ogDescription": "Política de privacidad del sitio web de Chimera. Cómo gestionamos sus datos en chimerawallet.com."
     },
     "hero": {
+      "title": "Política de privacidad del sitio web de Chimera",
+      "lastUpdated": "Última actualización: 9 de junio de 2025"
     },
+    "intro": "Nuestra Política de Privacidad describe nuestras prácticas con respecto a la recopilación, el uso y la divulgación de su información cuando utiliza nuestro servicio. También le informa sobre sus derechos de privacidad y protecciones legales. Utilizamos sus datos personales para mejorar y ofrecer nuestro servicio. Al utilizar nuestro servicio, usted acepta la recopilación y el uso de la información según lo descrito en esta Política de Privacidad.",
     "interpretationAndDefinitions": {
+      "heading": "Interpretación y definiciones",
       "interpretation": {
+        "heading": "Interpretación",
+        "body": "Las palabras cuya letra inicial está en mayúscula tienen significados definidos bajo las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado, independientemente de si aparecen en singular o en plural."
       },
       "definitions": {
+        "heading": "Definiciones",
+        "intro": "A los efectos de esta Política de Privacidad:",
         "items": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "<b>Cuenta</b> significa una cuenta única creada para que usted acceda a nuestro Servicio o a partes de nuestro Servicio.",
+          "<b>Compañía</b> (denominada indistintamente como \"la Compañía\", Acuerdo) se refiere a Chimerawallet.io. \"Nosotros\", \"Nos\" o \"Nuestro\" en este documento Las cookies son pequeños archivos que un sitio web coloca en su computadora, dispositivo móvil o cualquier otro dispositivo, que contienen los detalles de su historial de navegación en ese sitio web, entre otros muchos usos.",
+          "<b>Dispositivo</b> significa cualquier dispositivo que pueda acceder al Servicio, como una computadora, un teléfono celular o una tableta digital.",
+          "<b>Datos Personales</b> es cualquier información que se relacione con un individuo identificado o identificable.",
+          "<b>Servicio</b> se refiere a los servicios de Chimerawallet.io y al sitio web chimerawallet.com.",
+          "<b>Proveedor de servicios</b> se refiere a cualquier persona física o jurídica que procese los datos en nombre de la Compañía. Se refiere a empresas o personas físicas externas contratadas por la Compañía para facilitar el Servicio, prestar el Servicio en nombre de la Compañía, realizar servicios relacionados con el Servicio o ayudar a la Compañía a analizar cómo se utiliza el Servicio.",
+          "<b>Servicio de redes sociales de terceros</b> se refiere a cualquier sitio web o red social a través del cual un usuario puede iniciar sesión o crear una cuenta para utilizar el Servicio.",
+          "<b>Datos de uso</b> se refiere a los datos recopilados automáticamente, ya sea generados por el uso del Servicio o por la propia infraestructura del Servicio (por ejemplo, la duración de la visita a una página).",
+          "<b>Sitio web</b> se refiere al sitio web de Chimerawallet, accesible desde https://chimerawallet.com",
+          "<b>Usted</b> se refiere a la persona que accede o utiliza el Servicio, o a la empresa u otra entidad legal en nombre de la cual dicha persona accede o utiliza el Servicio, según corresponda."
         ]
       }
     },
     "collecting": {
+      "heading": "Recopilación y uso de sus datos personales",
       "typesOfData": {
+        "heading": "Tipos de datos recopilados"
       },
       "personalData": {
+        "heading": "Datos personales",
+        "body1": "Chimera Wallet se integra con diversos servicios de terceros a través de sus API para mejorar su funcionalidad. Solo al utilizar estos servicios de terceros mediante sus API, los proveedores de servicios de terceros pueden solicitarle cierta información personal que puede utilizarse para contactarlo o identificarlo. No recopilamos ni almacenamos datos personales de los usuarios. Todos los datos se transmiten directamente a los proveedores de servicios de terceros a través de nuestra integración de API. Nuestra plataforma (Chimera) actúa únicamente como interfaz y no conserva copias de ninguna información o dato del usuario procesado a través de nuestro sistema.",
+        "body2": "Si bien la billetera Chimera mantiene estrictos estándares de privacidad y respeta su derecho absoluto a la privacidad y la soberanía de sus datos, no podemos garantizar el mismo nivel de protección de la privacidad para los datos procesados ​​por servicios de terceros cuando usted decide utilizar sus funciones a través de nuestra aplicación. Le recomendamos encarecidamente que revise las políticas de privacidad de todos los servicios de terceros, realice su propio análisis y elija cuidadosamente con qué servicios desea interactuar a través del sitio web de la billetera Chimera."
       },
       "usageData": {
+        "heading": "Datos de uso",
+        "body1": "Los datos de uso se recopilan automáticamente al utilizar el Servicio.",
+        "body2": "Los datos de uso pueden incluir información como la dirección de protocolo de Internet de su dispositivo (por ejemplo, dirección IP), el tipo de navegador, la versión del navegador, las páginas de nuestro Servicio que visita, la hora y la fecha de su visita, el tiempo que pasa en esas páginas, identificadores únicos del dispositivo y otros datos de diagnóstico.",
+        "body3": "Cuando acceda al Servicio a través de un dispositivo móvil, podremos recopilar automáticamente cierta información, que incluye, entre otros, el tipo de dispositivo móvil que utiliza, el identificador único de su dispositivo móvil, la dirección IP de su dispositivo móvil, su sistema operativo móvil, el tipo de navegador de Internet móvil que utiliza, identificadores únicos del dispositivo y otros datos de diagnóstico.",
+        "body4": "También podemos recopilar información que su navegador envía cada vez que visita nuestro Servicio o cuando accede al Servicio a través de un dispositivo móvil."
       },
       "tracking": {
+        "heading": "Tecnologías de seguimiento y cookies",
+        "body1": "Utilizamos cookies y tecnologías de seguimiento similares para monitorizar la actividad en nuestro servicio y almacenar cierta información. Las tecnologías de seguimiento que utilizamos son balizas web, etiquetas y scripts para recopilar y rastrear información, así como para mejorar y analizar nuestro servicio. Las tecnologías que utilizamos pueden incluir:",
+        "browserCookies": "<b>Cookies o cookies del navegador.</b> Una cookie es un pequeño archivo que se almacena en su dispositivo. Puede configurar su navegador para que rechace todas las cookies o para que le avise cuando se envíe una. Sin embargo, si no acepta las cookies, es posible que no pueda utilizar algunas partes de nuestro servicio. A menos que haya ajustado la configuración de su navegador para que rechace las cookies, nuestro servicio podría utilizarlas.",
+        "flashCookies": "<b>Cookies Flash.</b> Algunas funciones de nuestro Servicio pueden usar objetos almacenados localmente (o cookies Flash) para recopilar y almacenar información sobre sus preferencias o su actividad en nuestro Servicio. Las cookies Flash no se gestionan con la misma configuración del navegador que las cookies del navegador. Para obtener más información sobre cómo puede eliminar las cookies Flash, consulte <a>\"¿Dónde puedo cambiar la configuración para deshabilitar o eliminar objetos compartidos locales?\"</a>.",
+        "webBeacons": "<b>Balizas web.</b> Ciertas secciones de nuestro Servicio y nuestros correos electrónicos pueden contener pequeños archivos electrónicos conocidos como balizas web (también denominadas gifs transparentes, etiquetas de píxeles y gifs de un solo píxel) que permiten a la Compañía, por ejemplo, contar los usuarios que han visitado esas páginas o abierto un correo electrónico y para otras estadísticas relacionadas con el sitio web (por ejemplo, registrar la popularidad de una sección determinada y verificar la integridad del sistema y del servidor).",
+        "body2": "Las cookies pueden ser persistentes o de sesión. Las cookies persistentes permanecen en su ordenador o dispositivo móvil incluso cuando se desconecta de internet, mientras que las cookies de sesión se eliminan en cuanto cierra el navegador. Utilizamos tanto cookies de sesión como persistentes para los fines que se detallan a continuación:"
       },
       "necessaryCookies": {
+        "heading": "Cookies necesarias/esenciales",
+        "type": "Tipo: Cookies de sesión",
+        "administeredBy": "Administrado por: Nosotros",
+        "purpose": "Finalidad: Estas cookies son esenciales para proporcionarle los servicios disponibles a través del sitio web y para que pueda utilizar algunas de sus funciones. Ayudan a autenticar a los usuarios y a prevenir el uso fraudulento de las cuentas. Sin estas cookies, no se pueden proporcionar los servicios que ha solicitado, y solo las utilizamos para ofrecerle dichos servicios."
       },
       "noticeCookies": {
+        "heading": "Política de cookies / Aviso de aceptación de cookies",
+        "type": "Tipo: Cookies persistentes",
+        "administeredBy": "Administrado por: Nosotros",
+        "purpose": "Finalidad: Estas cookies identifican si los usuarios han aceptado el uso de cookies en el sitio web."
       },
       "functionalityCookies": {
+        "heading": "Cookies de funcionalidad",
+        "type": "Tipo: Cookies persistentes",
+        "administeredBy": "Administrado por: Nosotros",
+        "purpose": "Finalidad: Estas cookies nos permiten recordar las opciones que seleccionas al usar el sitio web, como tus datos de inicio de sesión o tu idioma preferido. El objetivo de estas cookies es ofrecerte una experiencia más personalizada y evitar que tengas que volver a introducir tus preferencias cada vez que uses el sitio web.",
+        "moreInfo": "Para obtener más información sobre las cookies que utilizamos y sus opciones al respecto, visite nuestra Política de cookies o la sección de cookies de nuestra Política de privacidad."
       },
       "useOfData": {
+        "heading": "Uso de sus datos personales",
+        "intro": "La Compañía podrá utilizar los Datos Personales para los siguientes fines:",
+        "body1": "Para proporcionar y mantener nuestro Servicio, incluyendo el monitoreo del uso del mismo. Para contactarlo: Para contactarlo por correo electrónico, llamadas telefónicas, SMS u otras formas equivalentes de comunicación electrónica, como notificaciones push de una aplicación móvil sobre actualizaciones o comunicaciones informativas relacionadas con las funcionalidades, productos o servicios contratados, incluyendo las actualizaciones de seguridad, cuando sea necesario o razonable para su implementación.",
+        "body2": "Para proporcionarle noticias, ofertas especiales e información general sobre otros bienes, servicios y eventos que ofrecemos, similares a los que ya ha comprado o sobre los que ha solicitado información, a menos que haya optado por no recibir dicha información.",
+        "body3": "Para gestionar sus solicitudes: Para atender y gestionar sus solicitudes. Para otros fines: Podemos utilizar su información para otros fines, como el análisis de datos, la identificación de tendencias de uso, la determinación de la eficacia de nuestras campañas promocionales y la evaluación y mejora de nuestro Servicio, productos, servicios, marketing y su experiencia.",
+        "shareIntro": "Podemos compartir su información personal en las siguientes situaciones:",
         "shareItems": [
-          null,
-          null,
-          null,
-          null
+          "<b>Con proveedores de servicios:</b> Podemos compartir su información personal con proveedores de servicios para monitorear y analizar el uso de nuestro Servicio.",
+          "<b>Para transferencias comerciales:</b> Podemos compartir o transferir su información personal en relación con, o durante las negociaciones de, cualquier fusión, venta de activos de la Compañía, financiamiento o adquisición de la totalidad o una parte de nuestro negocio por otra compañía.",
+          "<b>Con empresas afiliadas:</b> Podemos compartir su información con nuestras empresas afiliadas, en cuyo caso les exigiremos que respeten esta Política de Privacidad. Nuestras empresas afiliadas incluyen nuestra empresa matriz y cualquier otra subsidiaria, socio de empresa conjunta u otras empresas que controlemos o que estén bajo control común con nosotros.",
+          "<b>Con su consentimiento:</b> Podemos divulgar su información personal para cualquier otro propósito con su consentimiento."
         ]
       },
       "retention": {
+        "heading": "Retención de sus datos personales",
+        "body1": "La empresa conservará sus datos personales únicamente durante el tiempo necesario para los fines descritos en esta Política de Privacidad. Conservaremos y utilizaremos sus datos personales para cumplir con nuestras obligaciones legales, resolver disputas y hacer cumplir nuestros acuerdos y políticas.",
+        "body2": "Además, la empresa conservará los datos de uso para análisis internos. Por lo general, estos datos se conservan durante un período más corto, a menos que se utilicen para mejorar la seguridad, optimizar la funcionalidad del servicio o que la ley exija su conservación durante períodos más prolongados."
       },
       "transfer": {
+        "heading": "Transferencia de sus datos personales",
+        "body1": "Su información, incluidos sus datos personales, se procesa en las oficinas de la empresa y en cualquier otro lugar donde se encuentren las partes involucradas en el procesamiento. Esto significa que dicha información puede transferirse y almacenarse en computadoras ubicadas fuera de su estado, provincia, país u otra jurisdicción gubernamental, donde las leyes de protección de datos pueden diferir de las de su jurisdicción.",
+        "body2": "Su consentimiento a esta Política de Privacidad, seguido del envío de dicha información, representa su aceptación de dicha transferencia.",
+        "body3": "La Compañía adoptará todas las medidas razonablemente necesarias para garantizar que sus datos se traten de forma segura y de conformidad con esta Política de Privacidad, y no se transferirá ningún dato personal a ninguna organización ni país a menos que existan controles adecuados, incluida la seguridad de sus datos y otra información personal."
       },
       "disclosure": {
+        "heading": "Divulgación de sus datos personales",
         "businessTransactions": {
+          "heading": "Transacciones comerciales",
+          "body1": "Si la empresa participa en una fusión, adquisición o venta de activos, sus datos personales podrán ser transferidos. Le notificaremos antes de que sus datos personales sean transferidos y queden sujetos a una política de privacidad diferente.",
+          "body2": "Aplicación de la ley: En determinadas circunstancias, la Compañía podría verse obligada a revelar sus Datos Personales si así lo exige la ley o en respuesta a solicitudes válidas de las autoridades públicas (por ejemplo, un tribunal o una agencia gubernamental)."
         },
         "otherLegal": {
+          "heading": "Otros requisitos legales",
+          "intro": "La Compañía podrá divulgar sus Datos Personales si cree de buena fe que dicha acción es necesaria para:",
           "items": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "Cumplir con una obligación legal",
+            "Proteger y defender los derechos o la propiedad de la Compañía.",
+            "Prevenir o investigar posibles irregularidades relacionadas con el Servicio.",
+            "Proteger la seguridad personal de los Usuarios del Servicio o del público.",
+            "Protegerse contra la responsabilidad legal"
           ]
         }
       },
       "security": {
+        "heading": "Seguridad de sus datos personales",
+        "body1": "La seguridad de sus datos personales es importante para nosotros, pero recuerde que ningún método de transmisión por internet ni de almacenamiento electrónico es 100% seguro. Si bien nos esforzamos por utilizar medios comercialmente aceptables para proteger sus datos personales, no podemos garantizar su seguridad absoluta."
       }
     },
     "childrensPrivacy": {
+      "heading": "Privacidad de los niños",
+      "body1": "Tenga en cuenta que Chimerawallet.io no está diseñado para ser utilizado por menores de 18 años ni está dirigido a ellos, y no recopilamos datos de menores de edad de forma intencionada. Si usted es padre, madre o tutor legal y sabe que su hijo/a nos ha proporcionado datos personales, póngase en contacto con nosotros. Si detectamos que hemos recopilado datos personales de un menor de 13 años sin el consentimiento de sus padres, eliminaremos dicha información de nuestros servidores. Si necesitamos basarnos en el consentimiento como base legal para procesar su información y su país exige el consentimiento de los padres, es posible que solicitemos dicho consentimiento antes de recopilar y utilizar esa información."
     },
     "linksToOtherWebsites": {
+      "heading": "Enlaces a otros sitios web",
+      "body1": "Nuestro servicio puede contener enlaces a otros sitios web que no son operados por nosotros. Si hace clic en un enlace de terceros, será redirigido al sitio de dicho tercero. Le recomendamos encarecidamente que revise la política de privacidad de cada sitio que visite. No tenemos control ni asumimos responsabilidad alguna por el contenido, las políticas de privacidad ni las prácticas de ningún sitio o servicio de terceros."
     },
     "yourRights": {
+      "heading": "Sus derechos",
+      "intro": "Como titular de los datos, usted tiene varios derechos relacionados con sus datos personales. A continuación, le describimos los distintos derechos que le asisten y cómo puede ejercerlos.",
       "accessRight": {
+        "heading": "Derecho de acceso",
+        "body1": "En cualquier momento, usted puede solicitar acceso a los datos personales que obran en nuestro poder y que le conciernen (es posible que haya oído hablar de este derecho como una \"solicitud de acceso del interesado\").",
+        "body2": "Tenga en cuenta que este derecho le permite recibir una copia de los datos personales que conservamos sobre usted para que pueda verificar su exactitud y asegurarse de que los estamos procesando legalmente. No se trata de un derecho que le permita solicitar datos personales de otras personas ni documentos específicos que no estén relacionados con sus datos personales. Puede ejercer este derecho en cualquier momento escribiéndonos a support@chimerawallet.com e indicando que desea realizar una «solicitud de acceso a datos personales». No es necesario completar ningún formulario para realizar este tipo de solicitud."
       },
       "rectificationAndErasure": {
+        "heading": "Su derecho a la rectificación y supresión",
+        "body1": "En cualquier momento, puede solicitar que corrijamos los datos personales que tengamos sobre usted si considera que son incorrectos o inexactos. Tenga en cuenta que podríamos pedirle que verifique cualquier dato nuevo que nos proporcione y podríamos tomar las medidas necesarias para comprobar que la información que nos ha facilitado sea correcta.",
+        "body2": "También puede solicitarnos que eliminemos los datos personales que controlamos si considera que no es necesario que los conservemos (este derecho se conoce como el «derecho al olvido»). Si bien haremos todo lo posible por respetar su solicitud y sus datos personales, no siempre será posible eliminarlos por completo, ya que puede haber requisitos legales para conservar ciertos datos o limitaciones técnicas. Si la eliminación no es técnicamente posible o si consideramos que tenemos una razón legal válida para seguir procesando los datos personales que nos solicita eliminar, se lo comunicaremos junto con nuestros motivos al responder a su solicitud.",
+        "body3": "Puedes ejercer este derecho en cualquier momento escribiéndonos a support@outlogi.net e indicándonos que deseas rectificar o eliminar tus datos personales y el motivo de tu solicitud. Si deseas que reemplacemos los datos incorrectos por datos nuevos, debes indicarnos cuáles son esos nuevos datos. No es necesario completar ningún formulario para realizar este tipo de solicitud."
       },
       "restrictProcessing": {
+        "heading": "Su derecho a restringir el procesamiento",
+        "body1": "Cuando tratamos sus datos personales basándonos en un interés legítimo, usted tiene derecho a solicitarnos que dejemos de tratarlos de esa manera si considera que nuestro seguimiento afecta a sus derechos y libertades fundamentales o si considera que dichos intereses legítimos no son válidos. También puede solicitarnos que dejemos de tratar sus datos personales (a) si cuestiona la exactitud de dichos datos y desea que verifiquemos su exactitud; (b) cuando se haya determinado que nuestro uso de los datos es ilícito, pero usted no desea que los eliminemos; (c) cuando ya no necesitemos tratar sus datos personales (y de otro modo los eliminaríamos), pero usted desea que sigamos almacenándolos para que pueda establecer, ejercer o defender reclamaciones legales. Puede ejercer este derecho en cualquier momento escribiéndonos a info@chimerawallet.com e indicándonos que solicita que dejemos de tratar el aspecto relevante de sus datos personales y describiendo cuál de las condiciones anteriores considera pertinente para dicha solicitud. No es necesario rellenar ningún formulario específico para realizar este tipo de solicitud."
       },
       "objectToProcessing": {
+        "heading": "Su derecho a oponerse al tratamiento de datos",
+        "body1": "Usted puede oponerse al tratamiento de sus datos personales cuando nos basemos en un interés legítimo para dicho tratamiento. Atenderemos su solicitud a menos que tengamos un interés legítimo superior que justifique el tratamiento o que necesitemos continuar tratándolos para el ejercicio o la defensa de una reclamación legal."
       },
       "stopCommunications": {
+        "heading": "Su derecho a dejar de recibir comunicaciones",
+        "body1": "Para cancelar la suscripción a nuestras comunicaciones en cualquier momento, haga clic en el enlace para cancelar la suscripción que encontrará al final de cualquier correo electrónico y actualice sus preferencias de notificación en la aplicación. Para obtener más información sobre sus derechos para solicitar que dejemos de enviarle distintos tipos de comunicaciones, póngase en contacto con nosotros (support@outlogic.net)."
       },
       "withdrawalOfConsent": {
+        "heading": "Retirada del consentimiento",
+        "body1": "Cuando el tratamiento de sus datos personales se base en su consentimiento, usted podrá revocarlo en cualquier momento. No obstante, esto no afectará a la legalidad del tratamiento realizado antes de la revocación. Si revoca su consentimiento, es posible que no podamos proporcionarle determinados productos o servicios. Le informaremos si este es el caso en el momento de la revocación.",
+        "body2": "Ejercicio de sus derechos: Cuando nos escriba solicitando el ejercicio de sus derechos, podremos pedirle que acredite su identidad. Es posible que le solicitemos copias de documentos de identificación relevantes para verificarla. Para procesar su solicitud con mayor facilidad, le agradeceríamos que indicara claramente qué derechos desea ejercer y, en su caso, el motivo. Cuanto más clara y específica sea su información, más rápido y eficientemente podremos tramitar su solicitud. Si no nos proporciona información suficiente, podríamos demorar la tramitación hasta que nos facilite la información adicional (en cuyo caso, se lo comunicaremos)."
       }
     },
     "changesToPolicy": {
+      "heading": "Cambios en esta Política de Privacidad",
+      "body1": "Es posible que actualicemos nuestra Política de Privacidad periódicamente. Cualquier cambio se comunicará mediante la publicación de la nueva Política de Privacidad en esta página.",
+      "body2": "Le notificaremos por correo electrónico o mediante un aviso destacado en nuestro servicio antes de que los cambios entren en vigor y actualizaremos la fecha de \"Última actualización\" en la parte superior de esta Política de Privacidad. Le recomendamos revisar esta Política de Privacidad periódicamente para estar al tanto de cualquier actualización. Los cambios entrarán en vigor al publicarse en esta página. Si no está de acuerdo con alguna modificación, deje de usar los Servicios de Chimera Wallet. Su acceso y uso continuado de los Servicios de Chimerawallet.io y/o del Sitio Web se considerará como su reconocimiento y aceptación de las modificaciones al Acuerdo revisado."
     },
     "contactUs": {
+      "heading": "Contáctanos",
+      "body": "Si tiene alguna pregunta sobre esta Política de Privacidad, puede contactarnos por correo electrónico: <a>info@chimerawallet.com</a>"
     }
   },
   "referrals": {
     "meta": {
+      "title": "Referencias de Chimera: Tu enlace. Sus transacciones. Tu comisión.",
+      "description": "Gana el 20 % de las comisiones de la plataforma por cada usuario que recomiendes. Aumenta hasta un 60 % con los multiplicadores de nivel CEXT. Sin límite máximo ni fecha de caducidad.",
+      "ogTitle": "Referencias de Quimera"
     },
     "hero": {
+      "eyebrow": "REFERENCIAS",
+      "titleLine1": "TU ENLACE.",
+      "titleLine2": "SU COMERCIO.",
+      "titleLine3": "TU CORTE. PARA SIEMPRE.",
+      "titleLine4": "SIN LÍMITE. SIN CADUCIDAD.",
+      "subtitle": "Ingresos reales de la plataforma, acreditados automáticamente.",
+      "body": "Por cada operación que realicen tus referidos, recibirás una parte directa de la comisión de la plataforma, mientras sigan operando."
     },
     "howItWorks": {
+      "title": "CÓMO FUNCIONA.",
       "steps": [
         {
+          "titlePrefix": "RECIBE TU EXCLUSIVO",
+          "titleHighlight": "CÓDIGO DE REFERENCIA",
+          "body": "CUANDO TE UNAS."
         },
         {
+          "titleHighlight": "COMPÁRTELO DONDE QUIERA",
+          "body": "REDES SOCIALES, MENSAJES DIRECTOS, GRUPOS COMUNITARIOS."
         },
         {
+          "titlePrefix": "SE REGISTRAN, COMPLETAN EL PROCESO DE VERIFICACIÓN DE CONOZCA A SU CLIENTE Y COMIENZAN A OPERAR.",
+          "titleHighlight": "COMIENZA A GANAR DINERO."
         },
         {
+          "titlePrefix": "SE ACUMULA",
+          "titleHighlight": "PARA SIEMPRE.",
+          "body": "TODAS LAS OPERACIONES SIN LÍMITE. SIN FECHA DE CADUCIDAD."
         }
       ]
     },
     "multipliers": {
+      "title": "SIGUIENTES MULTIPLICADORES",
+      "subtitle": "CUANTO MÁS ALTO SEA TU NIVEL, MAYOR SERÁ TU PARTE.",
       "tiers": [
         {
+          "name": "BRONCE",
+          "multiplier": "1x"
         },
         {
+          "name": "PLATA",
+          "multiplier": "1,5x"
         },
         {
+          "name": "ORO",
+          "multiplier": "2x"
         },
         {
+          "name": "DIAMANTE",
+          "multiplier": "3 veces"
         }
-      ]
+      ],
+      "badgeAlt": "Insignia de nivel {{name}}",
+      "referralBonus": "Bonificación por recomendación",
+      "disclaimer": "* Las recompensas por referencias se aplican a los usuarios que completen la verificación KYC.",
+      "cta": "OBTÉN TU CÓDIGO DE REFERENCIA"
     }
   },
   "token": {
     "meta": {
+      "title": "Token CEXT: paga menos, gana más.",
+      "description": "CEXT. El token de utilidad emitido desde Suiza que impulsa el ecosistema Chimera: reparto de comisiones, staking y multiplicadores de referidos."
     },
     "hero": {
+      "eyebrow": "ESPERAR SIGUIENTE",
+      "title": "PAGA MENOS. GANA MÁS.",
+      "titleLine2": "INFÓRMATE PRIMERO. GOBERNA MÁS.",
+      "subtitle": "Oferta fija. Inflación cero. Cuatro niveles.",
+      "body": "Descuentos en comisiones de hasta el 50 %. Multiplicadores de referencias de hasta 3x. Información de mercado entre 12 y 24 horas antes del lanzamiento público. Soporte humano en cada nivel: prioridad aumenta a medida que avanzas. Emitido en Suiza. Mil millones de tokens. Sin inflación. Sin dilución. Token de utilidad según la clasificación suiza.",
+      "cta": "ÚNETE A LA LISTA DE ESPERA"
     },
     "cards": {
+      "card1": "Descuentos en las tarifas de hasta el 50%.",
+      "card2": "Multiplicadores de referencias de hasta 3x",
+      "card3": "Información de mercado 12-24 horas antes del lanzamiento público",
+      "card4": "Soporte humano en todos los niveles",
+      "card5": "La prioridad aumenta a medida que avanzas.",
+      "card6": "Emitidos en Suiza, mil millones de tokens",
+      "card7": "Sin inflación ni dilución"
     },
     "distribution": {
+      "title": "Distribución de tokens",
+      "chartAlt": "Gráfico circular de distribución de tokens"
     },
     "stake": {
+      "title": "APUESTA A CONTINUACIÓN.",
+      "subtitle": "GANE HASTA UN 15% DE INTERÉS ANUAL.",
+      "body": "Pon tus CEXT a trabajar. Invierte y obtén hasta un 15 % de rentabilidad anual pagada en CEXT. Bloquea tus tokens durante periodos más largos para multiplicar tu puntuación y maximizar tus recompensas. Cuanto más tiempo los mantengas bloqueados, más ganarás."
     },
     "waitlistCta": {
+      "eyebrow": "ÚNETE A LA LISTA DE ESPERA",
+      "title": "ÚNETE A LA PRÓXIMA LISTA DE ESPERA"
     },
     "tiers": {
+      "title": "4 niveles - muchas ventajas",
+      "subtitle": "Descubre cómo puedes potenciar tu experiencia con el token Chimera.",
+      "balanceLabel": "Saldo bloqueado promedio",
+      "feeLabel": "Descuento en comisiones de negociación",
+      "refLabel": "Bonificación por recomendación",
+      "supLabel": "Acceso al soporte",
+      "newsLabel": "Acceso a las noticias",
+      "listLabel": "Descuento de publicación",
+      "badgeAlt": "Insignia de nivel {{name}}",
       "list": [
         {
+          "name": "BRONCE",
+          "balance": "≥ 10.000 CEXT",
+          "fee": "20%",
+          "ref": "1x",
+          "sup": "Estándar",
+          "news": "Público",
+          "list": "Básico"
         },
         {
+          "name": "PLATA",
+          "balance": "≥ 100.000 CEXT",
+          "fee": "30%",
+          "ref": "1,5x",
+          "sup": "Prioridad",
+          "news": "+12 horas",
+          "list": "Moderado"
         },
         {
+          "name": "ORO",
+          "balance": "≥ 1.000.000 CEXT",
+          "fee": "40%",
+          "ref": "2x",
+          "sup": "De primera calidad",
+          "news": "+24 horas",
+          "list": "Alto"
         },
         {
+          "name": "DIAMANTE",
+          "balance": "≥ 10.000.000 CEXT",
+          "fee": "50%",
+          "ref": "3 veces",
+          "sup": "Directo",
+          "news": "+24 horas",
+          "list": "Derechos completos + Propuesta"
         }
       ]
     },
     "staking": {
+      "eyebrow": "APUESTA",
+      "title": "HASTA UN 15% TAE",
+      "body": "Compra CEXT dentro de la aplicación y envíalo a la dirección de staking que aparece en la aplicación. Tus tokens, tu staking, tus recompensas.",
+      "footnote": "* El staking es un servicio proporcionado por un tercero. Las recompensas por staking no están garantizadas. Las tasas fluctúan según las condiciones de la red. Chimera Wallet no se responsabiliza de este servicio."
     },
     "comparison": {
+      "title": "Comparación de tokens de intercambio",
+      "subtitle": "Descubre cómo puedes potenciar tu experiencia con el token Quimera.",
+      "asOf": "Datos actualizados a mayo de 2026.",
+      "logoAlt": "Logotipo de {{name}}",
       "labels": {
+        "totalSupply": "Suministro total",
+        "feeDiscount": "Descuento en comisiones de negociación",
+        "minThreshold": "Umbral mínimo para el descuento máximo",
+        "referralBonus": "Bonificación por recomendación",
+        "premiumSupport": "Soporte Premium",
+        "earlyNews": "Acceso anticipado a las noticias",
+        "listingInfluence": "Influencia de la lista",
+        "governance": "Derechos de gobernanza"
       },
       "tokens": {
         "cext": {
+          "name": "SIGUIENTE",
+          "sub": "Quimera",
           "values": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "1.000.000.000 — FIJO, no inflacionario",
+            "Hasta un 50%",
+            "10.000.000 SIGUIENTE",
+            "Multiplicador de hasta 3x",
+            "Sí (Nivel 3+)",
+            "Sí (24h)",
+            "Sí (Nivel 4)",
+            "Planificado (nivel Diamante)"
           ]
         },
         "bnb": {
+          "name": "BNB",
+          "sub": "Binance",
           "values": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "~140.000.000 (después de la quema)",
+            "Hasta un 25 % directo / ~78 % combinado VIP9",
+            "Volumen de $4.000.000.000 + 5.500 BNB",
+            "Estándar",
+            "Solo para VIP",
+            "No",
+            "No",
+            "Limitado"
           ]
         },
         "kcs": {
+          "name": "KCS",
+          "sub": "KuCoin",
           "values": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "170.000.000",
+            "Hasta un 20% de comisión directa/negativa en VIP12",
+            "150.000 KCS o 500.000.000 de dólares de volumen",
+            "Estándar",
+            "Limitado",
+            "No",
+            "GemVote (limitado)",
+            "Limitado"
           ]
         },
         "okb": {
+          "name": "OKB",
+          "sub": "OKX",
           "values": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "21.000.000 (después de la quema en 2025)",
+            "Basado en niveles, en proceso de eliminación",
+            "N / A",
+            "Estándar",
+            "Limitado",
+            "No",
+            "No",
+            "Limitado"
           ]
         }
       }
     },
     "roadmap": {
+      "title": "¿QUÉ SIGUE?",
+      "footnote": "CEXT es emitido por Outlogic SAGL y revisado conforme a las directrices de FINMA. No es un valor. No es un token de pago. No es un contrato de inversión. Es un token de utilidad, con una claridad regulatoria que la mayoría de los tokens nunca alcanzan.",
       "items": [
         {
+          "d": "V0.0.9",
+          "t": "Versión beta de incorporación"
         },
         {
+          "d": "V0.1",
+          "t": "Incorporación"
         },
         {
+          "d": "V0.2",
+          "t": "SIGUIENTE"
         },
         {
+          "d": "V0.3",
+          "t": "Mnemotécnico"
         },
         {
+          "d": "V1 — Septiembre de 2026",
+          "t": "Envuelve e intercambia"
         },
         {
+          "d": "V1.1 — Octubre de 2026",
+          "t": "De oficina"
         },
         {
+          "d": "V2 — Octubre de 2026",
+          "t": "Comercio avanzado"
         },
         {
+          "d": "V2.1 — Octubre de 2026",
+          "t": "TPV"
         },
         {
+          "d": "V3 — Noviembre de 2026",
+          "t": "Tarjeta"
         },
         {
+          "d": "V4 — Diciembre de 2026",
+          "t": "TGE"
         },
         {
+          "d": "2027",
+          "t": "Gobernanza descentralizada"
         },
         {
+          "d": "2028",
+          "t": "Transición DAO"
         }
       ]
     },
     "airdrop": {
+      "coinsAlt": "Monedas flotantes CEXT",
+      "title": "SIGUIENTE",
+      "subtitle": "LANZAMIENTO AÉREO DE ACTIVIDAD.",
+      "body": "Los usuarios activos de Chimera pueden optar a un airdrop de CEXT en función de su uso real. Sin farmeo. Sin bots. Actividad real.",
+      "whitepaperCta": "LIBRO BLANCO"
     }
   }
 }
