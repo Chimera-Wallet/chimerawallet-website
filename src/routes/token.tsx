@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/reveal";
