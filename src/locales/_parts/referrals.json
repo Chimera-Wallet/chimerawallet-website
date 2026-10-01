@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Chimera Referrals — Your link. Their trades. Your cut.",
+    "description": "20% of platform fees from every user you refer. Scale up to 60% with CEXT tier multipliers. No cap, no expiry.",
+    "ogTitle": "Chimera Referrals"
+  },
+  "hero": {
+    "eyebrow": "REFERRALS",
+    "titleLine1": "YOUR LINK.",
+    "titleLine2": "THEIR TRADE.",
+    "titleLine3": "YOUR CUT. FOREVER.",
+    "titleLine4": "NO CAP. NO EXPIRY.",
+    "subtitle": "Real platform revenue, credited automatically",
+    "body": "Every trade your referrals complete earns you a direct cut of the platform fee — for as long as they keep trading."
+  },
+  "howItWorks": {
+    "title": "HOW IT WORKS.",
+    "steps": [
+      { "titlePrefix": "RECEIVE YOUR UNIQUE ", "titleHighlight": "REFERRAL CODE", "body": "WHEN YOU JOIN." },
+      { "titleHighlight": "SHARE IT ANYWHERE", "body": "SOCIAL MEDIA, DMS, COMMUNITY GROUPS." },
+      { "titlePrefix": "THEY SIGN UP, COMPLETE KYC, START TRADING. ", "titleHighlight": "YOU START EARNING.", "body": "" },
+      { "titlePrefix": "IT ACCUMULATES ", "titleHighlight": "FOREVER.", "body": "EVERY TRADE NO CAP. NO EXPIRY." }
+    ]
+  },
+  "multipliers": {
+    "title": "CEXT MULTIPLIERS",
+    "subtitle": "THE HIGHER YOUR TIER, THE BIGGER YOUR CUT.",
+    "tiers": [
+      { "name": "BRONZE", "multiplier": "1x" },
+      { "name": "SILVER", "multiplier": "1.5x" },
+      { "name": "GOLD", "multiplier": "2x" },
+      { "name": "DIAMOND", "multiplier": "3x" }
+    ],
+    "badgeAlt": "{{name}} tier badge",
+    "referralBonus": "Referral Bonus",
+    "disclaimer": "* Referral rewards apply to users who complete KYC verification.",
+    "cta": "GET YOUR REFERRAL CODE"
+  }
+}

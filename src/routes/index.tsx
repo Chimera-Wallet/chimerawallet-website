@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
+import i18n from "@/i18n";
 import { Reveal } from "@/components/reveal";
 import { CtaCard } from "@/components/cta-card";
 import { ScrollableComparison } from "@/components/scrollable-comparison";
@@ -36,6 +38,7 @@ import cextCoin3 from "@/assets/site/Coins/coin-3-1.png";
 import cextCoin4 from "@/assets/site/Coins/coin-4-2.png";
 
 function SelfCustodyVisual() {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
@@ -68,7 +71,7 @@ function SelfCustodyVisual() {
       <img src={scBg} alt="" className="absolute inset-0 h-full w-full object-cover" />
       <img src={scBtc} alt="" style={revealStyle(0.2, 0.9)} className="absolute left-[55%] top-[2%] z-10 w-[28%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
       <img src={scEth} alt="" style={revealStyle(0.8, 0.9)} className="absolute right-[2%] bottom-[2%] z-10 w-[30%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
-      <img src={scCard} alt="Chimera card" style={revealStyle(0, 0.85)} className="absolute left-1/2 top-1/2 z-20 w-[58%] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
+      <img src={scCard} alt={t("home.selfCustody.cardAlt")} style={revealStyle(0, 0.85)} className="absolute left-1/2 top-1/2 z-20 w-[58%] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
       <img src={scUsdt} alt="" style={revealStyle(0.4, 0.8)} className="absolute left-[5%] top-1/2 z-30 w-[18%] -translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
       <img src={scChim} alt="" style={revealStyle(0.6, 0.9)} className="absolute left-[56%] bottom-[5%] z-30 w-[10%] -translate-x-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
     </div>
@@ -78,17 +81,15 @@ function SelfCustodyVisual() {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Chimera — The Bitcoin Super-App" },
+      { title: i18n.t("home.meta.title") },
       {
         name: "description",
-        content:
-          "Chimera Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
+        content: i18n.t("home.meta.description"),
       },
-      { property: "og:title", content: "Chimera — The Bitcoin Super-App" },
+      { property: "og:title", content: i18n.t("home.meta.title") },
       {
         property: "og:description",
-        content:
-          "Chimera Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control.",
+        content: i18n.t("home.meta.description"),
       },
     ],
   }),
@@ -96,6 +97,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const { t } = useTranslation();
   return (
     <main>
       {/* HERO */}
@@ -105,7 +107,7 @@ function Index() {
             <Reveal delay={400}>
               <img
                 src={heroPhoneLeft}
-                alt="Chimera wallet app showing balance and transactions"
+                alt={t("home.hero.heroLeftAlt")}
                 className="hidden lg:block w-[160%] max-w-none h-auto -ml-[60%]"
               />
             </Reveal>
@@ -114,7 +116,7 @@ function Index() {
                 <p
                   className="text-center uppercase text-[var(--brand-green)]"
                 >
-                  CHIMERAWALLET, FINANCE EVOLVED
+                  {t("home.hero.eyebrow")}
                 </p>
               </Reveal>
               <Reveal delay={120}>
@@ -128,26 +130,24 @@ function Index() {
                     letterSpacing: "1px",
                   }}
                 >
-                  THE ONLY BITCOIN SUPER-APP BUILT SO NOBODY CAN EVER TAKE YOUR MONEY AWAY.
+                  {t("home.hero.title")}
                 </h1>
               </Reveal>
               <Reveal delay={240}>
                 <h2 className="mx-auto mt-6 max-w-2xl text-center text-base md:text-lg text-foreground/85">
-                  Not a promise. Not a policy. Mathematics.
+                  {t("home.hero.subtitle")}
                 </h2>
               </Reveal>
               <Reveal delay={340}>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Mainchain. Lightning. Arkade Protocol. One app.
-                  <br />
-                  Your keys. Nobody in between.
+                  <Trans i18nKey="home.hero.tagline" components={{ br: <br /> }} />
                 </p>
               </Reveal>
             </div>
             <Reveal delay={520}>
               <img
                 src={heroPhoneRight}
-                alt="Chimera card balance and transactions"
+                alt={t("home.hero.heroRightAlt")}
                 className="hidden lg:block w-[160%] max-w-none h-auto -mr-[60%]"
               />
             </Reveal>
@@ -157,8 +157,8 @@ function Index() {
           <div className="mx-auto mt-16 max-w-3xl space-y-4">
             <Reveal delay={0}>
               <CtaCard
-                eyebrow="CHIMERA WALLET"
-                title="LAUNCH THE APP"
+                eyebrow={t("home.hero.cta.launch.eyebrow")}
+                title={t("home.hero.cta.launch.title")}
                 eyebrowColor="text-[var(--brand-green)]"
                 filled
                 href="https://app.chimerawallet.com"
@@ -166,15 +166,15 @@ function Index() {
             </Reveal>
             <Reveal delay={120}>
               <CtaCard
-                title="JOIN CEXT WAITLIST"
+                title={t("home.hero.cta.waitlist.title")}
                 eyebrowColor="text-[var(--brand-green)]"
                 scrollTo="waitlist"
               />
             </Reveal>
             <Reveal delay={240}>
               <CtaCard
-                eyebrow="NOTIFY ME"
-                title="JOIN THE COMMUNITY"
+                eyebrow={t("home.hero.cta.community.eyebrow")}
+                title={t("home.hero.cta.community.title")}
                 eyebrowColor="text-[var(--brand-green)]"
                 href="https://t.me/Chimera_Community"
               />
@@ -193,12 +193,12 @@ function Index() {
             <div className="relative mx-auto aspect-[5/4] w-1/2 max-w-md pb-12 lg:w-3/4 lg:pb-20">
               <img
                 src={wallet1}
-                alt="Chimera wallet app — primary view"
+                alt={t("home.controlTradeEarn.walletPrimaryAlt")}
                 className="absolute left-0 top-0 w-[60%] h-auto object-contain"
               />
               <img
                 src={wallet2}
-                alt="Chimera wallet app — secondary view"
+                alt={t("home.controlTradeEarn.walletSecondaryAlt")}
                 className="absolute right-0 bottom-0 w-[60%] h-auto object-contain"
               />
             </div>
@@ -206,22 +206,22 @@ function Index() {
               <Reveal>
                 <FeatureCard
                   iconSrc={controlIcon}
-                  title="CONTROL"
-                  body="Your keys. Your coins. Full stop. Bitcoin mainchain, Lightning, Arkade Protocol VTXO - the complete Bitcoin stack, non-custodial from the first second to the last."
+                  title={t("home.controlTradeEarn.control.title")}
+                  body={t("home.controlTradeEarn.control.body")}
                 />
               </Reveal>
               <Reveal delay={120}>
                 <FeatureCard
                   iconSrc={tradeIcon}
-                  title="TRADE"
-                  body="Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial Chimera swaps coming soon."
+                  title={t("home.controlTradeEarn.trade.title")}
+                  body={t("home.controlTradeEarn.trade.body")}
                 />
               </Reveal>
               <Reveal delay={240}>
                 <FeatureCard
                   iconSrc={earnIcon}
-                  title="EARN"
-                  body="Refer friends and earn a share of platform fees - up to 20%, no cap, no expiry. Not points. Real revenue. P2P loans."
+                  title={t("home.controlTradeEarn.earn.title")}
+                  body={t("home.controlTradeEarn.earn.body")}
                 />
               </Reveal>
             </div>
@@ -232,31 +232,31 @@ function Index() {
       {/* SUPERCHARGING BITCOIN */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <p className="display text-center text-sm tracking-[0.3em] text-foreground/80">SUPERCHARGING BITCOIN</p>
-          <h2 className="display mt-4 text-center text-4xl md:text-5xl">SUPERCHARGING BITCOIN</h2>
-          <p className="mt-4 text-center text-sm text-foreground/80">Three layers. One interface. Zero compromise.</p>
+          <p className="display text-center text-sm tracking-[0.3em] text-foreground/80">{t("home.superchargingBitcoin.eyebrow")}</p>
+          <h2 className="display mt-4 text-center text-4xl md:text-5xl">{t("home.superchargingBitcoin.title")}</h2>
+          <p className="mt-4 text-center text-sm text-foreground/80">{t("home.superchargingBitcoin.subtitle")}</p>
 
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:items-stretch">
             <Reveal className="h-full">
               <LayerCard
                 iconSrc={bitcoinLogo}
-                title="MAINCHAIN"
-                body="Full BTC on-chain deposits and withdrawals and Fiat on/off ramp via third party providers."
+                title={t("home.superchargingBitcoin.mainchain.title")}
+                body={t("home.superchargingBitcoin.mainchain.body")}
               />
             </Reveal>
             <Reveal delay={120} className="h-full">
               <LayerCard
                 iconSrc={arkLogo}
                 iconClassName="h-16 w-16 -my-3"
-                title="ARKADE PROTOCOL"
-                body="VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Arkade Protocol."
+                title={t("home.superchargingBitcoin.arkadeProtocol.title")}
+                body={t("home.superchargingBitcoin.arkadeProtocol.body")}
               />
             </Reveal>
             <Reveal delay={240} className="h-full">
               <LayerCard
                 iconSrc={lightningLogo}
-                title="LIGHTNING"
-                body="Full Lightning invoice support, enhanced by Boltz. Every merchant, every exchange, zero channel management."
+                title={t("home.superchargingBitcoin.lightning.title")}
+                body={t("home.superchargingBitcoin.lightning.body")}
               />
             </Reveal>
           </div>
@@ -265,12 +265,12 @@ function Index() {
 
       {/* ARKADE PROTOCOL — heading */}
       <section className="mx-auto max-w-4xl px-6 pt-20 pb-24">
-        <h2 className="display text-center text-5xl md:text-7xl">ARKADE PROTOCOL</h2>
+        <h2 className="display text-center text-5xl md:text-7xl">{t("home.arkadeProtocol.title")}</h2>
         <p className="display mt-6 text-center text-base md:text-lg tracking-widest text-foreground/70">
-          BACKED BY THE BEST
+          {t("home.arkadeProtocol.backedBy")}
         </p>
         <p className="display mt-3 text-center tracking-[0.3em] text-foreground/60 text-[11px]">
-          $7.7M raised across two rounds.
+          {t("home.arkadeProtocol.raised")}
         </p>
       </section>
 
@@ -279,39 +279,21 @@ function Index() {
         <ScrollableComparison columns={3}>
           <Reveal>
             <ComparisonCard
-              title="CEX"
-              rows={[
-                ["Custodial", "Custody"],
-                ["Instant", "Speed"],
-                ["Required", "KYC"],
-                ["High", "Counterparty risk"],
-                ["No", "Unilateral exit"],
-              ]}
+              title={t("home.arkadeProtocol.comparison.cex.title")}
+              rows={t("home.arkadeProtocol.comparison.cex.rows", { returnObjects: true }) as [string, string][]}
             />
           </Reveal>
           <Reveal delay={120}>
             <ComparisonCard
-              title="DEX"
-              rows={[
-                ["Non-custodial", "Custody"],
-                ["Variable", "Speed"],
-                ["None", "KYC"],
-                ["Low", "Counterparty risk"],
-                ["Yes", "Unilateral exit"],
-              ]}
+              title={t("home.arkadeProtocol.comparison.dex.title")}
+              rows={t("home.arkadeProtocol.comparison.dex.rows", { returnObjects: true }) as [string, string][]}
             />
           </Reveal>
           <Reveal delay={240}>
             <ComparisonCard
-              title="Chimera"
+              title={t("home.arkadeProtocol.comparison.chimera.title")}
               highlight
-              rows={[
-                ["Non-custodial", "Custody"],
-                ["Instant", "Speed"],
-                ["Optional", "KYC"],
-                ["Minimal", "Counterparty risk"],
-                ["Yes", "Unilateral exit"],
-              ]}
+              rows={t("home.arkadeProtocol.comparison.chimera.rows", { returnObjects: true }) as [string, string][]}
             />
           </Reveal>
         </ScrollableComparison>
@@ -325,12 +307,12 @@ function Index() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
           <SelfCustodyVisual />
           <div>
-            <h2 className="display text-3xl md:text-4xl">SELF-CUSTODY</h2>
-            <p className="display mt-1 text-[18px] md:text-[22px]" style={{ fontWeight: 300 }}>DOESN'T STOP AT THE CHECKOUT.</p>
+            <h2 className="display text-3xl md:text-4xl">{t("home.selfCustody.title")}</h2>
+            <p className="display mt-1 text-[18px] md:text-[22px]" style={{ fontWeight: 300 }}>{t("home.selfCustody.subtitle")}</p>
             <p className="mt-6 text-sm text-foreground/85">
-              Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.
+              {t("home.selfCustody.body")}
             </p>
-            <button className="btn-brand mt-8">RESERVE YOUR SPOT</button>
+            <button className="btn-brand mt-8">{t("home.selfCustody.cta")}</button>
           </div>
         </div>
       </section>
@@ -338,13 +320,13 @@ function Index() {
       {/* POWERED BY */}
       <section className="overflow-hidden px-6 py-4">
         <div className="mx-auto max-w-[96rem]">
-          <p className="text-center text-xs font-medium tracking-widest text-foreground/70">Powered by</p>
+          <p className="text-center text-xs font-medium tracking-widest text-foreground/70">{t("home.poweredBy.label")}</p>
           <div className="-mt-2 grid grid-cols-2 gap-x-2 gap-y-2 md:-mt-10 md:grid-cols-4 md:gap-0">
             {[
-              { src: poweredByBitcoin, alt: "Bitcoin" },
-              { src: poweredByArkade, alt: "Arkade" },
-              { src: poweredByLightning, alt: "Lightning Network" },
-              { src: poweredByOutlogic, alt: "Outlogic" },
+              { src: poweredByBitcoin, alt: t("home.poweredBy.bitcoin") },
+              { src: poweredByArkade, alt: t("home.poweredBy.arkade") },
+              { src: poweredByLightning, alt: t("home.poweredBy.lightning") },
+              { src: poweredByOutlogic, alt: t("home.poweredBy.outlogic") },
             ].map((item) => (
               <img key={item.alt} src={item.src} alt={item.alt} className="relative h-auto w-[110%] max-w-none -m-[5%] md:m-0 md:w-[130%] md:-mx-[15%]" />
             ))}
@@ -384,14 +366,13 @@ function Index() {
             />
           </div>
           <div className="relative z-10">
-            <h2 className="display text-3xl md:text-4xl">CEXT TOKEN</h2>
-            <p className="mt-6 text-base font-medium">The more you hold, the harder the platform works for you.</p>
+            <h2 className="display text-3xl md:text-4xl">{t("home.cextToken.title")}</h2>
+            <p className="mt-6 text-base font-medium">{t("home.cextToken.subtitle")}</p>
             <p className="mt-3 text-sm text-muted-foreground">
-              1 Billion fixed supply. Fee discounts up to 50%. Referral multipliers up to 3×. Governance at Diamond
-              tier. Zero inflation. Classified as a utility token under the Swiss regulation.
+              {t("home.cextToken.body")}
             </p>
             
-            <CtaCard className="mt-8" title="DISCOVER CEXT" href="/token" />
+            <CtaCard className="mt-8" title={t("home.cextToken.cta")} href="/token" />
           </div>
         </div>
       </section>
@@ -400,22 +381,22 @@ function Index() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.4fr_1fr]">
           <div>
-            <h2 className="display text-3xl md:text-4xl">REFERRALS</h2>
+            <h2 className="display text-3xl md:text-4xl">{t("home.referrals.title")}</h2>
             <p className="display text-3xl md:text-4xl text-foreground/70">​</p>
-            <p className="mt-6 text-base font-medium">Share once. Earn on every trade they make. Forever.</p>
+            <p className="mt-6 text-base font-medium">{t("home.referrals.subtitle")}</p>
             <p className="mt-3 text-sm text-muted-foreground">
-              Up to 20% of platform fees. No cap. No expiry. Revenue share, not points.
+              {t("home.referrals.body")}
             </p>
             <p className="mt-3 text-xs text-muted-foreground">
-              * Referral rewards apply to users who complete KYC verification.
+              {t("home.referrals.disclaimer")}
             </p>
-            <CtaCard className="mt-8" title="GET YOUR REFERRAL CODE" />
+            <CtaCard className="mt-8" title={t("home.referrals.cta")} />
           </div>
           <div className="relative aspect-[4/5] w-full">
             <div className="absolute inset-x-0 top-1/2 aspect-square -translate-y-1/2 rounded-2xl overflow-hidden">
               <img
                 src={chart1Bg}
-                alt="Chimera referral preview"
+                alt={t("home.referrals.previewAlt")}
                 className="h-full w-full object-cover"
               />
             </div>
@@ -438,8 +419,8 @@ function Index() {
       {/* WAITLIST SIGNUP */}
       <section id="waitlist" className="mx-auto max-w-3xl px-6 pb-20 scroll-mt-24">
         <div className="surface-card p-8 md:p-10">
-          <p className="eyebrow">JOIN THE WAITLIST</p>
-          <h2 className="display mt-2 text-2xl md:text-3xl">JOIN CEXT WAITLIST!</h2>
+          <p className="eyebrow">{t("home.waitlist.eyebrow")}</p>
+          <h2 className="display mt-2 text-2xl md:text-3xl">{t("home.waitlist.title")}</h2>
           <WaitlistForm />
         </div>
       </section>
@@ -448,6 +429,7 @@ function Index() {
 }
 
 function WaitlistForm() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState<string>("");
@@ -463,11 +445,11 @@ function WaitlistForm() {
     (window as any)[callbackName] = (data: { result: string; msg?: string }) => {
       if (data.result === "success") {
         setStatus("success");
-        setMessage("Thanks for subscribing!");
+        setMessage(t("home.waitlist.success"));
         setEmail("");
       } else {
         setStatus("error");
-        setMessage(data.msg || "Something went wrong, please try again.");
+        setMessage(data.msg || t("home.waitlist.error"));
       }
       delete (window as any)[callbackName];
       script.remove();
@@ -489,7 +471,7 @@ function WaitlistForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
+          placeholder={t("home.waitlist.emailPlaceholder")}
           className="flex-1 rounded-full border border-white/10 bg-black/30 px-5 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[var(--brand-green)]"
         />
         {/* Honeypot: keeps Mailchimp happy, must stay hidden */}
@@ -497,7 +479,7 @@ function WaitlistForm() {
           <input type="text" name="b_00a079f682daf0fd064fd51a8_e89b2f090c" tabIndex={-1} defaultValue="" />
         </div>
         <button type="submit" disabled={status === "loading"} className="btn-brand">
-          {status === "loading" ? "JOINING..." : "JOIN NOW!"}
+          {status === "loading" ? t("home.waitlist.joining") : t("home.waitlist.joinNow")}
         </button>
       </div>
       {message && (
