@@ -1,0 +1,533 @@
+{
+  "about": {
+    "meta": {
+      "title": "De Chimera — Construida de personas quienes creyen que tú dinero tendría pertenecerte ",
+      "description": "Chimera Wallet no almacena fondos, no cobra comisiones ni gestiona flujos de órdenes. Es de código abierto, se basa en el navegador y está construida sobre Chimera. Libertad en su máxima expresión.",
+      "ogTitle": "De Chimera"
+    },
+    "hero": {
+      "eyebrow": "ACERCA DE",
+      "subtitle": "Escribimos código abierto para personas que entienden que su dinero les pertenece. Sin accionistas. Sin capital de riesgo. Sin rendir cuentas a nadie más que a nuestra misión.",
+      "body": "Todo lo que desarrollamos se publica abiertamente, es auditable por cualquiera y se puede bifurcar libremente. Los servicios financieros los proporcionan terceros regulados. No custodiamos sus fondos. La arquitectura lo hace imposible."
+    },
+    "stats": {
+      "mainnet": {
+        "logoAlt": "Logo Chimera"
+      },
+      "verifiable": {
+        "body": "NO ES UNA PROMESA DE HOJA DE RUTA. ENVIADO."
+      },
+      "raised": {
+        "note": "LA INFRAESTRUCTURA SOBRE LA QUE SE CONSTRUYE CHIMERA CUENTA CON LA CONFIANZA DE LOS MEJORES DEL SECTOR."
+      }
+    },
+    "code": {
+    },
+    "wallet": {
+    },
+    "standFor": {
+      "items": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+      ]
+    }
+  },
+  "app": {
+    "meta": {
+    },
+    "hero": {
+    },
+    "coins": {
+    },
+    "browser": {
+      "items": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "cta": {
+      }
+    },
+    "tiles": {
+      "get": {
+      },
+      "send": {
+      },
+      "id": {
+      },
+      "multiAsset": {
+      }
+    },
+    "swap": {
+      "cta": {
+      }
+    }
+  },
+  "card": {
+    "meta": {
+    },
+    "hero": {
+    },
+    "ctaCard": {
+    },
+    "spots": {
+    },
+    "benefits": {
+      "items": [
+        {
+        },
+        {
+        },
+        {
+        }
+      ]
+    },
+    "countries": {
+      "continents": {
+      },
+      "names": {
+      }
+    },
+    "faq": {
+      "items": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+      ]
+    },
+    "openChimera": {
+    }
+  },
+  "footer": {
+  },
+  "header": {
+    "nav": {
+    }
+  },
+  "home": {
+    "meta": {
+    },
+    "hero": {
+      "cta": {
+        "launch": {
+        },
+        "waitlist": {
+        },
+        "community": {
+        }
+      }
+    },
+    "controlTradeEarn": {
+      "control": {
+      },
+      "trade": {
+      },
+      "earn": {
+      }
+    },
+    "superchargingBitcoin": {
+      "mainchain": {
+      },
+      "arkadeProtocol": {
+      },
+      "lightning": {
+      }
+    },
+    "arkadeProtocol": {
+      "comparison": {
+        "cex": {
+          "rows": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ]
+        },
+        "dex": {
+          "rows": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ]
+        },
+        "chimera": {
+          "rows": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ]
+        }
+      }
+    },
+    "selfCustody": {
+    },
+    "poweredBy": {
+    },
+    "cextToken": {
+    },
+    "referrals": {
+    },
+    "waitlist": {
+    }
+  },
+  "news": {
+    "meta": {
+    },
+    "items": [
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      }
+    ]
+  },
+  "notFound": {
+  },
+  "pressKit": {
+    "meta": {
+    }
+  },
+  "privacyApp": {
+    "meta": {
+    },
+    "hero": {
+    },
+    "intro": {
+    },
+    "informationNotCollected": {
+    },
+    "informationShared": {
+    },
+    "thirdPartyApi": {
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "privacyManifesto": {
+    "meta": {
+    },
+    "intro": {
+    },
+    "providers": {
+    }
+  },
+  "privacyWeb": {
+    "meta": {
+    },
+    "hero": {
+    },
+    "interpretationAndDefinitions": {
+      "interpretation": {
+      },
+      "definitions": {
+        "items": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "collecting": {
+      "typesOfData": {
+      },
+      "personalData": {
+      },
+      "usageData": {
+      },
+      "tracking": {
+      },
+      "necessaryCookies": {
+      },
+      "noticeCookies": {
+      },
+      "functionalityCookies": {
+      },
+      "useOfData": {
+        "shareItems": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "retention": {
+      },
+      "transfer": {
+      },
+      "disclosure": {
+        "businessTransactions": {
+        },
+        "otherLegal": {
+          "items": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      },
+      "security": {
+      }
+    },
+    "childrensPrivacy": {
+    },
+    "linksToOtherWebsites": {
+    },
+    "yourRights": {
+      "accessRight": {
+      },
+      "rectificationAndErasure": {
+      },
+      "restrictProcessing": {
+      },
+      "objectToProcessing": {
+      },
+      "stopCommunications": {
+      },
+      "withdrawalOfConsent": {
+      }
+    },
+    "changesToPolicy": {
+    },
+    "contactUs": {
+    }
+  },
+  "referrals": {
+    "meta": {
+    },
+    "hero": {
+    },
+    "howItWorks": {
+      "steps": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+      ]
+    },
+    "multipliers": {
+      "tiers": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+      ]
+    }
+  },
+  "token": {
+    "meta": {
+    },
+    "hero": {
+    },
+    "cards": {
+    },
+    "distribution": {
+    },
+    "stake": {
+    },
+    "waitlistCta": {
+    },
+    "tiers": {
+      "list": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+      ]
+    },
+    "staking": {
+    },
+    "comparison": {
+      "labels": {
+      },
+      "tokens": {
+        "cext": {
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "bnb": {
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "kcs": {
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "okb": {
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      }
+    },
+    "roadmap": {
+      "items": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+      ]
+    },
+    "airdrop": {
+    }
+  }
+}
