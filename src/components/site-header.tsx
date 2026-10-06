@@ -31,8 +31,8 @@ export function SiteHeader() {
               <Link
                 key={n.to}
                 to={n.to}
-                className="rounded-full px-4 py-1.5 text-sm text-white/85 transition-colors hover:text-white"
-                activeProps={{ className: "rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--brand-green)]" }}
+                className="whitespace-nowrap rounded-full px-4 py-1.5 text-sm text-white/85 transition-colors hover:text-white"
+                activeProps={{ className: "whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--brand-green)]" }}
               >
                 {t(`header.nav.${n.key}`)}
               </Link>
