@@ -25,21 +25,24 @@ export function SiteHeader() {
            <img src={chimeraLogo} alt="Chimera" className="h-16 w-auto md:h-20" />
         </Link>
 
-        <nav className="hidden lg:absolute lg:left-1/2 lg:flex lg:-translate-x-1/2 self-end items-center gap-1 rounded-full border border-white/15 bg-white/15 px-2 py-1.5 backdrop-blur mb-4">
-          {navItems.map((n) => (
-            <Link
-              key={n.to}
-              to={n.to}
-              className="rounded-full px-4 py-1.5 text-sm text-white/85 transition-colors hover:text-white"
-              activeProps={{ className: "rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--brand-green)]" }}
-            >
-              {t(`header.nav.${n.key}`)}
-            </Link>
-          ))}
-        </nav>
+        <div className="hidden lg:absolute lg:left-1/2 lg:flex lg:-translate-x-1/2 lg:items-center lg:gap-4 self-end mb-4">
+          <nav className="flex items-center gap-1 rounded-full border border-white/15 bg-white/15 px-2 py-1.5 backdrop-blur">
+            {navItems.map((n) => (
+              <Link
+                key={n.to}
+                to={n.to}
+                className="rounded-full px-4 py-1.5 text-sm text-white/85 transition-colors hover:text-white"
+                activeProps={{ className: "rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--brand-green)]" }}
+              >
+                {t(`header.nav.${n.key}`)}
+              </Link>
+            ))}
+          </nav>
+
+          <LanguageSwitcher />
+        </div>
 
         <div className="flex items-center gap-2">
-          <LanguageSwitcher className="hidden lg:inline-flex" />
           <a
             href="https://x.com/chimera_wallet"
             target="_blank"
