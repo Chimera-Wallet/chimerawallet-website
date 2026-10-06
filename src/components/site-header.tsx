@@ -25,30 +25,27 @@ export function SiteHeader() {
            <img src={chimeraLogo} alt="Chimera" className="h-16 w-auto md:h-20" />
         </Link>
 
-        <div className="hidden xl:absolute xl:left-1/2 xl:flex xl:-translate-x-1/2 xl:items-center xl:gap-4 self-end mb-4">
-          <nav className="flex items-center gap-1 rounded-full border border-white/15 bg-white/15 px-2 py-1.5 backdrop-blur">
-            {navItems.map((n) => (
-              <Link
-                key={n.to}
-                to={n.to}
-                className="whitespace-nowrap rounded-full px-4 py-1.5 text-sm text-white/85 transition-colors hover:text-white"
-                activeProps={{ className: "whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--brand-green)]" }}
-              >
-                {t(`header.nav.${n.key}`)}
-              </Link>
-            ))}
-          </nav>
-
-          <LanguageSwitcher />
-        </div>
+        <nav className="hidden lg:absolute lg:left-1/2 lg:flex lg:-translate-x-1/2 self-end items-center gap-1 rounded-full border border-white/15 bg-white/15 px-2 py-1.5 backdrop-blur mb-4">
+          {navItems.map((n) => (
+            <Link
+              key={n.to}
+              to={n.to}
+              className="rounded-full px-4 py-1.5 text-sm text-white/85 transition-colors hover:text-white"
+              activeProps={{ className: "rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--brand-green)]" }}
+            >
+              {t(`header.nav.${n.key}`)}
+            </Link>
+          ))}
+        </nav>
 
         <div className="flex items-center gap-2">
+          <LanguageSwitcher className="hidden lg:inline-flex" />
           <a
             href="https://x.com/chimera_wallet"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X (Twitter)"
-            className="hidden xl:inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10"
+            className="hidden lg:inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
               <path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.84l-5.36-6.96L4.5 22H1.24l8.02-9.16L1 2h7.02l4.84 6.4L18.244 2Zm-1.2 18h1.9L7.06 4H5.06l11.984 16Z" />
@@ -59,7 +56,7 @@ export function SiteHeader() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Telegram"
-            className="hidden xl:inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10"
+            className="hidden lg:inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10"
           >
             <Send className="h-4 w-4" />
           </a>
@@ -67,7 +64,7 @@ export function SiteHeader() {
             href="https://app.chimerawallet.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center rounded-full px-5 text-xs font-bold tracking-widest text-[var(--brand-navy)] xl:h-12 xl:px-7"
+            className="inline-flex h-11 items-center rounded-full px-5 text-xs font-bold tracking-widest text-[var(--brand-navy)] lg:h-12 lg:px-7"
             style={{ backgroundColor: "var(--brand-green)" }}
           >
              {t("header.openChimera")}
@@ -77,7 +74,7 @@ export function SiteHeader() {
             <SheetTrigger asChild>
               <button
                 aria-label={t("header.openMenu")}
-                className="xl:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10"
+                className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10"
               >
                 <Menu className="h-5 w-5" />
               </button>

@@ -16,7 +16,7 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
     <DropdownMenu>
       <DropdownMenuTrigger
         aria-label={t("header.language")}
-        className={`inline-flex h-11 items-center gap-1.5 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-3 text-sm text-foreground hover:bg-white/10 ${className}`}
+        className={`inline-flex h-11 items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 text-sm text-foreground hover:bg-white/10 ${className}`}
       >
         <Flag code={current.code} />
         <span className="text-xs font-semibold uppercase">{current.code}</span>
