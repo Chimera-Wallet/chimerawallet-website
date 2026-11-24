@@ -17,14 +17,21 @@ export const Route = createFileRoute("/hydra-manifesto")({
 
 function HydraManifestoPage() {
   const { t } = useTranslation();
-  const body = t("hydraManifesto.body", { returnObjects: true }) as string[];
+  const sections = t("hydraManifesto.sections", { returnObjects: true }) as { title: string; paragraphs: string[] }[];
   return (
     <main className="mx-auto max-w-3xl px-6 pt-16 pb-24">
       <Reveal delay={0}><h1 className="hero-title">{t("hydraManifesto.title")}</h1></Reveal>
       <Reveal delay={120}><p className="hero-eyebrow mt-6 text-[var(--brand-green)]">{t("hydraManifesto.subtitle")}</p></Reveal>
-      <Reveal delay={240}><div className="mt-10 space-y-6 text-sm leading-relaxed text-foreground/85">
-        {Array.isArray(body) && body.map((p, i) => <p key={i}>{p}</p>)}
-      </div></Reveal>
+      {Array.isArray(sections) && sections.map((s, i) => (
+        <Reveal key={i} delay={i === 0 ? 240 : 0}>
+          <section className="mt-12">
+            <h2 className="display text-2xl text-[var(--brand-green)]">{s.title}</h2>
+            <div className="mt-6 space-y-6 text-sm leading-relaxed text-foreground/85">
+              {s.paragraphs.map((p, j) => <p key={j}>{p}</p>)}
+            </div>
+          </section>
+        </Reveal>
+      ))}
     </main>
   );
 }

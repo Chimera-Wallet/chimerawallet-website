@@ -5,7 +5,47 @@
   },
   "title": "THE HYDRA MANIFESTO",
   "subtitle": "Defending Freedom’s Infrastructure",
-  "body": [
-    "The full text of the Hydra Manifesto is coming soon."
+  "sections": [
+    {
+      "title": "Privacy Shouldn't Need an Explanation",
+      "paragraphs": [
+        "We have reached a strange point in the history of the internet. Wanting to keep your private life private now seems to require an explanation.",
+        "We are expected to accept surveillance as the price of being part of society. Our activities are recorded, our behavior analyzed, and our identities tied to more of what we do every day. We have grown so used to this that we barely question it.",
+        "We think that this is a mistake. Privacy is the right to decide what to reveal and to whom. It matters whether you are a journalist, an activist, or simply someone who would rather not be watched.",
+        "But defending privacy takes more than arguments. Arguments don’t protect anyone. Infrastructure does. And someone has to run it and keep it alive."
+      ]
+    },
+    {
+      "title": "Why Tor Matters",
+      "paragraphs": [
+        "Tor is one of the most valuable pieces of public infrastructure on the internet.",
+        "Tor routes traffic through thousands of independently operated relays, so what you do online can’t easily be tied to who you are. Tor isn’t perfect but for millions of people, it is the best protection they have.",
+        "The network's independence is also a practical challenge.",
+        "Relays need servers, bandwidth, money and people willing to run them. Tor traffic headed for the open internet leaves through an exit relay. That is where the pressure lands.",
+        "Operators face abuse complaints, hosting restrictions and legal consequences. Few are willing to carry it, so capacity piles up with a handful of operators and networks, a network built to have no single point of failure is being held by a few. That is a weakness and this is the problem we are here to fix."
+      ]
+    },
+    {
+      "title": "What Hydra Will Do",
+      "paragraphs": [
+        "The Hydra initiative exists to defend Freedom’s Infrastructure: Tor. We start where the network is thinnest: the exit relays. We want to bring more reliable capacity online, support independent operators and make it easier for others to contribute.",
+        "That means financing and deploying servers, working with hosting providers, finding new plug and play privacy friendly solutions and new ways to keep the infrastructure running over time.",
+        "We also want to challenge the suspicion surrounding privacy technologies. Operating an exit relay is a legitimate activity; treating anonymity as wrongdoing drives away the people we need to keep the network alive.",
+        "We will support responsible, lawful operations and engage with institutions and providers that can make a difference. We have no interest in controlling Tor or replacing the organizations already doing this work.",
+        "We would consider Hydra successful if the network became stronger, more diverse and less dependent on any single contributor. Including us."
+      ]
+    },
+    {
+      "title": "Strength Through Independence",
+      "paragraphs": [
+        "Cut one head, two grow back. In the myth, Hydra answered every cut with two new heads. That is the idea behind this initiative.",
+        "A network to resist censorship and surveillance can’t depend on one operator, one provider or one country.",
+        "It needs many heads. Many independent operators across different providers and jurisdictions, with enough redundancy to absorb failures and pressure and enough legal awareness to avoid dangerous consequences.",
+        "Hydra grows from the Chimera Association, a Swiss nonprofit promoting free software and digital autonomy.",
+        "We invite individuals, businesses and institutions to help, whether through awareness campaigns, technical and legal work, hosting, bandwidth or financial support.",
+        "Privacy is something we build, one relay at a time.",
+        "There is no single cure for the threats to online privacy. There is a concrete problem. And something we can do about it."
+      ]
+    }
   ]
 }
