@@ -289,6 +289,7 @@
     "poweredBy": "Powered by:",
     "privacy": "PRIVACY",
     "privacyManifesto": "Chimera Privacy Manifesto",
+    "hydraManifesto": "The Hydra Manifesto",
     "pressAndMedia": "PRESS AND MEDIA",
     "news": "News",
     "pressKit": "Press Kit",
@@ -491,6 +492,17 @@
       "success": "Thanks for subscribing!",
       "error": "Something went wrong, please try again."
     }
+  },
+  "hydraManifesto": {
+    "meta": {
+      "title": "The Hydra Manifesto — Chimera Wallet",
+      "description": "Defending Freedom's Infrastructure."
+    },
+    "title": "THE HYDRA MANIFESTO",
+    "subtitle": "Defending Freedom’s Infrastructure",
+    "body": [
+      "The full text of the Hydra Manifesto is coming soon."
+    ]
   },
   "news": {
     "meta": {

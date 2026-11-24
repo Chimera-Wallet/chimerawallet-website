@@ -41,6 +41,11 @@ export function SiteFooter() {
                    {t("footer.privacyManifesto")}
                  </Link>
               </li>
+              <li>
+                <Link to="/hydra-manifesto" className="hover:text-[var(--brand-green)]">
+                  {t("footer.hydraManifesto")}
+                </Link>
+              </li>
             </ul>
           </div>
 

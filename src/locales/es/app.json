@@ -289,6 +289,7 @@
     "poweredBy": "Desarrollado por:",
     "privacy": "PRIVACIDAD",
     "privacyManifesto": "Manifiesto de privacidad de Chimera",
+    "hydraManifesto": "The Hydra Manifesto",
     "pressAndMedia": "PRENSA Y MEDIOS DE COMUNICACIÓN",
     "news": "Noticias",
     "pressKit": "Kit de prensa",
@@ -491,6 +492,17 @@
       "success": "¡Gracias por suscribirte!",
       "error": "Algo salió mal, por favor inténtalo de nuevo."
     }
+  },
+  "hydraManifesto": {
+    "meta": {
+      "title": "The Hydra Manifesto — Chimera Wallet",
+      "description": "Defending Freedom's Infrastructure."
+    },
+    "title": "THE HYDRA MANIFESTO",
+    "subtitle": "Defending Freedom’s Infrastructure",
+    "body": [
+      "The full text of the Hydra Manifesto is coming soon."
+    ]
   },
   "news": {
     "meta": {
@@ -835,7 +847,8 @@
         },
         {
           "titlePrefix": "SE REGISTRAN, COMPLETAN EL PROCESO DE VERIFICACIÓN DE CONOZCA A SU CLIENTE Y COMIENZAN A OPERAR.",
-          "titleHighlight": "COMIENZA A GANAR DINERO."
+          "titleHighlight": "COMIENZA A GANAR DINERO.",
+          "body": ""
         },
         {
           "titlePrefix": "SE ACUMULA",
