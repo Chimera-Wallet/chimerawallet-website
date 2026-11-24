@@ -13,6 +13,7 @@ const navItems = [
   { key: "referrals", to: "/referrals" },
   { key: "about", to: "/about" },
   { key: "news", to: "/news" },
+  { key: "hydra", to: "/hydra-manifesto" },
 ] as const;
 
 export function SiteHeader() {
