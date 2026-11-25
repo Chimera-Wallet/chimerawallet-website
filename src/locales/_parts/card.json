@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "Chimera Card — Self-custody Visa",
+    "description": "Use the Chimera Card anywhere Visa is accepted. Powered by licensed partners. Top up via the Chimera Wallet and use your balance in 50+ countries."
+  },
+  "hero": {
+    "eyebrow": "CHIMERA CARD",
+    "title": "SELF-CUSTODY<br/>IN YOUR WALLET.<br/>VISA IN YOUR POCKET.",
+    "subtitle": "Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.",
+    "cta": "RESERVE YOUR CARD",
+    "imageAlt": "Chimera cards"
+  },
+  "ctaCard": {
+    "eyebrow": "SPEND ANYWHERE VISA IS ACCEPTED",
+    "title": "RESERVE YOUR CARD",
+    "body": "Top up your card directly from Chimera Wallet. No extra steps."
+  },
+  "spots": {
+    "imageAlt": "Chimera card with floating coins",
+    "heading": "1,000 SPOTS.",
+    "subheading": "THAT'S IT.",
+    "body": "Once all 1,000 spots are claimed, standard pricing applies — permanently. No waitlist, no retroactive pricing, no exceptions.",
+    "rollout": "Chimera Card Rolling out mid 2026.",
+    "cta": "SECURE YOUR SPOT NOW"
+  },
+  "benefits": {
+    "heading": "THREE BENEFITS",
+    "subheading": "THAT DON'T EXPIRE:",
+    "items": [
+      {
+        "tag": "FOREVER",
+        "title": "1.5% TRANSACTION FEE FOR LIFE",
+        "body": "Locked for life. Pre-order customers lock in 1.5% forever. Standard rate is 2% — and may rise. Yours won't.",
+        "badge": "1.5%",
+        "strike": "STANDARD 2%"
+      },
+      {
+        "tag": "FOREVER",
+        "title": "ZERO MONTHLY FEE",
+        "body": "No subscription. No maintenance charge. No annual fee. No bill.",
+        "badge": "FREE",
+        "strike": "FOREVER"
+      },
+      {
+        "tag": "FOREVER",
+        "title": "ZERO TOP-UP FEES",
+        "body": "Load from your Chimera Wallet at zero cost. Every time.",
+        "badge": "0.0%",
+        "strike": "STANDARD 1%"
+      }
+    ],
+    "disclaimer": "*Card programme provided in partnership with Wirex Pay. KYC is required to access the Wirex platform — separate from Chimera's own KYC. Chimera collects no fee or financial advantage for this service."
+  },
+  "countries": {
+    "heading": "SUPPORTED COUNTRIES",
+    "subheading": "Chimera Card works anywhere Visa is accepted. Residents of the following countries can apply:",
+    "continents": {
+      "Europe": "Europe",
+      "Asia & Pacific": "Asia & Pacific",
+      "Latin America": "Latin America"
+    },
+    "names": {
+      "Andorra": "Andorra", "Austria": "Austria", "Belgium": "Belgium", "Bulgaria": "Bulgaria",
+      "Croatia": "Croatia", "Cyprus": "Cyprus", "Czech Republic": "Czech Republic", "Denmark": "Denmark",
+      "Estonia": "Estonia", "Finland": "Finland", "France": "France", "Germany": "Germany",
+      "Gibraltar": "Gibraltar", "Greece": "Greece", "Hungary": "Hungary", "Iceland": "Iceland",
+      "Ireland": "Ireland", "Italy": "Italy", "Latvia": "Latvia", "Lithuania": "Lithuania",
+      "Luxembourg": "Luxembourg", "Malta": "Malta", "Monaco": "Monaco", "Montenegro": "Montenegro",
+      "Netherlands": "Netherlands", "Norway": "Norway", "Poland": "Poland", "Portugal": "Portugal",
+      "Romania": "Romania", "Slovakia": "Slovakia", "Slovenia": "Slovenia", "Spain": "Spain",
+      "Sweden": "Sweden", "Switzerland": "Switzerland", "United Kingdom": "United Kingdom",
+      "Australia": "Australia", "Hong Kong": "Hong Kong", "Indonesia": "Indonesia", "Malaysia": "Malaysia",
+      "Philippines": "Philippines", "Singapore": "Singapore", "Taiwan": "Taiwan", "Thailand": "Thailand",
+      "Vietnam": "Vietnam",
+      "Argentina": "Argentina", "Brazil": "Brazil", "Chile": "Chile", "Colombia": "Colombia",
+      "Ecuador": "Ecuador", "Mexico": "Mexico", "Peru": "Peru"
+    }
+  },
+  "faq": {
+    "heading": "FAQ",
+    "items": [
+      { "q": "How do I apply for a Chimera Card?", "a": "Click \"PRE-ORDER NOW\" below to reserve your card and lock in lifetime pre-order benefits." },
+      { "q": "What happens if I miss the pre-order window?", "a": "You'll pay standard rates with no grandfathered pricing. Pre-order members receive permanent rate protection." },
+      { "q": "Are pre-order rates really locked forever?", "a": "Yes. Your fees are frozen at pre-order levels for the lifetime of your account. Standard rates may increase over time, but yours won't." },
+      { "q": "Is Chimera Card secure?", "a": "Yes. Chimera Card uses the same Visa security infrastructure as traditional bank cards." },
+      { "q": "How do I top up my Chimera Card?", "a": "Top up directly from your non-custodial Chimera Wallet. It's quick, easy, and secure." }
+    ]
+  },
+  "openChimera": {
+    "eyebrow": "WORKS ON ANY DEVICE",
+    "title": "OPEN CHIMERA"
+  }
+}

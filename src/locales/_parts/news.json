@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "title": "Chimera — News",
+    "description": "The latest from Chimera Wallet — updates, ecosystem news, and Bitcoin L2 developments. Stay informed as we build toward the full super-app."
+  },
+  "title": "NEWS",
+  "items": [
+    { "source": "coinmarketcap", "title": "Nimbus Capital and Chimera Wallet Announce $15 Million Strategic Partnership To Expand DeFi Infrastructure on Bitcoin" },
+    { "source": "COINLIVE", "title": "Nimbus Capital and Chimera Wallet Forge $15 Million Partnership to Enhance Bitcoin DeFi" },
+    { "source": "AInvest", "title": "Bitcoin DeFi Partnership: A $15M Signal or Noise?" },
+    { "source": "cointelegraph", "title": "Nimbus Capital and Chimera Wallet announce $15 million strategic partnership to expand DeFi infrastructure on Bitcoin" },
+    { "source": "PR NEWSWIRE", "title": "Bitcoin Meets Commerce: Wirex and Chimera Wallet Bring Bitcoin spending to 80M+ Merchants" },
+    { "source": "FINTEC BUZZ", "title": "Wirex and Chimera Wallet Bring Bitcoin spending to 80M+ Merchants" },
+    { "source": "MEXC", "title": "Wirex Powers Chimera Card, Bringing Bitcoin Payments to 80M+ Merchants Worldwide" },
+    { "source": "binance", "title": "Wirex and Chimera Wallet Launch Bitcoin-Based Debit Card" },
+    { "source": "globe news wire", "title": "Nimbus Capital and Chimera Wallet announce $15 million strategic partnership to expand DeFi infrastructure on Bitcoin" },
+    { "source": "0xzx", "title": "Nimbus Capital and Chimera Wallet enter into a $15 million strategic partnership to expand Bitcoin DeFi infrastructure" },
+    { "source": "binance", "title": "Nimbus Capital and Chimera Wallet $15M DeFi Partnership" }
+  ]
+}

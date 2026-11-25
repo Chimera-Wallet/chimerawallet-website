@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Chimera App — No Install. No Memory. No Risk.",
+    "description": "Open Chimera Wallet in your browser. No download, no App Store, no custody layer. Instant access on any device.",
+    "ogTitle": "Chimera App — Progressive Web App"
+  },
+  "hero": {
+    "eyebrow": "PROGRESSIVE APP",
+    "title": "NO INSTALL.<br></br>NO MEMORY. NO RISK.",
+    "subtitle": "Bitcoin doesn't ask Apple for permission. Why should your wallet?",
+    "body": "Every native crypto app lives at the mercy of app stores. Wallets get removed on a Wednesday afternoon because someone in Cupertino or Mountain View changed their mind.",
+    "cta": "OPEN CHIMERA",
+    "mockupAlt": "Chimera app phone mockups"
+  },
+  "coins": {
+    "chimera": "Chimera",
+    "btc": "BTC",
+    "usdt": "USDT",
+    "eth": "ETH",
+    "tron": "TRON",
+    "polygon": "POLYGON",
+    "coinAlt": "{{name}} coin"
+  },
+  "browser": {
+    "eyebrow": "CHIMERA WALLET",
+    "title": "RUNS IN YOUR BROWSER.",
+    "subtitle": "No gatekeeper can touch it.",
+    "items": [
+      "No download. You open a URL — the wallet is there.",
+      "No review board. Nothing waiting to be approved or removed.",
+      "No geo-block. No platform that can reach in and turn your money off.",
+      "No middleman. Nothing standing between you and your Bitcoin."
+    ],
+    "body": "App stores have done it before. They'll do it again. No warning. No appeal. Gone. Not a promise. Architecture.",
+    "coinsSetAlt": "Bitcoin, Ethereum and Tether coins",
+    "cta": { "eyebrow": "WORKS ON ANY DEVICE", "title": "OPEN IN BROWSER" }
+  },
+  "tiles": {
+    "get": {
+      "titlePrefix": "WHAT ",
+      "titleHighlight": "YOU GET",
+      "body": "Bitcoin. Lightning. Arkade. All in one — and nothing missing. Mainchain for settlement. Lightning for instant payments. Arkade Protocol for the next generation. No switching apps. No compromise."
+    },
+    "send": {
+      "titleLine1": "NO CHANNELS. NO SETUP.",
+      "titleHighlight": "JUST SEND.",
+      "body": "Chimera eliminates Lightning's most painful friction. No inbound liquidity. No channel opens. Receive from day one."
+    },
+    "id": {
+      "titleHighlight": "NO ID",
+      "titleSuffix": " REQUIRED.",
+      "body": "Access your wallet in minutes. Start trading. Regulated services provided by third parties."
+    },
+    "multiAsset": {
+      "titleLine1": "MULTI-ASSET.",
+      "titleHighlight": "ONE INTERFACE.",
+      "body": "BTC, USDT, ETH, TRON, POLYGON, FIAT and expanding. Everything modern finance offers — without handing over custody."
+    }
+  },
+  "swap": {
+    "logoAlt": "Chimera",
+    "title": "ARKADE SWAP<br></br>AND WRAPPED ASSETS",
+    "body": "Unstoppable cross chain p2p trading with a level of privacy you never seen before. All the feature of a CEX with all the freedom of a DEX all wrapped in a progressive web app out of stores grasp. The future of trading is coming soon to Arkade.",
+    "cardAlt": "Chimera card swap",
+    "cta": { "eyebrow": "YOUR MONEY. YOUR DEVICE. YOUR RULES.", "title": "OPEN CHIMERA" }
+  }
+}

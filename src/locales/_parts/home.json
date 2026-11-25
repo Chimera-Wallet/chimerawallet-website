@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Chimera — The Bitcoin Super-App",
+    "description": "Chimera Wallet is the first Bitcoin super-app. Non-custodial, browser-based, no install required. Your keys, your control."
+  },
+  "hero": {
+    "heroLeftAlt": "Chimera wallet app showing balance and transactions",
+    "heroRightAlt": "Chimera card balance and transactions",
+    "eyebrow": "CHIMERAWALLET, FINANCE EVOLVED",
+    "title": "THE ONLY BITCOIN SUPER-APP BUILT SO NOBODY CAN EVER TAKE YOUR MONEY AWAY.",
+    "subtitle": "Not a promise. Not a policy. Mathematics.",
+    "tagline": "Mainchain. Lightning. Arkade Protocol. One app.<br></br>Your keys. Nobody in between.",
+    "cta": {
+      "launch": { "eyebrow": "CHIMERA WALLET", "title": "LAUNCH THE APP" },
+      "waitlist": { "title": "JOIN CEXT WAITLIST" },
+      "community": { "eyebrow": "NOTIFY ME", "title": "JOIN THE COMMUNITY" }
+    }
+  },
+  "controlTradeEarn": {
+    "walletPrimaryAlt": "Chimera wallet app — primary view",
+    "walletSecondaryAlt": "Chimera wallet app — secondary view",
+    "control": {
+      "title": "CONTROL",
+      "body": "Your keys. Your coins. Full stop. Bitcoin mainchain, Lightning, Arkade Protocol VTXO - the complete Bitcoin stack, non-custodial from the first second to the last."
+    },
+    "trade": {
+      "title": "TRADE",
+      "body": "Non-custodial safety. Buy, sell, and swap with zero spread markup - without ever sending funds to someone else's wallet. Support for Fiat and many other assets. No KYC under 1K CHF per month*. Non-custodial Chimera swaps coming soon."
+    },
+    "earn": {
+      "title": "EARN",
+      "body": "Refer friends and earn a share of platform fees - up to 20%, no cap, no expiry. Not points. Real revenue. P2P loans."
+    }
+  },
+  "superchargingBitcoin": {
+    "eyebrow": "SUPERCHARGING BITCOIN",
+    "title": "SUPERCHARGING BITCOIN",
+    "subtitle": "Three layers. One interface. Zero compromise.",
+    "mainchain": {
+      "title": "MAINCHAIN",
+      "body": "Full BTC on-chain deposits and withdrawals and Fiat on/off ramp via third party providers."
+    },
+    "arkadeProtocol": {
+      "title": "ARKADE PROTOCOL",
+      "body": "VTXO technology: mainchain-grade security, Lightning-grade speed without the channel headaches. Chimera is the first Super App on Arkade Protocol."
+    },
+    "lightning": {
+      "title": "LIGHTNING",
+      "body": "Full Lightning invoice support, enhanced by Boltz. Every merchant, every exchange, zero channel management."
+    }
+  },
+  "arkadeProtocol": {
+    "title": "ARKADE PROTOCOL",
+    "backedBy": "BACKED BY THE BEST",
+    "raised": "$7.7M raised across two rounds.",
+    "comparison": {
+      "cex": {
+        "title": "CEX",
+        "rows": [
+          ["Custodial", "Custody"],
+          ["Instant", "Speed"],
+          ["Required", "KYC"],
+          ["High", "Counterparty risk"],
+          ["No", "Unilateral exit"]
+        ]
+      },
+      "dex": {
+        "title": "DEX",
+        "rows": [
+          ["Non-custodial", "Custody"],
+          ["Variable", "Speed"],
+          ["None", "KYC"],
+          ["Low", "Counterparty risk"],
+          ["Yes", "Unilateral exit"]
+        ]
+      },
+      "chimera": {
+        "title": "Chimera",
+        "rows": [
+          ["Non-custodial", "Custody"],
+          ["Instant", "Speed"],
+          ["Optional", "KYC"],
+          ["Minimal", "Counterparty risk"],
+          ["Yes", "Unilateral exit"]
+        ]
+      }
+    }
+  },
+  "selfCustody": {
+    "cardAlt": "Chimera card",
+    "title": "SELF-CUSTODY",
+    "subtitle": "DOESN'T STOP AT THE CHECKOUT.",
+    "body": "Zero monthly fee. Zero top-up fee. 1.5% transaction fee locked for life. First 1,000 pre-orders only.",
+    "cta": "RESERVE YOUR SPOT"
+  },
+  "poweredBy": {
+    "label": "Powered by",
+    "bitcoin": "Bitcoin",
+    "arkade": "Arkade",
+    "lightning": "Lightning Network",
+    "outlogic": "Outlogic"
+  },
+  "cextToken": {
+    "title": "CEXT TOKEN",
+    "subtitle": "The more you hold, the harder the platform works for you.",
+    "body": "1 Billion fixed supply. Fee discounts up to 50%. Referral multipliers up to 3×. Governance at Diamond tier. Zero inflation. Classified as a utility token under the Swiss regulation.",
+    "cta": "DISCOVER CEXT"
+  },
+  "referrals": {
+    "title": "REFERRALS",
+    "subtitle": "Share once. Earn on every trade they make. Forever.",
+    "body": "Up to 20% of platform fees. No cap. No expiry. Revenue share, not points.",
+    "disclaimer": "* Referral rewards apply to users who complete KYC verification.",
+    "cta": "GET YOUR REFERRAL CODE",
+    "previewAlt": "Chimera referral preview"
+  },
+  "waitlist": {
+    "eyebrow": "JOIN THE WAITLIST",
+    "title": "JOIN CEXT WAITLIST!",
+    "emailPlaceholder": "Email",
+    "joining": "JOINING...",
+    "joinNow": "JOIN NOW!",
+    "success": "Thanks for subscribing!",
+    "error": "Something went wrong, please try again."
+  }
+}

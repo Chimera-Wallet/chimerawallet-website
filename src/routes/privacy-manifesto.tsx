@@ -1,20 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useTranslation, Trans } from "react-i18next";
+import i18n from "@/i18n";
 import { Reveal } from "@/components/reveal";
 
 export const Route = createFileRoute("/privacy-manifesto")({
   head: () => ({
     meta: [
-      { title: "Privacy Manifesto — Chimera Wallet" },
+      { title: i18n.t("privacyManifesto.meta.title") },
       {
         name: "description",
-        content:
-          "Most companies write privacy policies; we write code that doesn't need one. Chimera's approach to privacy and transparency.",
+        content: i18n.t("privacyManifesto.meta.description"),
       },
-      { property: "og:title", content: "Privacy Manifesto — Chimera Wallet" },
+      { property: "og:title", content: i18n.t("privacyManifesto.meta.title") },
       {
         property: "og:description",
-        content:
-          "Most companies write privacy policies; we write code that doesn't need one. Chimera's approach to privacy and transparency.",
+        content: i18n.t("privacyManifesto.meta.description"),
       },
     ],
   }),
@@ -22,57 +22,58 @@ export const Route = createFileRoute("/privacy-manifesto")({
 });
 
 function PrivacyManifestoPage() {
+  const { t } = useTranslation();
   return (
     <main className="mx-auto max-w-3xl px-6 pt-16 pb-24">
-      <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">CHIMERA</p></Reveal>
-      <Reveal delay={120}><h1 className="hero-title mt-6">PRIVACY MANIFESTO</h1></Reveal>
+      <Reveal delay={0}><p className="hero-eyebrow text-[var(--brand-green)]">{t("privacyManifesto.eyebrow")}</p></Reveal>
+      <Reveal delay={120}><h1 className="hero-title mt-6">{t("privacyManifesto.title")}</h1></Reveal>
 
       <Reveal delay={240}><div className="mt-10 space-y-6 text-sm leading-relaxed text-foreground/85">
         <p className="text-base font-medium text-foreground">
-          Most companies write privacy policies; we write code that doesn't need one.
+          {t("privacyManifesto.intro.p1")}
         </p>
 
-        <p>At Chimera we take privacy and transparency seriously.</p>
+        <p>{t("privacyManifesto.intro.p2")}</p>
 
         <p>
-          We are committed to protecting and preserving our users' privacy across all the platforms.
+          {t("privacyManifesto.intro.p3")}
         </p>
 
-        <p>Our approach to protecting your data is simple: we don't collect it.</p>
+        <p>{t("privacyManifesto.intro.p4")}</p>
 
         <p>
-          Our website at chimerawallet.com and Chimera wallet do not use cookies or other tracking
-          technologies.
+          {t("privacyManifesto.intro.p5")}
         </p>
 
         <p>
-          Our analytics come exclusively from Plausible (
-          <a
-            href="https://plausible.io/about"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--brand-green)] hover:underline"
-          >
-            https://plausible.io/about
-          </a>
-          ) a privacy preserving open-source solution designed to protect your privacy while providing
-          anonymized data for practical purposes.
+          <Trans
+            i18nKey="privacyManifesto.intro.p6"
+            components={{
+              a: (
+                <a
+                  href="https://plausible.io/about"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--brand-green)] hover:underline"
+                />
+              ),
+            }}
+          />
         </p>
 
         <p className="text-base font-medium text-foreground">
-          Privacy, built in from the ground up.
+          {t("privacyManifesto.intro.p7")}
         </p>
 
         <p>
-          You may directly share your data with third parties through our platforms in order to access
-          certain services please check the individual policies of the providers.
+          {t("privacyManifesto.intro.p8")}
         </p>
       </div></Reveal>
 
-      <Reveal><h2 className="display mt-12 text-2xl text-[var(--brand-green)]">PROVIDERS</h2></Reveal>
+      <Reveal><h2 className="display mt-12 text-2xl text-[var(--brand-green)]">{t("privacyManifesto.providersTitle")}</h2></Reveal>
       <Reveal delay={120}><ul className="mt-6 space-y-3 text-sm">
         <li>
-          Plausible —{" "}
+          {t("privacyManifesto.providers.plausible")} —{" "}
           <a
             href="https://plausible.io/about"
             target="_blank"
@@ -83,7 +84,7 @@ function PrivacyManifestoPage() {
           </a>
         </li>
         <li>
-          Outlogic Sagl —{" "}
+          {t("privacyManifesto.providers.outlogic")} —{" "}
           <a
             href="https://outlogic.net/privacy-policy/"
             target="_blank"
@@ -94,7 +95,7 @@ function PrivacyManifestoPage() {
           </a>
         </li>
         <li>
-          Lendasat —{" "}
+          {t("privacyManifesto.providers.lendasat")} —{" "}
           <a
             href="https://lendasat.com/docs/p2p-loans/legal/terms"
             target="_blank"

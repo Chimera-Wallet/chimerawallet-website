@@ -16,6 +16,7 @@ import { Route as PrivacyManifestoRouteImport } from './routes/privacy-manifesto
 import { Route as PrivacyAppRouteImport } from './routes/privacy-app'
 import { Route as PressKitRouteImport } from './routes/press-kit'
 import { Route as NewsRouteImport } from './routes/news'
+import { Route as HydraManifestoRouteImport } from './routes/hydra-manifesto'
 import { Route as CardRouteImport } from './routes/card'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AboutRouteImport } from './routes/about'
@@ -56,6 +57,11 @@ const NewsRoute = NewsRouteImport.update({
   path: '/news',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HydraManifestoRoute = HydraManifestoRouteImport.update({
+  id: '/hydra-manifesto',
+  path: '/hydra-manifesto',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CardRoute = CardRouteImport.update({
   id: '/card',
   path: '/card',
@@ -82,6 +88,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/app': typeof AppRoute
   '/card': typeof CardRoute
+  '/hydra-manifesto': typeof HydraManifestoRoute
   '/news': typeof NewsRoute
   '/press-kit': typeof PressKitRoute
   '/privacy-app': typeof PrivacyAppRoute
@@ -95,6 +102,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/app': typeof AppRoute
   '/card': typeof CardRoute
+  '/hydra-manifesto': typeof HydraManifestoRoute
   '/news': typeof NewsRoute
   '/press-kit': typeof PressKitRoute
   '/privacy-app': typeof PrivacyAppRoute
@@ -109,6 +117,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/app': typeof AppRoute
   '/card': typeof CardRoute
+  '/hydra-manifesto': typeof HydraManifestoRoute
   '/news': typeof NewsRoute
   '/press-kit': typeof PressKitRoute
   '/privacy-app': typeof PrivacyAppRoute
@@ -124,6 +133,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/app'
     | '/card'
+    | '/hydra-manifesto'
     | '/news'
     | '/press-kit'
     | '/privacy-app'
@@ -137,6 +147,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/app'
     | '/card'
+    | '/hydra-manifesto'
     | '/news'
     | '/press-kit'
     | '/privacy-app'
@@ -150,6 +161,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/app'
     | '/card'
+    | '/hydra-manifesto'
     | '/news'
     | '/press-kit'
     | '/privacy-app'
@@ -164,6 +176,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AppRoute: typeof AppRoute
   CardRoute: typeof CardRoute
+  HydraManifestoRoute: typeof HydraManifestoRoute
   NewsRoute: typeof NewsRoute
   PressKitRoute: typeof PressKitRoute
   PrivacyAppRoute: typeof PrivacyAppRoute
@@ -224,6 +237,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hydra-manifesto': {
+      id: '/hydra-manifesto'
+      path: '/hydra-manifesto'
+      fullPath: '/hydra-manifesto'
+      preLoaderRoute: typeof HydraManifestoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/card': {
       id: '/card'
       path: '/card'
@@ -260,6 +280,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AppRoute: AppRoute,
   CardRoute: CardRoute,
+  HydraManifestoRoute: HydraManifestoRoute,
   NewsRoute: NewsRoute,
   PressKitRoute: PressKitRoute,
   PrivacyAppRoute: PrivacyAppRoute,
